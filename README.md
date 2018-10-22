@@ -1,3 +1,5 @@
+[![goodtables.io](https://goodtables.io/badge/github/CatalogueOfLife/datapackage-specs.svg)](https://goodtables.io/github/CatalogueOfLife/datapackage-specs)
+
 # CoL Data Package Specification
 The recommended exchange format for data to and from the CoL Clearinghouse
 is a tabular text format based on [frictionless data packages](https://frictionlessdata.io/docs/tabular-data-package/). 
@@ -13,9 +15,6 @@ see https://frictionlessdata.io/docs/data-package/
 We prefer the following on top of the [table schema](https://frictionlessdata.io/specs/table-schema/):
  - tab separated files
  - concatenation with commas for array fields
-
-### Example data
-[![goodtables.io](https://goodtables.io/badge/github/CatalogueOfLife/datapackage-specs.svg)](https://goodtables.io/github/CatalogueOfLife/datapackage-specs)
 
 
 ## Name
