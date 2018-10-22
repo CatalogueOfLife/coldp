@@ -103,6 +103,10 @@ The direct parent in the classification. This is the preferred way of exchanging
 ### nameID
 Pointer to the accepted name referring to an existing Name.ID within this data package.
 
+### referenceID
+A comma concatenated list of reference IDs supporting the taxonomic concept.
+Each ID must refer to an existing Reference.ID within this data package.
+
 ### provisional
 type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
 
@@ -187,17 +191,6 @@ If parentID is given this field is ignored.
 ### kingdom
 The kingdom the taxon is classified in.
 If parentID is given this field is ignored.
-
-
-
-## TaxonReference
-A list of references supporting the taxonomic concept.
-
-### taxonID 
-Pointer to the taxon referring to an existing Taxon.ID within this data package.
-
-### referenceID
-Pointer to the reference that supports this taxonomic concept. Refers to an existing Reference.ID within this data package.
 
 
 
