@@ -1,17 +1,17 @@
-ID,parentID,nameID,provisional,accordingTo,accordingToID,accordingToDate,fossil,recent,lifezone[],link,remarks,subgenus,genus,subfamily,family,superfamily,suborder,order,subclass,class,subphylum,phylum,kingdom
-1,,1,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-10,1,10,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-20,10,20,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-30,20,30,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-31,20,31,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-100,20,100,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-101,30,101,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-102,30,102,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-110,31,110,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-1000,100,1000,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-1001,101,1001,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-1002,101,1002,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-1005,102,1005,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-1006,102,1006,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-1010,110,1010,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
-1011,110,1011,false,M.Döring,0000-0001-7757-1889,,true,true,marine;terrestrial;freshwater;brackish,,,,,,,,,,,,,,
+ID	parentID	nameID	provisional	accordingTo	accordingToID	accordingToDate	fossil	recent	lifezone[]	link	remarks	subgenus	genus	subfamily	family	superfamily	suborder	order	subclass	class	subphylum	phylum	kingdom
+1		1	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+10	1	10	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+20	10	20	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+30	20	30	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+31	20	31	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+100	20	100	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+101	30	101	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+102	30	102	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+110	31	110	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+1000	100	1000	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+1001	101	1001	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+1002	101	1002	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+1005	102	1005	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+1006	102	1006	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+1010	110	1010	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														
+1011	110	1011	false	M.Döring	0000-0001-7757-1889		true	true	marine;terrestrial;freshwater;brackish														

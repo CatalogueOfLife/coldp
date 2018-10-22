@@ -1,1 +1,1 @@
-ID,citation,author,title,year INTEGER,source
+ID	citation	author	title	year INTEGER	source

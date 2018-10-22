@@ -1,6 +1,6 @@
-taxonID,nameID,status,remarks
-1,2,synonym,
-10,11,synonym,
-1006,1006-s1,synonym,
-1006,1006-s2,synonym,
-1006,1006-s3,synonym,
+taxonID	nameID	status	remarks
+1	2	synonym	
+10	11	synonym	
+1006	1006-s1	synonym	
+1006	1006-s2	synonym	
+1006	1006-s3	synonym	
