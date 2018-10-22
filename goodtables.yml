@@ -1,2 +1,4 @@
 datapackages:
+  - 'https://raw.githubusercontent.com/frictionlessdata/example-data-packages/master/periodic-table/datapackage.json'
+  - 'https://raw.githubusercontent.com/CatalogueOfLife/datapackage-specs/master/datapackage.json'
   - 'datapackage.json'
