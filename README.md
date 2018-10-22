@@ -14,6 +14,9 @@ We prefer the following on top of the [table schema](https://frictionlessdata.io
  - tab separated files
  - concatenation with commas for array fields
 
+### Example data
+[![goodtables.io](https://goodtables.io/badge/github/CatalogueOfLife/datapackage-specs.svg)](https://goodtables.io/github/CatalogueOfLife/datapackage-specs)
+
 
 ## Name
 
