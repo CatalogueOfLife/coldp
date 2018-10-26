@@ -2,20 +2,35 @@
 
 # CoL Data Package Specification
 The recommended exchange format for data to and from the CoL Clearinghouse
-is a tabular text format based on [frictionless data packages](https://frictionlessdata.io/docs/tabular-data-package/). 
+is a tabular text format with a fixed set of files and columns.
 
-The format is a single ZIP archive that bundles various tab delimited files described below together with a datapackage.json descriptor. Each file holds a class of things shown in this diagram:
+The format is a single ZIP archive that bundles various delimited text files described below together with a metadata.yaml file providing basic metadata about the entire dataset. Each file holds records for the same class of things shown in this diagram:
 
 ![schema](schema.png)
 
 
-## datapackage.json Descriptor
-see https://frictionlessdata.io/docs/data-package/
+## Filenames
+The filename for an entity in the above diagram is a case insensitive version of the class name, any number of ignored hyphens and a known tabular text suffix. The suffix specifies one of the two supported tabular flavours, comma separated or tab separated files:
 
-We prefer the following on top of the [table schema](https://frictionlessdata.io/specs/table-schema/):
- - tab separated files
- - concatenation with commas for array fields
+ - `csv`: a comma separated, optionally quoted CSV file as per [RFC 4180](https://tools.ietf.org/html/rfc4180)
+ - `tsv`, `tab` or `txt`: indicates a tab seperated file without quoting
+ 
+ Valid examples are `taxon.tsv` or `vernacular-name.csv`
 
+## Character Encoding
+All data should be encoded in UTF-8.
+
+## Frictionless datapackage.json
+CoL provides a [webservice](http://api.col.plus/datapackage?title=specs&base=https%3A%2F%2Fraw.githubusercontent.com%2FCatalogueOfLife%2Fdatapackage-specs%2Fmaster%2Fdata%2F&resource=description.tsv&resource=distribution.tsv&resource=media.tsv&resource=name.tsv&resource=name-rel.tsv&resource=reference.tsv&resource=synonym.tsv&resource=taxon.tsv&resource=vernacular-name.tsv.tsv) returning a rich [tabular datapackage.json](https://frictionlessdata.io/docs/tabular-data-package/) describing the full customizable package. The webservice takes a few parameters to customize the package:
+
+ - title: the human readble title for the dataset
+ - resource: list of data filenames included in the package.
+ - base: the optional base uri (URL or filesystem) of the directory the files are found under.
+ - header: expect header columns in all data files, default=true.
+
+## metadata.yaml
+A YAML file with basic Dublin Core Key value pair entries.
+TO BE DONE...maybe pass this as a param to the package service instead of title???
 
 ## Name
 
