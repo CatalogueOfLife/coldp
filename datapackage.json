@@ -6,7 +6,7 @@
         {
             "encoding": "UTF-8",
             "format": "csv",
-            "name": "Reference",
+            "name": "reference",
             "path": "data/reference.tsv",
             "dialect": {
                 "delimiter": "\t",
@@ -56,7 +56,7 @@
         {
             "encoding": "UTF-8",
             "format": "csv",
-            "name": "Name",
+            "name": "name",
             "path": "data/name.tsv",
             "dialect": {
                 "delimiter": "\t",
@@ -246,7 +246,7 @@
         {
             "encoding": "UTF-8",
             "format": "csv",
-            "name": "NameRel",
+            "name": "namerel",
             "path": "data/namerel.tsv",
             "dialect": {
                 "delimiter": "\t",
@@ -298,14 +298,14 @@
                     {
                         "fields": "nameID",
                         "reference": {
-                            "resource": "Name",
+                            "resource": "name",
                             "fields": "ID"
                         }
                     },
                     {
                         "fields": "relatedNameID",
                         "reference": {
-                            "resource": "Name",
+                            "resource": "name",
                             "fields": "ID"
                         }
                     }
@@ -316,7 +316,7 @@
         {
             "encoding": "UTF-8",
             "format": "csv",
-            "name": "Taxon",
+            "name": "taxon",
             "path": "data/taxon.tsv",
             "dialect": {
                 "delimiter": "\t",
@@ -492,21 +492,21 @@
                     {
                         "fields": "parentID",
                         "reference": {
-                            "resource": "Taxon",
+                            "resource": "taxon",
                             "fields": "ID"
                         }
                     },
                     {
                         "fields": "nameID",
                         "reference": {
-                            "resource": "Name",
+                            "resource": "name",
                             "fields": "ID"
                         }
                     },
                     {
                         "fields": "referenceID",
                         "reference": {
-                            "resource": "Reference",
+                            "resource": "reference",
                             "fields": "ID"
                         }
                     }
@@ -517,7 +517,7 @@
         {
             "encoding": "UTF-8",
             "format": "csv",
-            "name": "Synonym",
+            "name": "synonym",
             "path": "data/synonym.tsv",
             "dialect": {
                 "delimiter": "\t",
@@ -560,14 +560,14 @@
                     {
                         "fields": "taxonID",
                         "reference": {
-                            "resource": "Taxon",
+                            "resource": "taxon",
                             "fields": "ID"
                         }
                     },
                     {
                         "fields": "nameID",
                         "reference": {
-                            "resource": "Name",
+                            "resource": "name",
                             "fields": "ID"
                         }
                     }
@@ -578,7 +578,7 @@
         {
             "encoding": "UTF-8",
             "format": "csv",
-            "name": "Description",
+            "name": "description",
             "path": "data/description.tsv",
             "dialect": {
                 "delimiter": "\t",
@@ -806,14 +806,14 @@
                     {
                         "fields": "taxonID",
                         "reference": {
-                            "resource": "Taxon",
+                            "resource": "taxon",
                             "fields": "ID"
                         }
                     },
                     {
                         "fields": "referenceID",
                         "reference": {
-                            "resource": "Reference",
+                            "resource": "reference",
                             "fields": "ID"
                         }
                     }
@@ -824,7 +824,7 @@
         {
             "encoding": "UTF-8",
             "format": "csv",
-            "name": "Distribution",
+            "name": "distribution",
             "path": "data/distribution.tsv",
             "dialect": {
                 "delimiter": "\t",
@@ -883,14 +883,14 @@
                     {
                         "fields": "taxonID",
                         "reference": {
-                            "resource": "Taxon",
+                            "resource": "taxon",
                             "fields": "ID"
                         }
                     },
                     {
                         "fields": "referenceID",
                         "reference": {
-                            "resource": "Reference",
+                            "resource": "reference",
                             "fields": "ID"
                         }
                     }
@@ -901,7 +901,7 @@
         {
             "encoding": "UTF-8",
             "format": "csv",
-            "name": "Media",
+            "name": "media",
             "path": "data/media.tsv",
             "dialect": {
                 "delimiter": "\t",
@@ -975,7 +975,7 @@
                     {
                         "fields": "taxonID",
                         "reference": {
-                            "resource": "Taxon",
+                            "resource": "taxon",
                             "fields": "ID"
                         }
                     }
@@ -986,7 +986,7 @@
         {
             "encoding": "UTF-8",
             "format": "csv",
-            "name": "VernacularName",
+            "name": "vernacularname",
             "path": "data/vernacularname.tsv",
             "dialect": {
                 "delimiter": "\t",
@@ -1483,14 +1483,14 @@
                     {
                         "fields": "taxonID",
                         "reference": {
-                            "resource": "Taxon",
+                            "resource": "taxon",
                             "fields": "ID"
                         }
                     },
                     {
                         "fields": "referenceID",
                         "reference": {
-                            "resource": "Reference",
+                            "resource": "reference",
                             "fields": "ID"
                         }
                     }
