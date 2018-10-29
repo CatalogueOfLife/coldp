@@ -1,2 +1,3 @@
 datapackages:
+  - 'datapackage.json'
   - 'http://api.col.plus/datapackage?title=specs&base=https%3A%2F%2Fraw.githubusercontent.com%2FCatalogueOfLife%2Fdatapackage-specs%2Fmaster%2Fdata%2F'
