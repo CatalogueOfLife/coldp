@@ -1,2 +1,2 @@
 datapackages:
-  - 'http://api.col.plus/datapackage?title=specs&base=https%3A%2F%2Fraw.githubusercontent.com%2FCatalogueOfLife%2Fdatapackage-specs%2Fmaster%2Fdata%2F&resource=description.tsv&resource=distribution.tsv&resource=media.tsv&resource=name.tsv&resource=name-rel.tsv&resource=reference.tsv&resource=synonym.tsv&resource=taxon.tsv&resource=vernacular-name.tsv'
+  - 'http://api.col.plus/datapackage?title=specs&base=https%3A%2F%2Fraw.githubusercontent.com%2FCatalogueOfLife%2Fdatapackage-specs%2Fmaster%2Fdata%2F'
