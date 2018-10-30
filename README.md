@@ -1,4 +1,3 @@
-[![goodtables.io](https://goodtables.io/badge/github/CatalogueOfLife/datapackage-specs.svg)](https://goodtables.io/github/CatalogueOfLife/datapackage-specs)
 
 # CoL Data Package Specification
 The recommended exchange format for data to and from the CoL Clearinghouse
@@ -9,7 +8,7 @@ The format is a single ZIP archive that bundles various delimited text files des
 ![schema](schema.png)
 
 
-## Filenames
+## Data Files
 The filename for an entity in the above diagram is a case insensitive version of the class name, any number of ignored hyphens and a known tabular text suffix. The suffix specifies one of the two supported tabular flavours, comma separated or tab separated files:
 
  - `csv`: a comma separated, optionally quoted CSV file as per [RFC 4180](https://tools.ietf.org/html/rfc4180)
@@ -17,20 +16,19 @@ The filename for an entity in the above diagram is a case insensitive version of
  
  Valid examples are `taxon.tsv` or `vernacular-name.csv`
 
-## Character Encoding
-All data should be encoded in UTF-8.
+It is recommended to place all data files in a subfolder called `data`. But having them on the root level is also allowed.
 
-## Frictionless datapackage.json
-CoL provides a [webservice](http://api.col.plus/datapackage?title=specs&base=https%3A%2F%2Fraw.githubusercontent.com%2FCatalogueOfLife%2Fdatapackage-specs%2Fmaster%2Fdata%2F&resource=description.tsv&resource=distribution.tsv&resource=media.tsv&resource=name.tsv&resource=name-rel.tsv&resource=reference.tsv&resource=synonym.tsv&resource=taxon.tsv&resource=vernacular-name.tsv.tsv) returning a rich [tabular datapackage.json](https://frictionlessdata.io/docs/tabular-data-package/) describing the full customizable package. The webservice takes a few parameters to customize the package:
+### Character Encoding
+All files should be encoded in UTF-8.
 
- - title: the human readble title for the dataset
- - resource: list of data filenames included in the package.
- - base: the optional base uri (URL or filesystem) of the directory the files are found under.
- - header: expect header columns in all data files, default=true.
 
 ## metadata.yaml
-A YAML file with basic Dublin Core Key value pair entries.
-TO BE DONE...maybe pass this as a param to the package service instead of title???
+A [YAML file](https://en.wikipedia.org/wiki/YAML) with metadata about the entire dataset should be included. The file consists mostly of key value pairs, see the [comments in metadata.yaml](metadata.yaml) for all available keys.
+
+
+# Data File Columns
+All data files should contain a header row that specifies the name of the columns as given below. In the absence of a header row it is expected that all columns exist in the exact order given below.
+
 
 ## Name
 
@@ -334,4 +332,3 @@ Optional sex of the organism this vernacular name is restricted to.
 
 ### referenceID
 Pointer to the reference that supports this vernacular name. Refers to an existing Reference.ID within this data package.
-

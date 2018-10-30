@@ -1,0 +1,45 @@
+title: The full dataset title
+description: | 
+    An abstract about the content of this dataset.
+    This can be as many paragraphs as you like in literal style YAML.
+
+# list of publishing organisations
+organisation:         
+  - FIN
+  - WorldFish
+  - FAO
+  - IFM-GEOMAR
+  - MNHN
+  - RMCA
+  - NRM
+  - FC-UBC
+  - AUTH
+  - CAFS
+
+# point of contact for questions. Either just a plain email or a name given with email address in angel brackets
+contact: Nicolas Bailly <nbailly@hcmr.gr>
+
+# list of authors and editors.
+# optionally an ORCID can be appended (orcid: prefix required!) to be included in DOI metadata
+authorsAndEditors:
+  - Rainer Froese
+  - Daniel Pauly
+  - Nicolas Bailly orcid:0000-0003-4994-0653
+
+# Any commons license, but preferrably CC0, CC-BY or CC-BY-NC
+license: CC-BY-NC
+
+# version name of this copy
+version: ver. (06/2018)
+
+# release date of this version in ISO YYYY-MM-DD
+released: 2018-06-01      
+
+# link to a website for the dataset if online
+website: https://www.fishbase.org
+
+# URL to large logo image
+logo: https://www.fishbase.de/images/gifs/fblogo_new.gif 
+
+# how to cite the dataset
+citation: Froese R. & Pauly D. (eds) (2018). FishBase (version 06/2018).
