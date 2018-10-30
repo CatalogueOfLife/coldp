@@ -1,5 +1,5 @@
 
-# CoL Data Package Specification
+# CoL Data Package (COLDP) Specification
 The recommended exchange format for data to and from the CoL Clearinghouse
 is a tabular text format with a fixed set of files and columns.
 
