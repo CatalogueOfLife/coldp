@@ -247,7 +247,7 @@
             "encoding": "UTF-8",
             "format": "csv",
             "name": "namerel",
-            "path": "data/namerel.tsv",
+            "path": "data/name-rel.tsv",
             "dialect": {
                 "delimiter": "\t",
                 "doubleQuote": false,
@@ -987,7 +987,7 @@
             "encoding": "UTF-8",
             "format": "csv",
             "name": "vernacularname",
-            "path": "data/vernacularname.tsv",
+            "path": "data/vernacular-name.tsv",
             "dialect": {
                 "delimiter": "\t",
                 "doubleQuote": false,
