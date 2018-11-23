@@ -10,13 +10,16 @@ ID	scientificName	authorship	rank	genus	specificEpithet	infraspecificEpithet	pub
 101	Crepis	L.	genus						botanical			
 102	Leontodon		genus						botanical			
 110	Gundelia	L.	genus						botanical			
-1000	Platycarpha glomerata	(Thunberg) A. P. de Candolle	species						botanical			
-1001	Crepis bakeri	Greene	species						botanical			
-1002	Crepis occidentalis	Nutt.	species						botanical			
-1005	Leontodon anomalus		species						botanical			
-1006	Leontodon taraxacoides	(Vill.) Mérat	species						botanical			
-1006-s1	Leontodon leysseri		species						botanical			
-1006-s2	Leontodon saxatilis		species						botanical			
-1006-s3	Leonida taraxacoida	Vill.	species						botanical			
-1010	Gundelia rosea	L.	species						botanical			
-1011	Gundelia tournefortii	L.	species						botanical			
+1000	Platycarpha glomerata	(Thunberg) A. P. de Candolle	species	Platycarpha	glomerata				botanical			
+1001	Crepis bakeri	Greene	species	Crepis	bakeri		greene1895	73	botanical		https://beta.ipni.org/n/69325-2	
+1002	Crepis occidentalis	Nutt.	species	Crepis	occidentalis				botanical			
+1005	Leontodon anomalus		species	Leontodon	anomalus				botanical			
+1006	Leontodon taraxacoides	(Vill.) Mérat	species	Leontodon	taraxacoides				botanical			
+1006-s1	Leontodon leysseri		species	Leontodon	leysseri				botanical			
+1006-s2	Leontodon saxatilis		species	Leontodon	saxatilis				botanical			
+1006-s3	Leonida taraxacoida	Vill.	species	Leonida	taraxacoida				botanical			
+1010	Gundelia rosea	L.	species	Gundelia	rosea				botanical			
+1011	Gundelia tournefortii	L.	species	Gundelia	tournefortii				botanical			
+1001a	Crepis bakeri subsp. bakeri		subspecies	Crepis	bakeri	bakeri			botanical			
+1001b	Crepis bakeri subsp. cusickii	(Eastw.) Babc. & Stebbins	subspecies	Crepis	bakeri	cusickii	publishedInID	publishedInPage	botanical			
+1001c	Crepis bakeri subsp. idahoensis	Babc. & Stebbins	subspecies	Crepis	bakeri	idahoensis	publishedInID	publishedInPage	botanical			
