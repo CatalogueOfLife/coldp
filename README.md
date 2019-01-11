@@ -7,6 +7,40 @@ The format is a single ZIP archive that bundles various delimited text files des
 
 ![schema](schema.png)
 
+## Feature Comparison
+
+The ColDP format was developed to overcome limitations that existed in previously used formats used to share taxonomic information, namely [Darwin Core Archives](https://dwc.tdwg.org/text/) and the Catalogue of Life submission format also known as [ACEF](http://www.catalogueoflife.org/content/contributing-your-data#ACEF) (Annual Checklist Exchange Format). The following table provides an overview of different features supported in those 3 formats:
+
+Feature|ACEF|DwC-A|ColDP
+ --- |:---:| :---:| :---:
+Linnean classification (KPCOFG)|x|x|x
+Extended Linnean classification (subranks)|-|-|x
+Flexible Parent-child classification|-|x|x
+Unrestricted ranks|-|x|x
+Higher taxon details|-|x|x
+Infraspecific taxa|x|x|x
+Nested infraspecific taxa|-|x|x
+Basionyms|-|x|x
+Synonyms|x|x|x
+Synonyms for higher taxa|-|x|x
+Name identifier|-|x|x
+Nomenclatural status|x|x|x
+Fossils/extinction flags|x|x|x
+Name & taxon separation|-|-|x
+Structured references|x|-|x
+Nomenclatural relations|-|-|x
+Type species|-|x|x
+Type specimen|-|x|*
+Taxon concepts|-|x|x
+Taxon concept relations|-|x|*
+Vernacular names|x|x|x
+Structured distributions|x|x|x
+Taxon descriptions|-|x|x
+Multimedia metadata|-|x|x
+
+ - `+` = supported
+ - `-` = not supported
+ - `*` = not yet supported but expected soon
 
 ## Data Files
 The filename for an entity in the above diagram is a case insensitive version of the class name, any number of ignored hyphens and a known tabular text suffix. The suffix specifies one of the two supported tabular flavours, comma separated or tab separated files:
