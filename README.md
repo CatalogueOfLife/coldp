@@ -7,7 +7,7 @@ The format is a single ZIP archive that bundles various delimited text files des
 
 ![schema](schema.png)
 
-## Feature Comparison
+## Format Comparison
 
 The ColDP format was developed to overcome limitations that existed in previously used formats used to share taxonomic information, namely [Darwin Core Archives](https://dwc.tdwg.org/text/) and the Catalogue of Life submission format also known as [ACEF](http://www.catalogueoflife.org/content/contributing-your-data#ACEF) (Annual Checklist Exchange Format). The following table provides an overview of different features supported in those 3 formats:
 
