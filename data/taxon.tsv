@@ -18,3 +18,5 @@ ID	parentID	nameID	provisional	accordingTo	accordingToID	accordingToDate	fossil	
 1001a	1001	1001a	false				false	true	terrestrial	https://en.wikipedia.org/wiki/Crepis_bakeri					Asteraceae								Plantae
 1001b	1001	1001b	false				false	true	terrestrial	https://en.wikipedia.org/wiki/Crepis_bakeri					Asteraceae								Plantae
 1001c	1001	1001c	false				false	true	terrestrial	https://en.wikipedia.org/wiki/Crepis_bakeri					Asteraceae								Plantae
+fake	1	fake	true	M.Döring	0000-0001-7757-1889	2018	false	true	terrestrial,brackish	https://herbaria.plants.ox.ac.uk/bol/plants400/profiles/OP/Paulownia	unclear classification												
+hybrid	1	hybrid	false	Shin Vac		2003-03-21	true	false	terrestrial,freshwater	link	my favorite hybrid												
