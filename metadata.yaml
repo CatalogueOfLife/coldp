@@ -1,4 +1,4 @@
-title: The full dataset title
+title: ColDP Example. The full dataset title
 description: | 
     An abstract about the content of this dataset.
     This can be as many paragraphs as you like in literal style YAML.
@@ -17,12 +17,12 @@ organisations:
   - CAFS
 
 # point of contact for questions. Either just a plain email or a name given with email address in angel brackets
-contact: Nicolas Bailly <nbailly@hcmr.gr>
+contact: Markus Döring <markus@mailinator.com>
 
 # list of authors and editors.
 # optionally an ORCID can be appended (orcid: prefix required!) to be included in DOI metadata
 authorsAndEditors:
-  - Rainer Froese
+  - Markus Döring orcid:0000-0001-7757-1889
   - Daniel Pauly
   - Nicolas Bailly orcid:0000-0003-4994-0653
 
