@@ -43,25 +43,30 @@ Multimedia metadata|-|x|x
  - `*` = not yet supported but expected soon
 
 ## Data Files
-The filename for an entity in the above diagram is a case insensitive version of the class name, any number of ignored hyphens and a known tabular text suffix. The suffix specifies one of the two supported tabular flavours, comma separated or tab separated files:
+The filename for an entity in the above diagram is a case insensitive version of the class name, any number of ignored hyphens or underscores and a known tabular text suffix. 
+The suffix specifies one of the two supported tabular flavours, comma separated or tab separated files:
 
  - `csv`: a comma separated, optionally quoted CSV file as per [RFC 4180](https://tools.ietf.org/html/rfc4180)
  - `tsv`, `tab` or `txt`: indicates a tab seperated file without quoting
  
- Valid examples are `taxon.tsv` or `vernacular-name.csv`
+ Valid examples are `Taxon.tsv` or `vernacular-name.csv`
 
-It is recommended to place all data files in a subfolder called `data`. But having them on the root level is also allowed.
+It is recommended to place all data files in a subfolder called `data`, but having them on the root level is allowed.
 
 ### Character Encoding
 All files should be encoded in UTF-8.
 
 
 ## metadata.yaml
-A [YAML file](https://en.wikipedia.org/wiki/YAML) with metadata about the entire dataset should be included. The file consists mostly of key value pairs, see the [comments in metadata.yaml](metadata.yaml) for all available keys.
+A [YAML file](https://en.wikipedia.org/wiki/YAML) with metadata about the entire dataset should be included. 
+The file consists mostly of key value pairs, see the [comments in metadata.yaml](metadata.yaml) for all available keys.
+Additional entries to the YAML file is allowed to express non standard properties.
 
 
 # Data File Columns
-All data files should contain a header row that specifies the name of the columns as given below. In the absence of a header row it is expected that all columns exist in the exact order given below.
+All data files should contain a header row that specifies the name of the columns as given below. 
+In the absence of a header row it is expected that all columns exist in the exact order given below.
+With headers given it is allowed to share additional columns which are not part of the standard as listed below.
 
 
 ## Name
@@ -161,10 +166,12 @@ A flag indicating that the taxon is only provisionally accepted and should be ha
 
 ### accordingTo
 The latest scrutinizer who reviewed the taxonomic concept.
+In case of multiple scrutinizers concatenate their names with a semicolon.
 
 ### accordingToID
 An identifier for the latest scrutinizer who reviewed the taxonomic concept.
 Recommended are [ORCID identifier](https://orcid.org/about/) which can be used inside DOI metadata of the CoL.
+In case of multiple scrutinizers concatenate the ORCIDs with a semicolon in the same order as the scrutinizers above.
 
 ### accordingToDate 
 type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date) 

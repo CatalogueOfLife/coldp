@@ -1,4 +1,6 @@
 title: ColDP Example. The full dataset title
+# a short, hopefully unique name for the dataset
+alias: ColDP Example
 description: | 
     An abstract about the content of this dataset.
     This can be as many paragraphs as you like in literal style YAML.
