@@ -250,12 +250,13 @@ If parentID is given this field is ignored.
 
 ## Synonym
 A synonymous name for a taxon.
+Note that the same name can be linked to mulitple taxa by having several Synonym records to model pro parte synonyms.
+
+### nameID 
+Pointer to the synonymous name referring to an existing Name.ID within this data package.
 
 ### taxonID
 Pointer to the taxon that this synonym is used for. For pro parte synonyms with multiple accepted names several synonym records sharing the same name but having different taxonIDs should be created. Refers to an existing Taxon.ID within this data package.
-
-### nameID 
-Pointer to the reference that is the source of this description. Refers to an existing Reference.ID within this data package.
 
 ### status 
 type: [enum](http://api.col.plus/vocab/taxonomicstatus)
