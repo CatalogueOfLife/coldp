@@ -277,15 +277,859 @@ Taxonomic remarks
 
 
 ## Reference
+Structured bibliographic references with a unique id to refer to from other entities.
+References can be given in 3 ways of different degree of atomization that are not mutually exclusive.
+The main reference file contains a full citation and 4 Dublin Core based properties that are also used in ACEF.
 
 ### ID  
 ### citation
+Full bibliographic citation as one single string.
 ### author
 ### title
-### year INTEGER
+### year
 ### source
 
+## Reference JSON-CSL
+In addition to the main reference file a `reference.json` file can be added to provide a JSON array of highly structured references
+in the [CSL-JSON](https://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html) format, e.g. as provided by CrossRef:
+```
+curl --location --silent --header "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1126/science.169.3946.635
+```
 
+The `id` field in each record of the array must correspond to a Reference record with the same `ID` in the CSV file.
+
+### CSL-JSON example
+
+```
+[
+{  
+   "indexed":{  
+      "date-parts":[  
+         [  
+            2019,
+            2,
+            16
+         ]
+      ],
+      "date-time":"2019-02-16T13:21:45Z",
+      "timestamp":1550323305641
+   },
+   "reference-count":46,
+   "publisher":"Oxford University Press (OUP)",
+   "content-domain":{  
+      "domain":[  
+
+      ],
+      "crossmark-restriction":false
+   },
+   "published-print":{  
+      "date-parts":[  
+         [  
+            2016
+         ]
+      ]
+   },
+   "DOI":"10.1093\/database\/baw125",
+   "type":"article-journal",
+   "created":{  
+      "date-parts":[  
+         [  
+            2016,
+            10,
+            3
+         ]
+      ],
+      "date-time":"2016-10-03T08:40:07Z",
+      "timestamp":1475484007000
+   },
+   "page":"baw125",
+   "source":"Crossref",
+   "is-referenced-by-count":12,
+   "title":"The Global Genome Biodiversity Network (GGBN) Data Standard specification",
+   "prefix":"10.1093",
+   "volume":"2016",
+   "author":[  
+      {  
+         "given":"G.",
+         "family":"Droege",
+         "sequence":"first",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"K.",
+         "family":"Barker",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"O.",
+         "family":"Seberg",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"J.",
+         "family":"Coddington",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"E.",
+         "family":"Benson",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"W. G.",
+         "family":"Berendsohn",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"B.",
+         "family":"Bunk",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"C.",
+         "family":"Butler",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"E. M.",
+         "family":"Cawsey",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"J.",
+         "family":"Deck",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"M.",
+         "family":"D\u00f6ring",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"P.",
+         "family":"Flemons",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"B.",
+         "family":"Gemeinholzer",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"A.",
+         "family":"G\u00fcntsch",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"T.",
+         "family":"Hollowell",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"P.",
+         "family":"Kelbert",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"I.",
+         "family":"Kostadinov",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"R.",
+         "family":"Kottmann",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"R. T.",
+         "family":"Lawlor",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"C.",
+         "family":"Lyal",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"J.",
+         "family":"Mackenzie-Dodds",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"C.",
+         "family":"Meyer",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"D.",
+         "family":"Mulcahy",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"S. Y.",
+         "family":"Nussbeck",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"\u00c9.",
+         "family":"O'Tuama",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"T.",
+         "family":"Orrell",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"G.",
+         "family":"Petersen",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"T.",
+         "family":"Robertson",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"C.",
+         "family":"S\u00f6hngen",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"J.",
+         "family":"Whitacre",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"J.",
+         "family":"Wieczorek",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"P.",
+         "family":"Yilmaz",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"H.",
+         "family":"Zetzsche",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"Y.",
+         "family":"Zhang",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      },
+      {  
+         "given":"X.",
+         "family":"Zhou",
+         "sequence":"additional",
+         "affiliation":[  
+
+         ]
+      }
+   ],
+   "member":"286",
+   "published-online":{  
+      "date-parts":[  
+         [  
+            2016,
+            10,
+            2
+         ]
+      ]
+   },
+   "reference":[  
+      {  
+         "key":"2016100301395315000_2016.0.baw125.1",
+         "DOI":"10.1093\/nar\/gkt928",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.2",
+         "DOI":"10.1371\/journal.pone.0029715",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.3",
+         "DOI":"10.1080\/11263504.2012.740085",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.4",
+         "DOI":"10.1038\/nbt.1823",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.5",
+         "DOI":"10.1101\/SQB.1986.051.01.032",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.6",
+         "DOI":"10.1073\/pnas.74.12.5463",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.7",
+         "DOI":"10.1016\/j.molcel.2015.05.004",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.8",
+         "unstructured":"Lav\u00edn Trueba J.L. Aransay A.M. (2016) The high-throughput sequencing technologies triple-W discussion: why use HTS, what is the optimal HTS method to use, and which data analysis workflow to follow. In: Lav\u00edn Trueba J.L. Aransay A.M. (eds.) Field Guidelines for Genetic Experimental Designs in High-Throughput Sequencing. Springer International Publishing. pp. 1\u201312.",
+         "DOI":"10.1007\/978-3-319-31350-4_1",
+         "doi-asserted-by":"crossref"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.9",
+         "first-page":"433",
+         "article-title":"Mitochondrial DNA extraction and sequencing of formalin-fixed archival snake tissue",
+         "volume":"19",
+         "author":"Friedman",
+         "year":"2008",
+         "journal-title":"Mitochondrial DNA"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.10",
+         "first-page":"e2202v1",
+         "article-title":"Greater than X kb: a quantitative assessment of preservation conditions on genomic DNA quality, and a proposed standard for genome-quality DNA",
+         "volume":"4",
+         "author":"Mulcahy",
+         "year":"2016",
+         "journal-title":"PeerJ Preprints"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.11",
+         "DOI":"10.1038\/nature09678",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.12",
+         "DOI":"10.1006\/jmbi.1990.9999",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.13",
+         "doi-asserted-by":"crossref",
+         "first-page":"D15",
+         "DOI":"10.1093\/nar\/gkq1150",
+         "article-title":"The international nucleotide sequence database collaboration",
+         "volume":"3",
+         "author":"Cochrane",
+         "year":"2011",
+         "journal-title":"Nucleic Acids Res"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.14",
+         "doi-asserted-by":"crossref",
+         "first-page":"273",
+         "DOI":"10.1098\/rspb.2007.1290",
+         "article-title":"Character-based DNA barcoding allows discrimination of genera, species and populations in Odonata",
+         "volume":"275",
+         "author":"Rach",
+         "year":"2008",
+         "journal-title":"Proc. R. Soc. B"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.15",
+         "DOI":"10.1007\/s00216-014-8435-y",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.16",
+         "DOI":"10.3897\/zookeys.365.6027",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.17",
+         "DOI":"10.1126\/science.1251385",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.18",
+         "DOI":"10.3897\/zookeys.152.2473",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.19",
+         "first-page":"1",
+         "article-title":"How to tackle the molecular species inventory for an industrialized natio\u2013n\u2014lessons from the first phase of the German Barcode of Life initiative GBOL (2012\u20132015)",
+         "volume":"17",
+         "author":"Geiger",
+         "year":"2016",
+         "journal-title":"Genome"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.20",
+         "DOI":"10.1038\/nature08656",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.21",
+         "unstructured":"Dessauer H.C. Hafner M.S. (1984) Collection of Frozen Tissues: Value,Management, Field and Laboratory Procedures, and Directory of Existing Collections. Association of Systematics Collections: Lawrence."
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.22",
+         "unstructured":"Engstrom M.D. Murphy R.W. Haddrath O. (1990) Sampling vertebrate collections for molecular research: practice and policies. In: Metsger D.A. Byers S.C. (eds), Managing the Modern Herbarium. Elton-Wolf, Vancouver. pp. 315\u2013330."
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.23",
+         "unstructured":"de Vincente M.C. Andersson M.S. (2006) DNA banks\u2014providing novel options for genebanks. Topical Reviews in Agricultural Biodiversity. International Plant Genetic Resources Institute, Rome."
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.24",
+         "unstructured":"OECD (Organisation for economic co-operation and development) (2001) Biological Resource Centres\u2014Underpinning the future of life sciences and biotechnology. http:\/\/www.oecd.org\/sti\/biotech\/2487422.pdf."
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.25",
+         "unstructured":"OECD (Organisation for economic co-operation and development) (2007) Best practice guidelines for biological resource centres. http:\/\/www.oecd.org\/sti\/biotech\/38777417.pdf."
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.26",
+         "first-page":"47",
+         "article-title":"The Nagoya Protocol on Access to Genetic Resources and the Fair and Equitable Sharing of Benefits Arising from their Utilization to the Convention on Biological Diversity",
+         "volume":"20",
+         "author":"Buck",
+         "year":"2011",
+         "journal-title":"Reciel"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.27",
+         "unstructured":"Butler C. Lyal C. Seberg O. (2015) GGBN creates access and benefit sharing documentation for members. GGBN Newsletter, March 2015. http:\/\/ggbn.org\/docs\/GGBN_March2015_Newsletter_FINAL.pdf."
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.28",
+         "doi-asserted-by":"crossref",
+         "first-page":"1181",
+         "DOI":"10.1038\/ng1007-1181",
+         "article-title":"The NCBI dbGaP database of genotypes and phenotypes",
+         "volume":"39",
+         "author":"Mailman",
+         "year":"2007",
+         "journal-title":"Nat. Genet"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.29",
+         "DOI":"10.1038\/nature09298",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.30",
+         "DOI":"10.1093\/nar\/gkt1211",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.31",
+         "DOI":"10.1038\/nature05874",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.32",
+         "DOI":"10.1002\/cncy.20147",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.33",
+         "DOI":"10.1158\/1055-9965.EPI-09-1268",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.34",
+         "DOI":"10.1089\/bio.2012.0012",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.35",
+         "DOI":"10.1089\/bio.2011.0035",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.36",
+         "first-page":"277",
+         "article-title":"Can biospecimen science expedite the ex situ conservation of plants in megadiverse countries? A focus on the flora of brazil",
+         "volume":"34",
+         "author":"Harding",
+         "year":"2013",
+         "journal-title":"Crit. Rev. Plant. Sci"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.37",
+         "DOI":"10.1038\/nbt1360",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.38",
+         "DOI":"10.1016\/j.resmic.2010.02.005",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.39",
+         "DOI":"10.1089\/bio.2010.0029",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.40",
+         "first-page":"552",
+         "article-title":"International networking of large amounts of primary biodiversity data. Proceedings Informatik 2009 - Im Focus das Leben",
+         "volume":"26",
+         "author":"Holetschek",
+         "year":"2009",
+         "journal-title":"Lect. Notes Inf"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.41",
+         "DOI":"10.1089\/omi.2008.0A10",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.42",
+         "DOI":"10.5301\/JBM.2012.9718",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.43",
+         "DOI":"10.1089\/bio.2012.0033",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.44",
+         "DOI":"10.1371\/journal.pone.0102623",
+         "doi-asserted-by":"publisher"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.45",
+         "doi-asserted-by":"crossref",
+         "first-page":"e014224.",
+         "DOI":"10.1371\/journal.pone.0142240",
+         "article-title":"B-HIT\u2014a tool for harvesting and indexing biodiversity data",
+         "volume":"10",
+         "author":"Kelbert",
+         "year":"2015",
+         "journal-title":"PLoS One"
+      },
+      {  
+         "key":"2016100301395315000_2016.0.baw125.46",
+         "DOI":"10.1089\/bio.2015.0061",
+         "doi-asserted-by":"publisher"
+      }
+   ],
+   "container-title":"Database",
+   "original-title":[  
+
+   ],
+   "language":"en",
+   "link":[  
+      {  
+         "URL":"http:\/\/academic.oup.com\/database\/article-pdf\/doi\/10.1093\/database\/baw125\/8225125\/baw125.pdf",
+         "content-type":"unspecified",
+         "content-version":"vor",
+         "intended-application":"similarity-checking"
+      }
+   ],
+   "deposited":{  
+      "date-parts":[  
+         [  
+            2017,
+            8,
+            25
+         ]
+      ],
+      "date-time":"2017-08-25T02:23:14Z",
+      "timestamp":1503627794000
+   },
+   "score":1.0,
+   "subtitle":[  
+
+   ],
+   "short-title":[  
+
+   ],
+   "issued":{  
+      "date-parts":[  
+         [  
+            2016
+         ]
+      ]
+   },
+   "references-count":46,
+   "alternative-id":[  
+      "10.1093\/database\/baw125"
+   ],
+   "URL":"http:\/\/dx.doi.org\/10.1093\/database\/baw125",
+   "relation":{  
+      "cites":[  
+
+      ]
+   },
+   "ISSN":[  
+      "1758-0463"
+   ],
+   "container-title-short":"Database"
+},
+
+{  
+   "indexed":{  
+      "date-parts":[  
+         [  
+            2019,
+            2,
+            16
+         ]
+      ],
+      "date-time":"2019-02-16T05:39:49Z",
+      "timestamp":1550295589144
+   },
+   "reference-count":0,
+   "publisher":"American Association for the Advancement of Science (AAAS)",
+   "issue":"3946",
+   "content-domain":{  
+      "domain":[  
+
+      ],
+      "crossmark-restriction":false
+   },
+   "published-print":{  
+      "date-parts":[  
+         [  
+            1970,
+            8,
+            14
+         ]
+      ]
+   },
+   "DOI":"10.1126\/science.169.3946.635",
+   "type":"article-journal",
+   "created":{  
+      "date-parts":[  
+         [  
+            2006,
+            10,
+            5
+         ]
+      ],
+      "date-time":"2006-10-05T12:56:56Z",
+      "timestamp":1160053016000
+   },
+   "page":"635-641",
+   "source":"Crossref",
+   "is-referenced-by-count":61,
+   "title":"The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance",
+   "prefix":"10.1126",
+   "volume":"169",
+   "author":[  
+      {  
+         "given":"H. S.",
+         "family":"Frank",
+         "sequence":"first",
+         "affiliation":[  
+
+         ]
+      }
+   ],
+   "member":"221",
+   "container-title":"Science",
+   "original-title":[  
+
+   ],
+   "language":"en",
+   "link":[  
+      {  
+         "URL":"https:\/\/syndication.highwire.org\/content\/doi\/10.1126\/science.169.3946.635",
+         "content-type":"unspecified",
+         "content-version":"vor",
+         "intended-application":"similarity-checking"
+      }
+   ],
+   "deposited":{  
+      "date-parts":[  
+         [  
+            2016,
+            12,
+            23
+         ]
+      ],
+      "date-time":"2016-12-23T19:54:07Z",
+      "timestamp":1482522847000
+   },
+   "score":1.0,
+   "subtitle":[  
+
+   ],
+   "short-title":[  
+
+   ],
+   "issued":{  
+      "date-parts":[  
+         [  
+            1970,
+            8,
+            14
+         ]
+      ]
+   },
+   "references-count":0,
+   "journal-issue":{  
+      "published-print":{  
+         "date-parts":[  
+            [  
+               1970,
+               8,
+               14
+            ]
+         ]
+      },
+      "issue":"3946"
+   },
+   "URL":"http:\/\/dx.doi.org\/10.1126\/science.169.3946.635",
+   "relation":{  
+
+   },
+   "ISSN":[  
+      "0036-8075",
+      "1095-9203"
+   ],
+   "container-title-short":"Science"
+}
+]
+```
+
+## Reference BIBTEX
+Alternatively to CSL-JSON a [BibTex](http://www.bibtex.org/Format/) file `reference.bib` can be given to provide highly structured citations.
+The id field following the curly opening bracket must correspond to a record ID from the reference.csv file.
+
+
+### Bibtex example
+```
+ @article{Droege_2016, 
+ 	title={The Global Genome Biodiversity Network (GGBN) Data Standard specification}, 
+ 	volume={2016}, 
+ 	ISSN={1758-0463}, 
+ 	url={http://dx.doi.org/10.1093/database/baw125}, 
+ 	DOI={10.1093/database/baw125}, 
+ 	journal={Database}, 
+ 	publisher={Oxford University Press (OUP)}, 
+ 	author={Droege, G. and Barker, K. and Seberg, O. and Coddington, J. and Benson, E. and Berendsohn, W. G. and Bunk, B. and Butler, C. and Cawsey, E. M. and Deck, J. and et al.}, 
+ 	year={2016}, 
+ 	pages={baw125}
+}
+
+@article{Frank_1970, 
+ 	title     = {The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance}, 
+ 	volume    = {169}, 
+ 	ISSN      = {1095-9203}, 
+ 	url       = {http://dx.doi.org/10.1126/science.169.3946.635}, 
+ 	DOI       = {10.1126/science.169.3946.635}, 
+ 	number    = {3946}, 
+ 	journal   = {Science}, 
+ 	publisher = {American Association for the Advancement of Science (AAAS)}, 
+ 	author    = {Frank, H. S.}, 
+ 	year      = {1970}, 
+ 	month     = {Aug}, 
+ 	pages     = {635–641}
+}
+```
 
 ## Description
 
@@ -294,7 +1138,9 @@ Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
 ### category ENUM
 ### description 
-### language CHARACTER3
+### language
+ISO 3 letter code
+
 ### referenceID
 Pointer to the reference that is the source of this description. Refers to an existing Reference.ID within this data package.
 
