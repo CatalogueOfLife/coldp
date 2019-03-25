@@ -206,6 +206,14 @@ If parentID is given this field is ignored.
 The genus the taxon is classified in.
 If parentID is given this field is ignored.
 
+### subtribe
+The subtribe the taxon is classified in.
+If parentID is given this field is ignored.
+
+### tribe
+The tribe the taxon is classified in.
+If parentID is given this field is ignored.
+
 ### subfamily
 The subfamily the taxon is classified in.
 If parentID is given this field is ignored.
