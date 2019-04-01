@@ -71,50 +71,55 @@ With headers given it is allowed to share additional columns which are not part 
 
 ## Name
 
-### ID
+#### ID
 Unique name identifier that is referred to elsewhere via `nameID`.
 
-### scientificName
+#### scientificName
 Required scientific name excluding the authorship
 
-### authorship
+#### authorship
 Authorship of the scientificName
 
-### rank
+#### rank
 type: [rank enum](http://api.col.plus/vocab/rank)
 
 The rank of the name preferrably given in case insensitive english. The recommended vocabulary is included in [rank_enum](http://api.col.plus/vocab/rank).
 
-### genus
+#### genus
 The genus part of a bi/trinomial
 
-### specificEpithet
+#### specificEpithet
 The specific epithet in case of bi/trinomials.
 
-### infraspecificEpithet
+#### infraspecificEpithet
 The infraspecific epithet in case of bi/trinomials.
 
-### publishedInID
+#### publishedInID
 A referenceID pointing to the Reference table indicating the original publication of the name in its given combination
 
-### publishedInPage
+#### publishedInPage
 The exact page number within the referenced reference that the original publication of the name in its given combination starts.
 
-### code
+#### code
 type: [code enum](http://api.col.plus/vocab/nomCode)
 
 The nomenclatural code the name falls under.
 
-### status
+#### original
+type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
+If true indicates an original name, i.e. a protonym/basionym.
+False for all subsequent combinations.
+
+#### status
 type: [code enum](http://api.col.plus/vocab/nomStatus)
 
 The broad nomenclatural status of the name.
 For the exact status note, e.g. *nomen nudum*, the remarks field should additionally be used
 
-### link
+#### link
 A link to a webpage provided by the source depicting the name.
 
-### remarks
+#### remarks
 Additional nomenclatural remarks about the name. Often indicating its status or relevant rules in the code.
 
 
@@ -123,21 +128,21 @@ Additional nomenclatural remarks about the name. Often indicating its status or 
 ## NameRel
 A directed nomenclatural name relation.
 
-### nameID 
+#### nameID 
 The name this relation originates from.
 
-### relatedNameID
+#### relatedNameID
 The name this relation relates to.
 
-### type
+#### type
 type: [enum](http://api.col.plus/vocab/nomreltype)
 
 The kind of relation.
 
-### publishedInID
+#### publishedInID
 The reference or nomenclatural act where this nomenclatural relation was established.
 
-### remarks
+#### remarks
 Remarks about the relation.
 
 
@@ -146,111 +151,111 @@ Remarks about the relation.
 ## Taxon
 An accepted name with a taxonomic classification given either as a parent-child relation or as a flat, denormalized record.
 
-### ID
+#### ID
 Unique taxon identifier that is referred to elsewhere via `taxonID`.
 
-### parentID
+#### parentID
 The direct parent in the classification. This is the preferred way of exchanging a hierarchy and takes precedence over any classification given in the denormalized fields.
 
-### nameID
+#### nameID
 Pointer to the accepted name referring to an existing Name.ID within this data package.
 
-### referenceID
+#### referenceID
 A comma concatenated list of reference IDs supporting the taxonomic concept.
 Each ID must refer to an existing Reference.ID within this data package.
 
-### provisional
+#### provisional
 type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
 
 A flag indicating that the taxon is only provisionally accepted and should be handled with care.
 
-### accordingTo
+#### accordingTo
 The latest scrutinizer who reviewed the taxonomic concept.
 In case of multiple scrutinizers concatenate their names with a semicolon.
 
-### accordingToID
+#### accordingToID
 An identifier for the latest scrutinizer who reviewed the taxonomic concept.
 Recommended are [ORCID identifier](https://orcid.org/about/) which can be used inside DOI metadata of the CoL.
 In case of multiple scrutinizers concatenate the ORCIDs with a semicolon in the same order as the scrutinizers above.
 
-### accordingToDate 
+#### accordingToDate 
 type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date) 
 
 The date when the taxonomic concept was last reviewed.
 
-### fossil
+#### fossil
 type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
 
 Flag indicating that the taxon existed pre holocene in the fossil record.
 
-### recent 
+#### recent 
 type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
 
 Flag indicating that the taxon existed during the holocene. This includes species that died out very recently. A taxon can both be recent and fossil.
 
-### lifezone
+#### lifezone
 type: [enum[]](http://api.col.plus/vocab/lifezone)
 A comma delimited list of lifezones this taxon is known to exist in.
 
-### link
+#### link
 A link to a webpage provided by the source depicting the taxon.
 
-### remarks
+#### remarks
 Any further taxonomic remarks.
 
-### subgenus
+#### subgenus
 The subgenus the taxon is classified in.
 If parentID is given this field is ignored.
 
-### genus
+#### genus
 The genus the taxon is classified in.
 If parentID is given this field is ignored.
 
-### subtribe
+#### subtribe
 The subtribe the taxon is classified in.
 If parentID is given this field is ignored.
 
-### tribe
+#### tribe
 The tribe the taxon is classified in.
 If parentID is given this field is ignored.
 
-### subfamily
+#### subfamily
 The subfamily the taxon is classified in.
 If parentID is given this field is ignored.
 
-### family
+#### family
 The family the taxon is classified in.
 If parentID is given this field is ignored.
 
-### superfamily
+#### superfamily
 The superfamily the taxon is classified in.
 If parentID is given this field is ignored.
 
-### suborder
+#### suborder
 The suborder the taxon is classified in.
 If parentID is given this field is ignored.
 
-### order
+#### order
 The order the taxon is classified in.
 If parentID is given this field is ignored.
 
-### subclass
+#### subclass
 The subclass the taxon is classified in.
 If parentID is given this field is ignored.
 
-### class
+#### class
 The class the taxon is classified in.
 If parentID is given this field is ignored.
 
-### subphylum
+#### subphylum
 The subphylum the taxon is classified in.
 If parentID is given this field is ignored.
 
-### phylum
+#### phylum
 The phylum the taxon is classified in.
 If parentID is given this field is ignored.
 
-### kingdom
+#### kingdom
 The kingdom the taxon is classified in.
 If parentID is given this field is ignored.
 
@@ -260,18 +265,18 @@ If parentID is given this field is ignored.
 A synonymous name for a taxon.
 Note that the same name can be linked to mulitple taxa by having several Synonym records to model pro parte synonyms.
 
-### nameID 
+#### nameID 
 Pointer to the synonymous name referring to an existing Name.ID within this data package.
 
-### taxonID
+#### taxonID
 Pointer to the taxon that this synonym is used for. For pro parte synonyms with multiple accepted names several synonym records sharing the same name but having different taxonIDs should be created. Refers to an existing Taxon.ID within this data package.
 
-### status 
+#### status 
 type: [enum](http://api.col.plus/vocab/taxonomicstatus)
 
 The kind of synonym. One of *synonym*, *ambiguous synonym* or *misapplied*.
 
-### remarks
+#### remarks
 Taxonomic remarks
 
 
@@ -281,13 +286,13 @@ Structured bibliographic references with a unique id to refer to from other enti
 References can be given in 3 ways of different degree of atomization that are not mutually exclusive.
 The main reference file contains a full citation and 4 Dublin Core based properties that are also used in ACEF.
 
-### ID  
-### citation
+#### ID  
+#### citation
 Full bibliographic citation as one single string.
-### author
-### title
-### year
-### source
+#### author
+#### title
+#### year
+#### source
 
 ## Reference JSON-CSL
 In addition to the main reference file a `reference.json` file can be added to provide a JSON array of highly structured references
@@ -298,7 +303,7 @@ curl --location --silent --header "Accept: application/vnd.citationstyles.csl+js
 
 The `id` field in each record of the array must correspond to a Reference record with the same `ID` in the CSV file.
 
-### CSL-JSON example
+#### CSL-JSON example
 
 ```
 [
@@ -1100,7 +1105,7 @@ Alternatively to CSL-JSON a [BibTex](http://www.bibtex.org/Format/) file `refere
 The id field following the curly opening bracket must correspond to a record ID from the reference.csv file.
 
 
-### Bibtex example
+#### Bibtex example
 ```
  @article{Droege_2016, 
  	title={The Global Genome Biodiversity Network (GGBN) Data Standard specification}, 
@@ -1133,15 +1138,15 @@ The id field following the curly opening bracket must correspond to a record ID 
 
 ## Description
 
-### taxonID 
+#### taxonID 
 Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
-### category ENUM
-### description 
-### language
+#### category ENUM
+#### description 
+#### language
 ISO 3 letter code
 
-### referenceID
+#### referenceID
 Pointer to the reference that is the source of this description. Refers to an existing Reference.ID within this data package.
 
 
@@ -1149,22 +1154,22 @@ Pointer to the reference that is the source of this description. Refers to an ex
 ## Distribution
 A structured distribution record for a taxon in a given area.
 
-### taxonID 
+#### taxonID 
 Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
-### area 
+#### area 
 The geographic area this distribution record is about.
 
-### gazetteer
+#### gazetteer
 type: [enum](http://api.col.plus/vocab/gazetteer)
 
 The geographic gazetteer the area is defined in.
 
-### status 
+#### status 
 type: [enum](http://api.col.plus/vocab/distributionstatus)
 Distribution status.
 
-### referenceID
+#### referenceID
 Pointer to the reference that supports this distribution. Refers to an existing Reference.ID within this data package.
 
 
@@ -1172,30 +1177,30 @@ Pointer to the reference that supports this distribution. Refers to an existing 
 ## Media
 Multimedia items for a taxon such as an image, audio or video.
 
-### taxonID 
+#### taxonID 
 Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
-### url 
+#### url 
 The URL that resolves to the media item itself, not a webpage that depicts it.
 
-### type
+#### type
 The MIME-type of the media item the url identifies.
 Preferrably the full type/subtype combination, e.g `image/jpeg`, but the primary type alone is sufficient (`image`, `video`, `audio`).
 
-### title
+#### title
 Optional title for the item.
 
-### created
+#### created
 type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date) 
 Date the media item was recorded.
 
-### creator
+#### creator
 Author of the media item.
 
-### license
+#### license
 type: [license](http://api.col.plus/vocab/license) 
 
-### link
+#### link
 Optional webpage from the source this media item is shown on.
 
 
@@ -1203,28 +1208,28 @@ Optional webpage from the source this media item is shown on.
 ## VernacularName
 A vernacular or common name for a taxon.
 
-### taxonID 
+#### taxonID 
 Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
-### name 
+#### name 
 The vernacular name in the original script.
 
-### transliteration
+#### transliteration
 An optional transliteration of the verncular name into the latin script.
 
-### language
+#### language
 Language of the vernacular name given as an ISO 3 letter code.
 
-### country CHARACTER2
+#### country CHARACTER2
 Country this vernacular name is used in given as an ISO 2 letter code.
 
-### lifeStage
+#### lifeStage
 Optional life stage of the organism this vernacular name is restricted to.
 
-### sex
+#### sex
 type: [enum](http://api.col.plus/vocab/sex)
 
 Optional sex of the organism this vernacular name is restricted to.
 
-### referenceID
+#### referenceID
 Pointer to the reference that supports this vernacular name. Refers to an existing Reference.ID within this data package.

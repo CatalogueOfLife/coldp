@@ -654,7 +654,7 @@
         </location>
         <size>
             <width>174.00</width>
-            <height>280.00</height>
+            <height>300.00</height>
         </size>
         <zorder>4</zorder>
         <SQLField>
@@ -715,6 +715,11 @@
             <uid><![CDATA[73B2D406-5E7F-43AD-A6AB-E6C8627DAAAD]]></uid>
         </SQLField>
         <SQLField>
+            <name><![CDATA[original]]></name>
+            <type><![CDATA[BOOLEAN]]></type>
+            <uid><![CDATA[F4EA6016-2896-41A2-9461-B26C2A5653C7]]></uid>
+        </SQLField>
+        <SQLField>
             <name><![CDATA[code]]></name>
             <type><![CDATA[ENUM]]></type>
             <uid><![CDATA[D1AC0C9C-9DB1-4477-AD38-F7D0252A1368]]></uid>
@@ -753,17 +758,17 @@
         <overviewPanelHidden><![CDATA[0]]></overviewPanelHidden>
         <pageBoundariesVisible><![CDATA[0]]></pageBoundariesVisible>
         <PageGridVisible><![CDATA[0]]></PageGridVisible>
-        <RightSidebarWidth><![CDATA[1603.000000]]></RightSidebarWidth>
+        <RightSidebarWidth><![CDATA[1254.000000]]></RightSidebarWidth>
         <sidebarIndex><![CDATA[5]]></sidebarIndex>
         <snapToGrid><![CDATA[0]]></snapToGrid>
         <SourceSidebarWidth><![CDATA[0.000000]]></SourceSidebarWidth>
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
         <windowHeight><![CDATA[970.000000]]></windowHeight>
-        <windowLocationX><![CDATA[240.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[75.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{91.5, 29.5}]]></windowScrollOrigin>
-        <windowWidth><![CDATA[1604.000000]]></windowWidth>
+        <windowLocationX><![CDATA[189.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[57.000000]]></windowLocationY>
+        <windowScrollOrigin><![CDATA[{70, 1}]]></windowScrollOrigin>
+        <windowWidth><![CDATA[1255.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>
     <containerName><![CDATA[model controller orginal container]]></containerName>
