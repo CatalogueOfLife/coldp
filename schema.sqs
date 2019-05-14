@@ -655,8 +655,8 @@
             <y>188.00</y>
         </location>
         <size>
-            <width>180.00</width>
-            <height>320.00</height>
+            <width>186.00</width>
+            <height>380.00</height>
         </size>
         <zorder>4</zorder>
         <SQLField>
@@ -695,9 +695,24 @@
             <uid><![CDATA[FF1573DE-F6AB-433E-8455-7D450FE27CD0]]></uid>
         </SQLField>
         <SQLField>
+            <name><![CDATA[infragenericEpithet]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[70690B3F-1709-455D-8736-91A7CE951F86]]></uid>
+        </SQLField>
+        <SQLField>
             <name><![CDATA[infraspecificEpithet]]></name>
             <type><![CDATA[TEXT]]></type>
             <uid><![CDATA[519135C7-0B7C-4B41-A915-088A1463C70F]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[cultivarEpithet]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[9FC6CC72-52C5-42DC-847D-6BC946D7997C]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[appendedPhrase]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[D99B6B17-0E6C-4FF0-BB2D-411782CEBEF2]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[publishedInID]]></name>
@@ -773,9 +788,9 @@
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
         <windowHeight><![CDATA[970.000000]]></windowHeight>
-        <windowLocationX><![CDATA[303.000000]]></windowLocationX>
+        <windowLocationX><![CDATA[1040.000000]]></windowLocationX>
         <windowLocationY><![CDATA[87.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{4, 13}]]></windowScrollOrigin>
+        <windowScrollOrigin><![CDATA[{19.5, 18}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1501.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>

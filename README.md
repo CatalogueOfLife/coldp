@@ -92,8 +92,17 @@ The genus part of a bi/trinomial
 #### specificEpithet
 The specific epithet in case of bi/trinomials.
 
+#### infragenericEpithet
+The infrageneric epithet in case of bi/trinomials. In zoological names often the subgenus.
+
 #### infraspecificEpithet
 The infraspecific epithet in case of bi/trinomials.
+
+#### cultivarEpithet
+The name of the cultivar for name governed by the cultivar code.
+
+#### appendedPhrase
+An optional, unrestricted, lose phrase appended to the name which is not covered by the existing attributes with strict semantics.
 
 #### publishedInID
 A referenceID pointing to the Reference table indicating the original publication of the name in its given combination
