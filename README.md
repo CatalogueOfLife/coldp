@@ -70,6 +70,7 @@ With headers given it is allowed to share additional columns which are not part 
 
 
 ## Name
+See [NAMES.md](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md) for examples and rationales.
 
 #### ID
 Unique name identifier that is referred to elsewhere via `nameID`.
@@ -100,6 +101,9 @@ A referenceID pointing to the Reference table indicating the original publicatio
 #### publishedInPage
 The exact page number within the referenced reference that the original publication of the name in its given combination starts.
 
+#### publishedInYear
+The effective year the name was published.
+
 #### code
 type: [code enum](http://api.col.plus/vocab/nomCode)
 
@@ -127,6 +131,7 @@ Additional nomenclatural remarks about the name. Often indicating its status or 
 
 ## NameRel
 A directed nomenclatural name relation.
+See [NAMES.md#name-relations](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md#name-relations) for examples.
 
 #### nameID 
 The name this relation originates from.
@@ -137,7 +142,7 @@ The name this relation relates to.
 #### type
 type: [enum](http://api.col.plus/vocab/nomreltype)
 
-The kind of relation.
+The kind of directed relation.
 
 #### publishedInID
 The reference or nomenclatural act where this nomenclatural relation was established.
