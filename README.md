@@ -301,12 +301,31 @@ References can be given in 3 ways of different degree of atomization that are no
 The main reference file contains a full citation and 4 Dublin Core based properties that are also used in ACEF.
 
 #### ID  
+The local identifier for the reference as used in publishedIn and other fields.
+
 #### citation
-Full bibliographic citation as one single string.
+Full bibliographic citation as one single string as an alternative to the rest of the more structured fields.
+If individual fields are given the full citation can be ignored.
+
 #### author
+The author(s) of the work. If multiple authors use a style that can safely be parsed.
+Recommended is to list authors by comma and prefix their surname with initials.
+If a comma is used to separate surname, firstname please use a semicolon to delimit individual authors.
+
 #### title
+The title of the work. In case of journal articles the article title, not the journal itself.
+
 #### year
+The year of the publication.
+
 #### source
+The title of the journal or book the work was published in. 
+The source should exclude volume, edition, pages and other specifics.
+
+#### details
+All details to locate the work within the source, sometimes also referred to as collation.
+That can include journal volume, edition, pages, pointer to illustrations or anything else.
+
 
 ## Reference JSON-CSL
 In addition to the main reference file a `reference.json` file can be added to provide a JSON array of highly structured references
