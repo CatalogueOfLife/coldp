@@ -89,11 +89,11 @@ The rank of the name preferrably given in case insensitive english. The recommen
 #### genus
 The genus part of a bi/trinomial
 
-#### specificEpithet
-The specific epithet in case of bi/trinomials.
-
 #### infragenericEpithet
 The infrageneric epithet in case of bi/trinomials. In zoological names often the subgenus.
+
+#### specificEpithet
+The specific epithet in case of bi/trinomials.
 
 #### infraspecificEpithet
 The infraspecific epithet in case of bi/trinomials.
@@ -103,6 +103,7 @@ The name of the cultivar for name governed by the cultivar code.
 
 #### appendedPhrase
 An optional, unrestricted, lose phrase appended to the name which is not covered by the existing attributes with strict semantics.
+Can be used for bacterial strain names or temporary placeholder names for unpublished species.
 
 #### publishedInID
 A referenceID pointing to the Reference table indicating the original publication of the name in its given combination
