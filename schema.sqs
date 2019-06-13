@@ -4,8 +4,8 @@
         <name><![CDATA[Distribution]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1184.00</x>
-            <y>583.00</y>
+            <x>1199.00</x>
+            <y>744.00</y>
         </location>
         <size>
             <width>164.00</width>
@@ -137,8 +137,8 @@
         <name><![CDATA[VernacularName]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1162.00</x>
-            <y>713.00</y>
+            <x>1186.00</x>
+            <y>528.00</y>
         </location>
         <size>
             <width>180.00</width>
@@ -460,8 +460,8 @@
         <name><![CDATA[Media]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1195.00</x>
-            <y>368.00</y>
+            <x>1213.00</x>
+            <y>287.00</y>
         </location>
         <size>
             <width>152.00</width>
@@ -793,9 +793,9 @@
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
         <windowHeight><![CDATA[970.000000]]></windowHeight>
-        <windowLocationX><![CDATA[183.000000]]></windowLocationX>
+        <windowLocationX><![CDATA[179.000000]]></windowLocationX>
         <windowLocationY><![CDATA[40.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{0, 52.5}]]></windowScrollOrigin>
+        <windowScrollOrigin><![CDATA[{302.5, 0}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1501.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>

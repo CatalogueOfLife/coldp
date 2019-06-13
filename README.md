@@ -56,7 +56,20 @@ It is recommended to place all data files in a subfolder called `data`, but havi
 ### Character Encoding
 All files should be encoded in UTF-8.
 
-
+### Entity listing:
+ - metadata.yaml
+ - [Name](#name)
+ - [NameRel](#namerel)
+ - [Taxon](#taxon)
+ - [Synonym](#synonym)
+ - [Reference](#reference)
+ - [Reference JSON-CSL](#reference-json-csl)
+ - [Reference BIBTEX](#reference-bibtex)
+ - [Description](#description)
+ - [Distribution](#distribution)
+ - [Media](#media)
+ - [VernacularName](#vernacularname)
+  
 ## metadata.yaml
 A [YAML file](https://en.wikipedia.org/wiki/YAML) with metadata about the entire dataset should be included. 
 The file consists mostly of key value pairs, see the [comments in metadata.yaml](metadata.yaml) for all available keys.
@@ -326,6 +339,12 @@ The source should exclude volume, edition, pages and other specifics.
 #### details
 All details to locate the work within the source, sometimes also referred to as collation.
 That can include journal volume, edition, pages, pointer to illustrations or anything else.
+
+#### doi
+The DOI of the reference
+
+#### link
+A URL link to the reference
 
 
 ## Reference JSON-CSL
