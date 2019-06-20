@@ -1271,10 +1271,13 @@ The vernacular name in the original script.
 An optional transliteration of the verncular name into the latin script.
 
 #### language
-Language of the vernacular name given as an ISO 3 letter code.
+Language of the vernacular name given as an ISO 639 3 letter code.
 
-#### country CHARACTER2
-Country this vernacular name is used in given as an ISO 2 letter code.
+#### country
+Country this vernacular name is used in given as an ISO 3166 2 letter code.
+
+#### area
+Optional area desribing the geographic use of the vernacular name in free text within the given country
 
 #### lifeStage
 Optional life stage of the organism this vernacular name is restricted to.

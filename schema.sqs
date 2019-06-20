@@ -4,8 +4,8 @@
         <name><![CDATA[Distribution]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1199.00</x>
-            <y>744.00</y>
+            <x>1195.00</x>
+            <y>770.00</y>
         </location>
         <size>
             <width>164.00</width>
@@ -142,7 +142,7 @@
         </location>
         <size>
             <width>180.00</width>
-            <height>180.00</height>
+            <height>200.00</height>
         </size>
         <zorder>0</zorder>
         <SQLField>
@@ -179,6 +179,11 @@
             <name><![CDATA[country]]></name>
             <type><![CDATA[CHARACTER(2)]]></type>
             <uid><![CDATA[03323348-B2A9-452D-A8C6-A1349D1F69A9]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[area]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[9EC43FDB-4F33-4E54-8D26-37987F826F20]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[lifeStage]]></name>
@@ -795,7 +800,7 @@
         <windowHeight><![CDATA[970.000000]]></windowHeight>
         <windowLocationX><![CDATA[179.000000]]></windowLocationX>
         <windowLocationY><![CDATA[40.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{302.5, 0}]]></windowScrollOrigin>
+        <windowScrollOrigin><![CDATA[{312.5, 5}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1501.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>
