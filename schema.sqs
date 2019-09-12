@@ -289,8 +289,8 @@
             <y>119.00</y>
         </location>
         <size>
-            <width>176.00</width>
-            <height>560.00</height>
+            <width>207.00</width>
+            <height>580.00</height>
         </size>
         <zorder>1</zorder>
         <SQLField>
@@ -357,14 +357,19 @@
             <uid><![CDATA[3B4A921D-FA7E-4197-A3EA-5687D9FA2B41]]></uid>
         </SQLField>
         <SQLField>
-            <name><![CDATA[fossil]]></name>
+            <name><![CDATA[extinct]]></name>
             <type><![CDATA[BOOLEAN]]></type>
             <uid><![CDATA[C01889D0-606E-4536-BD1C-F07806271A75]]></uid>
         </SQLField>
         <SQLField>
-            <name><![CDATA[recent]]></name>
-            <type><![CDATA[BOOLEAN]]></type>
+            <name><![CDATA[temporalRangeStart]]></name>
+            <type><![CDATA[ENUM]]></type>
             <uid><![CDATA[13CEEC2B-1B15-4778-8E93-F6B39C59CEDB]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[temporalRangeEnd]]></name>
+            <type><![CDATA[ENUM]]></type>
+            <uid><![CDATA[97D291BD-124D-4F11-8FB2-2A8F65722E96]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[lifezone]]></name>
@@ -791,17 +796,17 @@
         <overviewPanelHidden><![CDATA[0]]></overviewPanelHidden>
         <pageBoundariesVisible><![CDATA[0]]></pageBoundariesVisible>
         <PageGridVisible><![CDATA[0]]></PageGridVisible>
-        <RightSidebarWidth><![CDATA[1224.000000]]></RightSidebarWidth>
+        <RightSidebarWidth><![CDATA[1050.000000]]></RightSidebarWidth>
         <sidebarIndex><![CDATA[5]]></sidebarIndex>
         <snapToGrid><![CDATA[0]]></snapToGrid>
         <SourceSidebarWidth><![CDATA[0.000000]]></SourceSidebarWidth>
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
         <windowHeight><![CDATA[970.000000]]></windowHeight>
-        <windowLocationX><![CDATA[179.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[40.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{312.5, 5}]]></windowScrollOrigin>
-        <windowWidth><![CDATA[1501.000000]]></windowWidth>
+        <windowLocationX><![CDATA[252.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[57.000000]]></windowLocationY>
+        <windowScrollOrigin><![CDATA[{357, 216}]]></windowScrollOrigin>
+        <windowWidth><![CDATA[1051.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>
     <containerName><![CDATA[model controller orginal container]]></containerName>

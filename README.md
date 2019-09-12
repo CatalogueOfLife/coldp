@@ -211,15 +211,22 @@ type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date)
 
 The date when the taxonomic concept was last reviewed.
 
-#### fossil
+#### extinct 
 type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
 
-Flag indicating that the taxon existed pre holocene in the fossil record.
+Nullable flag indicating that the taxon is extinct (true) or extant (false). This includes species that died out very recently.
 
-#### recent 
-type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
+#### temporalRangeStart
+type: [enum](http://api.col.plus/vocab/geoTimeSpan)
 
-Flag indicating that the taxon existed during the holocene. This includes species that died out very recently. A taxon can both be recent and fossil.
+Earliest appearance of the taxon in the geological time scale.
+Recommended values are from the official International Commission on Stratigraphy (ICS).
+
+#### temporalRangeEnd
+type: [enum](http://api.col.plus/vocab/geoTimeSpan)
+
+Latest appearance of the taxon in the geological time scale.
+Recommended values are from the official International Commission on Stratigraphy (ICS).
 
 #### lifezone
 type: [enum[]](http://api.col.plus/vocab/lifezone)
