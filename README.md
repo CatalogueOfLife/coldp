@@ -217,16 +217,16 @@ type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
 Nullable flag indicating that the taxon is extinct (true) or extant (false). This includes species that died out very recently.
 
 #### temporalRangeStart
-type: [enum](http://api.col.plus/vocab/geoTimeSpan)
+type: [enum](http://api.col.plus/vocab/geotime)
 
 Earliest appearance of the taxon in the geological time scale.
-Recommended values are from the official International Commission on Stratigraphy (ICS).
+Recommended values are geochronological names from the official International Commission on Stratigraphy (ICS).
 
 #### temporalRangeEnd
-type: [enum](http://api.col.plus/vocab/geoTimeSpan)
+type: [enum](http://api.col.plus/vocab/geotime)
 
 Latest appearance of the taxon in the geological time scale.
-Recommended values are from the official International Commission on Stratigraphy (ICS).
+Recommended values are geochronological names from the official International Commission on Stratigraphy (ICS).
 
 #### lifezone
 type: [enum[]](http://api.col.plus/vocab/lifezone)
