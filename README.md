@@ -353,6 +353,9 @@ The DOI of the reference
 #### link
 A URL link to the reference
 
+#### remarks
+Additional comments about the reference.
+
 
 ## Reference JSON-CSL
 In addition to the main reference file a `reference.json` file can be added to provide a JSON array of highly structured references

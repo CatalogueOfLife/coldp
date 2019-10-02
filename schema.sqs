@@ -225,7 +225,7 @@
         </location>
         <size>
             <width>179.00</width>
-            <height>200.00</height>
+            <height>220.00</height>
         </size>
         <zorder>2</zorder>
         <SQLField>
@@ -275,6 +275,11 @@
             <name><![CDATA[link]]></name>
             <type><![CDATA[TEXT]]></type>
             <uid><![CDATA[AF32DC49-3D1B-4B40-8691-C692861A812E]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[remarks]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[9DB95975-868E-4A36-8C10-2ECBE581D84B]]></uid>
         </SQLField>
         <labelColor><![CDATA[{0.911331,0.504696,0,1}]]></labelColor>
         <labelWindowIndex><![CDATA[5]]></labelWindowIndex>
@@ -803,7 +808,7 @@
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
         <windowHeight><![CDATA[970.000000]]></windowHeight>
-        <windowLocationX><![CDATA[252.000000]]></windowLocationX>
+        <windowLocationX><![CDATA[348.000000]]></windowLocationX>
         <windowLocationY><![CDATA[57.000000]]></windowLocationY>
         <windowScrollOrigin><![CDATA[{357, 216}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1051.000000]]></windowWidth>
