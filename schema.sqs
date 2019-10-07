@@ -295,7 +295,7 @@
         </location>
         <size>
             <width>207.00</width>
-            <height>580.00</height>
+            <height>620.00</height>
         </size>
         <zorder>1</zorder>
         <SQLField>
@@ -390,6 +390,16 @@
             <name><![CDATA[remarks]]></name>
             <type><![CDATA[TEXT]]></type>
             <uid><![CDATA[6F7571AC-E313-4530-8E40-2931B7EB6D66]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[species]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[C0C9B777-C05A-4517-B0F5-5A2B94727A79]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[section]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[783A7136-C290-42C8-85C2-2228DE6B142F]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[subgenus]]></name>

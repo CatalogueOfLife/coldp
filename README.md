@@ -238,6 +238,14 @@ A link to a webpage provided by the source depicting the taxon.
 #### remarks
 Any further taxonomic remarks.
 
+#### species
+The species binomial the taxon is classified in.
+If parentID is given this field is ignored.
+
+#### section
+The (botanical) section the taxon is classified in. Considered a botanical rank below subgenus, not a zoological above family.
+If parentID is given this field is ignored.
+
 #### subgenus
 The subgenus the taxon is classified in.
 If parentID is given this field is ignored.
