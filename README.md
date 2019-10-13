@@ -319,6 +319,10 @@ type: [enum](http://api.col.plus/vocab/taxonomicstatus)
 
 The kind of synonym. One of *synonym*, *ambiguous synonym* or *misapplied*.
 
+#### referenceID
+A comma concatenated list of reference IDs supporting the synonym status of the name.
+Each ID must refer to an existing Reference.ID within this data package.
+
 #### remarks
 Taxonomic remarks
 
@@ -1212,8 +1216,16 @@ The id field following the curly opening bracket must correspond to a record ID 
 #### taxonID 
 Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
-#### category ENUM
+#### category
+The category the description text is about. Ideally derived from a shared, controlled vocabulary such as [TDWG SPM InfoItems](https://github.com/tdwg/ontology/blob/master/ontology/voc/SPMInfoItems.rdf) or [GBIF Description Types](http://rs.gbif.org/vocabulary/gbif/description_type.xml).
+
+#### format ENUM
+type: [enum](http://api.col.plus/vocab/textFormat)
+The format the description text is given in. One of plain text, markdown or html.
+
 #### description 
+A descriptive, human readable text about the given category in the declared format.
+
 #### language
 ISO 3 letter code
 
