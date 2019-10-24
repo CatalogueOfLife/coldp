@@ -27,6 +27,12 @@ authorsAndEditors:
   - Rainer Froese orcid:0000-0001-9745-636X
   - Daniel Pauly orcid:0000-0003-3756-4793
 
+# description of the geographical scope of the dataset
+geographicScope: global
+
+# taxonomic scope of the dataset
+taxonomicScope: Fishes
+
 # nomeclatural code covered. Keep empty if its across codes
 # botanical, zoological, bacterial, virus
 code: zoological
