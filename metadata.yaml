@@ -19,14 +19,17 @@ organisations:
   - CAFS
 
 # point of contact for questions. Either just a plain email or a name given with email address in angel brackets
-contact: Markus Döring <markus@mailinator.com>
+contact: Rainer Froese <rainer@mailinator.com>
 
 # list of authors and editors.
 # optionally an ORCID can be appended (orcid: prefix required!) to be included in DOI metadata
 authorsAndEditors:
-  - Markus Döring orcid:0000-0001-7757-1889
-  - Daniel Pauly
-  - Nicolas Bailly orcid:0000-0003-4994-0653
+  - Rainer Froese orcid:0000-0001-9745-636X
+  - Daniel Pauly orcid:0000-0003-3756-4793
+
+# nomeclatural code covered. Keep empty if its across codes
+# botanical, zoological, bacterial, virus
+code: zoological
 
 # Any commons license, but preferrably CC0, CC-BY or CC-BY-NC
 license: CC-BY-NC
