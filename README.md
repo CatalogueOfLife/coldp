@@ -38,7 +38,7 @@ Structured distributions|x|x|x
 Taxon descriptions|-|x|x
 Multimedia metadata|-|x|x
 
- - `+` = supported
+ - `x` = supported
  - `-` = not supported
  - `*` = not yet supported but expected soon
 
