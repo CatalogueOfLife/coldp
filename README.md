@@ -149,8 +149,9 @@ The status of the type material, e.g. holotype
 Type status should only be associated with the original name, not with a recombination.
 
 #### typeMaterial
-Material citation of the type material, i.e. type specimens.
-Ideally given in the verbatim form as was used in the original publication of the name or the subsequent designation.
+Material citation(s) of the type material, i.e. type specimens. 
+The citation can include multiple specimens, e.g. in case of type series.
+The citation is ideally given in the verbatim form as it was used in the original publication of the name or the subsequent designation.
 Type material should only be associated with the original name, not with a recombination.
 
 #### typeReferenceID
