@@ -143,6 +143,15 @@ type: [code enum](http://api.col.plus/vocab/nomStatus)
 The broad nomenclatural status of the name.
 For the exact status note, e.g. *nomen nudum*, the remarks field should additionally be used
 
+#### typeMaterial
+Information about the type material, i.e. specimens and it's status (e.g., institution/collection, registration number, nature of type).
+Type material should only be associated with the original name, not with a recombination.
+Excludes the type locality which is kept separate.
+
+#### typeLocality
+The type locality in it's verbatim form as given in the original publication of the name.
+E.g., geographical place name, depth, latitude, longitude.
+
 #### link
 A link to a webpage provided by the source depicting the name.
 
