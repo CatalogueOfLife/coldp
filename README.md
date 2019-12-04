@@ -38,7 +38,7 @@ Structured distributions|x|x|x
 Taxon descriptions|-|x|x
 Multimedia metadata|-|x|x
 
- - `+` = supported
+ - `x` = supported
  - `-` = not supported
  - `*` = not yet supported but expected soon
 
@@ -95,9 +95,9 @@ Required scientific name excluding the authorship
 Authorship of the scientificName
 
 #### rank
-type: [rank enum](http://api.col.plus/vocab/rank)
+type: [rank enum](http://api.catalogue.life/vocab/rank)
 
-The rank of the name preferrably given in case insensitive english. The recommended vocabulary is included in [rank_enum](http://api.col.plus/vocab/rank).
+The rank of the name preferrably given in case insensitive english. The recommended vocabulary is included in [rank_enum](http://api.catalogue.life/vocab/rank).
 
 #### genus
 The genus part of a bi/trinomial
@@ -128,7 +128,7 @@ The exact page number within the referenced reference that the original publicat
 The effective year the name was published.
 
 #### code
-type: [code enum](http://api.col.plus/vocab/nomCode)
+type: [code enum](http://api.catalogue.life/vocab/nomCode)
 
 The nomenclatural code the name falls under.
 
@@ -138,10 +138,25 @@ If true indicates an original name, i.e. a protonym/basionym.
 False for all subsequent combinations.
 
 #### status
-type: [code enum](http://api.col.plus/vocab/nomStatus)
+type: [code enum](http://api.catalogue.life/vocab/nomStatus)
 
 The broad nomenclatural status of the name.
 For the exact status note, e.g. *nomen nudum*, the remarks field should additionally be used
+
+#### typeStatus
+type: [type status enum](http://api.catalogue.life/vocab/typeStatus)
+The status of the type material, e.g. holotype
+Type status should only be associated with the original name, not with a recombination.
+
+#### typeMaterial
+Material citation(s) of the type material, i.e. type specimens. 
+The citation can include multiple specimens, e.g. in case of type series.
+The citation is ideally given in the verbatim form as it was used in the original publication of the name or the subsequent designation.
+Type material should only be associated with the original name, not with a recombination.
+
+#### typeReferenceID
+A referenceID pointing to the Reference table indicating the publication of the type designation.
+Most often this is equivalent to the original publishedInID, but for subsequent designations the later reference can be cited.
 
 #### link
 A link to a webpage provided by the source depicting the name.
@@ -163,7 +178,7 @@ The name this relation originates from.
 The name this relation relates to.
 
 #### type
-type: [enum](http://api.col.plus/vocab/nomreltype)
+type: [enum](http://api.catalogue.life/vocab/nomreltype)
 
 The kind of directed relation.
 
@@ -211,18 +226,25 @@ type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date)
 
 The date when the taxonomic concept was last reviewed.
 
-#### fossil
+#### extinct 
 type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
 
-Flag indicating that the taxon existed pre holocene in the fossil record.
+Nullable flag indicating that the taxon is extinct (true) or extant (false). This includes species that died out very recently.
 
-#### recent 
-type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
+#### temporalRangeStart
+type: [enum](http://api.catalogue.life/vocab/geotime)
 
-Flag indicating that the taxon existed during the holocene. This includes species that died out very recently. A taxon can both be recent and fossil.
+Earliest appearance of the taxon in the geological time scale.
+Recommended values are geochronological names from the official International Commission on Stratigraphy (ICS).
+
+#### temporalRangeEnd
+type: [enum](http://api.catalogue.life/vocab/geotime)
+
+Latest appearance of the taxon in the geological time scale.
+Recommended values are geochronological names from the official International Commission on Stratigraphy (ICS).
 
 #### lifezone
-type: [enum[]](http://api.col.plus/vocab/lifezone)
+type: [enum[]](http://api.catalogue.life/vocab/lifezone)
 A comma delimited list of lifezones this taxon is known to exist in.
 
 #### link
@@ -230,6 +252,14 @@ A link to a webpage provided by the source depicting the taxon.
 
 #### remarks
 Any further taxonomic remarks.
+
+#### species
+The species binomial the taxon is classified in.
+If parentID is given this field is ignored.
+
+#### section
+The (botanical) section the taxon is classified in. Considered a botanical rank below subgenus, not a zoological above family.
+If parentID is given this field is ignored.
 
 #### subgenus
 The subgenus the taxon is classified in.
@@ -300,9 +330,13 @@ Pointer to the synonymous name referring to an existing Name.ID within this data
 Pointer to the taxon that this synonym is used for. For pro parte synonyms with multiple accepted names several synonym records sharing the same name but having different taxonIDs should be created. Refers to an existing Taxon.ID within this data package.
 
 #### status 
-type: [enum](http://api.col.plus/vocab/taxonomicstatus)
+type: [enum](http://api.catalogue.life/vocab/taxonomicstatus)
 
 The kind of synonym. One of *synonym*, *ambiguous synonym* or *misapplied*.
+
+#### referenceID
+A comma concatenated list of reference IDs supporting the synonym status of the name.
+Each ID must refer to an existing Reference.ID within this data package.
 
 #### remarks
 Taxonomic remarks
@@ -345,6 +379,9 @@ The DOI of the reference
 
 #### link
 A URL link to the reference
+
+#### remarks
+Additional comments about the reference.
 
 
 ## Reference JSON-CSL
@@ -1194,8 +1231,16 @@ The id field following the curly opening bracket must correspond to a record ID 
 #### taxonID 
 Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
-#### category ENUM
+#### category
+The category the description text is about. Ideally derived from a shared, controlled vocabulary such as [TDWG SPM InfoItems](https://github.com/tdwg/ontology/blob/master/ontology/voc/SPMInfoItems.rdf) or [GBIF Description Types](http://rs.gbif.org/vocabulary/gbif/description_type.xml).
+
+#### format ENUM
+type: [enum](http://api.catalogue.life/vocab/textFormat)
+The format the description text is given in. One of plain text, markdown or html.
+
 #### description 
+A descriptive, human readable text about the given category in the declared format.
+
 #### language
 ISO 3 letter code
 
@@ -1214,12 +1259,12 @@ Pointer to the taxon referring to an existing Taxon.ID within this data package.
 The geographic area this distribution record is about.
 
 #### gazetteer
-type: [enum](http://api.col.plus/vocab/gazetteer)
+type: [enum](http://api.catalogue.life/vocab/gazetteer)
 
 The geographic gazetteer the area is defined in.
 
 #### status 
-type: [enum](http://api.col.plus/vocab/distributionstatus)
+type: [enum](http://api.catalogue.life/vocab/distributionstatus)
 Distribution status.
 
 #### referenceID
@@ -1251,7 +1296,7 @@ Date the media item was recorded.
 Author of the media item.
 
 #### license
-type: [license](http://api.col.plus/vocab/license) 
+type: [license](http://api.catalogue.life/vocab/license) 
 
 #### link
 Optional webpage from the source this media item is shown on.
@@ -1268,22 +1313,22 @@ Pointer to the taxon referring to an existing Taxon.ID within this data package.
 The vernacular name in the original script.
 
 #### transliteration
-An optional transliteration of the verncular name into the latin script.
+An optional transliteration of the vernacular name into the latin script.
 
 #### language
-Language of the vernacular name given as an ISO 639 3 letter code.
+Language of the vernacular name given as an ISO 639-3 letter code.
 
 #### country
-Country this vernacular name is used in given as an ISO 3166 2 letter code.
+Country this vernacular name is used in given as an ISO 3166-2 letter code.
 
 #### area
-Optional area desribing the geographic use of the vernacular name in free text within the given country
+Optional area describing the geographic use of the vernacular name in free text within the given country.
 
 #### lifeStage
 Optional life stage of the organism this vernacular name is restricted to.
 
 #### sex
-type: [enum](http://api.col.plus/vocab/sex)
+type: [enum](http://api.catalogue.life/vocab/sex)
 
 Optional sex of the organism this vernacular name is restricted to.
 

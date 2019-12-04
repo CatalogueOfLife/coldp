@@ -225,7 +225,7 @@
         </location>
         <size>
             <width>179.00</width>
-            <height>200.00</height>
+            <height>220.00</height>
         </size>
         <zorder>2</zorder>
         <SQLField>
@@ -276,6 +276,11 @@
             <type><![CDATA[TEXT]]></type>
             <uid><![CDATA[AF32DC49-3D1B-4B40-8691-C692861A812E]]></uid>
         </SQLField>
+        <SQLField>
+            <name><![CDATA[remarks]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[9DB95975-868E-4A36-8C10-2ECBE581D84B]]></uid>
+        </SQLField>
         <labelColor><![CDATA[{0.911331,0.504696,0,1}]]></labelColor>
         <labelWindowIndex><![CDATA[5]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
@@ -289,8 +294,8 @@
             <y>119.00</y>
         </location>
         <size>
-            <width>176.00</width>
-            <height>560.00</height>
+            <width>207.00</width>
+            <height>620.00</height>
         </size>
         <zorder>1</zorder>
         <SQLField>
@@ -357,14 +362,19 @@
             <uid><![CDATA[3B4A921D-FA7E-4197-A3EA-5687D9FA2B41]]></uid>
         </SQLField>
         <SQLField>
-            <name><![CDATA[fossil]]></name>
+            <name><![CDATA[extinct]]></name>
             <type><![CDATA[BOOLEAN]]></type>
             <uid><![CDATA[C01889D0-606E-4536-BD1C-F07806271A75]]></uid>
         </SQLField>
         <SQLField>
-            <name><![CDATA[recent]]></name>
-            <type><![CDATA[BOOLEAN]]></type>
+            <name><![CDATA[temporalRangeStart]]></name>
+            <type><![CDATA[ENUM]]></type>
             <uid><![CDATA[13CEEC2B-1B15-4778-8E93-F6B39C59CEDB]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[temporalRangeEnd]]></name>
+            <type><![CDATA[ENUM]]></type>
+            <uid><![CDATA[97D291BD-124D-4F11-8FB2-2A8F65722E96]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[lifezone]]></name>
@@ -380,6 +390,16 @@
             <name><![CDATA[remarks]]></name>
             <type><![CDATA[TEXT]]></type>
             <uid><![CDATA[6F7571AC-E313-4530-8E40-2931B7EB6D66]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[species]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[C0C9B777-C05A-4517-B0F5-5A2B94727A79]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[section]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[783A7136-C290-42C8-85C2-2228DE6B142F]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[subgenus]]></name>
@@ -548,8 +568,8 @@
             <y>74.00</y>
         </location>
         <size>
-            <width>152.00</width>
-            <height>100.00</height>
+            <width>154.00</width>
+            <height>120.00</height>
         </size>
         <zorder>6</zorder>
         <SQLField>
@@ -586,6 +606,21 @@
             <uid><![CDATA[EA9ED5EC-EC51-4B94-B7DA-5A0C85A17BC9]]></uid>
         </SQLField>
         <SQLField>
+            <name><![CDATA[referenceID]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <referencesField>ID</referencesField>
+            <referencesTable>Reference</referencesTable>
+            <referencesField><![CDATA[ID]]></referencesField>
+            <referencesTable><![CDATA[Reference]]></referencesTable>
+            <sourceCardinality>5</sourceCardinality>
+            <destinationCardinality>0</destinationCardinality>
+            <referencesFieldUID><![CDATA[B479B9CD-4B6B-408A-BB03-2CE75F9C09C7]]></referencesFieldUID>
+            <referencesTableUID><![CDATA[75124B01-D882-44C2-99DD-251744BC5626]]></referencesTableUID>
+            <connectorHidden><![CDATA[0]]></connectorHidden>
+            <notNull><![CDATA[0]]></notNull>
+            <uid><![CDATA[0D61342F-6754-4B0D-AB64-D3DA418D3F81]]></uid>
+        </SQLField>
+        <SQLField>
             <name><![CDATA[remarks]]></name>
             <type><![CDATA[TEXT]]></type>
             <uid><![CDATA[2A5A77D8-17C5-406C-B2E9-4D2DDCC7173E]]></uid>
@@ -603,7 +638,7 @@
         </location>
         <size>
             <width>180.00</width>
-            <height>120.00</height>
+            <height>140.00</height>
         </size>
         <zorder>8</zorder>
         <SQLField>
@@ -622,9 +657,15 @@
         </SQLField>
         <SQLField>
             <name><![CDATA[category]]></name>
-            <type><![CDATA[ENUM]]></type>
+            <type><![CDATA[TEXT]]></type>
             <notNull><![CDATA[0]]></notNull>
             <uid><![CDATA[A6BA8CEC-9F04-4056-BB42-5718BF464A5A]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[format]]></name>
+            <type><![CDATA[ENUM]]></type>
+            <notNull><![CDATA[1]]></notNull>
+            <uid><![CDATA[7FA2B7DA-7247-414F-AC17-49DAD03ED1E4]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[description]]></name>
@@ -666,7 +707,7 @@
         </location>
         <size>
             <width>186.00</width>
-            <height>380.00</height>
+            <height>440.00</height>
         </size>
         <zorder>4</zorder>
         <SQLField>
@@ -763,6 +804,29 @@
             <uid><![CDATA[BEC34BFA-5C0A-4A18-A0F6-786297FD6444]]></uid>
         </SQLField>
         <SQLField>
+            <name><![CDATA[typeStatus]]></name>
+            <type><![CDATA[ENUM]]></type>
+            <uid><![CDATA[6B7991A4-AF66-46C6-9B09-18AC2537D8D7]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[typeMaterial]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[33A64115-4662-4118-9482-CBF1099E37FF]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[typeReferenceID]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <referencesField>ID</referencesField>
+            <referencesTable>Reference</referencesTable>
+            <referencesField><![CDATA[ID]]></referencesField>
+            <referencesTable><![CDATA[Reference]]></referencesTable>
+            <sourceCardinality>0</sourceCardinality>
+            <destinationCardinality>0</destinationCardinality>
+            <referencesFieldUID><![CDATA[B479B9CD-4B6B-408A-BB03-2CE75F9C09C7]]></referencesFieldUID>
+            <referencesTableUID><![CDATA[75124B01-D882-44C2-99DD-251744BC5626]]></referencesTableUID>
+            <uid><![CDATA[82B98FFD-5FF0-4F75-987B-7EC40E96D1D9]]></uid>
+        </SQLField>
+        <SQLField>
             <name><![CDATA[link]]></name>
             <type><![CDATA[TEXT]]></type>
             <uid><![CDATA[9089E831-67A7-4359-AB44-7E7E8BDE50A0]]></uid>
@@ -791,17 +855,17 @@
         <overviewPanelHidden><![CDATA[0]]></overviewPanelHidden>
         <pageBoundariesVisible><![CDATA[0]]></pageBoundariesVisible>
         <PageGridVisible><![CDATA[0]]></PageGridVisible>
-        <RightSidebarWidth><![CDATA[1224.000000]]></RightSidebarWidth>
+        <RightSidebarWidth><![CDATA[986.000000]]></RightSidebarWidth>
         <sidebarIndex><![CDATA[5]]></sidebarIndex>
         <snapToGrid><![CDATA[0]]></snapToGrid>
         <SourceSidebarWidth><![CDATA[0.000000]]></SourceSidebarWidth>
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
         <windowHeight><![CDATA[970.000000]]></windowHeight>
-        <windowLocationX><![CDATA[179.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[40.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{312.5, 5}]]></windowScrollOrigin>
-        <windowWidth><![CDATA[1501.000000]]></windowWidth>
+        <windowLocationX><![CDATA[372.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[87.000000]]></windowLocationY>
+        <windowScrollOrigin><![CDATA[{141, 162.5}]]></windowScrollOrigin>
+        <windowWidth><![CDATA[1263.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>
     <containerName><![CDATA[model controller orginal container]]></containerName>
