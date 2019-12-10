@@ -142,7 +142,7 @@
         </location>
         <size>
             <width>180.00</width>
-            <height>200.00</height>
+            <height>180.00</height>
         </size>
         <zorder>0</zorder>
         <SQLField>
@@ -184,11 +184,6 @@
             <name><![CDATA[area]]></name>
             <type><![CDATA[TEXT]]></type>
             <uid><![CDATA[9EC43FDB-4F33-4E54-8D26-37987F826F20]]></uid>
-        </SQLField>
-        <SQLField>
-            <name><![CDATA[lifeStage]]></name>
-            <type><![CDATA[TEXT]]></type>
-            <uid><![CDATA[13385480-D1B6-4795-A5D1-7D9F4EA0D67B]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[sex]]></name>
@@ -855,17 +850,17 @@
         <overviewPanelHidden><![CDATA[0]]></overviewPanelHidden>
         <pageBoundariesVisible><![CDATA[0]]></pageBoundariesVisible>
         <PageGridVisible><![CDATA[0]]></PageGridVisible>
-        <RightSidebarWidth><![CDATA[986.000000]]></RightSidebarWidth>
+        <RightSidebarWidth><![CDATA[999.000000]]></RightSidebarWidth>
         <sidebarIndex><![CDATA[5]]></sidebarIndex>
         <snapToGrid><![CDATA[0]]></snapToGrid>
         <SourceSidebarWidth><![CDATA[0.000000]]></SourceSidebarWidth>
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
-        <windowHeight><![CDATA[970.000000]]></windowHeight>
-        <windowLocationX><![CDATA[372.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[87.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{141, 162.5}]]></windowScrollOrigin>
-        <windowWidth><![CDATA[1263.000000]]></windowWidth>
+        <windowHeight><![CDATA[678.000000]]></windowHeight>
+        <windowLocationX><![CDATA[58.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[375.000000]]></windowLocationY>
+        <windowScrollOrigin><![CDATA[{873.5, 195.5}]]></windowScrollOrigin>
+        <windowWidth><![CDATA[1000.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>
     <containerName><![CDATA[model controller orginal container]]></containerName>

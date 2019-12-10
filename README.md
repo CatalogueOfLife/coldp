@@ -1324,9 +1324,6 @@ Country this vernacular name is used in given as an ISO 3166-2 letter code.
 #### area
 Optional area describing the geographic use of the vernacular name in free text within the given country.
 
-#### lifeStage
-Optional life stage of the organism this vernacular name is restricted to.
-
 #### sex
 type: [enum](http://api.catalogue.life/vocab/sex)
 
