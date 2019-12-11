@@ -150,7 +150,7 @@ Type status should only be associated with the original name, not with a recombi
 
 #### typeMaterial
 Material citation(s) of the type material, i.e. type specimens. 
-The citation can include multiple specimens, e.g. in case of type series.
+The citation can include multiple specimens, e.g. in case of type series by concatenating individual citations with the pipe `|` symbol.
 The citation is ideally given in the verbatim form as it was used in the original publication of the name or the subsequent designation.
 Type material should only be associated with the original name, not with a recombination.
 
