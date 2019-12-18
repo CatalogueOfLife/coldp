@@ -30,7 +30,7 @@ Name & taxon separation|-|-|x
 Structured references|x|-|x
 Nomenclatural relations|-|-|x
 Type species|-|x|x
-Type specimen|-|x|*
+Type specimen|-|x|x
 Taxon concepts|-|x|x
 Taxon concept relations|-|x|*
 Vernacular names|x|x|x
@@ -177,12 +177,8 @@ Remarks about the relation.
 
 ## TypeMaterial
 Type material designated to names.
-We avoid the use of fully structured specimen data and instead primarily use a single id, citation & status value.
+We avoid the use of fully structured specimen data and instead primarily use a citation & status value.
 Type material should only be associated with the original name, not with a recombination.
-
-#### ID
-Optional unique identifier for the specimen. 
-If coming from a Darwin Core world dwc:occurrenceID is a great fit.
 
 #### nameID
 Pointer to the typified name referring to an existing Name.ID within this data package.

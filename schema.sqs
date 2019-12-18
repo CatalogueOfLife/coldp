@@ -559,22 +559,14 @@
         <name><![CDATA[TypeMaterial]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>124.00</x>
-            <y>429.00</y>
+            <x>132.00</x>
+            <y>446.00</y>
         </location>
         <size>
             <width>154.00</width>
-            <height>160.00</height>
+            <height>140.00</height>
         </size>
         <zorder>9</zorder>
-        <SQLField>
-            <name><![CDATA[ID]]></name>
-            <type><![CDATA[TEXT]]></type>
-            <primaryKey>1</primaryKey>
-            <forcedUnique><![CDATA[1]]></forcedUnique>
-            <notNull><![CDATA[0]]></notNull>
-            <uid><![CDATA[A3303EB4-2734-4D8C-9AF3-3F60D787D31F]]></uid>
-        </SQLField>
         <SQLField>
             <name><![CDATA[nameID]]></name>
             <type><![CDATA[TEXT]]></type>
@@ -646,7 +638,7 @@
         </location>
         <size>
             <width>154.00</width>
-            <height>140.00</height>
+            <height>160.00</height>
         </size>
         <zorder>6</zorder>
         <SQLField>
@@ -704,6 +696,11 @@
             <connectorHidden><![CDATA[0]]></connectorHidden>
             <notNull><![CDATA[0]]></notNull>
             <uid><![CDATA[0D61342F-6754-4B0D-AB64-D3DA418D3F81]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[link]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[BF0ADA74-044F-46DF-A2FD-2E53BB043850]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[remarks]]></name>
