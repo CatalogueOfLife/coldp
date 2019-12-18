@@ -143,21 +143,6 @@ type: [code enum](http://api.catalogue.life/vocab/nomStatus)
 The broad nomenclatural status of the name.
 For the exact status note, e.g. *nomen nudum*, the remarks field should additionally be used
 
-#### typeStatus
-type: [type status enum](http://api.catalogue.life/vocab/typeStatus)
-The status of the type material, e.g. holotype
-Type status should only be associated with the original name, not with a recombination.
-
-#### typeMaterial
-Material citation(s) of the type material, i.e. type specimens. 
-The citation can include multiple specimens, e.g. in case of type series by concatenating individual citations with the pipe `|` symbol.
-The citation is ideally given in the verbatim form as it was used in the original publication of the name or the subsequent designation.
-Type material should only be associated with the original name, not with a recombination.
-
-#### typeReferenceID
-A referenceID pointing to the Reference table indicating the publication of the type designation.
-Most often this is equivalent to the original publishedInID, but for subsequent designations the later reference can be cited.
-
 #### link
 A link to a webpage provided by the source depicting the name.
 
@@ -188,6 +173,39 @@ The reference or nomenclatural act where this nomenclatural relation was establi
 #### remarks
 Remarks about the relation.
 
+
+
+## TypeMaterial
+Type material designated to names.
+We avoid the use of fully structured specimen data and instead primarily use a single id, citation & status value.
+Type material should only be associated with the original name, not with a recombination.
+
+#### ID
+Optional unique identifier for the specimen. 
+If coming from a Darwin Core world dwc:occurrenceID is a great fit.
+
+#### nameID
+Pointer to the typified name referring to an existing Name.ID within this data package.
+Type material should only be associated with an original name, not with recombinations.
+
+#### citation
+Material citation(s) of the type material, i.e. type specimens. 
+The citation is ideally given in the verbatim form as it was used in the original publication of the name or the subsequent designation.
+Otherwise it is recommended to follow the [material citation guidelines published by European Journal of Taxonomy](material_citations_formatting_guide.pdf).
+
+#### status
+type: [type status enum](http://api.catalogue.life/vocab/typeStatus)
+The status of the type material, e.g. holotype
+
+#### referenceID
+A referenceID pointing to the Reference table indicating the publication of the type designation.
+Most often this is equivalent to the original publishedInID, but for subsequent designations a later reference should be cited.
+
+#### link
+A link to further information about the specimen, e.g. as provided by the institute holding the collection.
+
+#### remarks
+Any further remarks on the type.
 
 
 
@@ -322,6 +340,10 @@ If parentID is given this field is ignored.
 ## Synonym
 A synonymous name for a taxon.
 Note that the same name can be linked to mulitple taxa by having several Synonym records to model pro parte synonyms.
+
+#### ID
+Optional unique identifier for the synonym.
+If given it should not clash with the taxon ids.
 
 #### nameID 
 Pointer to the synonymous name referring to an existing Name.ID within this data package.
