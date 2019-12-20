@@ -177,17 +177,21 @@ Remarks about the relation.
 
 ## TypeMaterial
 Type material designated to names.
-We avoid the use of fully structured specimen data and instead primarily use a citation & status value.
 Type material should only be associated with the original name, not with a recombination.
+
+#### ID
+Optional unique identifier for the specimen. 
+If possible use the existing specimen identifier, e.g. the collection/institution code and catalogue number.
+If coming from a Darwin Core world dwc:occurrenceID is a great fit.
 
 #### nameID
 Pointer to the typified name referring to an existing Name.ID within this data package.
 Type material should only be associated with an original name, not with recombinations.
 
 #### citation
-Material citation(s) of the type material, i.e. type specimens. 
-The citation is ideally given in the verbatim form as it was used in the original publication of the name or the subsequent designation.
-Otherwise it is recommended to follow the [material citation guidelines published by European Journal of Taxonomy](material_citations_formatting_guide.pdf).
+Material citation of the type material, i.e. type specimen. 
+The citation is ideally given in the verbatim form as it was used in the original publication of the name or the subsequent designation. Otherwise it is recommended to follow the [material citation guidelines published by European Journal of Taxonomy](material_citations_formatting_guide.pdf).
+If atomized fields below are given a citation is not needed. Otherwise it is required.
 
 #### status
 type: [type status enum](http://api.catalogue.life/vocab/typeStatus)
@@ -197,11 +201,36 @@ The status of the type material, e.g. holotype
 A referenceID pointing to the Reference table indicating the publication of the type designation.
 Most often this is equivalent to the original publishedInID, but for subsequent designations a later reference should be cited.
 
+#### locality
+The type locality. Ideally from largest area to smallest.
+
+#### country
+The country of the type locality. Preferably as ISO codes.
+
+#### latitude
+Decimal latitude of the type locality given in WGS84
+
+#### longitude
+Decimal longitude of the type locality given in WGS84
+
+#### altitude
+Altitude of the type locality. Ideally given as meters above mean seal level.
+Depth should be given as negative altitudes.
+
+#### host
+Indicates the host organism from which the type specimen was obtained (symbiotype).
+
+#### date
+Date the type material was gathered. Recommended to be given as ISO 8601 dates.
+
+#### collector
+The collectors name
+
 #### link
 A link to further information about the specimen, e.g. as provided by the institute holding the collection.
 
 #### remarks
-Any further remarks on the type.
+Any further remarks on the type material.
 
 
 
