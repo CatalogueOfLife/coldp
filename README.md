@@ -138,7 +138,7 @@ If true indicates an original name, i.e. a protonym/basionym.
 False for all subsequent combinations.
 
 #### status
-type: [code enum](http://api.catalogue.life/vocab/nomStatus)
+type: [nomStatus enum](http://api.catalogue.life/vocab/nomStatus)
 
 The broad nomenclatural status of the name.
 For the exact status note, e.g. *nomen nudum*, the remarks field should additionally be used
