@@ -65,6 +65,7 @@ All files should be encoded in UTF-8.
  - [Reference](#reference)
  - [Reference JSON-CSL](#reference-json-csl)
  - [Reference BIBTEX](#reference-bibtex)
+ - [TypeMaterial](#typematerial)
  - [Description](#description)
  - [Distribution](#distribution)
  - [Media](#media)
