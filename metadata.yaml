@@ -37,6 +37,11 @@ taxonomicScope: Fishes
 # botanical, zoological, bacterial, virus
 code: zoological
 
+# gazateer to base distribution codes on.
+# See http://api.catalogue.life/vocab/gazetteer
+# tdwg, iso, fao, longhurst, teow, iho, text
+gazetteer: iso
+
 # Any commons license, but preferrably CC0, CC-BY or CC-BY-NC
 license: CC-BY-NC
 
