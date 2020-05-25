@@ -18,14 +18,22 @@ organisations:
   - AUTH
   - CAFS
 
-# point of contact for questions. Either just a plain email or a name given with email address in angel brackets
-contact: Rainer Froese <rainer@mailinator.com>
+# single point of contact for questions
+contact: 
+  - givenName: Rainer
+    familyName: Froese
+    email: rainer@mailinator.com
 
 # list of authors and editors.
-# optionally an ORCID can be appended (orcid: prefix required!) to be included in DOI metadata
+# Please provide an ORCID if you can so it can be included in DOI metadata
 authorsAndEditors:
-  - Rainer Froese orcid:0000-0001-9745-636X
-  - Daniel Pauly orcid:0000-0003-3756-4793
+  - givenName: Rainer
+    familyName: Froese
+    email: rainer@mailinator.com
+    orcid: 0000-0001-9745-636X
+  - givenName: Daniel
+    familyName: Pauly
+    orcid: 0000-0003-3756-4793
 
 # description of the geographical scope of the dataset
 geographicScope: global

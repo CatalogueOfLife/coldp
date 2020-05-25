@@ -62,18 +62,21 @@ All files should be encoded in UTF-8.
  - [NameRel](#namerel)
  - [Taxon](#taxon)
  - [Synonym](#synonym)
+ - [NameUsage](#nameusage)
+ - [Person](#person)
  - [Reference](#reference)
  - [Reference JSON-CSL](#reference-json-csl)
  - [Reference BIBTEX](#reference-bibtex)
  - [TypeMaterial](#typematerial)
- - [Description](#description)
  - [Distribution](#distribution)
  - [Media](#media)
  - [VernacularName](#vernacularname)
+ - [Treatment](#treatment)
   
 ## metadata.yaml
 A [YAML file](https://en.wikipedia.org/wiki/YAML) with metadata about the entire dataset should be included. 
 The file consists mostly of key value pairs, see the [comments in metadata.yaml](metadata.yaml) for all available keys.
+An exception are the contact and authorsAndEditors properties which takes a simple [person](#person) object, see [yaml example](metadata.yaml).
 Additional entries to the YAML file is allowed to express non standard properties.
 
 
@@ -115,10 +118,6 @@ The infraspecific epithet in case of bi/trinomials.
 #### cultivarEpithet
 The name of the cultivar for name governed by the cultivar code.
 
-#### appendedPhrase
-An optional, unrestricted, lose phrase appended to the name which is not covered by the existing attributes with strict semantics.
-Can be used for bacterial strain names or temporary placeholder names for unpublished species.
-
 #### publishedInID
 A referenceID pointing to the Reference table indicating the original publication of the name in its given combination
 
@@ -143,6 +142,7 @@ type: [nomStatus enum](http://api.catalogue.life/vocab/nomStatus)
 
 The broad nomenclatural status of the name.
 For the exact status note, e.g. *nomen nudum*, the remarks field should additionally be used
+Alternatively a URI or simple name from a class of the [NOMEN ontology](https://github.com/SpeciesFileGroup/nomen/blob/master/src/ontology/nomen.owl) can be used.
 
 #### link
 A link to a webpage provided by the source depicting the name.
@@ -247,28 +247,32 @@ The direct parent in the classification. This is the preferred way of exchanging
 #### nameID
 Pointer to the accepted name referring to an existing Name.ID within this data package.
 
-#### referenceID
-A comma concatenated list of reference IDs supporting the taxonomic concept.
-Each ID must refer to an existing Reference.ID within this data package.
+#### appendedNamePhrase
+An optional, unrestricted, lose phrase appended to the name just for this taxon.
+E.g. the phrase "sensu latu" may be added to the name to describe this taxon more precisely.
+
+#### accordingToID
+A reference ID to the publication that established the taxonomic concept used by this taxon.
+The author & year of the reference will be used to qualify the name with `sensu AUTHOR, YEAR`.
+The ID must refer to an existing Reference.ID within this data package.
+
+#### scrutinizerID
+Link to the person who is the latest scrutinizer who reviewed the taxonomic concept.
+In case of multiple scrutinizers concatenate their IDs with a semicolon.
+Each ID must refer to an existing Person.ID within this data package.
+
+#### scrutinizerDate
+type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date) 
+The date when the taxonomic concept was last revised or reviewed by the scrutinizer.
 
 #### provisional
 type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
 
 A flag indicating that the taxon is only provisionally accepted and should be handled with care.
 
-#### accordingTo
-The latest scrutinizer who reviewed the taxonomic concept.
-In case of multiple scrutinizers concatenate their names with a semicolon.
-
-#### accordingToID
-An identifier for the latest scrutinizer who reviewed the taxonomic concept.
-Recommended are [ORCID identifier](https://orcid.org/about/) which can be used inside DOI metadata of the CoL.
-In case of multiple scrutinizers concatenate the ORCIDs with a semicolon in the same order as the scrutinizers above.
-
-#### accordingToDate 
-type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date) 
-
-The date when the taxonomic concept was last reviewed.
+#### referenceID
+A comma concatenated list of reference IDs supporting the taxonomic concept that has been reviewed by the scrutinizer.
+Each ID must refer to an existing Reference.ID within this data package.
 
 #### extinct 
 type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
@@ -290,12 +294,6 @@ Recommended values are geochronological names from the official International Co
 #### lifezone
 type: [enum[]](http://api.catalogue.life/vocab/lifezone)
 A comma delimited list of lifezones this taxon is known to exist in.
-
-#### link
-A link to a webpage provided by the source depicting the taxon.
-
-#### remarks
-Any further taxonomic remarks.
 
 #### species
 The species binomial the taxon is classified in.
@@ -361,6 +359,12 @@ If parentID is given this field is ignored.
 The kingdom the taxon is classified in.
 If parentID is given this field is ignored.
 
+#### link
+A link to a webpage provided by the source depicting the taxon.
+
+#### remarks
+Any further taxonomic remarks.
+
 
 
 ## Synonym
@@ -371,11 +375,23 @@ Note that the same name can be linked to mulitple taxa by having several Synonym
 Optional unique identifier for the synonym.
 If given it should not clash with the taxon ids.
 
+#### taxonID
+Pointer to the taxon that this synonym is used for. For pro parte synonyms with multiple accepted names several synonym records sharing the same name but having different taxonIDs should be created. Refers to an existing Taxon.ID within this data package.
+
 #### nameID 
 Pointer to the synonymous name referring to an existing Name.ID within this data package.
 
-#### taxonID
-Pointer to the taxon that this synonym is used for. For pro parte synonyms with multiple accepted names several synonym records sharing the same name but having different taxonIDs should be created. Refers to an existing Taxon.ID within this data package.
+#### appendedNamePhrase
+An optional, unrestricted, lose phrase appended to the name just for this synonym.
+E.g. the phrase "sensu latu" may be added to the name to describe this synonym more precisely.
+Or "auct. mult." or "auct. amer." for misapplied names that cannot refer to a single publication.
+Misapplied names that refer to a single publication should use `accordingToID` instead.
+
+#### accordingToID
+A reference ID to the publication that established the taxonomic concept used by this taxon.
+The author & year of the reference will be used to qualify the name with `sensu AUTHOR, YEAR`.
+Strongly recommended in case of misapplied names.
+The ID must refer to an existing Reference.ID within this data package.
 
 #### status 
 type: [enum](http://api.catalogue.life/vocab/taxonomicstatus)
@@ -386,8 +402,59 @@ The kind of synonym. One of *synonym*, *ambiguous synonym* or *misapplied*.
 A comma concatenated list of reference IDs supporting the synonym status of the name.
 Each ID must refer to an existing Reference.ID within this data package.
 
+#### link
+A link to a webpage provided by the source depicting the synonym.
+
 #### remarks
-Taxonomic remarks
+Any further taxonomic remarks.
+
+
+
+## NameUsage
+As a simpler alternative to the 3 entities [Name](#name), [Taxon](#taxon) and [Synonym](#synonym) a single `NameUsage` entity can be supplied.
+A NameUsage record can either be an accepted Taxon or a Synonym and is easily distinguished by its status. A NameUsage.ID acts both as a taxonID and nameID if referred to from other table, e.g TypeMaterial or VernacularName. For synonyms the `parentID` property is used to link to the accepted taxon.
+
+All properties available in the individual entities can also be used for the single NameUsage:
+
+![NameUsage schema](schemaNU.png)
+
+There are two clashing properties that exist both on a Name and Taxon, but which have a slightly different meaning.
+Therefore following properties deviate slightly from their usage in their classic version:
+ 
+ - **status**: is the taxonomic name usage status which includes Synonym.status and the Taxon.provisional flag. 
+ - **nameStatus**: corresponds to the nomenclatural name status.
+ - **parentID**: for taxa it points to the next higher taxon to form the classification, for synonyms it points at the accepted taxon.
+ - **genus**: is the taxonomic classification of a name usage and corresponds to Taxon.genus. For synonyms it often is not the same as the genus part of the name
+ - **genericName**: corresponds to the genus property of a name and represents the atomized genus of a scientificName.
+ 
+If a single NameUsage entity is given no further Name, Taxon or Synonym entity must exist.
+
+
+
+## Person
+A single person.
+
+#### ID
+Unique local identifier for a person.
+
+#### givenName
+The given name(s) of a person. Often also called firstname.
+If multiple separate them with simple spaces.
+
+#### familyName
+The family name of a person. Often also called last- or surname.
+
+#### country
+The ISO code of the persons residence.
+
+#### email
+The persons email address.
+
+#### orcid
+The [ORCID identifier](https://orcid.org/about/) for the person.
+
+#### gbif
+The [gbif username](https://www.gbif.org/) for the person.
 
 
 
@@ -1274,27 +1341,6 @@ The id field following the curly opening bracket must correspond to a record ID 
 }
 ```
 
-## Description
-
-#### taxonID 
-Pointer to the taxon referring to an existing Taxon.ID within this data package.
-
-#### category
-The category the description text is about. Ideally derived from a shared, controlled vocabulary such as [TDWG SPM InfoItems](https://github.com/tdwg/ontology/blob/master/ontology/voc/SPMInfoItems.rdf) or [GBIF Description Types](http://rs.gbif.org/vocabulary/gbif/description_type.xml).
-
-#### format ENUM
-type: [enum](http://api.catalogue.life/vocab/textFormat)
-The format the description text is given in. One of plain text, markdown or html.
-
-#### description 
-A descriptive, human readable text about the given category in the declared format.
-
-#### language
-ISO 3 letter code
-
-#### referenceID
-Pointer to the reference that is the source of this description. Refers to an existing Reference.ID within this data package.
-
 
 
 ## Distribution
@@ -1379,3 +1425,13 @@ Optional sex of the organism this vernacular name is restricted to.
 
 #### referenceID
 Pointer to the reference that supports this vernacular name. Refers to an existing Reference.ID within this data package.
+
+
+
+
+## Treatment
+Treatments are parts of publications that "treat" a single taxon. They can be an original description for a new species, but also subsequent taxonomic works and usually include several sections such as a diagnosis, description, material examied, distribution, etc.
+ColDP captures an entire treatment either as an TXT, HTML or XML document that lives as an individual file in a subfolder `treatments` and is named by the corresponding taxonID of the name usage it describes. The taxons `accordingToID` should always point to the reference the treatment is published in.
+Example: `treatments/19854332.html` would be an html document which is the marked up treatment for the taxon with ID `19854332`.
+
+
