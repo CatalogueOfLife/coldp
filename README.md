@@ -63,7 +63,6 @@ All files should be encoded in UTF-8.
  - [Taxon](#taxon)
  - [Synonym](#synonym)
  - [NameUsage](#nameusage)
- - [Person](#person)
  - [Reference](#reference)
  - [Reference JSON-CSL](#reference-json-csl)
  - [Reference BIBTEX](#reference-bibtex)
@@ -76,7 +75,7 @@ All files should be encoded in UTF-8.
 ## metadata.yaml
 A [YAML file](https://en.wikipedia.org/wiki/YAML) with metadata about the entire dataset should be included. 
 The file consists mostly of key value pairs, see the [comments in metadata.yaml](metadata.yaml) for all available keys.
-An exception are the contact and authorsAndEditors properties which takes a simple [person](#person) object, see [yaml example](metadata.yaml).
+An exception are the contact and authorsAndEditors properties which takes a simple person object, see [yaml example](metadata.yaml).
 Additional entries to the YAML file is allowed to express non standard properties.
 
 
@@ -256,10 +255,8 @@ A reference ID to the publication that established the taxonomic concept used by
 The author & year of the reference will be used to qualify the name with `sensu AUTHOR, YEAR`.
 The ID must refer to an existing Reference.ID within this data package.
 
-#### scrutinizerID
-Link to the person who is the latest scrutinizer who reviewed the taxonomic concept.
-In case of multiple scrutinizers concatenate their IDs with a semicolon.
-Each ID must refer to an existing Person.ID within this data package.
+#### scrutinizer
+Name of the person who is the latest scrutinizer who revised or reviewed the taxonomic concept.
 
 #### scrutinizerDate
 type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date) 
@@ -428,33 +425,6 @@ Therefore following properties deviate slightly from their usage in their classi
  - **genericName**: corresponds to the genus property of a name and represents the atomized genus of a scientificName.
  
 If a single NameUsage entity is given no further Name, Taxon or Synonym entity must exist.
-
-
-
-## Person
-A single person.
-
-#### ID
-Unique local identifier for a person.
-
-#### givenName
-The given name(s) of a person. Often also called firstname.
-If multiple separate them with simple spaces.
-
-#### familyName
-The family name of a person. Often also called last- or surname.
-
-#### country
-The ISO code of the persons residence.
-
-#### email
-The persons email address.
-
-#### orcid
-The [ORCID identifier](https://orcid.org/about/) for the person.
-
-#### gbif
-The [gbif username](https://www.gbif.org/) for the person.
 
 
 

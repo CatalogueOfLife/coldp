@@ -4,7 +4,7 @@
         <name><![CDATA[Person]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>667.00</x>
+            <x>666.00</x>
             <y>455.00</y>
         </location>
         <size>
@@ -57,7 +57,7 @@
             <hidden><![CDATA[0]]></hidden>
             <uid><![CDATA[22265E11-B944-40BE-A056-AB69F106A44B]]></uid>
         </SQLField>
-        <hidden><![CDATA[0]]></hidden>
+        <hidden><![CDATA[1]]></hidden>
         <labelColor><![CDATA[{0.578747,0.32152,0,1}]]></labelColor>
         <labelWindowIndex><![CDATA[1]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
@@ -628,7 +628,7 @@
         <incompleteReferenceTarget><![CDATA[1]]></incompleteReferenceTarget>
         <labelColor><![CDATA[{0.38,0.88,0.31,0.8}]]></labelColor>
         <labelName><![CDATA[Usage]]></labelName>
-        <labelUid><![CDATA[386675FF-6611-4442-8C3B-24DF75644EAE]]></labelUid>
+        <labelUid><![CDATA[C7E137E6-19C1-45ED-8E0F-6C7C763BA967]]></labelUid>
         <labelWindowIndex><![CDATA[1]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[92DA6EA1-D817-4766-A256-3EFF44D3D54B]]></uid>
@@ -901,7 +901,7 @@
             <uid><![CDATA[DB5DC431-A4C5-4DB7-9285-EB720B2545C6]]></uid>
         </SQLField>
         <SQLField>
-            <name><![CDATA[scrutinizerID]]></name>
+            <name><![CDATA[scrutinizer]]></name>
             <type><![CDATA[TEXT]]></type>
             <referencesField>ID</referencesField>
             <referencesTable>Person</referencesTable>
@@ -1063,7 +1063,7 @@
         <incompleteReferenceTarget><![CDATA[1]]></incompleteReferenceTarget>
         <labelColor><![CDATA[{0.38,0.88,0.31,0.8}]]></labelColor>
         <labelName><![CDATA[NameUsage]]></labelName>
-        <labelUid><![CDATA[BFF99451-AC7A-4F6C-9103-F0081E91143B]]></labelUid>
+        <labelUid><![CDATA[2315F489-0993-474B-9285-3F90C6F672C4]]></labelUid>
         <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[C1197407-207A-4AAA-8774-DC628EDDA84F]]></uid>
@@ -1328,7 +1328,7 @@
         <hidden><![CDATA[1]]></hidden>
         <labelColor><![CDATA[{0.38,0.88,0.31,0.8}]]></labelColor>
         <labelName><![CDATA[Usage]]></labelName>
-        <labelUid><![CDATA[386675FF-6611-4442-8C3B-24DF75644EAE]]></labelUid>
+        <labelUid><![CDATA[C7E137E6-19C1-45ED-8E0F-6C7C763BA967]]></labelUid>
         <labelWindowIndex><![CDATA[2]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[E91CB87D-4078-4DFF-8F43-4AA91B6E3807]]></uid>
@@ -1512,7 +1512,7 @@
         <hidden><![CDATA[1]]></hidden>
         <labelColor><![CDATA[{0.38,0.88,0.31,0.8}]]></labelColor>
         <labelName><![CDATA[Usage]]></labelName>
-        <labelUid><![CDATA[386675FF-6611-4442-8C3B-24DF75644EAE]]></labelUid>
+        <labelUid><![CDATA[C7E137E6-19C1-45ED-8E0F-6C7C763BA967]]></labelUid>
         <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[FA38CFBE-F59D-430F-9FA6-170A50C525DE]]></uid>
@@ -1565,14 +1565,28 @@
     </SQLObjectLabel>
     <SQLObjectLabel>
         <name><![CDATA[Usage]]></name>
+        <colorString><![CDATA[]]></colorString>
         <colorString><![CDATA[{0.38,0.88,0.31,0.8}]]></colorString>
         <expanded><![CDATA[1]]></expanded>
         <uid><![CDATA[386675FF-6611-4442-8C3B-24DF75644EAE]]></uid>
     </SQLObjectLabel>
     <SQLObjectLabel>
         <name><![CDATA[NameUsage]]></name>
+        <colorString><![CDATA[]]></colorString>
         <colorString><![CDATA[{0.38,0.88,0.31,0.8}]]></colorString>
         <expanded><![CDATA[1]]></expanded>
         <uid><![CDATA[BFF99451-AC7A-4F6C-9103-F0081E91143B]]></uid>
+    </SQLObjectLabel>
+    <SQLObjectLabel>
+        <name><![CDATA[Usage]]></name>
+        <colorString><![CDATA[{0.38,0.88,0.31,0.8}]]></colorString>
+        <expanded><![CDATA[1]]></expanded>
+        <uid><![CDATA[C7E137E6-19C1-45ED-8E0F-6C7C763BA967]]></uid>
+    </SQLObjectLabel>
+    <SQLObjectLabel>
+        <name><![CDATA[NameUsage]]></name>
+        <colorString><![CDATA[{0.38,0.88,0.31,0.8}]]></colorString>
+        <expanded><![CDATA[1]]></expanded>
+        <uid><![CDATA[2315F489-0993-474B-9285-3F90C6F672C4]]></uid>
     </SQLObjectLabel>
 </SQLContainer>
