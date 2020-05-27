@@ -59,7 +59,7 @@ All files should be encoded in UTF-8.
 ### Entity listing:
  - metadata.yaml
  - [Name](#name)
- - [NameRel](#namerel)
+ - [NameRelation](#namerelation)
  - [Taxon](#taxon)
  - [Synonym](#synonym)
  - [NameUsage](#nameusage)
@@ -102,8 +102,12 @@ type: [rank enum](http://api.catalogue.life/vocab/rank)
 
 The rank of the name preferrably given in case insensitive english. The recommended vocabulary is included in [rank_enum](http://api.catalogue.life/vocab/rank).
 
+#### uninomial
+The single-word name of generic or higher rank names.
+
 #### genus
-The genus part of a bi/trinomial
+The genus part of a bi/trinomial. 
+Note that for generic names the uninomial field should be used, not genus!
 
 #### infragenericEpithet
 The infrageneric epithet in case of bi/trinomials. In zoological names often the subgenus.
@@ -118,7 +122,7 @@ The infraspecific epithet in case of bi/trinomials.
 The name of the cultivar for name governed by the cultivar code.
 
 #### publishedInID
-A referenceID pointing to the Reference table indicating the original publication of the name in its given combination
+A referenceID pointing to the Reference table indicating the original publication of the name in its given combination, not the basionym.
 
 #### publishedInPage
 The exact page number within the referenced reference that the original publication of the name in its given combination starts.
@@ -131,10 +135,12 @@ type: [code enum](http://api.catalogue.life/vocab/nomCode)
 
 The nomenclatural code the name falls under.
 
-#### original
-type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
-If true indicates an original name, i.e. a protonym/basionym.
-False for all subsequent combinations.
+#### originalNameId
+Identifier of the name which is the original combination of this name. Also known as the basionym or protonym. 
+Contrary to the strict basionym definition it is recommended to populate this field also for original names which should point to itself.
+
+Note there is an alternative way to share the information about an original name by using a [NameRelation](#namerelation) with `type=basionym`.
+The field originalNameId exists for simplicity and because it is an important information to be shared.
 
 #### status
 type: [nomStatus enum](http://api.catalogue.life/vocab/nomStatus)
@@ -152,7 +158,7 @@ Additional nomenclatural remarks about the name. Often indicating its status or 
 
 
 
-## NameRel
+## NameRelation
 A directed nomenclatural name relation.
 See [NAMES.md#name-relations](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md#name-relations) for examples.
 
@@ -164,6 +170,8 @@ The name this relation relates to.
 
 #### type
 type: [enum](http://api.catalogue.life/vocab/nomreltype)
+
+spelling correction
 
 The kind of directed relation.
 
@@ -409,7 +417,7 @@ Any further taxonomic remarks.
 
 ## NameUsage
 As a simpler alternative to the 3 entities [Name](#name), [Taxon](#taxon) and [Synonym](#synonym) a single `NameUsage` entity can be supplied.
-A NameUsage record can either be an accepted Taxon or a Synonym and is easily distinguished by its status. A NameUsage.ID acts both as a taxonID and nameID if referred to from other table, e.g TypeMaterial or VernacularName. For synonyms the `parentID` property is used to link to the accepted taxon.
+A NameUsage record can either be an accepted Taxon or a Synonym and is easily distinguished by its status. A NameUsage.ID acts both as a taxonID and nameID if referred to from other table, e.g TypeMaterial or VernacularName. For synonyms the `parentID` field is used to link to the accepted taxon.
 
 All properties available in the individual entities can also be used for the single NameUsage:
 
@@ -422,7 +430,7 @@ Therefore following properties deviate slightly from their usage in their classi
  - **nameStatus**: corresponds to the nomenclatural name status.
  - **parentID**: for taxa it points to the next higher taxon to form the classification, for synonyms it points at the accepted taxon.
  - **genus**: is the taxonomic classification of a name usage and corresponds to Taxon.genus. For synonyms it often is not the same as the genus part of the name
- - **genericName**: corresponds to the genus property of a name and represents the atomized genus of a scientificName.
+ - **genericName**: corresponds to the genus field of a name and represents the atomized genus of a scientificName.
  
 If a single NameUsage entity is given no further Name, Taxon or Synonym entity must exist.
 
@@ -483,25 +491,7 @@ The `id` field in each record of the array must correspond to a Reference record
 ```
 [
 {  
-   "indexed":{  
-      "date-parts":[  
-         [  
-            2019,
-            2,
-            16
-         ]
-      ],
-      "date-time":"2019-02-16T13:21:45Z",
-      "timestamp":1550323305641
-   },
-   "reference-count":46,
    "publisher":"Oxford University Press (OUP)",
-   "content-domain":{  
-      "domain":[  
-
-      ],
-      "crossmark-restriction":false
-   },
    "published-print":{  
       "date-parts":[  
          [  
@@ -524,7 +514,6 @@ The `id` field in each record of the array must correspond to a Reference record
    },
    "page":"baw125",
    "source":"Crossref",
-   "is-referenced-by-count":12,
    "title":"The Global Genome Biodiversity Network (GGBN) Data Standard specification",
    "prefix":"10.1093",
    "volume":"2016",
@@ -820,281 +809,6 @@ The `id` field in each record of the array must correspond to a Reference record
          ]
       ]
    },
-   "reference":[  
-      {  
-         "key":"2016100301395315000_2016.0.baw125.1",
-         "DOI":"10.1093\/nar\/gkt928",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.2",
-         "DOI":"10.1371\/journal.pone.0029715",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.3",
-         "DOI":"10.1080\/11263504.2012.740085",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.4",
-         "DOI":"10.1038\/nbt.1823",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.5",
-         "DOI":"10.1101\/SQB.1986.051.01.032",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.6",
-         "DOI":"10.1073\/pnas.74.12.5463",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.7",
-         "DOI":"10.1016\/j.molcel.2015.05.004",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.8",
-         "unstructured":"Lav\u00edn Trueba J.L. Aransay A.M. (2016) The high-throughput sequencing technologies triple-W discussion: why use HTS, what is the optimal HTS method to use, and which data analysis workflow to follow. In: Lav\u00edn Trueba J.L. Aransay A.M. (eds.) Field Guidelines for Genetic Experimental Designs in High-Throughput Sequencing. Springer International Publishing. pp. 1\u201312.",
-         "DOI":"10.1007\/978-3-319-31350-4_1",
-         "doi-asserted-by":"crossref"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.9",
-         "first-page":"433",
-         "article-title":"Mitochondrial DNA extraction and sequencing of formalin-fixed archival snake tissue",
-         "volume":"19",
-         "author":"Friedman",
-         "year":"2008",
-         "journal-title":"Mitochondrial DNA"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.10",
-         "first-page":"e2202v1",
-         "article-title":"Greater than X kb: a quantitative assessment of preservation conditions on genomic DNA quality, and a proposed standard for genome-quality DNA",
-         "volume":"4",
-         "author":"Mulcahy",
-         "year":"2016",
-         "journal-title":"PeerJ Preprints"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.11",
-         "DOI":"10.1038\/nature09678",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.12",
-         "DOI":"10.1006\/jmbi.1990.9999",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.13",
-         "doi-asserted-by":"crossref",
-         "first-page":"D15",
-         "DOI":"10.1093\/nar\/gkq1150",
-         "article-title":"The international nucleotide sequence database collaboration",
-         "volume":"3",
-         "author":"Cochrane",
-         "year":"2011",
-         "journal-title":"Nucleic Acids Res"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.14",
-         "doi-asserted-by":"crossref",
-         "first-page":"273",
-         "DOI":"10.1098\/rspb.2007.1290",
-         "article-title":"Character-based DNA barcoding allows discrimination of genera, species and populations in Odonata",
-         "volume":"275",
-         "author":"Rach",
-         "year":"2008",
-         "journal-title":"Proc. R. Soc. B"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.15",
-         "DOI":"10.1007\/s00216-014-8435-y",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.16",
-         "DOI":"10.3897\/zookeys.365.6027",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.17",
-         "DOI":"10.1126\/science.1251385",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.18",
-         "DOI":"10.3897\/zookeys.152.2473",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.19",
-         "first-page":"1",
-         "article-title":"How to tackle the molecular species inventory for an industrialized natio\u2013n\u2014lessons from the first phase of the German Barcode of Life initiative GBOL (2012\u20132015)",
-         "volume":"17",
-         "author":"Geiger",
-         "year":"2016",
-         "journal-title":"Genome"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.20",
-         "DOI":"10.1038\/nature08656",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.21",
-         "unstructured":"Dessauer H.C. Hafner M.S. (1984) Collection of Frozen Tissues: Value,Management, Field and Laboratory Procedures, and Directory of Existing Collections. Association of Systematics Collections: Lawrence."
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.22",
-         "unstructured":"Engstrom M.D. Murphy R.W. Haddrath O. (1990) Sampling vertebrate collections for molecular research: practice and policies. In: Metsger D.A. Byers S.C. (eds), Managing the Modern Herbarium. Elton-Wolf, Vancouver. pp. 315\u2013330."
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.23",
-         "unstructured":"de Vincente M.C. Andersson M.S. (2006) DNA banks\u2014providing novel options for genebanks. Topical Reviews in Agricultural Biodiversity. International Plant Genetic Resources Institute, Rome."
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.24",
-         "unstructured":"OECD (Organisation for economic co-operation and development) (2001) Biological Resource Centres\u2014Underpinning the future of life sciences and biotechnology. http:\/\/www.oecd.org\/sti\/biotech\/2487422.pdf."
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.25",
-         "unstructured":"OECD (Organisation for economic co-operation and development) (2007) Best practice guidelines for biological resource centres. http:\/\/www.oecd.org\/sti\/biotech\/38777417.pdf."
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.26",
-         "first-page":"47",
-         "article-title":"The Nagoya Protocol on Access to Genetic Resources and the Fair and Equitable Sharing of Benefits Arising from their Utilization to the Convention on Biological Diversity",
-         "volume":"20",
-         "author":"Buck",
-         "year":"2011",
-         "journal-title":"Reciel"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.27",
-         "unstructured":"Butler C. Lyal C. Seberg O. (2015) GGBN creates access and benefit sharing documentation for members. GGBN Newsletter, March 2015. http:\/\/ggbn.org\/docs\/GGBN_March2015_Newsletter_FINAL.pdf."
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.28",
-         "doi-asserted-by":"crossref",
-         "first-page":"1181",
-         "DOI":"10.1038\/ng1007-1181",
-         "article-title":"The NCBI dbGaP database of genotypes and phenotypes",
-         "volume":"39",
-         "author":"Mailman",
-         "year":"2007",
-         "journal-title":"Nat. Genet"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.29",
-         "DOI":"10.1038\/nature09298",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.30",
-         "DOI":"10.1093\/nar\/gkt1211",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.31",
-         "DOI":"10.1038\/nature05874",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.32",
-         "DOI":"10.1002\/cncy.20147",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.33",
-         "DOI":"10.1158\/1055-9965.EPI-09-1268",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.34",
-         "DOI":"10.1089\/bio.2012.0012",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.35",
-         "DOI":"10.1089\/bio.2011.0035",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.36",
-         "first-page":"277",
-         "article-title":"Can biospecimen science expedite the ex situ conservation of plants in megadiverse countries? A focus on the flora of brazil",
-         "volume":"34",
-         "author":"Harding",
-         "year":"2013",
-         "journal-title":"Crit. Rev. Plant. Sci"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.37",
-         "DOI":"10.1038\/nbt1360",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.38",
-         "DOI":"10.1016\/j.resmic.2010.02.005",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.39",
-         "DOI":"10.1089\/bio.2010.0029",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.40",
-         "first-page":"552",
-         "article-title":"International networking of large amounts of primary biodiversity data. Proceedings Informatik 2009 - Im Focus das Leben",
-         "volume":"26",
-         "author":"Holetschek",
-         "year":"2009",
-         "journal-title":"Lect. Notes Inf"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.41",
-         "DOI":"10.1089\/omi.2008.0A10",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.42",
-         "DOI":"10.5301\/JBM.2012.9718",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.43",
-         "DOI":"10.1089\/bio.2012.0033",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.44",
-         "DOI":"10.1371\/journal.pone.0102623",
-         "doi-asserted-by":"publisher"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.45",
-         "doi-asserted-by":"crossref",
-         "first-page":"e014224.",
-         "DOI":"10.1371\/journal.pone.0142240",
-         "article-title":"B-HIT\u2014a tool for harvesting and indexing biodiversity data",
-         "volume":"10",
-         "author":"Kelbert",
-         "year":"2015",
-         "journal-title":"PLoS One"
-      },
-      {  
-         "key":"2016100301395315000_2016.0.baw125.46",
-         "DOI":"10.1089\/bio.2015.0061",
-         "doi-asserted-by":"publisher"
-      }
-   ],
    "container-title":"Database",
    "original-title":[  
 
@@ -1119,7 +833,6 @@ The `id` field in each record of the array must correspond to a Reference record
       "date-time":"2017-08-25T02:23:14Z",
       "timestamp":1503627794000
    },
-   "score":1.0,
    "subtitle":[  
 
    ],
@@ -1133,16 +846,10 @@ The `id` field in each record of the array must correspond to a Reference record
          ]
       ]
    },
-   "references-count":46,
    "alternative-id":[  
       "10.1093\/database\/baw125"
    ],
    "URL":"http:\/\/dx.doi.org\/10.1093\/database\/baw125",
-   "relation":{  
-      "cites":[  
-
-      ]
-   },
    "ISSN":[  
       "1758-0463"
    ],
@@ -1150,26 +857,8 @@ The `id` field in each record of the array must correspond to a Reference record
 },
 
 {  
-   "indexed":{  
-      "date-parts":[  
-         [  
-            2019,
-            2,
-            16
-         ]
-      ],
-      "date-time":"2019-02-16T05:39:49Z",
-      "timestamp":1550295589144
-   },
-   "reference-count":0,
    "publisher":"American Association for the Advancement of Science (AAAS)",
    "issue":"3946",
-   "content-domain":{  
-      "domain":[  
-
-      ],
-      "crossmark-restriction":false
-   },
    "published-print":{  
       "date-parts":[  
          [  
@@ -1194,7 +883,6 @@ The `id` field in each record of the array must correspond to a Reference record
    },
    "page":"635-641",
    "source":"Crossref",
-   "is-referenced-by-count":61,
    "title":"The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance",
    "prefix":"10.1126",
    "volume":"169",
@@ -1233,7 +921,6 @@ The `id` field in each record of the array must correspond to a Reference record
       "date-time":"2016-12-23T19:54:07Z",
       "timestamp":1482522847000
    },
-   "score":1.0,
    "subtitle":[  
 
    ],
@@ -1249,7 +936,6 @@ The `id` field in each record of the array must correspond to a Reference record
          ]
       ]
    },
-   "references-count":0,
    "journal-issue":{  
       "published-print":{  
          "date-parts":[  
@@ -1400,7 +1086,7 @@ Pointer to the reference that supports this vernacular name. Refers to an existi
 
 
 ## Treatment
-Treatments are parts of publications that "treat" a single taxon. They can be an original description for a new species, but also subsequent taxonomic works and usually include several sections such as a diagnosis, description, material examied, distribution, etc.
+[Treatments](http://plazi.org/api-tools/api/#What_is_a_treatment) are parts of publications that "treat" a single taxon. They can be an original description for a new species, but also subsequent taxonomic works and usually include several sections such as a diagnosis, description, material examied, distribution, etc.
 ColDP captures an entire treatment either as an TXT, HTML or XML document that lives as an individual file in a subfolder `treatments` and is named by the corresponding taxonID of the name usage it describes. The taxons `accordingToID` should always point to the reference the treatment is published in.
 Example: `treatments/19854332.html` would be an html document which is the marked up treatment for the taxon with ID `19854332`.
 
