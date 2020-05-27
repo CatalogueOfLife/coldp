@@ -254,7 +254,7 @@ The direct parent in the classification. This is the preferred way of exchanging
 #### nameID
 Pointer to the accepted name referring to an existing Name.ID within this data package.
 
-#### appendedNamePhrase
+#### appendedPhrase
 An optional, unrestricted, lose phrase appended to the name just for this taxon.
 E.g. the phrase "sensu latu" may be added to the name to describe this taxon more precisely.
 
@@ -386,7 +386,7 @@ Pointer to the taxon that this synonym is used for. For pro parte synonyms with 
 #### nameID 
 Pointer to the synonymous name referring to an existing Name.ID within this data package.
 
-#### appendedNamePhrase
+#### appendedPhrase
 An optional, unrestricted, lose phrase appended to the name just for this synonym.
 E.g. the phrase "sensu latu" may be added to the name to describe this synonym more precisely.
 Or "auct. mult." or "auct. amer." for misapplied names that cannot refer to a single publication.
