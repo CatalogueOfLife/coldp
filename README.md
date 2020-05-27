@@ -57,7 +57,7 @@ It is recommended to place all data files in a subfolder called `data`, but havi
 All files should be encoded in UTF-8.
 
 ### Entity listing:
- - metadata.yaml
+ - [metadata.yaml](#metadatayaml)
  - [Name](#name)
  - [NameRelation](#namerelation)
  - [Taxon](#taxon)
@@ -70,11 +70,11 @@ All files should be encoded in UTF-8.
  - [Distribution](#distribution)
  - [Media](#media)
  - [VernacularName](#vernacularname)
- - [Treatment](#treatment)
+ - [Treatment documents](#treatment)
   
 ## metadata.yaml
-A [YAML file](https://en.wikipedia.org/wiki/YAML) with metadata about the entire dataset should be included. 
-The file consists mostly of key value pairs, see the [comments in metadata.yaml](metadata.yaml) for all available keys.
+A [YAML file](https://en.wikipedia.org/wiki/YAML) with metadata about the entire data package should be included. 
+The file consists mostly of key value pairs like title, see the [comments in metadata.yaml](metadata.yaml) for all available keys.
 An exception are the contact and authorsAndEditors properties which takes a simple person object, see [yaml example](metadata.yaml).
 Additional entries to the YAML file is allowed to express non standard properties.
 
