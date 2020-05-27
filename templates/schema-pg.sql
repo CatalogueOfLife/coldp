@@ -89,6 +89,25 @@ CREATE TYPE STATUS AS ENUM (
   'MISAPPLIED'
 );
 
+CREATE TYPE TAXRELTYPE AS ENUM (
+  'CONGRUENT',
+  'INCLUDES',
+  'OVERLAPS',
+  'EXCLUDES',
+  'INTERSECTS',
+
+  'INTERACTS_WITH',
+  'VISITS',
+  'INHABITS',
+  'SYMBIONT_OF',
+  'ASSOCIATED_WITH',
+  'EATS',
+  'POLLINATES',
+  'PARASITE_OF',
+  'PATHOGEN_OF',
+  'HOST_OF'
+);
+
 CREATE TYPE RANK AS ENUM (
   'DOMAIN',
   'REALM',
@@ -240,6 +259,14 @@ CREATE TABLE "Taxon" (
 	lifezone LIFEZONE[],
 	link TEXT,
 	remarks TEXT
+);
+
+CREATE TABLE "TaxonRelation" (
+  "taxonID" TEXT NOT NULL REFERENCES "Taxon",
+  "relatedTaxonID" TEXT NOT NULL REFERENCES "Taxon",
+  type TAXRELTYPE NOT NULL,
+  "referenceID" TEXT REFERENCES "Reference",
+  remarks TEXT
 );
 
 CREATE TABLE "Distribution" (

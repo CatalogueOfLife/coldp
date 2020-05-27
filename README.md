@@ -27,12 +27,13 @@ Name identifier|-|x|x
 Nomenclatural status|x|x|x
 Fossils/extinction flags|x|x|x
 Name & taxon separation|-|-|x
+Species interactions|-|-|x
 Structured references|x|-|x
 Nomenclatural relations|-|-|x
 Type species|-|x|x
 Type specimen|-|x|x
 Taxon concepts|-|x|x
-Taxon concept relations|-|x|*
+Taxon concept relations|-|x|x
 Vernacular names|x|x|x
 Structured distributions|x|x|x
 Taxon descriptions|-|x|x
@@ -40,8 +41,7 @@ Multimedia metadata|-|x|x
 
  - `x` = supported
  - `-` = not supported
- - `*` = not yet supported but expected soon
-
+ 
 ## Data Files
 The filename for an entity in the above diagram is a case insensitive version of the class name, any number of ignored hyphens or underscores and a known tabular text suffix. 
 The suffix specifies one of the two supported tabular flavours, comma separated or tab separated files:
@@ -63,6 +63,7 @@ All files should be encoded in UTF-8.
  - [Taxon](#taxon)
  - [Synonym](#synonym)
  - [NameUsage](#nameusage)
+ - [TaxonRelation](#taxonrelation)
  - [Reference](#reference)
  - [Reference JSON-CSL](#reference-json-csl)
  - [Reference BIBTEX](#reference-bibtex)
@@ -163,17 +164,15 @@ A directed nomenclatural name relation.
 See [NAMES.md#name-relations](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md#name-relations) for examples.
 
 #### nameID 
-The name this relation originates from.
+The subject name this relation originates from.
 
 #### relatedNameID
-The name this relation relates to.
+The object name this relation relates to.
 
 #### type
 type: [enum](http://api.catalogue.life/vocab/nomreltype)
 
-spelling correction
-
-The kind of directed relation.
+The kind of directed nomenclatural relation.
 
 #### publishedInID
 The reference or nomenclatural act where this nomenclatural relation was established.
@@ -433,6 +432,29 @@ Therefore following properties deviate slightly from their usage in their classi
  - **genericName**: corresponds to the genus field of a name and represents the atomized genus of a scientificName.
  
 If a single NameUsage entity is given no further Name, Taxon or Synonym entity must exist.
+
+
+
+## TaxonRelation
+A directed taxon relation. 
+Either a RCC5 concept relation or a species interaction.
+
+#### taxonID 
+The subject taxon this relation originates from.
+
+#### relatedTaxonID
+The object taxon this taxon relates to.
+
+#### type
+type: [enum](http://api.catalogue.life/vocab/taxreltype)
+
+The kind of directed taxon relation, either concept or species interaction.
+
+#### referenceID
+A reference where this relation was documented.
+
+#### remarks
+Remarks about the relation.
 
 
 

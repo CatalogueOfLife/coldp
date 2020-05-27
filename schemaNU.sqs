@@ -73,11 +73,11 @@
         <name><![CDATA[NameRelation]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>421.00</x>
-            <y>69.00</y>
+            <x>437.00</x>
+            <y>73.00</y>
         </location>
         <size>
-            <width>172.00</width>
+            <width>178.00</width>
             <height>120.00</height>
         </size>
         <zorder>2</zorder>
@@ -235,7 +235,7 @@
         <name><![CDATA[Reference]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>652.00</x>
+            <x>668.00</x>
             <y>669.00</y>
         </location>
         <size>
@@ -311,6 +311,89 @@
         <labelWindowIndex><![CDATA[4]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[75124B01-D882-44C2-99DD-251744BC5626]]></uid>
+    </SQLTable>
+    <SQLTable>
+        <name><![CDATA[TaxonRelation]]></name>
+        <schema><![CDATA[]]></schema>
+        <location>
+            <x>436.00</x>
+            <y>218.00</y>
+        </location>
+        <size>
+            <width>179.00</width>
+            <height>120.00</height>
+        </size>
+        <zorder>8</zorder>
+        <SQLField>
+            <name><![CDATA[taxonID]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <referencesField>ID</referencesField>
+            <referencesTable>NameUsage</referencesTable>
+            <referencesField><![CDATA[ID]]></referencesField>
+            <referencesTable><![CDATA[NameUsage]]></referencesTable>
+            <sourceCardinality>0</sourceCardinality>
+            <destinationCardinality>0</destinationCardinality>
+            <referencesFieldUID><![CDATA[91F17EB2-D0AB-4699-A77C-606F986D00D5]]></referencesFieldUID>
+            <referencesTableUID><![CDATA[C1197407-207A-4AAA-8774-DC628EDDA84F]]></referencesTableUID>
+            <autoIncrement><![CDATA[0]]></autoIncrement>
+            <hidden><![CDATA[0]]></hidden>
+            <notNull><![CDATA[1]]></notNull>
+            <uid><![CDATA[D3792EED-8ECA-4A25-A574-75358D91DB78]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[relatedTaxonID]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <referencesField>ID</referencesField>
+            <referencesTable>NameUsage</referencesTable>
+            <referencesField><![CDATA[ID]]></referencesField>
+            <referencesTable><![CDATA[NameUsage]]></referencesTable>
+            <sourceCardinality>0</sourceCardinality>
+            <destinationCardinality>0</destinationCardinality>
+            <referencesFieldUID><![CDATA[91F17EB2-D0AB-4699-A77C-606F986D00D5]]></referencesFieldUID>
+            <referencesTableUID><![CDATA[C1197407-207A-4AAA-8774-DC628EDDA84F]]></referencesTableUID>
+            <autoIncrement><![CDATA[0]]></autoIncrement>
+            <hidden><![CDATA[0]]></hidden>
+            <notNull><![CDATA[1]]></notNull>
+            <uid><![CDATA[97C30A1E-385D-4803-9A8E-29CE23D70792]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[type]]></name>
+            <type><![CDATA[ENUM]]></type>
+            <autoIncrement><![CDATA[0]]></autoIncrement>
+            <hidden><![CDATA[0]]></hidden>
+            <notNull><![CDATA[1]]></notNull>
+            <uid><![CDATA[C8DD8060-A55F-4AAF-A673-C07F72EC2F91]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[referenceID]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <referencesField>ID</referencesField>
+            <referencesTable>Reference</referencesTable>
+            <referencesField><![CDATA[ID]]></referencesField>
+            <referencesTable><![CDATA[Reference]]></referencesTable>
+            <sourceCardinality>0</sourceCardinality>
+            <destinationCardinality>0</destinationCardinality>
+            <referencesFieldUID><![CDATA[B479B9CD-4B6B-408A-BB03-2CE75F9C09C7]]></referencesFieldUID>
+            <referencesTableUID><![CDATA[75124B01-D882-44C2-99DD-251744BC5626]]></referencesTableUID>
+            <autoIncrement><![CDATA[0]]></autoIncrement>
+            <connectorMidPoint><![CDATA[825.000000]]></connectorMidPoint>
+            <hidden><![CDATA[0]]></hidden>
+            <notNull><![CDATA[0]]></notNull>
+            <uid><![CDATA[D5F995E4-5C0B-4F2F-AF56-E23D6B4CABA5]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[remarks]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <autoIncrement><![CDATA[0]]></autoIncrement>
+            <hidden><![CDATA[0]]></hidden>
+            <notNull><![CDATA[0]]></notNull>
+            <uid><![CDATA[2881E385-D268-4F4E-A3B2-5C882678B14F]]></uid>
+        </SQLField>
+        <hidden><![CDATA[0]]></hidden>
+        <labelColor><![CDATA[{0.817065,0.870764,0.746326,0.8}]]></labelColor>
+        <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
+        <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
+        <uid><![CDATA[77BE0EBA-259B-41EA-B982-8E5D67D89551]]></uid>
     </SQLTable>
     <SQLTable>
         <name><![CDATA[Media]]></name>
@@ -534,7 +617,6 @@
             <referencesFieldUID><![CDATA[B479B9CD-4B6B-408A-BB03-2CE75F9C09C7]]></referencesFieldUID>
             <referencesTableUID><![CDATA[75124B01-D882-44C2-99DD-251744BC5626]]></referencesTableUID>
             <hidden><![CDATA[0]]></hidden>
-            <incompleteReferenceTarget><![CDATA[1]]></incompleteReferenceTarget>
             <uid><![CDATA[A9AC177A-2DC7-4472-80D4-6487C8BAA8C8]]></uid>
         </SQLField>
         <SQLField>
@@ -745,7 +827,6 @@
             <uid><![CDATA[D6F4114A-B293-4D8F-B7CA-1FDE14055F44]]></uid>
         </SQLField>
         <hidden><![CDATA[0]]></hidden>
-        <incompleteReferenceTarget><![CDATA[1]]></incompleteReferenceTarget>
         <labelWindowIndex><![CDATA[6]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[C1197407-207A-4AAA-8774-DC628EDDA84F]]></uid>
@@ -754,11 +835,11 @@
         <name><![CDATA[TypeMaterial]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>415.00</x>
-            <y>226.00</y>
+            <x>432.00</x>
+            <y>375.00</y>
         </location>
         <size>
-            <width>170.00</width>
+            <width>183.00</width>
             <height>320.00</height>
         </size>
         <zorder>6</zorder>
@@ -973,7 +1054,7 @@
         <windowHeight><![CDATA[1057.000000]]></windowHeight>
         <windowLocationX><![CDATA[15.000000]]></windowLocationX>
         <windowLocationY><![CDATA[0.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{312, 0}]]></windowScrollOrigin>
+        <windowScrollOrigin><![CDATA[{273.5, 2.5}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1751.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>
