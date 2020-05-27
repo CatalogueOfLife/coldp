@@ -136,12 +136,12 @@ type: [code enum](http://api.catalogue.life/vocab/nomCode)
 
 The nomenclatural code the name falls under.
 
-#### originalNameId
+#### originalNameID
 Identifier of the name which is the original combination of this name. Also known as the basionym or protonym. 
 Contrary to the strict basionym definition it is recommended to populate this field also for original names which should point to itself.
 
 Note there is an alternative way to share the information about an original name by using a [NameRelation](#namerelation) with `type=basionym`.
-The field originalNameId exists for simplicity and because it is an important information to be shared.
+The field originalNameID exists for simplicity and because it is an important information to be shared.
 
 #### status
 type: [nomStatus enum](http://api.catalogue.life/vocab/nomStatus)

@@ -216,7 +216,7 @@ CREATE TABLE "Reference" (
 
 CREATE TABLE "Name" (
 	"ID" TEXT PRIMARY KEY,
-	"originalNameId" TEXT REFERENCES "Name",
+	"originalNameID" TEXT REFERENCES "Name",
 	"scientificName" TEXT NOT NULL,
 	authorship TEXT,
 	rank RANK NOT NULL,
