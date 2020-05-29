@@ -90,11 +90,11 @@ CREATE TYPE STATUS AS ENUM (
 );
 
 CREATE TYPE TAXRELTYPE AS ENUM (
-  'CONGRUENT',
+  'EQUALS',
   'INCLUDES',
+  'INCLUDED_IN',
   'OVERLAPS',
   'EXCLUDES',
-  'INTERSECTS',
 
   'INTERACTS_WITH',
   'VISITS',
@@ -247,7 +247,7 @@ CREATE TABLE "Taxon" (
 	"ID" TEXT PRIMARY KEY,
 	"parentID" TEXT REFERENCES "Taxon",
 	"nameID" TEXT NOT NULL REFERENCES "Name",
-	"appendedPhrase" TEXT,
+	"namePhrase" TEXT,
 	"accordingToID" TEXT REFERENCES "Reference",
 	provisional BOOLEAN NOT NULL,
 	"referenceID" TEXT[],
@@ -281,7 +281,7 @@ CREATE TABLE "Synonym" (
 	"ID" TEXT PRIMARY KEY,
 	"taxonID" TEXT REFERENCES "Taxon",
 	"nameID" TEXT NOT NULL REFERENCES "Name",
-	"appendedPhrase" TEXT,
+	"namePhrase" TEXT,
 	"accordingToID" TEXT REFERENCES "Reference",
 	status STATUS NOT NULL,
 	"referenceID" TEXT[],

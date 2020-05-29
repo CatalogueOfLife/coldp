@@ -483,7 +483,7 @@
             <uid><![CDATA[ECC24866-20E2-4EC3-8BDF-E0F69BA2BC9A]]></uid>
         </SQLField>
         <SQLField>
-            <name><![CDATA[appendedPhrase]]></name>
+            <name><![CDATA[namePhrase]]></name>
             <type><![CDATA[TEXT]]></type>
             <hidden><![CDATA[0]]></hidden>
             <uid><![CDATA[D8BA2B34-38A8-4EA9-8360-E25C9DED6F6B]]></uid>
@@ -974,7 +974,7 @@
             <uid><![CDATA[756A1358-0390-4C16-9D6E-D82315473EF8]]></uid>
         </SQLField>
         <SQLField>
-            <name><![CDATA[appendedPhrase]]></name>
+            <name><![CDATA[namePhrase]]></name>
             <type><![CDATA[TEXT]]></type>
             <hidden><![CDATA[0]]></hidden>
             <uid><![CDATA[712135ED-6009-469C-99D8-BBF030A1446D]]></uid>
@@ -1251,9 +1251,9 @@
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
         <windowHeight><![CDATA[1057.000000]]></windowHeight>
-        <windowLocationX><![CDATA[15.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[0.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{187, 84.5}]]></windowScrollOrigin>
+        <windowLocationX><![CDATA[4.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[20.000000]]></windowLocationY>
+        <windowScrollOrigin><![CDATA[{189, 0}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1751.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>
