@@ -449,6 +449,7 @@ The object taxon this taxon relates to.
 type: [enum](http://api.catalogue.life/vocab/taxreltype)
 
 The kind of directed taxon relation, either concept or species interaction.
+Species interaction types are heavily inspired by https://www.globalbioticinteractions.org and the OBO Relation Ontology http://www.ontobee.org/ontology/RO
 
 #### referenceID
 A reference where this relation was documented.
