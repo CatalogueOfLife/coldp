@@ -20,4 +20,5 @@ ID	parentID	nameID	provisional	accordingToID	scrutinizer	scrutinizerDate	extinct
 1001c	1001	1001c	false					false	terrestrial	https://en.wikipedia.org/wiki/Crepis_bakeri	
 fake	1	fake	true		M.Döring	2018	false	terrestrial,brackish	https://herbaria.plants.ox.ac.uk/bol/plants400/profiles/OP/Paulownia	unclear classification
 hybrid	1	hybrid	false		Shin Vac	2003-03-21	true	false	terrestrial,freshwater	link	my favorite hybrid
-sec1011	110	1011	false	Hind2013			false	terrestrial		
+Hind2013	110	1011	false	Hind2013			false	terrestrial	https://www.jstor.org/stable/45066252	
+Jarvis2007	110	1011	false	Jarvis2007			false	terrestrial	http://tb.plazi.org/GgServer/html/24BF99B096BF897134A192EB740A13F7	
