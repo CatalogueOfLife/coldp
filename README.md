@@ -248,7 +248,7 @@ An accepted name with a taxonomic classification given either as a parent-child 
 Unique taxon identifier that is referred to elsewhere via `taxonID`.
 
 #### parentID
-The direct parent in the classification. This is the preferred way of exchanging a hierarchy and takes precedence over any classification given in the denormalized fields.
+The direct parent taxon's ID in the classification. This is the preferred way of exchanging a hierarchy and takes precedence over any classification given in the denormalized fields.
 
 #### nameID
 Pointer to the accepted name referring to an existing Name.ID within this data package.
@@ -427,7 +427,7 @@ Therefore following properties deviate slightly from their usage in their classi
  
  - **status**: is the taxonomic name usage status which includes Synonym.status and the Taxon.provisional flag. 
  - **nameStatus**: corresponds to the nomenclatural name status.
- - **parentID**: for taxa it points to the next higher taxon to form the classification, for synonyms it points at the accepted taxon.
+ - **parentID**: for taxa it points to the next higher taxon's ID to form the classification, for synonyms it points at the accepted taxon.
  - **genus**: is the taxonomic classification of a name usage and corresponds to Taxon.genus. For synonyms it often is not the same as the genus part of the name
  - **genericName**: corresponds to the genus field of a name and represents the atomized genus of a scientificName.
  
