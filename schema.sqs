@@ -463,6 +463,14 @@
         <SQLField>
             <name><![CDATA[parentID]]></name>
             <type><![CDATA[TEXT]]></type>
+            <referencesField>ID</referencesField>
+            <referencesTable>Taxon</referencesTable>
+            <referencesField><![CDATA[ID]]></referencesField>
+            <referencesTable><![CDATA[Taxon]]></referencesTable>
+            <sourceCardinality>0</sourceCardinality>
+            <destinationCardinality>0</destinationCardinality>
+            <referencesFieldUID><![CDATA[57854AB8-FD38-4617-B304-4269A5CAE1A4]]></referencesFieldUID>
+            <referencesTableUID><![CDATA[92DA6EA1-D817-4766-A256-3EFF44D3D54B]]></referencesTableUID>
             <forcedUnique><![CDATA[0]]></forcedUnique>
             <hidden><![CDATA[0]]></hidden>
             <uid><![CDATA[7ED5AF99-8FAD-4CC0-9DAE-E3AF114F1E7D]]></uid>
