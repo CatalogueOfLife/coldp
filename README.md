@@ -463,7 +463,7 @@ Remarks about the concept relation.
 
 ## SpeciesInteraction
 A directed taxon relation representing species interactions.
-Different to a (TaxonConceptRelation)[#taxonconceptrelation] a species interaction can also point to a species (name) outside of the local dataset.
+Different to a [TaxonConceptRelation](#taxonconceptrelation) a species interaction can also point to a species (name) outside of the local dataset.
 
 #### taxonID 
 The subject taxon the species interaction is about. Always required to point to an existing taxonID in the local dataset.
