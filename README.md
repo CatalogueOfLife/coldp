@@ -28,6 +28,7 @@ Nomenclatural status|x|x|x
 Fossils/extinction flags|x|x|x
 Name & taxon separation|-|-|x
 Species interactions|-|-|x
+Species estimates|-|-|x
 Structured references|x|-|x
 Nomenclatural relations|-|-|x
 Type species|-|x|x
@@ -63,7 +64,9 @@ All files should be encoded in UTF-8.
  - [Taxon](#taxon)
  - [Synonym](#synonym)
  - [NameUsage](#nameusage)
- - [TaxonRelation](#taxonrelation)
+ - [TaxonConceptRelation](#taxonconceptrelation)
+ - [SpeciesInteraction](#speciesinteraction)
+ - [SpeciesEstimate](#speciesestimate)
  - [Reference](#reference)
  - [Reference JSON-CSL](#reference-json-csl)
  - [Reference BIBTEX](#reference-bibtex)
@@ -174,7 +177,7 @@ type: [enum](http://api.catalogue.life/vocab/nomreltype)
 
 The kind of directed nomenclatural relation.
 
-#### publishedInID
+#### referenceID
 The reference or nomenclatural act where this nomenclatural relation was established.
 
 #### remarks
@@ -435,27 +438,78 @@ If a single NameUsage entity is given no further Name, Taxon or Synonym entity m
 
 
 
-## TaxonRelation
-A directed taxon relation. 
-Either a RCC5 concept relation or a species interaction.
+
+## TaxonConceptRelation
+A directed taxon relation representing RCC5 taxon concept assertions.
 
 #### taxonID 
 The subject taxon this relation originates from.
 
 #### relatedTaxonID
-The object taxon this taxon relates to.
+The object this taxon relates to.
 
 #### type
-type: [enum](http://api.catalogue.life/vocab/taxreltype)
+type: [enum](http://api.catalogue.life/vocab/taxonconceptreltype)
+The kind of directed RCC5 relation that specifies how the two taxon concepts are related.
 
-The kind of directed taxon relation, either concept or species interaction.
+#### referenceID
+A reference where this relation was documented or who asserted it.
+
+#### remarks
+Remarks about the concept relation.
+
+
+
+
+## SpeciesInteraction
+A directed taxon relation representing species interactions.
+Different to a (TaxonConceptRelation)[#taxonconceptrelation] a species interaction can also point to a species (name) outside of the local dataset.
+
+#### taxonID 
+The subject taxon the species interaction is about. Always required to point to an existing taxonID in the local dataset.
+
+#### relatedTaxonID
+The related taxon this interaction is describing. If given it must refer to a local taxonID from the dataset.
+If missing, the 'relatedTaxonScientificName' must be given instead.
+
+#### relatedTaxonScientificName
+The scientificName of the related taxon this interaction is describing. Includes the authorship if known.
+It is mutually exclusive with relatedTaxonID and if given no relatedTaxonID should exist.
+The relatedTaxonScientificName can be used to document species interactions without the need to have full blown name and taxon records.
+
+#### type
+type: [enum](http://api.catalogue.life/vocab/speciesinteractiontype)
+
+The kind of directed species interaction. Each interaction exists also in reverse to allow the alternative relatedTaxonScientificName field to be used.
 Species interaction types are heavily inspired by https://www.globalbioticinteractions.org and the OBO Relation Ontology http://www.ontobee.org/ontology/RO
 
 #### referenceID
-A reference where this relation was documented.
+A reference where the interaction was documented.
 
 #### remarks
-Remarks about the relation.
+Remarks about the species interation.
+
+
+
+
+## SpeciesEstimate
+An estimation of the number of species for a given higher taxon, e.g. a family.
+The estimation must be based on a reference and should give the number of species according to a certain "type" that is expected to exist.
+
+#### taxonID
+The higher taxon's ID that is the estimate refers to.
+
+#### estimate
+type: [integer]
+The estimated number of species.
+
+#### type 
+type: [enum](http://api.catalogue.life/vocab/estimatetype)
+The exact kind of estimation, e.g. number of described living species or total estimated species including yet to be described organisms.
+If none is given the type defaults to 'described species living'.
+
+#### referenceID
+A mandatory reference ID that supports the estimate and also provides a temporal context.
 
 
 
