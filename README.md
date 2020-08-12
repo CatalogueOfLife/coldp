@@ -125,26 +125,26 @@ The infraspecific epithet in case of bi/trinomials.
 #### cultivarEpithet
 The name of the cultivar for name governed by the cultivar code.
 
-#### publishedInID
+#### referenceID
 A referenceID pointing to the Reference table indicating the original publication of the name in its given combination, not the basionym.
 
-#### publishedInPage
+#### referencePage
 The exact page number within the referenced reference that the original publication of the name in its given combination starts.
 
 #### publishedInYear
-The effective year the name was published.
+The effective year the name was published. This is the year that is nomenclaturally relevant.
 
 #### code
 type: [code enum](http://api.catalogue.life/vocab/nomCode)
 
 The nomenclatural code the name falls under.
 
-#### originalNameID
+#### basionymID
 Identifier of the name which is the original combination of this name. Also known as the basionym or protonym. 
 Contrary to the strict basionym definition it is recommended to populate this field also for original names which should point to itself.
 
 Note there is an alternative way to share the information about an original name by using a [NameRelation](#namerelation) with `type=basionym`.
-The field originalNameID exists for simplicity and because it is an important information to be shared.
+The field basionymID exists for simplicity and because it is an important information to be shared.
 
 #### status
 type: [nomStatus enum](http://api.catalogue.life/vocab/nomStatus)
@@ -180,6 +180,9 @@ The kind of directed nomenclatural relation.
 #### referenceID
 The reference or nomenclatural act where this nomenclatural relation was established.
 
+#### referencePage
+The exact page number within the reference that the nomenclatural relation starts being mentioned.
+
 #### remarks
 Remarks about the relation.
 
@@ -209,7 +212,7 @@ The status of the type material, e.g. holotype
 
 #### referenceID
 A referenceID pointing to the Reference table indicating the publication of the type designation.
-Most often this is equivalent to the original publishedInID, but for subsequent designations a later reference should be cited.
+Most often this is equivalent to the original names referenceID, but for subsequent designations a later reference should be cited.
 
 #### locality
 The type locality. Ideally from largest area to smallest.
@@ -520,7 +523,7 @@ References can be given in 3 ways of different degree of atomization that are no
 The main reference file contains a full citation and 4 Dublin Core based properties that are also used in ACEF.
 
 #### ID  
-The local identifier for the reference as used in publishedIn and other fields.
+The local identifier for the reference as used in referenceID in other entities.
 
 #### citation
 Full bibliographic citation as one single string as an alternative to the rest of the more structured fields.
