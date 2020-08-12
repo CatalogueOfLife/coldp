@@ -449,7 +449,7 @@ The subject taxon this relation originates from.
 The object this taxon relates to.
 
 #### type
-type: [enum](http://api.catalogue.life/vocab/taxonconceptreltype)
+type: [enum](http://api.catalogue.life/vocab/TaxonConceptRelType)
 The kind of directed RCC5 relation that specifies how the two taxon concepts are related.
 
 #### referenceID
@@ -478,10 +478,11 @@ It is mutually exclusive with relatedTaxonID and if given no relatedTaxonID shou
 The relatedTaxonScientificName can be used to document species interactions without the need to have full blown name and taxon records.
 
 #### type
-type: [enum](http://api.catalogue.life/vocab/speciesinteractiontype)
+type: [enum](http://api.catalogue.life/vocab/SpeciesInteractionType)
 
 The kind of directed species interaction. Each interaction exists also in reverse to allow the alternative relatedTaxonScientificName field to be used.
-Species interaction types are heavily inspired by https://www.globalbioticinteractions.org and the OBO Relation Ontology http://www.ontobee.org/ontology/RO
+Species interaction types are heavily inspired by https://www.globalbioticinteractions.org and the OBO Relation Ontology http://www.ontobee.org/ontology/RO 
+to which all entries are mapped.
 
 #### referenceID
 A reference where the interaction was documented.
