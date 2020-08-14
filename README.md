@@ -89,6 +89,8 @@ In the absence of a header row it is expected that all columns exist in the exac
 With headers given it is allowed to share additional columns which are not part of the standard as listed below.
 
 
+
+
 ## Name
 See [NAMES.md](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md) for examples and rationales.
 
@@ -126,13 +128,14 @@ The infraspecific epithet in case of bi/trinomials.
 The name of the cultivar for name governed by the cultivar code.
 
 #### referenceID
-A referenceID pointing to the Reference table indicating the original publication of the name in its given combination, not the basionym.
+A pointer to a Reference indicating the original publication of the name in its given combination, not the basionym.
 
-#### referencePage
-The exact page number within the referenced reference that the original publication of the name in its given combination starts.
+#### pageReferenceID
+An optional microcitation to the specific page within the referenced reference that the original publication of the name in its given combination starts.
 
-#### publishedInYear
-The effective year the name was published. This is the year that is nomenclaturally relevant.
+#### namePublishedInYear
+The effective year the name was published, given as a 4 digit integer . 
+This is the year that is nomenclaturally relevant.
 
 #### code
 type: [code enum](http://api.catalogue.life/vocab/nomCode)
@@ -180,11 +183,13 @@ The kind of directed nomenclatural relation.
 #### referenceID
 The reference or nomenclatural act where this nomenclatural relation was established.
 
-#### referencePage
-The exact page number within the reference that the nomenclatural relation starts being mentioned.
+#### pageReferenceID
+An optional microcitation to the exact page within the reference that the nomenclatural relation starts being mentioned.
+Multiple page references can be given by as a comma concatenated list.
 
 #### remarks
 Remarks about the relation.
+
 
 
 
@@ -213,6 +218,10 @@ The status of the type material, e.g. holotype
 #### referenceID
 A referenceID pointing to the Reference table indicating the publication of the type designation.
 Most often this is equivalent to the original names referenceID, but for subsequent designations a later reference should be cited.
+
+#### pageReferenceID
+An optional microcitation to a specific page within the reference given by referenceID.
+Multiple page references can be given by as a comma concatenated list.
 
 #### locality
 The type locality. Ideally from largest area to smallest.
@@ -247,6 +256,7 @@ Any further remarks on the type material.
 
 
 
+
 ## Taxon
 An accepted name with a taxonomic classification given either as a parent-child relation or as a flat, denormalized record.
 
@@ -271,6 +281,9 @@ The ID must refer to an existing Reference.ID within this data package.
 #### scrutinizer
 Name of the person who is the latest scrutinizer who revised or reviewed the taxonomic concept.
 
+#### scrutinizerID
+Identifier for the scrutinizer. Highly recommended are [ORCID](https://orcid.org) ids.
+
 #### scrutinizerDate
 type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date) 
 The date when the taxonomic concept was last revised or reviewed by the scrutinizer.
@@ -283,6 +296,10 @@ A flag indicating that the taxon is only provisionally accepted and should be ha
 #### referenceID
 A comma concatenated list of reference IDs supporting the taxonomic concept that has been reviewed by the scrutinizer.
 Each ID must refer to an existing Reference.ID within this data package.
+
+#### pageReferenceID
+An optional microcitation to a specific page within the reference given by referenceID.
+Multiple page references can be given by as a comma concatenated list.
 
 #### extinct 
 type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
@@ -377,6 +394,7 @@ Any further taxonomic remarks.
 
 
 
+
 ## Synonym
 A synonymous name for a taxon.
 Note that the same name can be linked to mulitple taxa by having several Synonym records to model pro parte synonyms.
@@ -412,11 +430,16 @@ The kind of synonym. One of *synonym*, *ambiguous synonym* or *misapplied*.
 A comma concatenated list of reference IDs supporting the synonym status of the name.
 Each ID must refer to an existing Reference.ID within this data package.
 
+#### pageReferenceID
+An optional microcitation to a specific page within the reference given by referenceID.
+Multiple page references can be given by as a comma concatenated list.
+
 #### link
 A link to a webpage provided by the source depicting the synonym.
 
 #### remarks
 Any further taxonomic remarks.
+
 
 
 
@@ -428,14 +451,18 @@ All properties available in the individual entities can also be used for the sin
 
 ![NameUsage schema](schemaNU.png)
 
-There are two clashing properties that exist both on a Name and Taxon, but which have a slightly different meaning.
-Therefore following properties deviate slightly from their usage in their classic version:
+There are two clashing properties that exist both on a Name and Taxon/Synonym, but which have a slightly different meaning.
+Therefore the following properties deviate slightly from their usage in their classic version:
  
+ - **parentID**: for taxa it points to the next higher taxon's ID to form the classification, for synonyms it points at the accepted taxon.
  - **status**: is the taxonomic name usage status which includes Synonym.status and the Taxon.provisional flag. 
  - **nameStatus**: corresponds to the nomenclatural name status.
- - **parentID**: for taxa it points to the next higher taxon's ID to form the classification, for synonyms it points at the accepted taxon.
  - **genus**: is the taxonomic classification of a name usage and corresponds to Taxon.genus. For synonyms it often is not the same as the genus part of the name
  - **genericName**: corresponds to the genus field of a name and represents the atomized genus of a scientificName.
+ - **referenceID**: corresponds to the taxonomic reference(s) otherwise given in Taxon/Synonm.referenceID.
+ - **pageReferenceID**: corresponds to the taxonomic page references otherwise given in Taxon/Synonm.pageReferenceID.
+ - **nameReferenceID**: corresponds to the nomenclatural reference otherwise given in Name.referenceID.
+ - **namePageReferenceID**: corresponds to the nomenclatural page reference otherwise given in Name.pageReferenceID.
  
 If a single NameUsage entity is given no further Name, Taxon or Synonym entity must exist.
 
@@ -457,6 +484,10 @@ The kind of directed RCC5 relation that specifies how the two taxon concepts are
 
 #### referenceID
 A reference where this relation was documented or who asserted it.
+
+#### pageReferenceID
+An optional microcitation to a specific page within the reference given by referenceID.
+Multiple page references can be given by as a comma concatenated list.
 
 #### remarks
 Remarks about the concept relation.
@@ -490,6 +521,10 @@ to which all entries are mapped.
 #### referenceID
 A reference where the interaction was documented.
 
+#### pageReferenceID
+An optional microcitation to a specific page within the reference given by referenceID.
+Multiple page references can be given by as a comma concatenated list.
+
 #### remarks
 Remarks about the species interation.
 
@@ -515,12 +550,20 @@ If none is given the type defaults to 'described species living'.
 #### referenceID
 A mandatory reference ID that supports the estimate and also provides a temporal context.
 
+#### pageReferenceID
+An optional microcitation to a specific page within the reference given by referenceID.
+Multiple page references can be given by as a comma concatenated list.
 
 
 ## Reference
 Structured bibliographic references with a unique id to refer to from other entities.
-References can be given in 3 ways of different degree of atomization that are not mutually exclusive.
-The main reference file contains a full citation and 4 Dublin Core based properties that are also used in ACEF.
+References can be given in various degrees of atomization:
+
+1) A simple citation string is the minimum required
+2) Semi structured using the field list below mostly corresponding to Dublin Core
+3) Fully parsed references in the well established BibTex or CSL-JSON format. 
+   See the sections below with for how to share alternative formats that do not conform to tabular CSV/TSV files.
+
 
 #### ID  
 The local identifier for the reference as used in referenceID in other entities.
@@ -559,492 +602,119 @@ Additional comments about the reference.
 
 
 ## Reference JSON-CSL
-In addition to the main reference file a `reference.json` file can be added to provide a JSON array of highly structured references
+Instead of the main reference file a `reference.json` file can be added to provide a JSON array of highly structured references
 in the [CSL-JSON](https://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html) format, e.g. as provided by CrossRef:
 ```
 curl --location --silent --header "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1126/science.169.3946.635
 ```
 
-The `id` field in each record of the array must correspond to a Reference record with the same `ID` in the CSV file.
+The `id` field in each record of the array is used as the primary key and referred to from `referenceID` fields elsewhere.
 
 #### CSL-JSON example
 
 ```
 [
-{  
-   "publisher":"Oxford University Press (OUP)",
-   "published-print":{  
-      "date-parts":[  
-         [  
-            2016
-         ]
-      ]
-   },
-   "DOI":"10.1093\/database\/baw125",
-   "type":"article-journal",
-   "created":{  
-      "date-parts":[  
-         [  
-            2016,
-            10,
-            3
-         ]
-      ],
-      "date-time":"2016-10-03T08:40:07Z",
-      "timestamp":1475484007000
-   },
-   "page":"baw125",
-   "source":"Crossref",
-   "title":"The Global Genome Biodiversity Network (GGBN) Data Standard specification",
-   "prefix":"10.1093",
-   "volume":"2016",
-   "author":[  
-      {  
-         "given":"G.",
-         "family":"Droege",
-         "sequence":"first",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"K.",
-         "family":"Barker",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"O.",
-         "family":"Seberg",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"J.",
-         "family":"Coddington",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"E.",
-         "family":"Benson",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"W. G.",
-         "family":"Berendsohn",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"B.",
-         "family":"Bunk",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"C.",
-         "family":"Butler",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"E. M.",
-         "family":"Cawsey",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"J.",
-         "family":"Deck",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"M.",
-         "family":"D\u00f6ring",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"P.",
-         "family":"Flemons",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"B.",
-         "family":"Gemeinholzer",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"A.",
-         "family":"G\u00fcntsch",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"T.",
-         "family":"Hollowell",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"P.",
-         "family":"Kelbert",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"I.",
-         "family":"Kostadinov",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"R.",
-         "family":"Kottmann",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"R. T.",
-         "family":"Lawlor",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"C.",
-         "family":"Lyal",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"J.",
-         "family":"Mackenzie-Dodds",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"C.",
-         "family":"Meyer",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"D.",
-         "family":"Mulcahy",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"S. Y.",
-         "family":"Nussbeck",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"\u00c9.",
-         "family":"O'Tuama",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"T.",
-         "family":"Orrell",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"G.",
-         "family":"Petersen",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"T.",
-         "family":"Robertson",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"C.",
-         "family":"S\u00f6hngen",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"J.",
-         "family":"Whitacre",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"J.",
-         "family":"Wieczorek",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"P.",
-         "family":"Yilmaz",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"H.",
-         "family":"Zetzsche",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"Y.",
-         "family":"Zhang",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      },
-      {  
-         "given":"X.",
-         "family":"Zhou",
-         "sequence":"additional",
-         "affiliation":[  
-
-         ]
-      }
-   ],
-   "member":"286",
-   "published-online":{  
-      "date-parts":[  
-         [  
-            2016,
-            10,
-            2
-         ]
-      ]
-   },
-   "container-title":"Database",
-   "original-title":[  
-
-   ],
-   "language":"en",
-   "link":[  
-      {  
-         "URL":"http:\/\/academic.oup.com\/database\/article-pdf\/doi\/10.1093\/database\/baw125\/8225125\/baw125.pdf",
-         "content-type":"unspecified",
-         "content-version":"vor",
-         "intended-application":"similarity-checking"
-      }
-   ],
-   "deposited":{  
-      "date-parts":[  
-         [  
-            2017,
-            8,
-            25
-         ]
-      ],
-      "date-time":"2017-08-25T02:23:14Z",
-      "timestamp":1503627794000
-   },
-   "subtitle":[  
-
-   ],
-   "short-title":[  
-
-   ],
-   "issued":{  
-      "date-parts":[  
-         [  
-            2016
-         ]
-      ]
-   },
-   "alternative-id":[  
-      "10.1093\/database\/baw125"
-   ],
-   "URL":"http:\/\/dx.doi.org\/10.1093\/database\/baw125",
-   "ISSN":[  
-      "1758-0463"
-   ],
-   "container-title-short":"Database"
-},
-
-{  
-   "publisher":"American Association for the Advancement of Science (AAAS)",
-   "issue":"3946",
-   "published-print":{  
-      "date-parts":[  
-         [  
-            1970,
-            8,
-            14
-         ]
-      ]
-   },
-   "DOI":"10.1126\/science.169.3946.635",
-   "type":"article-journal",
-   "created":{  
-      "date-parts":[  
-         [  
-            2006,
-            10,
-            5
-         ]
-      ],
-      "date-time":"2006-10-05T12:56:56Z",
-      "timestamp":1160053016000
-   },
-   "page":"635-641",
-   "source":"Crossref",
-   "title":"The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance",
-   "prefix":"10.1126",
-   "volume":"169",
-   "author":[  
-      {  
-         "given":"H. S.",
-         "family":"Frank",
-         "sequence":"first",
-         "affiliation":[  
-
-         ]
-      }
-   ],
-   "member":"221",
-   "container-title":"Science",
-   "original-title":[  
-
-   ],
-   "language":"en",
-   "link":[  
-      {  
-         "URL":"https:\/\/syndication.highwire.org\/content\/doi\/10.1126\/science.169.3946.635",
-         "content-type":"unspecified",
-         "content-version":"vor",
-         "intended-application":"similarity-checking"
-      }
-   ],
-   "deposited":{  
-      "date-parts":[  
-         [  
-            2016,
-            12,
-            23
-         ]
-      ],
-      "date-time":"2016-12-23T19:54:07Z",
-      "timestamp":1482522847000
-   },
-   "subtitle":[  
-
-   ],
-   "short-title":[  
-
-   ],
-   "issued":{  
-      "date-parts":[  
-         [  
-            1970,
-            8,
-            14
-         ]
-      ]
-   },
-   "journal-issue":{  
-      "published-print":{  
-         "date-parts":[  
-            [  
-               1970,
-               8,
-               14
+{
+    "id": "science.169.3946.635",
+    "publisher": "American Association for the Advancement of Science (AAAS)",
+    "issue": "3946",
+    "published-print": {
+        "date-parts": [
+            [
+                1970,
+                8,
+                14
             ]
-         ]
-      },
-      "issue":"3946"
-   },
-   "URL":"http:\/\/dx.doi.org\/10.1126\/science.169.3946.635",
-   "relation":{  
-
-   },
-   "ISSN":[  
-      "0036-8075",
-      "1095-9203"
-   ],
-   "container-title-short":"Science"
+        ]
+    },
+    "DOI": "10.1126/science.169.3946.635",
+    "type": "article-journal",
+    "created": {
+        "date-parts": [
+            [
+                2006,
+                10,
+                5
+            ]
+        ],
+        "date-time": "2006-10-05T12:56:56Z",
+        "timestamp": 1160053016000
+    },
+    "page": "635-641",
+    "source": "Crossref",
+    "title": "The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance",
+    "prefix": "10.1126",
+    "volume": "169",
+    "author": [
+        {
+            "given": "H. S.",
+            "family": "Frank",
+            "sequence": "first",
+            "affiliation": []
+        }
+    ],
+    "container-title": "Science",
+    "original-title": [],
+    "language": "en",
+    "link": [
+        {
+            "URL": "https://syndication.highwire.org/content/doi/10.1126/science.169.3946.635",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+        }
+    ],
+    "deposited": {
+        "date-parts": [
+            [
+                2020,
+                2,
+                5
+            ]
+        ],
+        "date-time": "2020-02-05T16:15:06Z",
+        "timestamp": 1580919306000
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+        "date-parts": [
+            [
+                1970,
+                8,
+                14
+            ]
+        ]
+    },
+    "journal-issue": {
+        "published-print": {
+            "date-parts": [
+                [
+                    1970,
+                    8,
+                    14
+                ]
+            ]
+        },
+        "issue": "3946"
+    },
+    "URL": "http://dx.doi.org/10.1126/science.169.3946.635",
+    "ISSN": [
+        "0036-8075",
+        "1095-9203"
+    ],
+    "subject": [
+        "Multidisciplinary"
+    ],
+    "container-title-short": "Science"
 }
 ]
 ```
 
 ## Reference BIBTEX
 Alternatively to CSL-JSON a [BibTex](http://www.bibtex.org/Format/) file `reference.bib` can be given to provide highly structured citations.
-The id field following the curly opening bracket must correspond to a record ID from the reference.csv file.
+
+The `id` field following the curly opening bracket is used as the primary key and referred to from `referenceID` fields elsewhere.
 
 
 #### Bibtex example
@@ -1079,6 +749,31 @@ The id field following the curly opening bracket must correspond to a record ID 
 ```
 
 
+## PageReference
+References are usually classic bibliographic citations on the article level.
+In many cases it is desirable to point and link to specific pages, e.g. where exactly a name has first been published.
+In order to avoid highly redundant references ColDP allows to share PageReference records that are microcitations to a specific page
+that belongs to a specific Reference record. Using PageReferences is optional and can be used anywhere where there is a referenceID by using the pageReferenceID field.
+
+
+#### ID  
+A local identifier for the page reference as used in pageReferenceID in other entities.
+This can often be conveniently constructed by concatenating the referenceID with the page in question, e.g. `Droege_2016-p635`.
+
+#### referenceID
+Pointer to the reference that includes this page. Refers to an existing Reference.ID within this data package.
+
+#### page
+The exact page the microcitation is pointing to within the reference
+
+#### link
+A URL link to the exact page of the reference. 
+If only a link for the entire reference is available this should only be included in the main reference, not here again.
+
+#### remarks
+Opportunity to indicate the context, e.g. "Plate VIII: Genitalia drawings" or "Original description of Abies", etc. 
+
+
 
 ## Distribution
 A structured distribution record for a taxon in a given area.
@@ -1100,6 +795,10 @@ Distribution status.
 
 #### referenceID
 Pointer to the reference that supports this distribution. Refers to an existing Reference.ID within this data package.
+
+#### pageReferenceID
+An optional microcitation to a specific page within the reference given by referenceID.
+Multiple page references can be given by as a comma concatenated list.
 
 
 
@@ -1162,6 +861,10 @@ Optional sex of the organism this vernacular name is restricted to.
 
 #### referenceID
 Pointer to the reference that supports this vernacular name. Refers to an existing Reference.ID within this data package.
+
+#### pageReferenceID
+An optional microcitation to a specific page within the reference given by referenceID.
+Multiple page references can be given by as a comma concatenated list.
 
 
 
