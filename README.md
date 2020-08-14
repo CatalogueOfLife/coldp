@@ -30,6 +30,7 @@ Name & taxon separation|-|-|x
 Species interactions|-|-|x
 Species estimates|-|-|x
 Structured references|x|-|x
+Microcitations|-|-|x
 Nomenclatural relations|-|-|x
 Type species|-|x|x
 Type specimen|-|x|x
@@ -70,6 +71,7 @@ All files should be encoded in UTF-8.
  - [Reference](#reference)
  - [Reference JSON-CSL](#reference-json-csl)
  - [Reference BIBTEX](#reference-bibtex)
+ - [PageReference](#pagereference)
  - [TypeMaterial](#typematerial)
  - [Distribution](#distribution)
  - [Media](#media)
