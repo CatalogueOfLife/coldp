@@ -718,8 +718,8 @@
             <y>55.00</y>
         </location>
         <size>
-            <width>217.00</width>
-            <height>960.00</height>
+            <width>219.00</width>
+            <height>980.00</height>
         </size>
         <zorder>7</zorder>
         <SQLField>
@@ -868,6 +868,11 @@
             <type><![CDATA[INTEGER]]></type>
             <hidden><![CDATA[0]]></hidden>
             <uid><![CDATA[BB8A54E9-9868-4451-BFF4-4F0CF25AF2FA]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[namePublishedInPage]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[9F193C3E-DB6F-4D55-AD6A-428A71A12E74]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[code]]></name>

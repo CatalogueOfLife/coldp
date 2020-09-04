@@ -135,7 +135,11 @@ A pointer to a Reference indicating the original publication of the name in its 
 #### pageReferenceID
 An optional microcitation to the specific page within the referenced reference that the original publication of the name in its given combination starts.
 
-#### namePublishedInYear
+#### publishedInPage
+The exact single page number where the name was published.
+If the description spans multiple pages on the first page should be given.
+
+#### publishedInYear
 The effective year the name was published, given as a 4 digit integer . 
 This is the year that is nomenclaturally relevant.
 
@@ -465,7 +469,9 @@ Therefore the following properties deviate slightly from their usage in their cl
  - **pageReferenceID**: corresponds to the taxonomic page references otherwise given in Taxon/Synonm.pageReferenceID.
  - **nameReferenceID**: corresponds to the nomenclatural reference otherwise given in Name.referenceID.
  - **namePageReferenceID**: corresponds to the nomenclatural page reference otherwise given in Name.pageReferenceID.
- 
+ - **namePublishedInPage**: corresponds to Name.publishedInPage.
+ - **namePublishedInYear**: corresponds to Name.publishedInYear.
+
 If a single NameUsage entity is given no further Name, Taxon or Synonym entity must exist.
 
 

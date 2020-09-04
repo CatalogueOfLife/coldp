@@ -1407,11 +1407,11 @@
         <schema><![CDATA[]]></schema>
         <location>
             <x>349.00</x>
-            <y>434.00</y>
+            <y>422.00</y>
         </location>
         <size>
-            <width>218.00</width>
-            <height>380.00</height>
+            <width>219.00</width>
+            <height>400.00</height>
         </size>
         <zorder>4</zorder>
         <SQLField>
@@ -1527,8 +1527,13 @@
             <uid><![CDATA[3C3B8837-15F3-4A0E-96E8-0978D1B3E090]]></uid>
         </SQLField>
         <SQLField>
-            <name><![CDATA[namePublishedInYear]]></name>
+            <name><![CDATA[publishedInPage]]></name>
             <type><![CDATA[INTEGER]]></type>
+            <uid><![CDATA[B7057682-8B02-4A28-A920-127FFE14DAAD]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[publishedInYear]]></name>
+            <type><![CDATA[TEXT]]></type>
             <hidden><![CDATA[0]]></hidden>
             <uid><![CDATA[F6E97284-89DE-490F-AEC0-E67439DE8C89]]></uid>
         </SQLField>
@@ -1577,7 +1582,7 @@
         <pageBoundariesVisible><![CDATA[0]]></pageBoundariesVisible>
         <PageGridVisible><![CDATA[0]]></PageGridVisible>
         <RightSidebarWidth><![CDATA[1474.000000]]></RightSidebarWidth>
-        <sidebarIndex><![CDATA[4]]></sidebarIndex>
+        <sidebarIndex><![CDATA[5]]></sidebarIndex>
         <snapToGrid><![CDATA[0]]></snapToGrid>
         <SourceSidebarWidth><![CDATA[0.000000]]></SourceSidebarWidth>
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
