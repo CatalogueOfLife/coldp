@@ -71,7 +71,7 @@ All files should be encoded in UTF-8.
  - [Reference](#reference)
  - [Reference JSON-CSL](#reference-json-csl)
  - [Reference BIBTEX](#reference-bibtex)
- - [PageReference](#pagereference)
+ - [NameReference](#namereference)
  - [TypeMaterial](#typematerial)
  - [Distribution](#distribution)
  - [Media](#media)
@@ -98,6 +98,13 @@ See [NAMES.md](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md) for 
 
 #### ID
 Unique name identifier that is referred to elsewhere via `nameID`.
+
+#### basionymID
+Identifier of the name which is the original combination of this name. Also known as the basionym or protonym. 
+Contrary to the strict basionym definition it is recommended to populate this field also for original names which should point to itself.
+
+Note there is an alternative way to share the information about an original name by using a [NameRelation](#namerelation) with `type=basionym`.
+The field basionymID exists for simplicity and because it is an important information to be shared.
 
 #### scientificName
 Required scientific name excluding the authorship
@@ -129,31 +136,10 @@ The infraspecific epithet in case of bi/trinomials.
 #### cultivarEpithet
 The name of the cultivar for name governed by the cultivar code.
 
-#### referenceID
-A pointer to a Reference indicating the original publication of the name in its given combination, not the basionym.
-
-#### pageReferenceID
-An optional microcitation to the specific page within the referenced reference that the original publication of the name in its given combination starts.
-
-#### publishedInPage
-The exact single page number where the name was published.
-If the description spans multiple pages on the first page should be given.
-
-#### publishedInYear
-The effective year the name was published, given as a 4 digit integer . 
-This is the year that is nomenclaturally relevant.
-
 #### code
 type: [code enum](http://api.catalogue.life/vocab/nomCode)
 
 The nomenclatural code the name falls under.
-
-#### basionymID
-Identifier of the name which is the original combination of this name. Also known as the basionym or protonym. 
-Contrary to the strict basionym definition it is recommended to populate this field also for original names which should point to itself.
-
-Note there is an alternative way to share the information about an original name by using a [NameRelation](#namerelation) with `type=basionym`.
-The field basionymID exists for simplicity and because it is an important information to be shared.
 
 #### status
 type: [nomStatus enum](http://api.catalogue.life/vocab/nomStatus)
@@ -161,6 +147,21 @@ type: [nomStatus enum](http://api.catalogue.life/vocab/nomStatus)
 The broad nomenclatural status of the name.
 For the exact status note, e.g. *nomen nudum*, the remarks field should additionally be used
 Alternatively a URI or simple name from a class of the [NOMEN ontology](https://github.com/SpeciesFileGroup/nomen/blob/master/src/ontology/nomen.owl) can be used.
+
+#### referenceID
+A pointer to a Reference indicating the original publication of the name in its given combination, not the basionym.
+
+#### publishedInYear
+The effective year the name was published, given as a 4 digit integer . 
+This is the year that is nomenclaturally relevant.
+
+#### publishedInPage
+The exact single page number where the name was published.
+If the description spans multiple pages, the first page should be given.
+
+#### publishedInPageLink
+A URL to the exact page where the name was published.
+If the description spans multiple pages, the link to the first page should be given.
 
 #### link
 A link to a webpage provided by the source depicting the name.
@@ -177,9 +178,11 @@ See [NAMES.md#name-relations](https://github.com/Sp2000/colplus/blob/master/docs
 
 #### nameID 
 The subject name this relation originates from.
+Refers to an existing Name.ID or NameUsage.ID within this data package.
 
 #### relatedNameID
 The object name this relation relates to.
+Refers to an existing Name.ID or NameUsage.ID within this data package.
 
 #### type
 type: [enum](http://api.catalogue.life/vocab/nomreltype)
@@ -188,10 +191,6 @@ The kind of directed nomenclatural relation.
 
 #### referenceID
 The reference or nomenclatural act where this nomenclatural relation was established.
-
-#### pageReferenceID
-An optional microcitation to the exact page within the reference that the nomenclatural relation starts being mentioned.
-Multiple page references can be given by as a comma concatenated list.
 
 #### remarks
 Remarks about the relation.
@@ -224,10 +223,6 @@ The status of the type material, e.g. holotype
 #### referenceID
 A referenceID pointing to the Reference table indicating the publication of the type designation.
 Most often this is equivalent to the original names referenceID, but for subsequent designations a later reference should be cited.
-
-#### pageReferenceID
-An optional microcitation to a specific page within the reference given by referenceID.
-Multiple page references can be given by as a comma concatenated list.
 
 #### locality
 The type locality. Ideally from largest area to smallest.
@@ -302,10 +297,6 @@ A flag indicating that the taxon is only provisionally accepted and should be ha
 #### referenceID
 A comma concatenated list of reference IDs supporting the taxonomic concept that has been reviewed by the scrutinizer.
 Each ID must refer to an existing Reference.ID within this data package.
-
-#### pageReferenceID
-An optional microcitation to a specific page within the reference given by referenceID.
-Multiple page references can be given by as a comma concatenated list.
 
 #### extinct 
 type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
@@ -436,10 +427,6 @@ The kind of synonym. One of *synonym*, *ambiguous synonym* or *misapplied*.
 A comma concatenated list of reference IDs supporting the synonym status of the name.
 Each ID must refer to an existing Reference.ID within this data package.
 
-#### pageReferenceID
-An optional microcitation to a specific page within the reference given by referenceID.
-Multiple page references can be given by as a comma concatenated list.
-
 #### link
 A link to a webpage provided by the source depicting the synonym.
 
@@ -451,7 +438,9 @@ Any further taxonomic remarks.
 
 ## NameUsage
 As a simpler alternative to the 3 entities [Name](#name), [Taxon](#taxon) and [Synonym](#synonym) a single `NameUsage` entity can be supplied.
-A NameUsage record can either be an accepted Taxon or a Synonym and is easily distinguished by its status. A NameUsage.ID acts both as a taxonID and nameID if referred to from other table, e.g TypeMaterial or VernacularName. For synonyms the `parentID` field is used to link to the accepted taxon.
+A NameUsage record can either be an accepted Taxon or a Synonym and is easily distinguished by its status. 
+A NameUsage.ID acts both as a taxonID and nameID if referred to from other table, e.g TypeMaterial or VernacularName. 
+For synonyms the `parentID` field is used to link to the accepted taxon.
 
 All properties available in the individual entities can also be used for the single NameUsage:
 
@@ -466,11 +455,10 @@ Therefore the following properties deviate slightly from their usage in their cl
  - **genus**: is the taxonomic classification of a name usage and corresponds to Taxon.genus. For synonyms it often is not the same as the genus part of the name
  - **genericName**: corresponds to the genus field of a name and represents the atomized genus of a scientificName.
  - **referenceID**: corresponds to the taxonomic reference(s) otherwise given in Taxon/Synonm.referenceID.
- - **pageReferenceID**: corresponds to the taxonomic page references otherwise given in Taxon/Synonm.pageReferenceID.
  - **nameReferenceID**: corresponds to the nomenclatural reference otherwise given in Name.referenceID.
- - **namePageReferenceID**: corresponds to the nomenclatural page reference otherwise given in Name.pageReferenceID.
- - **namePublishedInPage**: corresponds to Name.publishedInPage.
  - **namePublishedInYear**: corresponds to Name.publishedInYear.
+ - **namePublishedInPage**: corresponds to Name.publishedInPage.
+ - **namePublishedInPageLink**: corresponds to Name.publishedInPageLink.
 
 If a single NameUsage entity is given no further Name, Taxon or Synonym entity must exist.
 
@@ -492,10 +480,6 @@ The kind of directed RCC5 relation that specifies how the two taxon concepts are
 
 #### referenceID
 A reference where this relation was documented or who asserted it.
-
-#### pageReferenceID
-An optional microcitation to a specific page within the reference given by referenceID.
-Multiple page references can be given by as a comma concatenated list.
 
 #### remarks
 Remarks about the concept relation.
@@ -529,10 +513,6 @@ to which all entries are mapped.
 #### referenceID
 A reference where the interaction was documented.
 
-#### pageReferenceID
-An optional microcitation to a specific page within the reference given by referenceID.
-Multiple page references can be given by as a comma concatenated list.
-
 #### remarks
 Remarks about the species interation.
 
@@ -558,9 +538,7 @@ If none is given the type defaults to 'described species living'.
 #### referenceID
 A mandatory reference ID that supports the estimate and also provides a temporal context.
 
-#### pageReferenceID
-An optional microcitation to a specific page within the reference given by referenceID.
-Multiple page references can be given by as a comma concatenated list.
+
 
 
 ## Reference
@@ -757,19 +735,21 @@ The `id` field following the curly opening bracket is used as the primary key an
 ```
 
 
-## PageReference
+## NameReference
 References are usually classic bibliographic citations on the article level.
 In many cases it is desirable to point and link to specific pages, e.g. where exactly a name has first been published.
-In order to avoid highly redundant references ColDP allows to share PageReference records that are microcitations to a specific page
-that belongs to a specific Reference record. Using PageReferences is optional and can be used anywhere where there is a referenceID by using the pageReferenceID field.
+
+In order to avoid highly redundant references ColDP allows to share NameReference records that are microcitations to a specific page 
+where a name was mentioned that belongs to a specific Reference record. 
+Using NameReferences is optional.
 
 
-#### ID  
-A local identifier for the page reference as used in pageReferenceID in other entities.
-This can often be conveniently constructed by concatenating the referenceID with the page in question, e.g. `Droege_2016-p635`.
+#### nameID
+Pointer to the name that is mentioned in the given reference.
+Refers to an existing Name.ID or NameUsage.ID within this data package.
 
 #### referenceID
-Pointer to the reference that includes this page. Refers to an existing Reference.ID within this data package.
+Pointer to the reference that includes the name. Refers to an existing Reference.ID within this data package.
 
 #### page
 The exact page the microcitation is pointing to within the reference
