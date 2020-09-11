@@ -1,4 +1,4 @@
-ID	scientificName	authorship	rank	genus	specificEpithet	infraspecificEpithet	publishedInID	publishedInPage	code	status	link	remarks
+ID	scientificName	authorship	rank	genus	specificEpithet	infraspecificEpithet	referenceID	publishedInPage	code	status	link	remarks
 1	Plantae		kingdom						botanical			
 2	Viridae		kingdom						botanical			
 10	Asteraceae		family						botanical			
