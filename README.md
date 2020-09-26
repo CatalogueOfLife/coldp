@@ -454,7 +454,7 @@ Therefore the following properties deviate slightly from their usage in their cl
  - **nameStatus**: corresponds to the nomenclatural name status.
  - **genus**: is the taxonomic classification of a name usage and corresponds to Taxon.genus. For synonyms it often is not the same as the genus part of the name
  - **genericName**: corresponds to the genus field of a name and represents the atomized genus of a scientificName.
- - **referenceID**: corresponds to the taxonomic reference(s) otherwise given in Taxon/Synonm.referenceID.
+ - **referenceID**: corresponds to the taxonomic reference(s) otherwise given in Taxon/Synonym.referenceID.
  - **nameReferenceID**: corresponds to the nomenclatural reference otherwise given in Name.referenceID.
  - **namePublishedInYear**: corresponds to Name.publishedInYear.
  - **namePublishedInPage**: corresponds to Name.publishedInPage.
