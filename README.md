@@ -315,9 +315,9 @@ type: [enum](http://api.catalogue.life/vocab/geotime)
 Latest appearance of the taxon in the geological time scale.
 Recommended values are geochronological names from the official International Commission on Stratigraphy (ICS).
 
-#### lifezone
-type: [enum[]](http://api.catalogue.life/vocab/lifezone)
-A comma delimited list of lifezones this taxon is known to exist in.
+#### environment
+type: [enum[]](http://api.catalogue.life/vocab/environment)
+A comma delimited list of environments this taxon is known to exist in.
 
 #### species
 The species binomial the taxon is classified in.
@@ -787,6 +787,9 @@ Pointer to the reference that supports this distribution. Refers to an existing 
 #### pageReferenceID
 An optional microcitation to a specific page within the reference given by referenceID.
 Multiple page references can be given by as a comma concatenated list.
+
+#### remarks
+Remarks about the distribution.
 
 
 

@@ -9,7 +9,7 @@
         </location>
         <size>
             <width>154.00</width>
-            <height>120.00</height>
+            <height>140.00</height>
         </size>
         <zorder>3</zorder>
         <SQLField>
@@ -63,6 +63,12 @@
             <hidden><![CDATA[0]]></hidden>
             <notNull><![CDATA[0]]></notNull>
             <uid><![CDATA[0F26F82D-CA38-4CE8-B762-7BBAF9B4A9D5]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[remarks]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <hidden><![CDATA[0]]></hidden>
+            <uid><![CDATA[04BD599D-2AAF-4CD8-9868-9C4E027092A3]]></uid>
         </SQLField>
         <hidden><![CDATA[0]]></hidden>
         <labelColor><![CDATA[{0.817065,0.870764,0.746326,0.8}]]></labelColor>
@@ -150,8 +156,8 @@
         <name><![CDATA[VernacularName]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1186.00</x>
-            <y>678.00</y>
+            <x>1187.00</x>
+            <y>691.00</y>
         </location>
         <size>
             <width>155.00</width>
@@ -559,7 +565,7 @@
         </SQLField>
         <hidden><![CDATA[0]]></hidden>
         <labelColor><![CDATA[{0.475635,0.475647,0.47564,1}]]></labelColor>
-        <labelWindowIndex><![CDATA[0]]></labelWindowIndex>
+        <labelWindowIndex><![CDATA[1]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[B7C4F3A3-BE7A-4084-B04D-CC1BEB249B1D]]></uid>
     </SQLTable>
@@ -890,7 +896,7 @@
             <uid><![CDATA[2CF5B08E-665F-4AED-BE90-A29847C58EC8]]></uid>
         </SQLField>
         <SQLField>
-            <name><![CDATA[lifezone]]></name>
+            <name><![CDATA[environment]]></name>
             <type><![CDATA[ENUM[]]]></type>
             <hidden><![CDATA[0]]></hidden>
             <uid><![CDATA[998A489C-12A2-4760-8469-596FC1D62872]]></uid>
@@ -1312,8 +1318,8 @@
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
         <windowHeight><![CDATA[1057.000000]]></windowHeight>
-        <windowLocationX><![CDATA[6.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[40.000000]]></windowLocationY>
+        <windowLocationX><![CDATA[41.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[0.000000]]></windowLocationY>
         <windowScrollOrigin><![CDATA[{327, 10.5}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1751.000000]]></windowWidth>
     </SQLDocumentInfo>
