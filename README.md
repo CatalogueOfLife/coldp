@@ -152,8 +152,10 @@ Alternatively a URI or simple name from a class of the [NOMEN ontology](https://
 A pointer to a Reference indicating the original publication of the name in its given combination, not the basionym.
 
 #### publishedInYear
-The effective year the name was published, given as a 4 digit integer . 
-This is the year that is nomenclaturally relevant.
+The effective year the name was published, given as a 4 digit integer. 
+It is the year that is nomenclaturally relevant for the given combination.
+In most cases this will be the same as the publication year given in the linked reference record via referenceID.
+But in some cases this might be different.
 
 #### publishedInPage
 The exact single page number where the name was published.
