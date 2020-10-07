@@ -24,9 +24,9 @@ contact:
     familyName: Froese
     email: rainer@mailinator.com
 
-# list of authors and editors.
+# list of authors and/or editors. Recommendation is to keep authors empty if editors are given
 # Please provide an ORCID if you can so it can be included in DOI metadata
-authorsAndEditors:
+authors:
   - givenName: Rainer
     familyName: Froese
     email: rainer@mailinator.com
@@ -34,7 +34,15 @@ authorsAndEditors:
   - givenName: Daniel
     familyName: Pauly
     orcid: 0000-0003-3756-4793
-    role: editor  # only 2 accepted roles are "author" (default) or "editor"
+
+editors:
+  - givenName: Rainer
+    familyName: Froese
+    email: rainer@mailinator.com
+    orcid: 0000-0001-9745-636X
+  - givenName: Daniel
+    familyName: Pauly
+    orcid: 0000-0003-3756-4793
 
 # description of the geographical scope of the dataset
 geographicScope: global
