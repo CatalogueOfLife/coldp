@@ -1,6 +1,6 @@
 
-# CoL Data Package (COLDP) Specification
-The recommended exchange format for data to and from the CoL Clearinghouse
+# COL Data Package (ColDP) Specification
+The recommended exchange format for data to and from COL ChecklistBank
 is a tabular text format with a fixed set of files and columns.
 
 The format is a single ZIP archive that bundles various delimited text files described below together with a metadata.yaml file providing basic metadata about the entire dataset. Each file holds records for the same class of things shown in this diagram:
@@ -9,7 +9,7 @@ The format is a single ZIP archive that bundles various delimited text files des
 
 ## Format Comparison
 
-The ColDP format was developed to overcome limitations existing in currently used formats for sharing taxonomic information, namely [Darwin Core Archives](https://dwc.tdwg.org/text/) and the Catalogue of Life submission format also known as [ACEF](http://www.catalogueoflife.org/content/contributing-your-data#ACEF) (Annual Checklist Exchange Format). Darwin Core Archives and ACEF could still be used for exchanging data to and from the Catalogue of Life clearinghouse, but the COLDP format will support the most features. The following table provides an overview of different features supported in each of the 3 formats:
+The ColDP format was developed to overcome limitations existing in currently used formats for sharing taxonomic information, namely [Darwin Core Archives](https://dwc.tdwg.org/text/) and the Catalogue of Life submission format also known as [ACEF](http://www.catalogueoflife.org/content/contributing-your-data#ACEF) (Annual Checklist Exchange Format). Darwin Core Archives and ACEF could still be used for exchanging data to and from the Catalogue of Life ChecklistBank, but the COLDP format will support the most features. The following table provides an overview of different features supported in each of the 3 formats:
 
 Feature|ACEF|DwC-A|ColDP
  --- |:---:| :---:| :---:
