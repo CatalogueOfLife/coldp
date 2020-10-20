@@ -7,16 +7,26 @@ description: |
 
 # list of publishing organisations
 organisations:         
-  - FIN
-  - WorldFish
-  - FAO
-  - IFM-GEOMAR
-  - MNHN
-  - RMCA
-  - NRM
-  - FC-UBC
-  - AUTH
-  - CAFS
+  - name: The WorldFish Center
+    department: 
+    city: Penang
+    country: Malaysia
+  - name: Food and Agriculture Organization of the United Nations
+    department: 
+    city: Rome
+    country: Italy
+  - name: Helmholtz Centre for Ocean Research Kiel
+    department: GEOMAR
+    city: Kiel
+    country: Germany
+  - name: Muséum National d'Histoire Naturelle 
+    department: 
+    city: Paris
+    country: France
+  - name: Aristotle University of Thessaloniki
+    department: 
+    city: Thessaloniki
+    country: Greece
 
 # single point of contact for questions
 contact: 
