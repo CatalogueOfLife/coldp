@@ -81,8 +81,11 @@ All files should be encoded in UTF-8.
 ## metadata.yaml
 A [YAML file](https://en.wikipedia.org/wiki/YAML) with metadata about the entire data package should be included. 
 The file consists mostly of key value pairs like title, see the [comments in metadata.yaml](metadata.yaml) for all available keys.
-An exception are the contact and authorsAndEditors properties which takes a simple person object, see [yaml example](metadata.yaml).
-Additional entries to the YAML file is allowed to express non standard properties.
+
+An exception are the contact and authors and editors properties which takes a compound person object 
+and the organisations list which takes a structured organisation object. 
+See [yaml example](metadata.yaml) for all available fields.
+Additional entries to the YAML file are allowed to express non standard properties.
 
 
 # Data File Columns
