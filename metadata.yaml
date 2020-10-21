@@ -6,13 +6,21 @@ description: |
     This can be as many paragraphs as you like in literal style YAML.
 
 # list of publishing organisations
+# Each organisation can use the following properties:
+#   name: name of the organisation, required!
+#   department: subunit within the organisation, sometimes a project (optional)
+#   city: city (optional)
+#   country: ISO country code (optional)
+
 organisations:         
   - name: The WorldFish Center
-    department: 
     city: Penang
     country: Malaysia
+  - name: University of British Columbia
+    department: Global Fisheries Cluster
+    city: Vancouver, B.C.
+    country: Canada
   - name: Food and Agriculture Organization of the United Nations
-    department: 
     city: Rome
     country: Italy
   - name: Helmholtz Centre for Ocean Research Kiel
@@ -20,21 +28,26 @@ organisations:
     city: Kiel
     country: Germany
   - name: Muséum National d'Histoire Naturelle 
-    department: 
     city: Paris
     country: France
   - name: Aristotle University of Thessaloniki
-    department: 
     city: Thessaloniki
     country: Greece
 
 # single point of contact for questions
+# person entity with 4 properties:
+#   givenName: first name, optional
+#   familyName: last name. Only required field
+#   email: email address, optional
+#   orcid: orcid id, optional
+
 contact: 
   - givenName: Rainer
     familyName: Froese
     email: rainer@mailinator.com
 
 # list of authors and/or editors. Recommendation is to keep authors empty if editors are given
+# For available person properties see contact above
 # Please provide an ORCID if you can so it can be included in DOI metadata
 authors:
   - givenName: Rainer
