@@ -10,6 +10,7 @@ description: |
 #   name: name of the organisation, required!
 #   department: subunit within the organisation, sometimes a project (optional)
 #   city: city (optional)
+#   state: state or province (optional)
 #   country: ISO country code (optional)
 
 organisations:         
@@ -19,6 +20,7 @@ organisations:
   - name: University of British Columbia
     department: Global Fisheries Cluster
     city: Vancouver, B.C.
+    state: B.C.
     country: Canada
   - name: Food and Agriculture Organization of the United Nations
     city: Rome
