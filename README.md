@@ -776,6 +776,9 @@ Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
 #### area 
 The geographic area this distribution record is about.
+The area value should be taken from the gazetteer that defines the values used here.
+For all agazetteers but TEXT the area value should be the identifier from the given standard.
+E.g. ISO country codes, TDWG codes or TEOW identifiers.
 
 #### gazetteer
 type: [enum](http://api.catalogue.life/vocab/gazetteer)
