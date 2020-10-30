@@ -774,6 +774,12 @@ A structured distribution record for a taxon in a given area.
 #### taxonID 
 Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
+#### areaID 
+The identifier/code for the geographic area this distribution record is about.
+The value must be taken from the gazetteer this record declares.
+E.g. ISO country codes, TDWG codes or TEOW identifiers.
+If the TEXT gazetteer is used only the free text area should be given with no areaID.
+
 #### area 
 The geographic area this distribution record is about.
 The area value should be taken from the gazetteer that defines the values used here.
@@ -784,6 +790,7 @@ E.g. ISO country codes, TDWG codes or TEOW identifiers.
 type: [enum](http://api.catalogue.life/vocab/gazetteer)
 
 The geographic gazetteer the area is defined in.
+Alternatively the gazetteer can be defined globally for all records in the metadata.yml file.
 
 #### status 
 type: [enum](http://api.catalogue.life/vocab/distributionstatus)

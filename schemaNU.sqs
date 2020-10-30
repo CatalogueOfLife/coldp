@@ -4,12 +4,12 @@
         <name><![CDATA[Distribution]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1188.00</x>
-            <y>514.00</y>
+            <x>1186.00</x>
+            <y>498.00</y>
         </location>
         <size>
             <width>154.00</width>
-            <height>140.00</height>
+            <height>160.00</height>
         </size>
         <zorder>3</zorder>
         <SQLField>
@@ -33,6 +33,13 @@
             <hidden><![CDATA[0]]></hidden>
             <notNull><![CDATA[1]]></notNull>
             <uid><![CDATA[7B3FC862-DE73-42FA-9CA0-25139A3A25BA]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[areaID]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <hidden><![CDATA[0]]></hidden>
+            <notNull><![CDATA[1]]></notNull>
+            <uid><![CDATA[4E29A093-C372-4A06-BD15-4E9D739985B2]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[gazetteer]]></name>
