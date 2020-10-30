@@ -1,4 +1,4 @@
-taxonID	area	gazetteer	status	referenceID
+taxonID	areaID	gazetteer	status	referenceID
 1001a	US-CA	ISO	native	wp1
 1001a	US-NV	ISO	native	wp1
 1001a	US-OR	ISO	native	wp1
