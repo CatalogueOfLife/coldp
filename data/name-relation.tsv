@@ -1,4 +1,4 @@
-nameID	relatedNameID	type	publishedInID	remarks
+nameID	relatedNameID	type	referenceID	remarks
 1006	1006-s3	basionym		
 fake	hybrid	SPELLING_CORRECTION	rel	a relation remark
 fake	hybrid	BASED_ON	rel	another relation remark
