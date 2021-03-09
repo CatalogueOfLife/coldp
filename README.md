@@ -277,7 +277,7 @@ Pointer to the accepted name referring to an existing Name.ID within this data p
 
 #### namePhrase
 An optional, unrestricted, lose phrase appended to the name just for this taxon.
-E.g. the phrase "sensu latu" may be added to the name to describe this taxon more precisely.
+E.g. the phrase "sensu lato" may be added to the name to describe this taxon more precisely.
 
 #### accordingToID
 A reference ID to the publication that established the taxonomic concept used by this taxon.
@@ -413,7 +413,7 @@ Pointer to the synonymous name referring to an existing Name.ID within this data
 
 #### namePhrase
 An optional, unrestricted, lose phrase appended to the name just for this synonym.
-E.g. the phrase "sensu latu" may be added to the name to describe this synonym more precisely.
+E.g. the phrase "sensu lato" may be added to the name to describe this synonym more precisely.
 Or "auct. mult." or "auct. amer." for misapplied names that cannot refer to a single publication.
 Misapplied names that refer to a single publication should use `accordingToID` instead.
 
