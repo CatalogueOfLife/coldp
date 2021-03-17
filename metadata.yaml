@@ -75,20 +75,17 @@ geographicScope: global
 # taxonomic scope of the dataset
 taxonomicScope: Fishes
 
-# nomeclatural code covered. Keep empty if its across codes
-# botanical, zoological, bacterial, virus
-code: zoological
+# integer between 1-5 with 5 expressing highest confidence in quality of the data
+confidence: 5
 
-# gazateer to base distribution codes on.
-# See http://api.catalogue.life/vocab/gazetteer
-# tdwg, iso, fao, longhurst, teow, iho, text
-gazetteer: iso
+# 0-100 to express the completeness of the dataset in regards to the defined scope
+completeness: 95
 
 # Any commons license, but preferrably CC0, CC-BY or CC-BY-NC
-license: CC-BY-NC
+license: CC0
 
 # version name of this copy
-version: ver. (06/2018)
+version: v.48 (06/2018)
 
 # release date of this version in ISO YYYY-MM-DD
 released: 2018-06-01      
@@ -101,3 +98,19 @@ logo: https://www.fishbase.de/images/gifs/fblogo_new.gif
 
 # how to cite the dataset
 citation: Froese R. & Pauly D. (eds) (2018). FishBase (version 06/2018).
+
+
+
+
+#
+# DEPRECATED SETTINGS THAT WILL BE MOVED TO A DEDICATED FILE SOON!
+#
+
+# nomeclatural code covered. Keep empty if its across codes
+# botanical, zoological, bacterial, virus
+code: zoological
+
+# gazateer to base distribution codes on.
+# See http://api.catalogue.life/vocab/gazetteer
+# tdwg, iso, fao, longhurst, teow, iho, text
+gazetteer: iso
