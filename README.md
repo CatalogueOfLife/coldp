@@ -745,8 +745,10 @@ References are usually classic bibliographic citations on the article level.
 In many cases it is desirable to point and link to specific pages, e.g. where exactly a name has first been published.
 
 In order to avoid highly redundant references ColDP allows to share NameReference records that are microcitations to a specific page 
-where a name was mentioned that belongs to a specific Reference record. 
-Using NameReferences is optional.
+where a name was mentioned that belongs to a specific Reference record. They are appearances of a name in a publication.
+
+NameReference should not be used to designate the original publication of the name which should rather be done using Name.referenceID.
+Using NameReference is optional and supplements Name.referenceID.
 
 
 #### nameID
