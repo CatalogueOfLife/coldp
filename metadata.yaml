@@ -7,8 +7,8 @@ description: |
 
 # list of publishing organisations
 # Each organisation can use the following properties:
-#   name: name of the organisation, required!
 #   department: subunit within the organisation, sometimes a project (optional)
+#   name: name of the organisation, required!
 #   city: city (optional)
 #   state: state or province (optional)
 #   country: ISO country code (optional)
@@ -17,16 +17,16 @@ organisations:
   - name: The WorldFish Center
     city: Penang
     country: Malaysia
-  - name: University of British Columbia
-    department: Global Fisheries Cluster
+  - department: Global Fisheries Cluster
+    name: University of British Columbia    
     city: Vancouver, B.C.
     state: B.C.
     country: Canada
   - name: Food and Agriculture Organization of the United Nations
     city: Rome
     country: Italy
-  - name: Helmholtz Centre for Ocean Research Kiel
-    department: GEOMAR
+  - department: GEOMAR
+    name: Helmholtz Centre for Ocean Research Kiel
     city: Kiel
     country: Germany
   - name: Muséum National d'Histoire Naturelle 
@@ -42,7 +42,6 @@ organisations:
 #   familyName: last name. Only required field
 #   email: email address, optional
 #   orcid: orcid id, optional
-
 contact: 
   - givenName: Rainer
     familyName: Froese
