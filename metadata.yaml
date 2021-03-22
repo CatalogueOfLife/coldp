@@ -43,9 +43,9 @@ organisations:
 #   email: email address, optional
 #   orcid: orcid id, optional
 contact: 
-  - givenName: Rainer
-    familyName: Froese
-    email: rainer@mailinator.com
+  givenName: Rainer
+  familyName: Froese
+  email: rainer@mailinator.com
 
 # list of authors and/or editors. Recommendation is to keep authors empty if editors are given
 # For available person properties see contact above
