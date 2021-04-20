@@ -388,8 +388,13 @@ If parentID is given this field is ignored.
 The kingdom the taxon is classified in.
 If parentID is given this field is ignored.
 
-#### link
-A link to a webpage provided by the source depicting the taxon.
+#### kingdom
+The kingdom the taxon is classified in.
+If parentID is given this field is ignored.
+
+#### sequenceIndex
+A integer to specify an optional custom sort order for taxa in the datasets.
+This can be used to define a traditional ordering of orders and families for example and can be existing for parts of the dataset, e.g. higher ranks, only. The natural ordering of integers from small to large should be applied.
 
 #### remarks
 Any further taxonomic remarks.
