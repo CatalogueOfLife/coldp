@@ -103,7 +103,7 @@ See [NAMES.md](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md) for 
 Unique name identifier that is referred to elsewhere via `nameID`.
 
 #### sourceID
-Optional identifier for the source this record came from as listed in the metadata.yaml
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### basionymID
 Identifier of the name which is the original combination of this name. Also known as the basionym or protonym. 
@@ -193,7 +193,7 @@ The object name this relation relates to.
 Refers to an existing Name.ID or NameUsage.ID within this data package.
 
 #### sourceID
-Optional identifier for the source this record came from as listed in the metadata.yaml
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### type
 type: [enum](http://api.catalogue.life/vocab/nomreltype)
@@ -219,7 +219,7 @@ If possible use the existing specimen identifier, e.g. the collection/institutio
 If coming from a Darwin Core world dwc:occurrenceID is a great fit.
 
 #### sourceID
-Optional identifier for the source this record came from as listed in the metadata.yaml
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### nameID
 Pointer to the typified name referring to an existing Name.ID within this data package.
@@ -279,7 +279,7 @@ An accepted name with a taxonomic classification given either as a parent-child 
 Unique taxon identifier that is referred to elsewhere via `taxonID`.
 
 #### sourceID
-Optional identifier for the source this record came from as listed in the metadata.yaml
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### parentID
 The direct parent taxon's ID in the classification. This is the preferred way of exchanging a hierarchy and takes precedence over any classification given in the denormalized fields.
@@ -422,7 +422,7 @@ Optional unique identifier for the synonym.
 If given it should not clash with the taxon ids.
 
 #### sourceID
-Optional identifier for the source this record came from as listed in the metadata.yaml
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### taxonID
 Pointer to the taxon that this synonym is used for. For pro parte synonyms with multiple accepted names several synonym records sharing the same name but having different taxonIDs should be created. Refers to an existing Taxon.ID within this data package.
@@ -523,7 +523,7 @@ The related taxon this interaction is describing. If given it must refer to a lo
 If missing, the 'relatedTaxonScientificName' must be given instead.
 
 #### sourceID
-Optional identifier for the source this record came from as listed in the metadata.yaml
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### relatedTaxonScientificName
 The scientificName of the related taxon this interaction is describing. Includes the authorship if known.
@@ -554,7 +554,7 @@ The estimation must be based on a reference and should give the number of specie
 The higher taxon's ID that is the estimate refers to.
 
 #### sourceID
-Optional identifier for the source this record came from as listed in the metadata.yaml
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### estimate
 type: [integer]
@@ -585,7 +585,7 @@ References can be given in various degrees of atomization:
 The local identifier for the reference as used in referenceID in other entities.
 
 #### sourceID
-Optional identifier for the source this record came from as listed in the metadata.yaml
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### citation
 Full bibliographic citation as one single string as an alternative to the rest of the more structured fields.
@@ -787,7 +787,7 @@ Refers to an existing Name.ID or NameUsage.ID within this data package.
 Pointer to the reference that includes the name. Refers to an existing Reference.ID within this data package.
 
 #### sourceID
-Optional identifier for the source this record came from as listed in the metadata.yaml
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### page
 The exact page the microcitation is pointing to within the reference
@@ -808,7 +808,7 @@ A structured distribution record for a taxon in a given area.
 Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
 #### sourceID
-Optional identifier for the source this record came from as listed in the metadata.yaml
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### areaID 
 The identifier/code for the geographic area this distribution record is about.
@@ -851,7 +851,7 @@ Multimedia items for a taxon such as an image, audio or video.
 Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
 #### sourceID
-Optional identifier for the source this record came from as listed in the metadata.yaml
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### url 
 The URL that resolves to the media item itself, not a webpage that depicts it.
@@ -885,7 +885,7 @@ A vernacular or common name for a taxon.
 Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
 #### sourceID
-Optional identifier for the source this record came from as listed in the metadata.yaml
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### name 
 The vernacular name in the original script.
