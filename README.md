@@ -71,7 +71,6 @@ All files should be encoded in UTF-8.
  - [Reference](#reference)
  - [Reference JSON-CSL](#reference-json-csl)
  - [Reference BIBTEX](#reference-bibtex)
- - [NameReference](#namereference)
  - [TypeMaterial](#typematerial)
  - [Distribution](#distribution)
  - [Media](#media)
@@ -766,38 +765,6 @@ The `id` field following the curly opening bracket is used as the primary key an
  	pages     = {635–641}
 }
 ```
-
-
-## NameReference
-References are usually classic bibliographic citations on the article level.
-In many cases it is desirable to point and link to specific pages, e.g. where exactly a name has first been published.
-
-In order to avoid highly redundant references ColDP allows to share NameReference records that are microcitations to a specific page 
-where a name was mentioned that belongs to a specific Reference record. They are appearances of a name in a publication.
-
-NameReference should not be used to designate the original publication of the name which should rather be done using Name.referenceID.
-Using NameReference is optional and supplements Name.referenceID.
-
-
-#### nameID
-Pointer to the name that is mentioned in the given reference.
-Refers to an existing Name.ID or NameUsage.ID within this data package.
-
-#### referenceID
-Pointer to the reference that includes the name. Refers to an existing Reference.ID within this data package.
-
-#### sourceID
-Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
-
-#### page
-The exact page the microcitation is pointing to within the reference
-
-#### link
-A URL link to the exact page of the reference. 
-If only a link for the entire reference is available this should only be included in the main reference, not here again.
-
-#### remarks
-Opportunity to indicate the context, e.g. "Plate VIII: Genitalia drawings" or "Original description of Abies", etc. 
 
 
 
