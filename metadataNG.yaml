@@ -1,5 +1,12 @@
-# DOI for the dataset
-doi: 
+# single, primary DOI for the dataset
+doi: 10.15468/2zjeva
+
+# List of alternative identifiers for the dataset with an ID and an optional type value
+# Supported ID types: DOI, GBIF, COL, PLAZI
+identifier:
+  - col: 1010
+  - gbif: b96ed603-b710-4b3a-b99b-9bf0de6ef85b
+  - plazi: 3378FFAB6B55FFE0B065C77BFF226429
 
 # Full dataset title
 title: ColDP Example. The full dataset title
@@ -43,6 +50,7 @@ description: |
 # +++ REFERENCE CITATION +++
 # We use BibTeX field keys to represent a structured citation:
 #   id: identifier for the reference
+#   type: the BibTeX Entry type, ie. article, book, inbook or misc which is the default if none is given
 #   doi: DOI for the reference. Can be in addition to another identifier used as the ID above
 #   author: The name(s) of the author(s) as Person objects with familyName & givenName (see above)
 #   editor: The name(s) of the editor(s) as Person objects
@@ -50,7 +58,7 @@ description: |
 #   booktitle: The title of the book, if only part of it is being cited
 #   journal: The journal or magazine the work was published in
 #   year: The year of publication (or, if unpublished, the year of creation)
-#   month: The month of publication (or, if unpublished, the month of creation)
+#   month: The month of publication (or, if unpublished, the month of creation) using integers from 1-12
 #   series: The series of books the book was published in
 #   volume: The volume of a journal or multi-volume book
 #   number: The "(issue) number" of a journal or magazine if applicable. Note that this is not the "article number" assigned by some journals`.
@@ -60,6 +68,10 @@ description: |
 #   publisher: The publisher's name
 #   institution: The institution that was involved in the publishing, but not necessarily the publisher
 #   address: Publisher's address (usually just the city, but can be the full address for lesser-known publishers)
+# Additional non standard BibTeX fields
+#   version: dataset version
+#   ISBN: ISBN number (books)
+#   ISSN: ISSN serial number
 
 
 # Single point of contact for questions
@@ -178,7 +190,12 @@ logo: https://www.fishbase.de/images/gifs/fblogo_new.gif
 # List of Citations (see top) this dataset is derived from.
 # Identifiers for a source can be referenced from individual data records via sourceID to indicate the provenance on a record level.
 source:
-  - id: src1
-    title: "Title of source #1"
-  - id: src2
-    title: "Title of source #2"
+  - id: ecf
+    title: Eschmeyer's Catalog of Fishes
+    editor: 
+      - Fricke, R.
+      - Eschmeyer, W. N.
+      - Van der Laan, R.
+    year: 2021
+    version: 13 April 2021 
+    url: https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp
