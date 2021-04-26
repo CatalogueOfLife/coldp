@@ -1,13 +1,15 @@
 doi: 10.15468/col.grt63j
 identifier:
   - col: 2278
-title: Catalogue of Life 2021
 alias: COL21
+title: Catalogue of Life 2021
 description: | 
     The Catalogue of Life (CoL) is an assembly of expert-based global species checklists with the aim to build a comprehensive catalogue of all known species of organisms on Earth. 
     Continuous progress is made towards completion, but for now, it probably includes just over 80% of the world’s known species. 
     The Catalogue of Life estimates 2.2M extant species on the planet recognised by taxonomists at present time. 
     This means that for many groups it continues to be deficient, and users may notice that many species are still missing from the Catalogue.
+
+    For changes in this version see release notes at https://preview.catalogueoflife.org/2021/04/05/release.
 
 issn: 2405-8858
 issued: 2021-06-15
@@ -19,7 +21,7 @@ contact:
   email: support@catalogueoflife.org
 
 creator:
-  - organisation: Catalogue of Life
+  - organisation: Catalogue of Life Consortium
 
   - givenName: Nicolas
     familyName: Bailly
@@ -33,7 +35,7 @@ creator:
   # ... and all other GSD authors & COL team members listed here
 
 publisher:         
-  organisation: Species 2000 & ITIS     
+  organisation: Catalogue of Life
   city: Leiden
   country: NL
 
