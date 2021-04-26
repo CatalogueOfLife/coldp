@@ -88,10 +88,10 @@ contact:
   familyName: Froese
   email: rainer@mailinator.com
 
-# Creators of the dataset. Will be part of the default citation!
+# Creators of the dataset. Will be treated as authors in the default citation!
 # For available fields see Agent type at the top
 # Please provide an ORCID if you can so it can be included in DOI metadata
-author:
+creator:
   - givenName: Nicolas
     familyName: Bailly
     orcid: 0000-0003-4994-0653
