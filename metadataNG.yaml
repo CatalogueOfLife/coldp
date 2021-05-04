@@ -17,13 +17,16 @@ alias: ColDP Example
 # Multi parapgraph description / abstract of the dataset
 description: | 
     An abstract about the content of this dataset.
-    This can be as many paragraphs as you like in literal style YAML.
+    This can be as many paragraphs as you like in literal style YAML.    
 
 # Official release date of this version in ISO YYYY-MM-DD. Will be part of the default citation!
 issued: 2018-06-01      
 
 # Version name of this copy
 version: v.48 (06/2018)
+
+# ISSN number for a serial publication
+issn: 2405-8858
 
 
 # Agent and Citation are 2 complex objects used for several fields further down.
@@ -40,14 +43,14 @@ version: v.48 (06/2018)
 #   familyName: last name
 #   givenName: first name
 # ORGANISATION fields
-#   grid: GRID organisation ID, https://www.grid.ac  example: grid.5254.6
 #   rorid: ROR organisation ID, https://ror.org  example: 03yrm5c26
+#   grid: GRID organisation ID, https://www.grid.ac  example: grid.5254.6
 #   organisation: name of the organisation / institution
 #   department: subunit within the organisation, sometimes a project
 #   city: city
 #   state: state or province
 #   country: ISO country code
-# Shared fields
+# SHARED fields
 #   email: email address
 #   url: webpage
 #   note: miscellaneous extra information
@@ -58,8 +61,8 @@ version: v.48 (06/2018)
 #   id: identifier for the reference
 #   type: the BibTeX Entry type, ie. article, book, inbook or misc which is the default if none is given
 #   doi: DOI for the reference. Can be in addition to another identifier used as the ID above
-#   author: The name(s) of the author(s) as Person objects with familyName & givenName (see above)
-#   editor: The name(s) of the editor(s) as Person objects
+#   author: The names of the author(s) as a list of Person objects with familyName & givenName (this deviates from BibTEX, see above for a Person)
+#   editor: The names of the editor(s) as a list of Person objects
 #   title: The title of the work
 #   booktitle: The title of the book, if only part of it is being cited
 #   journal: The journal or magazine the work was published in
@@ -72,12 +75,11 @@ version: v.48 (06/2018)
 #   chapter: The chapter number
 #   pages: Page numbers, separated either by commas or double-hyphens.
 #   publisher: The publisher's name
-#   institution: The institution that was involved in the publishing, but not necessarily the publisher
 #   address: Publisher's address (usually just the city, but can be the full address for lesser-known publishers)
 # Additional non standard BibTeX fields
 #   version: dataset version
-#   ISBN: ISBN number (books)
-#   ISSN: ISSN serial number
+#   isbn: ISBN number (books)
+#   issn: ISSN serial number
 #   url: link to webpage for electronic resources
 #   note: e.g. Accessed Dec. 10, 2012
 
@@ -114,7 +116,7 @@ editor:
 
 # Single publishing organisation. Will be part of the default citation!
 publisher:         
-  grid: grid.17091.3e
+  rorid: https://ror.org/03rmrcq20
   organisation: University of British Columbia    
   department: Global Fisheries Cluster
   city: Vancouver
@@ -124,11 +126,11 @@ publisher:
 # Agent helping in distributing the dataset. 
 # Often an organisation providing hosting services.
 distributor:
-  - grid: grid.15649.3f
-    organisation: Helmholtz Centre for Ocean Research Kiel    
-    department: GEOMAR
-    city: Kiel
-    country: Germany
+  rorid: https://ror.org/02h2x0161
+  organisation: Helmholtz Centre for Ocean Research Kiel    
+  department: GEOMAR
+  city: Kiel
+  country: Germany
 
 # Agent contributing to the dataset in any other way, but who is not considered an author of the dataset
 # Use the optional note field to specify the kind of contribution
@@ -154,14 +156,17 @@ contributor:
     country: Malaysia
 
   - organisation: Food and Agriculture Organization of the United Nations
+    rorid: https://ror.org/00pe0tf51
     city: Rome
     country: Italy
 
   - organisation: Muséum National d'Histoire Naturelle 
+    rorid: https://ror.org/03wkt5x30
     city: Paris
     country: France
 
   - organisation: Aristotle University of Thessaloniki
+    rorid: https://ror.org/02j61yw88
     city: Thessaloniki
     country: Greece
 

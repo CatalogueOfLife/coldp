@@ -40,10 +40,10 @@ publisher:
   country: NL
 
 distributor:
-  - grid: grid.434488.7
-    organisation: Global Biodiversity Information Facility
-    city: København
-    country: DK
+  grid: grid.434488.7
+  organisation: Global Biodiversity Information Facility
+  city: København
+  country: DK
 
 geographicScope: global
 taxonomicScope: Biota
