@@ -185,7 +185,8 @@ confidence: 5
 # 0-100 to express the completeness of the dataset in regards to the defined scope
 completeness: 95
 
-# Any commons license (CC0, CC-BY, CC-BY-NC, CC-BY-SA, CC-BY-ND, CC-BY-NC-SA, CC-BY-NC-ND), but preferrably CC0 or CC-BY to be usable by COL
+# Any commons license (CC0, CC-BY, CC-BY-NC, CC-BY-SA, CC-BY-ND, CC-BY-NC-SA, CC-BY-NC-ND)
+# Must be CC0 or CC-BY to be used by COL !!!
 license: CC0
 
 # Link to a website for the dataset
