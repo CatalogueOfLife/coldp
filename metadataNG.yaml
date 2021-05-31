@@ -190,7 +190,7 @@ completeness: 95
 license: CC0
 
 # Link to a website for the dataset
-website: https://www.fishbase.org
+url: https://www.fishbase.org
 
 # URL to large logo image
 logo: https://www.fishbase.de/images/gifs/fblogo_new.gif 
