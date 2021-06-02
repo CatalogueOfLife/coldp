@@ -43,8 +43,7 @@ issn: 2405-8858
 #   familyName: last name
 #   givenName: first name
 # ORGANISATION fields
-#   rorid: ROR organisation ID, https://ror.org  example: 03yrm5c26
-#   grid: GRID organisation ID, https://www.grid.ac  example: grid.5254.6
+#   rorid: ROR organisation ID, https://ror.org  example: https://ror.org/05fjyn938
 #   organisation: name of the organisation / institution
 #   department: subunit within the organisation, sometimes a project
 #   city: city
