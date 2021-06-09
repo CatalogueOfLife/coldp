@@ -29,11 +29,8 @@ version: v.48 (06/2018)
 issn: 2405-8858
 
 
-# Agent and Citation are 2 complex objects used for several fields further down.
-# We provide here a complete definition that is referenced below.
-
-
 # +++ AGENT +++
+#
 # Agent entities are used for many fields below and can be either a person, an organisation or a combination of both.
 # The minimum requirement is either a persons family name, an organisation name or any of the identifiers for them.
 #
@@ -59,34 +56,6 @@ issn: 2405-8858
 # For the parsing to given and family name to correctly work it is highly recommended to use one of the following formats:
 # GivenName FamilyName: Only use this in case the last name is a single token. There can be many first names e.g. John Paul Sartre
 # FamilyName, GivenName: Supports any conmplex last name. E.g. Brinch Hansen, Per
-
-
-# +++ REFERENCE CITATION +++
-# We use BibTeX field keys to represent a structured citation:
-#   id: identifier for the reference
-#   type: the BibTeX Entry type, ie. article, book, inbook or misc which is the default if none is given
-#   doi: DOI for the reference. Can be in addition to another identifier used as the ID above
-#   author: The names of the author(s) as a list of Person objects with family & given (this deviates from BibTEX, see above for a Person)
-#   editor: The names of the editor(s) as a list of Person objects
-#   title: The title of the work
-#   booktitle: The title of the book, if only part of it is being cited
-#   journal: The journal or magazine the work was published in
-#   year: The year of publication (or, if unpublished, the year of creation)
-#   month: The month of publication (or, if unpublished, the month of creation) using integers from 1-12
-#   series: The series of books the book was published in
-#   volume: The volume of a journal or multi-volume book
-#   number: The "(issue) number" of a journal or magazine if applicable. Note that this is not the "article number" assigned by some journals`.
-#   edition: The edition of a book, long form (such as "First" or "Second")
-#   chapter: The chapter number
-#   pages: Page numbers, separated either by commas or double-hyphens.
-#   publisher: The publisher's name
-#   address: Publisher's address (usually just the city, but can be the full address for lesser-known publishers)
-# Additional non standard BibTeX fields
-#   version: dataset version
-#   isbn: ISBN number (books)
-#   issn: ISSN serial number
-#   url: link to webpage for electronic resources
-#   note: e.g. Accessed Dec. 10, 2012
 
 
 # Single point of contact for questions
@@ -198,15 +167,56 @@ url: https://www.fishbase.org
 # URL to large logo image
 logo: https://www.fishbase.de/images/gifs/fblogo_new.gif 
 
-# List of Citations (see top) this dataset is derived from.
-# Identifiers for a source can be referenced from individual data records via sourceID to indicate the provenance on a record level.
+
+# List of Citations this dataset is derived from.
+# We use CSL-JSON fields to represent a structured citation, see below for the main fields used for bibliographies.
+#
+# NAME fields:
+# are lists of people represented either by a simple string or objects with family & given fields.
+# In case no parsed name can be provided, simple strings will be parsed.
+# For the parsing to given and family name to correctly work it is highly recommended to use one of the following formats:
+#   1) GivenName FamilyName: Only use this in case the last name is a single token. There can be many first names e.g. John Paul Sartre
+#   2) FamilyName, GivenName: Supports any conmplex last name. E.g. Brinch Hansen, Per
+#
+# DATE fields:
+# are ISO dates that can be truncated, i.e. 1998, 1998-05 or 1998-05-21
+#
 source:
   - id: ecf
+    type: book
     title: Eschmeyer's Catalog of Fishes
     editor: 
-      - Fricke, R.
+      - Fricke, R. # simple 
       - Eschmeyer, W. N.
       - Van der Laan, R.
-    year: 2021
+    issued: 2021
     version: 13 April 2021 
     url: https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp
+
+  - id: # identifier for the source, can be referenced from individual data records via sourceID to indicate the provenance on a record level.
+    type: # CSL type, e.g. ARTICLE-JOURNAL, BOOK, CHAPTER, DATASET, WEBPAGE. See https://aurimasv.github.io/z2csl/typeMap.xml for a mapping of CSL types to field sets
+    doi: # a DOI
+    author: # [name] author list
+      - given: John Paul
+        family: Sartre
+      - given: Simone
+        family: de Beauvoir
+    editor: # [name] editor list
+    title: # primary title of the item
+    container-author: # [name] author of the container holding the item (e.g. the book author for a book chapter)
+    container-title: # title of the container holding the item (e.g. the book title for a book chapter, the journal title for a journal article)
+    issued: # [date] date the item was issued/published
+    accessed: # [date] date the item has been accessed
+    collection-title: # title of the collection holding the item (e.g. the series title for a book)
+    collection-editor: # [name] editor of the collection holding the item (e.g. the series editor for a book)
+    volume: # [number] (container) volume holding the item (e.g. “2” when citing a chapter from book volume 2)
+    issue: # [number] (container) issue holding the item (e.g. “5” when citing a journal article from journal volume 2, issue 5)
+    edition: # [number] (container) edition holding the item (e.g. “3” when citing a chapter in the third edition of a book)
+    page: # range of pages the item (e.g. a journal article) covers in a container (e.g. a journal issue)
+    publisher: # publisher
+    publisher-place: # geographic location of the publisher
+    version: # version of the item (e.g. “2.0.9” for a software program)
+    isbn: # International Standard Book Number
+    issn: # International Standard Serial Number
+    url: # link to webpage for electronic resources
+    note: # (short) inline note giving additional item details (e.g. a concise summary or commentary)  
