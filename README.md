@@ -574,12 +574,11 @@ A mandatory reference ID that supports the estimate and also provides a temporal
 
 ## Reference
 Structured bibliographic references with a unique id to refer to from other entities.
-References can be given in various degrees of atomization:
+References can be given either as a simple, single citation string, or in a structured form.
 
-1) A simple citation string is the minimum required
-2) Semi structured using the field list below mostly corresponding to Dublin Core
-3) Fully parsed references in the well established BibTex or CSL-JSON format. 
-   See the sections below with for how to share alternative formats that do not conform to tabular CSV/TSV files.
+ColDP supports fully parsed references in CSV based on the CSL-JSON format.
+Alternatively references can also be provided in the native file formats for the well established BibTex or CSL-JSON formats. 
+See the sections below with for how to share alternative formats that do not conform to tabular CSV/TSV files.
 
 
 #### ID  
@@ -592,33 +591,97 @@ Optional identifier for the source this record came from as listed in the [metad
 Full bibliographic citation as one single string as an alternative to the rest of the more structured fields.
 If individual fields are given the full citation can be ignored.
 
+### type
+CSL type that defines what kind of structured reference this is.
+See https://aurimasv.github.io/z2csl/typeMap.xml for all types and a mapping of CSL types to field sets.
+E.g. ARTICLE-JOURNAL, BOOK, CHAPTER, DATASET or WEBPAGE. 
+
 #### author
 The author(s) of the work. If multiple authors use a style that can safely be parsed.
-Recommended is to list authors by comma and prefix their surname with initials.
+Recommended are 2 common forms:
+
+ 1. family1, given1; family2, given2; ...
+ 2. given1 family1, given2 family2, ...
+
+The first form using commas and semicolons can safely be parsed also for family names which include whitespace.
+In accordance with BibTeX it is also permissable to use the english word `and` as a delimiter instead of the semicolon.
+
+The second form requires the family name to be a single word, as all words before the last whitespace are considered given names.
 If a comma is used to separate surname, firstname please use a semicolon to delimit individual authors.
 
+#### editor
+The editor(s) of the work. 
+See author for recommendations how to supply person names.
+
 #### title
-The title of the work. In case of journal articles the article title, not the journal itself.
+The title of the work. 
+In case of journal articles the article title, not the journal itself.
 
-#### year
-The year of the publication.
+#### containerAuthor
+Author(s) of the container holding the item, e.g. the book author for a book chapter.
+See author for recommendations how to supply person names.
 
-#### source
-The title of the journal or book the work was published in. 
-The source should exclude volume, edition, pages and other specifics.
+#### containerTitle
+Title of the container holding the item, e.g. the book title for a book chapter, the journal title for a journal article.
+The containerTitle should exclude volume, edition, pages and other specifics.
 
-#### details
-All details to locate the work within the source, sometimes also referred to as collation.
-That can include journal volume, edition, pages, pointer to illustrations or anything else.
+#### issued
+type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date) 
+Date the work was issued/published. 
+Use ISO dates that can be truncated to represent a year, year & month or exact date, e.g. 1998, 1998-05 or 1998-05-21
+
+#### accessed
+type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date) 
+Date the item has been accessed.
+See issued for how to use ISO dates.
+
+### collectionTitle
+Title of the collection holding the item, e.g. the series title for a book.
+
+### collectionEditor
+Editor(s) of the collection holding the item, e.g. the series editor for a book.
+
+### volume
+type: [number](https://specs.frictionlessdata.io/table-schema/#number)
+(container) volume number holding the item, e.g. `2` when citing a chapter from book volume 2.
+
+### issue
+type: [number](https://specs.frictionlessdata.io/table-schema/#number)
+(container) issue holding the item, e.g. `5` when citing a journal article from journal volume 2, issue 5.
+
+### edition
+type: [number](https://specs.frictionlessdata.io/table-schema/#number)
+(container) edition holding the item, e.g. `3` when citing a chapter in the third edition of a book.
+
+### page
+Range of pages the item (e.g. a journal article) covers in a container (e.g. a journal issue)
+
+### publisher
+Name of the publisher
+
+### publisherPlace
+Geographic location of the publisher
+
+### version
+Version of the item or dataset
+
+### isbn
+International Standard Book Number
+
+### issn
+International Standard Serial Number
 
 #### doi
 The DOI of the reference
 
 #### link
-A URL link to the reference
+A URL link to the reference. A link to a webpage for electronic resources.
+`url` in CSL-JSON terminology, but we prefer link to be consistent with other ColDP entities.
 
 #### remarks
 Additional comments about the reference.
+`note` in CSL-JSON terminology, but we prefer remarks to be consistent with other ColDP entities.
+
 
 
 ## Reference JSON-CSL
