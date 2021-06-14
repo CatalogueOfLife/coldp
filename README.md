@@ -1,12 +1,15 @@
-* [Diagram](#format-comparison)
+
+# COL Data Package (ColDP) Specification
+The recommended exchange format for data to and from COL ChecklistBank
+is a tabular text format with a fixed set of files and columns.
+
+* [Schema](#schema)
 * [Format Comparison](#format-comparison)
 * [Data Files](#data-files)
 * [metadata.yaml](#metadatayaml)
 * [Best Practises](#best-practices)
 
-# COL Data Package (ColDP) Specification
-The recommended exchange format for data to and from COL ChecklistBank
-is a tabular text format with a fixed set of files and columns.
+## Schema
 
 The format is a single ZIP archive that bundles various delimited text files described below together with a metadata.yaml file providing basic metadata about the entire dataset. Each file holds records for the same class of things shown in this diagram:
 
