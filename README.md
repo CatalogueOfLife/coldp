@@ -6,7 +6,7 @@ is a tabular text format with a fixed set of files and columns.
 * [Schema](#schema)
 * [Format Comparison](#format-comparison)
 * [Data Files](#data-files)
-* [metadata.yaml](#metadatayaml)
+* [Metadata](#metadata)
 * [Best Practises](#best-practices)
 
 ## Schema
@@ -84,8 +84,8 @@ All files should be encoded in UTF-8.
  - [VernacularName](#vernacularname)
  - [Treatment documents](#treatment)
   
-## metadata.yaml
-A [YAML file](https://en.wikipedia.org/wiki/YAML) with metadata about the entire data package should be included. 
+## Metadata
+A [YAML file](https://en.wikipedia.org/wiki/YAML) called `metadata.yaml` with metadata about the entire data package should be included. 
 The file consists mostly of key value pairs like title, see the [comments in metadata.yaml](metadata.yaml) for all available keys.
 There is also a [JSON schema](metadata.json) available for validation.
 
