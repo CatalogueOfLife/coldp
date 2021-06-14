@@ -1,3 +1,8 @@
+* [Diagram](#format-comparison)
+* [Format Comparison](#format-comparison)
+* [Data Files](#data-files)
+* [metadata.yaml](#metadatayaml)
+* [Best Practises](#best-practices)
 
 # COL Data Package (ColDP) Specification
 The recommended exchange format for data to and from COL ChecklistBank
@@ -6,6 +11,7 @@ is a tabular text format with a fixed set of files and columns.
 The format is a single ZIP archive that bundles various delimited text files described below together with a metadata.yaml file providing basic metadata about the entire dataset. Each file holds records for the same class of things shown in this diagram:
 
 ![schema](schema.png)
+
 
 ## Format Comparison
 
@@ -948,10 +954,25 @@ Multiple page references can be given by as a comma concatenated list.
 
 
 
-
 ## Treatment
 [Treatments](http://plazi.org/api-tools/api/#What_is_a_treatment) are parts of publications that "treat" a single taxon. They can be an original description for a new species, but also subsequent taxonomic works and usually include several sections such as a diagnosis, description, material examied, distribution, etc.
 ColDP captures an entire treatment either as an TXT, HTML or XML document that lives as an individual file in a subfolder `treatments` and is named by the corresponding taxonID of the name usage it describes. The taxons `accordingToID` should always point to the reference the treatment is published in.
 Example: `treatments/19854332.html` would be an html document which is the marked up treatment for the taxon with ID `19854332`.
+
+
+
+## Best Practices
+
+### parentID vs flat ranks
+A taxonomic hierarchy can be established either as a parent child relationship using `Taxon.parentID` or by using the flat, higher rank terms on each record.
+If possible the parent child approach using `parentID` is preferrable and the flat higher ranks are not needed in that case.
+  
+### Species with an uncertain genus
+Sometimes there a cases of a described species with a taxonomically unresolved placement. 
+It appears to be a valid species, but there has been no updated taxonomic placement yet (or can't be because of missing types/information) 
+and a current placement into some other genus is not possible and/or no new combination has yet been published. 
+Instead of listing the same "split" genus twice COL strongly recommends to flag the species taxon with `provisional=true` and place it directly under it's next higher taxon, e.g. the family.
+
+
 
 
