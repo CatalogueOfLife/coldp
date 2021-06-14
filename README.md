@@ -11,7 +11,7 @@ is a tabular text format with a fixed set of files and columns.
 
 ## Schema
 
-The format is a single ZIP archive that bundles various delimited text files described below together with a metadata.yaml file providing basic metadata about the entire dataset. Each file holds records for the same class of things shown in this diagram:
+The format is a single ZIP archive that bundles various delimited text files described below together with a metadata.yaml file providing basic metadata about the entire dataset. Each file holds records for the same class of things shown in this diagram with columns explained in more detail in the [Data File section](#data-file-columns):
 
 ![schema](schema.png)
 
@@ -95,6 +95,7 @@ An exception are the contact and authors and editors properties which takes a co
 and the organisations list which takes a structured organisation object. 
 See [yaml example](metadata.yaml) for all available fields.
 Additional entries to the YAML file are allowed to express non standard properties.
+
 
 
 # Data File Columns
@@ -964,13 +965,13 @@ Example: `treatments/19854332.html` would be an html document which is the marke
 
 
 
-## Best Practices
+# Best Practices
 
-### parentID vs flat ranks
+## parentID vs flat ranks
 A taxonomic hierarchy can be established either as a parent child relationship using `Taxon.parentID` or by using the flat, higher rank terms on each record.
 If possible the parent child approach using `parentID` is preferrable and the flat higher ranks are not needed in that case.
   
-### Species with an uncertain genus
+## Species with an uncertain genus
 Sometimes there a cases of a described species with a taxonomically unresolved placement. 
 It appears to be a valid species, but there has been no updated taxonomic placement yet (or can't be because of missing types/information) 
 and a current placement into some other genus is not possible and/or no new combination has yet been published. 
