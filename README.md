@@ -13,7 +13,7 @@ is a tabular text format with a fixed set of files and columns.
 
 The format is a single ZIP archive that bundles various delimited text files described below together with a metadata.yaml file providing basic metadata about the entire dataset. Each file holds records for the same class of things shown in this diagram with columns explained in more detail in the [Data File section](#data-file-columns):
 
-![schema](schema.png)
+![schema](docs/schema.png)
 
 
 ## Format Comparison
@@ -40,7 +40,6 @@ Name & taxon separation|-|-|x
 Species interactions|-|-|x
 Species estimates|-|-|x
 Structured references|x|-|x
-Microcitations|-|-|x
 Nomenclatural relations|-|-|x
 Type species|-|x|x
 Type specimen|-|x|x
@@ -62,8 +61,6 @@ The suffix specifies one of the two supported tabular flavours, comma separated 
  - `tsv`, `tab` or `txt`: indicates a tab seperated file without quoting
  
  Valid examples are `Taxon.tsv` or `vernacular-name.csv`
-
-It is recommended to place all data files in a subfolder called `data`, but having them on the root level is allowed.
 
 ### Character Encoding
 All files should be encoded in UTF-8.
@@ -90,6 +87,7 @@ All files should be encoded in UTF-8.
 ## metadata.yaml
 A [YAML file](https://en.wikipedia.org/wiki/YAML) with metadata about the entire data package should be included. 
 The file consists mostly of key value pairs like title, see the [comments in metadata.yaml](metadata.yaml) for all available keys.
+There is also a [JSON schema](metadata.json) available for validation.
 
 An exception are the contact and authors and editors properties which takes a compound person object 
 and the organisations list which takes a structured organisation object. 
@@ -237,7 +235,7 @@ Type material should only be associated with an original name, not with recombin
 
 #### citation
 Material citation of the type material, i.e. type specimen. 
-The citation is ideally given in the verbatim form as it was used in the original publication of the name or the subsequent designation. Otherwise it is recommended to follow the [material citation guidelines published by European Journal of Taxonomy](material_citations_formatting_guide.pdf).
+The citation is ideally given in the verbatim form as it was used in the original publication of the name or the subsequent designation. Otherwise it is recommended to follow the [material citation guidelines published by European Journal of Taxonomy](docs/material_citations_formatting_guide.pdf).
 If atomized fields below are given a citation is not needed. Otherwise it is required.
 
 #### status
@@ -479,7 +477,7 @@ For synonyms the `parentID` field is used to link to the accepted taxon.
 
 All properties available in the individual entities can also be used for the single NameUsage:
 
-![NameUsage schema](schemaNU.png)
+![NameUsage schema](docs/schemaNU.png)
 
 There are two clashing properties that exist both on a Name and Taxon/Synonym, but which have a slightly different meaning.
 Therefore the following properties deviate slightly from their usage in their classic version:

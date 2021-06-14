@@ -1,0 +1,330 @@
+{
+  "description": "JSON schema for COL Data Package (ColDP) metadata",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/CatalogueOfLife/coldp/master/metadata.json",
+  "type": "object",
+  "properties": {
+        "alias": {
+          "type": "string"
+        },
+        "completeness": {
+          "type": "integer"
+        },
+        "confidence": {
+          "type": "integer"
+        },
+        "contact": {
+          "$ref": "#/definitions/Contact"
+        },
+        "contributor": {
+          "items": {
+            "$ref": "#/definitions/Contributor"
+          },
+          "type": "array"
+        },
+        "creator": {
+          "items": {
+            "$ref": "#/definitions/Tor"
+          },
+          "type": "array"
+        },
+        "description": {
+          "type": "string"
+        },
+        "doi": {
+          "type": "string"
+        },
+        "editor": {
+          "items": {
+            "$ref": "#/definitions/Tor"
+          },
+          "type": "array"
+        },
+        "geographicScope": {
+          "type": "string"
+        },
+        "identifier": {
+          "$ref": "#/definitions/Identifier"
+        },
+        "issn": {
+          "type": "string"
+        },
+        "issued": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        },
+        "logo": {
+          "format": "uri",
+          "qt-uri-extensions": [
+            ".gif"
+          ],
+          "qt-uri-protocols": [
+            "https"
+          ],
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "publisher": {
+          "$ref": "#/definitions/Publisher"
+        },
+        "source": {
+          "items": {
+            "$ref": "#/definitions/Source"
+          },
+          "type": "array"
+        },
+        "taxonomicScope": {
+          "type": "string"
+        },
+        "temporalScope": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "url": {
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ],
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "alias",
+        "completeness",
+        "confidence",
+        "contact",
+        "contributor",
+        "creator",
+        "description",
+        "doi",
+        "editor",
+        "geographicScope",
+        "identifier",
+        "issn",
+        "issued",
+        "license",
+        "logo",
+        "notes",
+        "publisher",
+        "source",
+        "taxonomicScope",
+        "temporalScope",
+        "title",
+        "url",
+        "version"
+      ],
+    },
+
+
+  "definitions": {
+    "Agent": {
+      "title": "Agent",
+      "type": "object",
+      "properties": {
+        "orcid": {
+          "type": "string"
+        },
+        "family": {
+          "type": "string"
+        },
+        "given": {
+          "type": "string"
+        },
+
+        "rorid": {
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ],
+          "type": "string"
+        },
+        "department": {
+          "type": "string"
+        },
+        "organisation": {
+          "type": "string"
+        },
+
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+
+        "email": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "anyOf": [
+        { "required":[ "family" ] },
+        { "required":[ "organisation" ] },
+        { "required":[ "email" ] }
+      ],
+    },
+    "Citation": {
+      "additionalProperties": false,
+      "properties": {
+        "accessed": {
+          "type": "null"
+        },
+        "author": {
+          "type": "null"
+        },
+        "collectionEditor": {
+          "type": "null"
+        },
+        "collectionTitle": {
+          "type": "null"
+        },
+        "containerAuthor": {
+          "type": "null"
+        },
+        "containerTitle": {
+          "type": "null"
+        },
+        "doi": {
+          "type": "null"
+        },
+        "edition": {
+          "type": "null"
+        },
+        "editor": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/EditorElement"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "isbn": {
+          "type": "null"
+        },
+        "issn": {
+          "type": "null"
+        },
+        "issue": {
+          "type": "null"
+        },
+        "issued": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "note": {
+          "type": "null"
+        },
+        "page": {
+          "type": "null"
+        },
+        "publisher": {
+          "type": "null"
+        },
+        "publisherPlace": {
+          "type": "null"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "type": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "format": "uri",
+              "qt-uri-extensions": [
+                ".asp"
+              ],
+              "qt-uri-protocols": [
+                "https"
+              ],
+              "type": "string"
+            }
+          ]
+        },
+        "version": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "volume": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "editor",
+        "id",
+        "issued",
+        "title",
+        "type",
+        "url",
+        "version"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+  },
+}
