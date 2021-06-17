@@ -4,53 +4,76 @@
   "$id": "https://raw.githubusercontent.com/CatalogueOfLife/coldp/master/metadata.json",
   "type": "object",
   "properties": {
+        "doi": {
+          "type": "string"
+        },
+        "identifier": {
+          "$ref": "object"
+        },
+        "title": {
+          "type": "string"
+        },
         "alias": {
           "type": "string"
         },
+        "version": {
+          "type": "string"
+        },
+        "issued": {
+          "format": "date-time",
+          "type": "string"
+        },
+
+        "creator": {
+          "items": {
+            "$ref": "#/definitions/Agent"
+          },
+          "type": "array"
+        },
+        "editor": {
+          "items": {
+            "$ref": "#/definitions/Agent"
+          },
+          "type": "array"
+        },
+        "publisher": {
+          "$ref": "#/definitions/Agent"
+        },
+        "contact": {
+          "$ref": "#/definitions/Agent"
+        },
+        "contributor": {
+          "items": {
+            "$ref": "#/definitions/Agent"
+          },
+          "type": "array"
+        },
+
+        "description": {
+          "type": "string"
+        },
+
+        "taxonomicScope": {
+          "type": "string"
+        },
+        "temporalScope": {
+          "type": "string"
+        },
+        "geographicScope": {
+          "type": "string"
+        },
+
         "completeness": {
           "type": "integer"
         },
         "confidence": {
           "type": "integer"
         },
-        "contact": {
-          "$ref": "#/definitions/Contact"
-        },
-        "contributor": {
-          "items": {
-            "$ref": "#/definitions/Contributor"
-          },
-          "type": "array"
-        },
-        "creator": {
-          "items": {
-            "$ref": "#/definitions/Tor"
-          },
-          "type": "array"
-        },
-        "description": {
+        "url": {
+          "format": "uri",
           "type": "string"
-        },
-        "doi": {
-          "type": "string"
-        },
-        "editor": {
-          "items": {
-            "$ref": "#/definitions/Tor"
-          },
-          "type": "array"
-        },
-        "geographicScope": {
-          "type": "string"
-        },
-        "identifier": {
-          "$ref": "#/definitions/Identifier"
         },
         "issn": {
-          "type": "string"
-        },
-        "issued": {
-          "format": "date-time",
           "type": "string"
         },
         "license": {
@@ -58,19 +81,7 @@
         },
         "logo": {
           "format": "uri",
-          "qt-uri-extensions": [
-            ".gif"
-          ],
-          "qt-uri-protocols": [
-            "https"
-          ],
           "type": "string"
-        },
-        "notes": {
-          "type": "string"
-        },
-        "publisher": {
-          "$ref": "#/definitions/Publisher"
         },
         "source": {
           "items": {
@@ -78,54 +89,16 @@
           },
           "type": "array"
         },
-        "taxonomicScope": {
-          "type": "string"
-        },
-        "temporalScope": {
-          "type": "string"
-        },
-        "title": {
-          "type": "string"
-        },
-        "url": {
-          "format": "uri",
-          "qt-uri-protocols": [
-            "https"
-          ],
-          "type": "string"
-        },
-        "version": {
+        "notes": {
           "type": "string"
         }
-      },
-      "required": [
-        "alias",
-        "completeness",
-        "confidence",
-        "contact",
-        "contributor",
-        "creator",
-        "description",
-        "doi",
-        "editor",
-        "geographicScope",
-        "identifier",
-        "issn",
-        "issued",
-        "license",
-        "logo",
-        "notes",
-        "publisher",
-        "source",
-        "taxonomicScope",
-        "temporalScope",
-        "title",
-        "url",
-        "version"
-      ],
-    },
-
-
+  },
+  "required": [
+    "title",
+    "creator",
+    "issued",
+    "license"
+  ],
   "definitions": {
     "Agent": {
       "title": "Agent",
@@ -142,10 +115,6 @@
         },
 
         "rorid": {
-          "format": "uri",
-          "qt-uri-protocols": [
-            "https"
-          ],
           "type": "string"
         },
         "department": {
@@ -162,13 +131,17 @@
           "type": "string"
         },
         "country": {
-          "type": "string"
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
         },
 
         "email": {
+          "format": "email",
           "type": "string"
         },
         "url": {
+          "format": "uri",
           "type": "string"
         },
         "note": {
@@ -180,151 +153,119 @@
         { "required":[ "family" ] },
         { "required":[ "organisation" ] },
         { "required":[ "email" ] }
-      ],
+      ]
     },
     "Citation": {
       "additionalProperties": false,
       "properties": {
-        "accessed": {
-          "type": "null"
-        },
-        "author": {
-          "type": "null"
-        },
-        "collectionEditor": {
-          "type": "null"
-        },
-        "collectionTitle": {
-          "type": "null"
-        },
-        "containerAuthor": {
-          "type": "null"
-        },
-        "containerTitle": {
-          "type": "null"
-        },
-        "doi": {
-          "type": "null"
-        },
-        "edition": {
-          "type": "null"
-        },
-        "editor": {
-          "anyOf": [
-            {
-              "items": {
-                "$ref": "#/definitions/EditorElement"
-              },
-              "type": "array"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
         "id": {
-          "anyOf": [
-            {
-              "type": "null"
-            },
-            {
-              "type": "string"
-            }
-          ]
-        },
-        "isbn": {
-          "type": "null"
-        },
-        "issn": {
-          "type": "null"
-        },
-        "issue": {
-          "type": "null"
-        },
-        "issued": {
-          "anyOf": [
-            {
-              "type": "null"
-            },
-            {
-              "type": "string"
-            }
-          ]
-        },
-        "note": {
-          "type": "null"
-        },
-        "page": {
-          "type": "null"
-        },
-        "publisher": {
-          "type": "null"
-        },
-        "publisherPlace": {
-          "type": "null"
-        },
-        "title": {
-          "anyOf": [
-            {
-              "type": "null"
-            },
-            {
-              "type": "string"
-            }
-          ]
+          "type": "string"
         },
         "type": {
-          "anyOf": [
-            {
-              "type": "null"
-            },
-            {
-              "type": "string"
-            }
-          ]
+          "type": "string"
         },
-        "url": {
-          "anyOf": [
-            {
-              "type": "null"
-            },
-            {
-              "format": "uri",
-              "qt-uri-extensions": [
-                ".asp"
-              ],
-              "qt-uri-protocols": [
-                "https"
-              ],
-              "type": "string"
-            }
-          ]
+        "title": {
+          "type": "string"
         },
         "version": {
-          "anyOf": [
-            {
-              "type": "null"
-            },
-            {
-              "type": "string"
-            }
-          ]
+          "type": "string"
+        },
+        "author": {
+          "items": {
+            "$ref": "#/definitions/Person"
+          },
+          "type": "array"
+        },
+        "editor": {
+          "items": {
+            "$ref": "#/definitions/Person"
+          },
+          "type": "array"
+        },
+        "publisher": {
+          "type": "string"
+        },
+        "publisherPlace": {
+          "type": "string"
+        },
+        "issued": {
+          "format": "date",
+          "type": "string"
+        },
+        "containerTitle": {
+          "type": "string"
+        },
+        "containerAuthor": {
+          "items": {
+            "$ref": "#/definitions/Person"
+          },
+          "type": "array"
         },
         "volume": {
-          "type": "null"
+          "type": "string"
+        },
+        "issue": {
+          "type": "string"
+        },
+        "edition": {
+          "type": "string"
+        },
+        "page": {
+          "type": "string"
+        },
+        "collectionTitle": {
+          "type": "string"
+        },
+        "collectionEditor": {
+          "items": {
+            "$ref": "#/definitions/Person"
+          },
+          "type": "array"
+        },
+        "doi": {
+          "type": "string"
+        },
+        "isbn": {
+          "type": "string"
+        },
+        "issn": {
+          "type": "string"
+        },
+        "url": {
+          "format": "uri",
+          "type": "string"
+        },
+        "accessed": {
+          "format": "date",
+          "type": "string"
+        },
+
+        "note": {
+          "type": "string"
         }
       },
       "required": [
-        "editor",
         "id",
-        "issued",
-        "title",
-        "type",
-        "url",
-        "version"
+        "title"
       ],
       "title": "Source",
       "type": "object"
     },
-  },
+    "Person": {
+      "title": "Person",
+      "type": "object",
+      "properties": {
+        "family": {
+          "type": "string"
+        },
+        "given": {
+          "type": "string"
+        },
+        "literal": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
 }
