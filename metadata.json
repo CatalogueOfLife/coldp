@@ -8,7 +8,7 @@
           "type": "string"
         },
         "identifier": {
-          "$ref": "object"
+          "type": "object"
         },
         "title": {
           "type": "string"
@@ -85,7 +85,7 @@
         },
         "source": {
           "items": {
-            "$ref": "#/definitions/Source"
+            "$ref": "#/definitions/Citation"
           },
           "type": "array"
         },
