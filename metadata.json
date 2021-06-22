@@ -270,13 +270,13 @@
       "title": "ISO Date",
       "type": "string",
       "format": "regex",
-      "pattern": "[0-9][0-9][0-9][0-9](-[0-9][0-9](-[0-9][0-9])?)?"
+      "pattern": "^[0-9][0-9][0-9][0-9](-[0-9][0-9](-[0-9][0-9])?)?$"
     },
     "doi": {
       "title": "DOI",
       "type": "string",
       "format": "regex",
-      "pattern": "(doi:|https://doi.org/)?10.[0-9]+/.+"
+      "pattern": "^(doi:|https://doi.org/)?10.[0-9]+/.+"
     }
 
   }
