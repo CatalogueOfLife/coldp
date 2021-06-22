@@ -161,7 +161,8 @@
           "type": "string"
         },
         "type": {
-          "type": "string"
+          "type": "string",
+          "enum": ["article-journal", "book", "chapter", "thesis", "paper-conference", "manuscript", "dataset", "webpage", "personal_communication"]
         },
         "title": {
           "type": "string"
@@ -188,8 +189,7 @@
           "type": "string"
         },
         "issued": {
-          "format": "date",
-          "type": "string"
+          "$ref": "#/definitions/isodate"
         },
         "containerTitle": {
           "type": "string"
@@ -222,7 +222,7 @@
           "type": "array"
         },
         "doi": {
-          "type": "string"
+          "$ref": "#/definitions/doi"
         },
         "isbn": {
           "type": "string"
@@ -235,8 +235,7 @@
           "type": "string"
         },
         "accessed": {
-          "format": "date",
-          "type": "string"
+          "$ref": "#/definitions/doi"
         },
 
         "note": {
