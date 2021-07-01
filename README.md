@@ -483,7 +483,7 @@ There are two clashing properties that exist both on a Name and Taxon/Synonym, b
 Therefore the following properties deviate slightly from their usage in their classic version:
  
  - **parentID**: for taxa it points to the next higher taxon's ID to form the classification, for synonyms it points at the accepted taxon.
- - **status**: is the taxonomic name usage status which includes Synonym.status and the Taxon.provisional flag. 
+ - **status**: is the taxonomic name usage status which includes Synonym.status and the Taxon.provisional flag. A provisional taxon should be listed as `provisionally accepted`
  - **nameStatus**: corresponds to the nomenclatural name status.
  - **genus**: is the taxonomic classification of a name usage and corresponds to Taxon.genus. For synonyms it often is not the same as the genus part of the name
  - **genericName**: corresponds to the genus field of a name and represents the atomized genus of a scientificName.

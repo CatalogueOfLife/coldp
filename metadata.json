@@ -155,7 +155,7 @@
       ]
     },
     "Citation": {
-      "additionalProperties": false,
+      "additionalProperties": true,
       "properties": {
         "id": {
           "type": "string"
