@@ -139,7 +139,8 @@ The genus part of a bi/trinomial.
 Note that for generic names the uninomial field should be used, not genus!
 
 #### infragenericEpithet
-The infrageneric epithet in case of bi/trinomials. In zoological names often the subgenus.
+The infrageneric epithet. Used as the terminal epithet for names at infrageneric ranks and optionally also for bi/trinomials
+In zoological names often the subgenus.
 
 #### specificEpithet
 The specific epithet in case of bi/trinomials.
