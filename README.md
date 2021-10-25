@@ -26,6 +26,7 @@ Linnean classification (KPCOFG)|x|x|x
 Extended Linnean classification (subranks)|-|-|x
 Flexible Parent-child classification|-|x|x
 Custom taxon ordering|-|-|x
+Phylo trees|-|-|x
 Unrestricted ranks|-|x|x
 Higher taxon details|-|x|x
 Infraspecific taxa|x|x|x
@@ -47,7 +48,7 @@ Taxon concepts|-|x|x
 Taxon concept relations|-|x|x
 Vernacular names|x|x|x
 Structured distributions|x|x|x
-Taxon descriptions|-|x|x
+Treatments|-|x|x
 Multimedia metadata|-|x|x
 
  - `x` = supported
@@ -293,6 +294,15 @@ Optional identifier for the source this record came from as listed in the [metad
 #### parentID
 The direct parent taxon's ID in the classification. This is the preferred way of exchanging a hierarchy and takes precedence over any classification given in the denormalized fields.
 
+#### sequenceIndex
+A integer to specify an optional custom sort order for sibling taxa sharing the same parentID in the datasets.
+This can be used to define a traditional ordering of orders and families for example and can be existing for parts of the dataset, e.g. higher ranks, only. The natural ordering of integers from small to large should be applied.
+Not that this does not have to be a unique, global index.
+
+#### branchLength
+type: [number]
+The optional length of the parent edge to represent phylogenetic trees.
+
 #### nameID
 Pointer to the accepted name referring to an existing Name.ID within this data package.
 
@@ -408,11 +418,6 @@ If parentID is given this field is ignored.
 #### kingdom
 The kingdom the taxon is classified in.
 If parentID is given this field is ignored.
-
-#### sequenceIndex
-A integer to specify an optional custom sort order for sibling taxa sharing the same parentID in the datasets.
-This can be used to define a traditional ordering of orders and families for example and can be existing for parts of the dataset, e.g. higher ranks, only. The natural ordering of integers from small to large should be applied.
-Not that this does not have to be a unique, global index.
 
 #### link
 A link to a webpage provided by the source depicting the taxon.
