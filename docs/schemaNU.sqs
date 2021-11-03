@@ -780,7 +780,7 @@
         </location>
         <size>
             <width>215.00</width>
-            <height>1020.00</height>
+            <height>1040.00</height>
         </size>
         <zorder>6</zorder>
         <SQLField>
@@ -930,19 +930,25 @@
         <SQLField>
             <name><![CDATA[namePublishedInYear]]></name>
             <type><![CDATA[INTEGER]]></type>
+            <FieldBackgroundColor><![CDATA[{0.921431,0.921453,0.921441,0.754655,sRGBColorSpace}]]></FieldBackgroundColor>
             <hidden><![CDATA[0]]></hidden>
+            <labelColor><![CDATA[{0.921431,0.921453,0.921441,0.754655,sRGBColorSpace}]]></labelColor>
             <uid><![CDATA[BB8A54E9-9868-4451-BFF4-4F0CF25AF2FA]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[namePublishedInPage]]></name>
             <type><![CDATA[TEXT]]></type>
+            <FieldBackgroundColor><![CDATA[{0.921431,0.921453,0.921441,0.754655,sRGBColorSpace}]]></FieldBackgroundColor>
+            <labelColor><![CDATA[{0.921431,0.921453,0.921441,0.754655,sRGBColorSpace}]]></labelColor>
             <uid><![CDATA[9F193C3E-DB6F-4D55-AD6A-428A71A12E74]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[namePublishedInPageLink]]></name>
             <type><![CDATA[TEXT]]></type>
             <connectorLineStyle><![CDATA[2]]></connectorLineStyle>
+            <FieldBackgroundColor><![CDATA[{0.921431,0.921453,0.921441,0.754655,sRGBColorSpace}]]></FieldBackgroundColor>
             <hidden><![CDATA[0]]></hidden>
+            <labelColor><![CDATA[{0.921431,0.921453,0.921441,0.754655,sRGBColorSpace}]]></labelColor>
             <uid><![CDATA[AF3C1C9E-55B5-4A86-A2B0-1951DBA2735C]]></uid>
         </SQLField>
         <SQLField>
@@ -954,9 +960,9 @@
         <SQLField>
             <name><![CDATA[nameStatus]]></name>
             <type><![CDATA[ENUM]]></type>
-            <FieldBackgroundColor><![CDATA[{0.921431,0.921453,0.921441,0.754655}]]></FieldBackgroundColor>
+            <FieldBackgroundColor><![CDATA[{0.921431,0.921453,0.921441,0.754655,sRGBColorSpace}]]></FieldBackgroundColor>
             <hidden><![CDATA[0]]></hidden>
-            <labelColor><![CDATA[{0.921431,0.921453,0.921441,0.754655}]]></labelColor>
+            <labelColor><![CDATA[{0.921431,0.921453,0.921441,0.754655,sRGBColorSpace}]]></labelColor>
             <uid><![CDATA[0B4F1115-E3A2-473C-AE9C-3B186B7E2889]]></uid>
         </SQLField>
         <SQLField>
@@ -1141,11 +1147,20 @@
             <uid><![CDATA[EDF3847B-A501-4A56-BE8E-1680688DF6DF]]></uid>
         </SQLField>
         <SQLField>
+            <name><![CDATA[nameRemarks]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <FieldBackgroundColor><![CDATA[{0.921431,0.921453,0.921441,0.754655,sRGBColorSpace}]]></FieldBackgroundColor>
+            <forcedUnique><![CDATA[0]]></forcedUnique>
+            <hidden><![CDATA[0]]></hidden>
+            <labelColor><![CDATA[{0.921431,0.921453,0.921441,0.754655,sRGBColorSpace}]]></labelColor>
+            <uid><![CDATA[D6F4114A-B293-4D8F-B7CA-1FDE14055F44]]></uid>
+        </SQLField>
+        <SQLField>
             <name><![CDATA[remarks]]></name>
             <type><![CDATA[TEXT]]></type>
             <forcedUnique><![CDATA[0]]></forcedUnique>
             <hidden><![CDATA[0]]></hidden>
-            <uid><![CDATA[D6F4114A-B293-4D8F-B7CA-1FDE14055F44]]></uid>
+            <uid><![CDATA[22D7636A-25D4-4E4E-8A4F-F357B3D299C3]]></uid>
         </SQLField>
         <hidden><![CDATA[0]]></hidden>
         <labelWindowIndex><![CDATA[9]]></labelWindowIndex>
@@ -1471,8 +1486,8 @@
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
         <windowHeight><![CDATA[1010.000000]]></windowHeight>
-        <windowLocationX><![CDATA[1106.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[-12.000000]]></windowLocationY>
+        <windowLocationX><![CDATA[137.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[49.000000]]></windowLocationY>
         <windowScrollOrigin><![CDATA[{0, 0}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1612.000000]]></windowWidth>
     </SQLDocumentInfo>

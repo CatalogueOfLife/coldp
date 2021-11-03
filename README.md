@@ -489,8 +489,11 @@ There are two clashing properties that exist both on a Name and Taxon/Synonym, b
 Therefore the following properties deviate slightly from their usage in their classic version:
  
  - **parentID**: for taxa it points to the next higher taxon's ID to form the classification, for synonyms it points at the accepted taxon.
- - **status**: is the taxonomic name usage status which includes Synonym.status and the Taxon.provisional flag. A provisional taxon should be listed as `provisionally accepted`
+ - **status**: is the taxonomic name usage status which includes Synonym.status and the Taxon.provisional flag. 
+            A provisional taxon should be listed as `provisionally accepted`. 
+            Unresolved names which are neither accepted nor synonyms can be listed with status=`bare name` in which case only the Name properties are relevant. This corresponds to a lone Name record without a Taxon or Synonym record.
  - **nameStatus**: corresponds to the nomenclatural name status.
+ - **nameRemarks**: corresponds to the nomenclatural name remarks otherwise given in Name.remarks.
  - **genus**: is the taxonomic classification of a name usage and corresponds to Taxon.genus. For synonyms it often is not the same as the genus part of the name
  - **genericName**: corresponds to the genus field of a name and represents the atomized genus of a scientificName.
  - **referenceID**: corresponds to the taxonomic reference(s) otherwise given in Taxon/Synonym.referenceID.
@@ -605,7 +608,7 @@ Optional identifier for the source this record came from as listed in the [metad
 Full bibliographic citation as one single string as an alternative to the rest of the more structured fields.
 If individual fields are given the full citation can be ignored.
 
-### type
+#### type
 CSL type that defines what kind of structured reference this is.
 See https://aurimasv.github.io/z2csl/typeMap.xml for all types and a mapping of CSL types to field sets.
 E.g. ARTICLE-JOURNAL, BOOK, CHAPTER, DATASET or WEBPAGE. 
@@ -649,40 +652,40 @@ type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date)
 Date the item has been accessed.
 See issued for how to use ISO dates.
 
-### collectionTitle
+#### collectionTitle
 Title of the collection holding the item, e.g. the series title for a book.
 
-### collectionEditor
+#### collectionEditor
 Editor(s) of the collection holding the item, e.g. the series editor for a book.
 
-### volume
+#### volume
 type: [number](https://specs.frictionlessdata.io/table-schema/#number)
 (container) volume number holding the item, e.g. `2` when citing a chapter from book volume 2.
 
-### issue
+#### issue
 type: [number](https://specs.frictionlessdata.io/table-schema/#number)
 (container) issue holding the item, e.g. `5` when citing a journal article from journal volume 2, issue 5.
 
-### edition
+#### edition
 type: [number](https://specs.frictionlessdata.io/table-schema/#number)
 (container) edition holding the item, e.g. `3` when citing a chapter in the third edition of a book.
 
-### page
+#### page
 Range of pages the item (e.g. a journal article) covers in a container (e.g. a journal issue)
 
-### publisher
+#### publisher
 Name of the publisher
 
-### publisherPlace
+#### publisherPlace
 Geographic location of the publisher
 
-### version
+#### version
 Version of the item or dataset
 
-### isbn
+#### isbn
 International Standard Book Number
 
-### issn
+#### issn
 International Standard Serial Number
 
 #### doi
