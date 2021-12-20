@@ -1,5 +1,5 @@
 
-# COL Data Package (ColDP) Specification
+# COL Data Package (ColDP) Specification 1.0
 The recommended exchange format for data to and from COL ChecklistBank
 is a tabular text format with a fixed set of files and columns.
 
@@ -9,9 +9,17 @@ is a tabular text format with a fixed set of files and columns.
 * [Metadata](#metadata)
 * [Best Practises](#best-practices)
 
+## Status & Versioning
+*Verison 1.0 of ColDP has been released on [October 25th 2021](https://github.com/CatalogueOfLife/coldp/commit/b39c35c8e5d3be3b936807acbede9c4fbfe015c4)*. 
+No more fields or entities will be renamed, removed or added.
+It is anticipated that the documentation and enumeration of values will still be changing and these are not strictly part of the frozen specs.
+We therefor have not tagged a release in github.
+
+
 ## Schema
 
-The format is a single ZIP archive that bundles various delimited text files described below together with a metadata.yaml file providing basic metadata about the entire dataset. Each file holds records for the same class of things shown in this diagram with columns explained in more detail in the [Data File section](#data-file-columns):
+The format is a single ZIP archive that bundles various delimited text files described below together with a metadata.yaml file providing basic metadata about the entire dataset. Each file holds records for the same class of things shown in this diagram with columns explained in more detail in the [Data File section](#data-file-columns).
+It aligns closely to the Frictionless Tabular Data Package for which we provide a [descriptor](http://api.catalogueoflife.org/datapackage).
 
 ![schema](docs/schema.png)
 
