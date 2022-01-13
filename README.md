@@ -620,9 +620,10 @@ Full bibliographic citation as one single string as an alternative to the rest o
 If individual fields are given the full citation can be ignored.
 
 #### type
-CSL type that defines what kind of structured reference this is.
-See https://aurimasv.github.io/z2csl/typeMap.xml for all types and a mapping of CSL types to field sets.
+type: [enum](http://api.catalogueoflife.org/vocab/csltype)
+CSL type that defines what kind of structured reference this is and which fields are applicable.
 E.g. ARTICLE-JOURNAL, BOOK, CHAPTER, DATASET or WEBPAGE. 
+See also https://aurimasv.github.io/z2csl/typeMap.xml for mapping of CSL types from Zotero and to field sets.
 
 #### author
 The author(s) of the work. If multiple authors use a style that can safely be parsed.
