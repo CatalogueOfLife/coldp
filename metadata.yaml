@@ -90,7 +90,7 @@ editor:
 
 # Single publishing organisation. Will be part of the default citation!
 publisher:         
-  rorid: https://ror.org/03rmrcq20
+  rorid: 03rmrcq20
   organisation: University of British Columbia    
   department: Global Fisheries Cluster
   city: Vancouver
@@ -125,7 +125,7 @@ contributor:
     city: Penang
     country: Malaysia
 
-  - rorid: https://ror.org/02h2x0161
+  - rorid: 02h2x0161
     organisation: Helmholtz Centre for Ocean Research Kiel    
     department: GEOMAR
     city: Kiel
@@ -133,17 +133,17 @@ contributor:
     note: Hosting services
 
   - organisation: Food and Agriculture Organization of the United Nations
-    rorid: https://ror.org/00pe0tf51
+    rorid: 00pe0tf51
     city: Rome
     country: Italy
 
   - organisation: Muséum National d'Histoire Naturelle 
-    rorid: https://ror.org/03wkt5x30
+    rorid: 03wkt5x30
     city: Paris
     country: France
 
   - organisation: Aristotle University of Thessaloniki
-    rorid: https://ror.org/02j61yw88
+    rorid: 02j61yw88
     city: Thessaloniki
     country: Greece
 
