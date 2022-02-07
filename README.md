@@ -570,7 +570,7 @@ to which all entries are mapped.
 A reference where the interaction was documented.
 
 #### remarks
-Remarks about the species interation.
+Remarks about the species interaction.
 
 
 
