@@ -472,6 +472,7 @@ The ID must refer to an existing Reference.ID within this data package.
 type: [enum](http://api.catalogue.life/vocab/taxonomicstatus)
 
 The kind of synonym. One of *synonym*, *ambiguous synonym* or *misapplied*.
+Defaults to *synonym*.
 
 #### referenceID
 A comma concatenated list of reference IDs supporting the synonym status of the name.
