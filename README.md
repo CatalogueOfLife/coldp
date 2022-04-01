@@ -203,7 +203,7 @@ Additional nomenclatural remarks about the name. Often indicating its status or 
 
 ## NameRelation
 A directed nomenclatural name relation.
-See [NAMES.md#name-relations](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md#name-relations) for examples.
+See [NAMES.md#name-relations](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md#name-relations) for examples and definitions.
 
 #### nameID 
 The subject name this relation originates from.
