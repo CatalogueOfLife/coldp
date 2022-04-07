@@ -16,8 +16,6 @@ is a tabular text format with a fixed set of files and columns.
 *No more fields or entities will be renamed, removed or added*.
 
 Since then only [small changes](CHANGES.md) to the documentation and enumeration of values have been applied with the latest release of ColDP being [version 1.0.1](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.1).
-
-
 ColDP adheres to [semantic versioning](http://semver.org/):
  - **patch** changes (1.0.x) do not alter the exchange schema at all. No more fields or entities will be renamed, removed or added. The documentation and enumeration of values are allowed to change.
  - **minor** changes (1.x.0) preserve backwards compatability. Fields or entities can be added, but not renamed or removed.
