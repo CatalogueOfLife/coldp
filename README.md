@@ -16,8 +16,11 @@ is a tabular text format with a fixed set of files and columns.
 *No more fields or entities will be renamed, removed or added*.
 It is anticipated that the documentation and enumeration of values will still be changing and these are not strictly part of the frozen specs.
 
-Any changes to the specification that do not break backwards compatability, i.e. primarily adding new fields or entities, will be considered a *minor version increase*  towards version 1.1. Breaking changes (removal or changes in name & semantics) will be pooled for the next mayor version.
-
+ColDP adheres to [semantic versioning](http://semver.org/):
+ - **patch** changes (1.0.x) do not alter the exchange schema at all. No more fields or entities will be renamed, removed or added. The documentation and enumeration of values are allowed to change.
+ - **minor** changes (1.x.0) preserve backwards compatability. Fields or entities can be added, but not renamed or removed.
+ - **major** changes (x.0.0) break backwards compatability. Fields or entities can be renamed, removed, added or changed in semantics. 
+ 
 
 ## Schema
 
@@ -205,7 +208,7 @@ Additional nomenclatural remarks about the name. Often indicating its status or 
 A directed nomenclatural name relation.
 See [NAMES.md#name-relations](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md#name-relations) for examples and definitions.
 
-#### nameID 
+#### nameID
 The subject name this relation originates from.
 Refers to an existing Name.ID or NameUsage.ID within this data package.
 
@@ -345,7 +348,7 @@ A flag indicating that the taxon is only provisionally accepted and should be ha
 A comma concatenated list of reference IDs supporting the taxonomic concept that has been reviewed by the scrutinizer.
 Each ID must refer to an existing Reference.ID within this data package.
 
-#### extinct 
+#### extinct
 type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
 
 Nullable flag indicating that the taxon is extinct (true) or extant (false). This includes species that died out very recently.
@@ -453,7 +456,7 @@ Optional identifier for the source this record came from as listed in the [metad
 #### taxonID
 Pointer to the taxon that this synonym is used for. For pro parte synonyms with multiple accepted names several synonym records sharing the same name but having different taxonIDs should be created. Refers to an existing Taxon.ID within this data package.
 
-#### nameID 
+#### nameID
 Pointer to the synonymous name referring to an existing Name.ID within this data package.
 
 #### namePhrase
@@ -468,7 +471,7 @@ The author & year of the reference will be used to qualify the name with `sensu 
 Strongly recommended in case of misapplied names.
 The ID must refer to an existing Reference.ID within this data package.
 
-#### status 
+#### status
 type: [enum](http://api.catalogue.life/vocab/taxonomicstatus)
 
 The kind of synonym. One of *synonym*, *ambiguous synonym* or *misapplied*.
@@ -522,7 +525,7 @@ If a single NameUsage entity is given no further Name, Taxon or Synonym entity m
 ## TaxonConceptRelation
 A directed taxon relation representing RCC5 taxon concept assertions.
 
-#### taxonID 
+#### taxonID
 The subject taxon this relation originates from.
 
 #### relatedTaxonID
@@ -545,7 +548,7 @@ Remarks about the concept relation.
 A directed taxon relation representing species interactions.
 Different to a [TaxonConceptRelation](#taxonconceptrelation) a species interaction can also point to a species (name) outside of the local dataset.
 
-#### taxonID 
+#### taxonID
 The subject taxon the species interaction is about. Always required to point to an existing taxonID in the local dataset.
 
 #### relatedTaxonID
@@ -590,7 +593,7 @@ Optional identifier for the source this record came from as listed in the [metad
 type: [integer]
 The estimated number of species.
 
-#### type 
+#### type
 type: [enum](http://api.catalogue.life/vocab/estimatetype)
 The exact kind of estimation, e.g. number of described living species or total estimated species including yet to be described organisms.
 If none is given the type defaults to 'described species living'.
@@ -610,7 +613,7 @@ Alternatively references can also be provided in the native file formats for the
 See the sections below with for how to share alternative formats that do not conform to tabular CSV/TSV files.
 
 
-#### ID  
+#### ID
 The local identifier for the reference as used in referenceID in other entities.
 
 #### sourceID
@@ -866,19 +869,19 @@ The `id` field following the curly opening bracket is used as the primary key an
 ## Distribution
 A structured distribution record for a taxon in a given area.
 
-#### taxonID 
+#### taxonID
 Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
 #### sourceID
 Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
-#### areaID 
+#### areaID
 The identifier/code for the geographic area this distribution record is about.
 The value must be taken from the gazetteer this record declares.
 E.g. ISO country codes, TDWG codes or TEOW identifiers.
 If the TEXT gazetteer is used only the free text area should be given with no areaID.
 
-#### area 
+#### area
 The geographic area this distribution record is about.
 The area value should be taken from the gazetteer that defines the values used here.
 For all agazetteers but TEXT the area value should be the identifier from the given standard.
@@ -890,7 +893,7 @@ type: [enum](http://api.catalogue.life/vocab/gazetteer)
 The geographic gazetteer the area is defined in.
 Alternatively the gazetteer can be defined globally for all records in the metadata.yml file.
 
-#### status 
+#### status
 type: [enum](http://api.catalogue.life/vocab/distributionstatus)
 Distribution status.
 
@@ -909,13 +912,13 @@ Remarks about the distribution.
 ## Media
 Multimedia items for a taxon such as an image, audio or video.
 
-#### taxonID 
+#### taxonID
 Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
 #### sourceID
 Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
-#### url 
+#### url
 The URL that resolves to the media item itself, not a webpage that depicts it.
 
 #### type
@@ -943,13 +946,13 @@ Optional webpage from the source this media item is shown on.
 ## VernacularName
 A vernacular or common name for a taxon.
 
-#### taxonID 
+#### taxonID
 Pointer to the taxon referring to an existing Taxon.ID within this data package.
 
 #### sourceID
 Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
-#### name 
+#### name
 The vernacular name in the original script.
 
 #### transliteration
