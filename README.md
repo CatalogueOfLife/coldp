@@ -11,10 +11,12 @@ is a tabular text format with a fixed set of files and columns.
 * [Best Practises](#best-practices)
 
 ## Status & Versioning
-**Verison 1.0 of ColDP has been released on [October 25th 2021](https://github.com/CatalogueOfLife/coldp/commit/b39c35c8e5d3be3b936807acbede9c4fbfe015c4)**.
+**Verison 1.0 of ColDP has been released on [October 25th 2021](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.0)**.
 
 *No more fields or entities will be renamed, removed or added*.
-It is anticipated that the documentation and enumeration of values will still be changing and these are not strictly part of the frozen specs.
+
+Since then only [small changes](CHANGES.md) to the documentation and enumeration of values have been applied with the latest release of ColDP being [version 1.0.1](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.1).
+
 
 ColDP adheres to [semantic versioning](http://semver.org/):
  - **patch** changes (1.0.x) do not alter the exchange schema at all. No more fields or entities will be renamed, removed or added. The documentation and enumeration of values are allowed to change.
