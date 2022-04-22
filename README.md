@@ -601,6 +601,8 @@ If none is given the type defaults to 'described species living'.
 #### referenceID
 A mandatory reference ID that supports the estimate and also provides a temporal context.
 
+#### remarks
+Remarks about the species estimate. Often used to explain the method used when the estimate is not directly taken from a publication.
 
 
 
