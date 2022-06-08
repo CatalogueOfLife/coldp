@@ -1002,6 +1002,15 @@ It appears to be a valid species, but there has been no updated taxonomic placem
 and a current placement into some other genus is not possible and/or no new combination has yet been published. 
 Instead of listing the same "split" genus twice COL strongly recommends to flag the species taxon with `provisional=true` and place it directly under it's next higher taxon, e.g. the family.
 
+## Misapplied names
+A misapplied  name  is when  the  name  of  one  taxon  is  erroneously  applied  to  a  different  taxon. 
+When "misidentifications" are in widespread use in publications they are often included as part of the synonymy of a taxon.
+A misapplied name may refer to a single misapplication, but frequently indicates all usages of a name are wrong in a specific, e.g. regional, context. 
+There are various conventions in use and phrases like ```auct. nec Zeller, 1877```, ```sensu Li & Zheng 1997``` or Ficus exasperata ```auct. non Vahl: De Wildeman & Durand``` 
+strictly do not belong to the Name instance, but to the name usage, i.e. the Synonym or NameUsage coldp record. 
+Separating usage notes from the names authorship can be done in  2 ways in ColDP:
 
-
+ 1. ```accordingToID``` can be used to refer to a single publication or author that contains the misapplication. 
+ 2. ```namePhrase``` is used for any additions to the names authorship and can also be used for misapplications like ```Leucospermum bolusii E.Phillips, 1910 auct. non Gandoger``` 
+    with ```E.Phillips, 1910``` being the Name.authorship and ```auct. non Gandoger``` the Synonym.namePhrase
 
