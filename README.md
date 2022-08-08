@@ -142,9 +142,9 @@ Required scientific name excluding the authorship
 Authorship of the scientificName
 
 #### rank
-type: [rank enum](http://api.catalogue.life/vocab/rank)
+type: [rank enum](http://api.checklistbank.org/vocab/rank)
 
-The rank of the name preferrably given in case insensitive english. The recommended vocabulary is included in [rank_enum](http://api.catalogue.life/vocab/rank).
+The rank of the name preferrably given in case insensitive english. The recommended vocabulary is included in [rank_enum](http://api.checklistbank.org/vocab/rank).
 
 #### uninomial
 The single-word name of generic or higher rank names.
@@ -167,12 +167,12 @@ The infraspecific epithet in case of bi/trinomials.
 The name of the cultivar for name governed by the cultivar code.
 
 #### code
-type: [code enum](http://api.catalogue.life/vocab/nomCode)
+type: [code enum](http://api.checklistbank.org/vocab/nomCode)
 
 The nomenclatural code the name falls under.
 
 #### status
-type: [nomStatus enum](http://api.catalogue.life/vocab/nomStatus)
+type: [nomStatus enum](http://api.checklistbank.org/vocab/nomStatus)
 
 The broad nomenclatural status of the name.
 For the exact status note, e.g. *nomen nudum*, the remarks field should additionally be used
@@ -220,7 +220,7 @@ Refers to an existing Name.ID or NameUsage.ID within this data package.
 Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### type
-type: [enum](http://api.catalogue.life/vocab/nomreltype)
+type: [enum](http://api.checklistbank.org/vocab/nomreltype)
 
 The kind of directed nomenclatural relation.
 
@@ -255,7 +255,7 @@ The citation is ideally given in the verbatim form as it was used in the origina
 If atomized fields below are given a citation is not needed. Otherwise it is required.
 
 #### status
-type: [type status enum](http://api.catalogue.life/vocab/typeStatus)
+type: [type status enum](http://api.checklistbank.org/vocab/typeStatus)
 The status of the type material, e.g. holotype
 
 #### referenceID
@@ -354,19 +354,19 @@ type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
 Nullable flag indicating that the taxon is extinct (true) or extant (false). This includes species that died out very recently.
 
 #### temporalRangeStart
-type: [enum](http://api.catalogue.life/vocab/geotime)
+type: [enum](http://api.checklistbank.org/vocab/geotime)
 
 Earliest appearance of the taxon in the geological time scale.
 Recommended values are geochronological names from the official International Commission on Stratigraphy (ICS).
 
 #### temporalRangeEnd
-type: [enum](http://api.catalogue.life/vocab/geotime)
+type: [enum](http://api.checklistbank.org/vocab/geotime)
 
 Latest appearance of the taxon in the geological time scale.
 Recommended values are geochronological names from the official International Commission on Stratigraphy (ICS).
 
 #### environment
-type: [enum[]](http://api.catalogue.life/vocab/environment)
+type: [enum[]](http://api.checklistbank.org/vocab/environment)
 A comma delimited list of environments this taxon is known to exist in.
 
 #### species
@@ -472,7 +472,7 @@ Strongly recommended in case of misapplied names.
 The ID must refer to an existing Reference.ID within this data package.
 
 #### status
-type: [enum](http://api.catalogue.life/vocab/taxonomicstatus)
+type: [enum](http://api.checklistbank.org/vocab/taxonomicstatus)
 
 The kind of synonym. One of *synonym*, *ambiguous synonym* or *misapplied*.
 Defaults to *synonym*.
@@ -532,7 +532,7 @@ The subject taxon this relation originates from.
 The object this taxon relates to.
 
 #### type
-type: [enum](http://api.catalogue.life/vocab/TaxonConceptRelType)
+type: [enum](http://api.checklistbank.org/vocab/TaxonConceptRelType)
 The kind of directed RCC5 relation that specifies how the two taxon concepts are related.
 
 #### referenceID
@@ -564,7 +564,7 @@ It is mutually exclusive with relatedTaxonID and if given no relatedTaxonID shou
 The relatedTaxonScientificName can be used to document species interactions without the need to have full blown name and taxon records.
 
 #### type
-type: [enum](http://api.catalogue.life/vocab/SpeciesInteractionType)
+type: [enum](http://api.checklistbank.org/vocab/SpeciesInteractionType)
 
 The kind of directed species interaction. Each interaction exists also in reverse to allow the alternative relatedTaxonScientificName field to be used.
 Species interaction types are heavily inspired by https://www.globalbioticinteractions.org and the OBO Relation Ontology http://www.ontobee.org/ontology/RO 
@@ -594,7 +594,7 @@ type: [integer]
 The estimated number of species.
 
 #### type
-type: [enum](http://api.catalogue.life/vocab/estimatetype)
+type: [enum](http://api.checklistbank.org/vocab/estimatetype)
 The exact kind of estimation, e.g. number of described living species or total estimated species including yet to be described organisms.
 If none is given the type defaults to 'described species living'.
 
@@ -890,13 +890,13 @@ For all agazetteers but TEXT the area value should be the identifier from the gi
 E.g. ISO country codes, TDWG codes or TEOW identifiers.
 
 #### gazetteer
-type: [enum](http://api.catalogue.life/vocab/gazetteer)
+type: [enum](http://api.checklistbank.org/vocab/gazetteer)
 
 The geographic gazetteer the area is defined in.
 Alternatively the gazetteer can be defined globally for all records in the metadata.yml file.
 
 #### status
-type: [enum](http://api.catalogue.life/vocab/distributionstatus)
+type: [enum](http://api.checklistbank.org/vocab/distributionstatus)
 Distribution status.
 
 #### referenceID
@@ -938,7 +938,7 @@ Date the media item was recorded.
 Author of the media item.
 
 #### license
-type: [license](http://api.catalogue.life/vocab/license) 
+type: [license](http://api.checklistbank.org/vocab/license) 
 
 #### link
 Optional webpage from the source this media item is shown on.
@@ -970,7 +970,7 @@ Country this vernacular name is used in given as an ISO 3166-2 letter code.
 Optional area describing the geographic use of the vernacular name in free text within the given country.
 
 #### sex
-type: [enum](http://api.catalogue.life/vocab/sex)
+type: [enum](http://api.checklistbank.org/vocab/sex)
 
 Optional sex of the organism this vernacular name is restricted to.
 
