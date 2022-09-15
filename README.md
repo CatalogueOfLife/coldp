@@ -11,7 +11,7 @@ is a tabular text format with a fixed set of files and columns.
 * [Best Practises](#best-practices)
 
 ## Status & Versioning
-**Verison 1.0 of ColDP has been released on [October 25th 2021](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.0)**.
+**Version 1.0 of ColDP has been released on [October 25th 2021](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.0)**.
 
 *No more fields or entities will be renamed, removed or added*.
 
@@ -129,6 +129,8 @@ Unique name identifier that is referred to elsewhere via `nameID`.
 A comma concatenated list of alternative identifiers for the name.
 Every alternative identifier must be a URI/URN/URL or given in the form of `scheme:id`. 
 See [identifiers](#Identifiers) for all details and common schemes.
+
+*added in v1.1*
 
 #### sourceID
 Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
@@ -312,6 +314,7 @@ A comma concatenated list of alternative identifiers for the taxonomic concept.
 Every alternative identifier must be a URI/URN/URL or given in the form of `scheme:id`. 
 See [identifiers](#Identifiers) for all details and common schemes.
 
+*added in v1.1*
 
 #### sourceID
 Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
@@ -530,7 +533,7 @@ Therefore the following properties deviate slightly from their usage in their cl
  - **namePublishedInYear**: corresponds to Name.publishedInYear.
  - **namePublishedInPage**: corresponds to Name.publishedInPage.
  - **namePublishedInPageLink**: corresponds to Name.publishedInPageLink.
- - **nameAlternativeID**: corresponds to Name.alternativeID.
+ - **nameAlternativeID**: corresponds to Name.alternativeID. *added in v1.1*
 
 If a single NameUsage entity is given no further Name, Taxon or Synonym entity must exist.
 
