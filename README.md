@@ -125,6 +125,11 @@ See [NAMES.md](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md) for 
 #### ID
 Unique name identifier that is referred to elsewhere via `nameID`.
 
+#### alternativeID
+A comma concatenated list of alternative identifiers for the name.
+Every alternative identifier must be a URI/URN/URL or given in the form of `scheme:id`. 
+See [identifiers](#Identifiers) for all details and common schemes.
+
 #### sourceID
 Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
@@ -302,6 +307,12 @@ An accepted name with a taxonomic classification given either as a parent-child 
 #### ID
 Unique taxon identifier that is referred to elsewhere via `taxonID`.
 
+#### alternativeID
+A comma concatenated list of alternative identifiers for the taxonomic concept.
+Every alternative identifier must be a URI/URN/URL or given in the form of `scheme:id`. 
+See [identifiers](#Identifiers) for all details and common schemes.
+
+
 #### sourceID
 Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
@@ -347,6 +358,7 @@ A flag indicating that the taxon is only provisionally accepted and should be ha
 #### referenceID
 A comma concatenated list of reference IDs supporting the taxonomic concept that has been reviewed by the scrutinizer.
 Each ID must refer to an existing Reference.ID within this data package.
+See [best practices](#best-practices) for details on how to concatenate multi values.
 
 #### extinct
 type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
@@ -454,7 +466,9 @@ If given it should not clash with the taxon ids.
 Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### taxonID
-Pointer to the taxon that this synonym is used for. For pro parte synonyms with multiple accepted names several synonym records sharing the same name but having different taxonIDs should be created. Refers to an existing Taxon.ID within this data package.
+Pointer to the taxon that this synonym is used for. 
+For pro parte synonyms with multiple accepted names several synonym records sharing the same name but having different taxonIDs should be created. 
+Refers to an existing Taxon.ID within this data package.
 
 #### nameID
 Pointer to the synonymous name referring to an existing Name.ID within this data package.
@@ -516,6 +530,7 @@ Therefore the following properties deviate slightly from their usage in their cl
  - **namePublishedInYear**: corresponds to Name.publishedInYear.
  - **namePublishedInPage**: corresponds to Name.publishedInPage.
  - **namePublishedInPageLink**: corresponds to Name.publishedInPageLink.
+ - **nameAlternativeID**: corresponds to Name.alternativeID.
 
 If a single NameUsage entity is given no further Name, Taxon or Synonym entity must exist.
 
@@ -617,6 +632,11 @@ See the sections below with for how to share alternative formats that do not con
 
 #### ID
 The local identifier for the reference as used in referenceID in other entities.
+
+#### alternativeID
+A comma concatenated list of alternative identifiers for the reference.
+Every alternative identifier must be a URI/URN/URL or given in the form of `scheme:id`. 
+See [identifiers](#Identifiers) for all details and common schemes.
 
 #### sourceID
 Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
@@ -838,31 +858,31 @@ The `id` field following the curly opening bracket is used as the primary key an
 #### Bibtex example
 ```
  @article{Droege_2016, 
- 	title={The Global Genome Biodiversity Network (GGBN) Data Standard specification}, 
- 	volume={2016}, 
- 	ISSN={1758-0463}, 
- 	url={http://dx.doi.org/10.1093/database/baw125}, 
- 	DOI={10.1093/database/baw125}, 
- 	journal={Database}, 
- 	publisher={Oxford University Press (OUP)}, 
- 	author={Droege, G. and Barker, K. and Seberg, O. and Coddington, J. and Benson, E. and Berendsohn, W. G. and Bunk, B. and Butler, C. and Cawsey, E. M. and Deck, J. and et al.}, 
- 	year={2016}, 
- 	pages={baw125}
+    title={The Global Genome Biodiversity Network (GGBN) Data Standard specification}, 
+    volume={2016}, 
+    ISSN={1758-0463}, 
+    url={http://dx.doi.org/10.1093/database/baw125}, 
+    DOI={10.1093/database/baw125}, 
+    journal={Database}, 
+    publisher={Oxford University Press (OUP)}, 
+    author={Droege, G. and Barker, K. and Seberg, O. and Coddington, J. and Benson, E. and Berendsohn, W. G. and Bunk, B. and Butler, C. and Cawsey, E. M. and Deck, J. and et al.}, 
+    year={2016}, 
+    pages={baw125}
 }
 
 @article{Frank_1970, 
- 	title     = {The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance}, 
- 	volume    = {169}, 
- 	ISSN      = {1095-9203}, 
- 	url       = {http://dx.doi.org/10.1126/science.169.3946.635}, 
- 	DOI       = {10.1126/science.169.3946.635}, 
- 	number    = {3946}, 
- 	journal   = {Science}, 
- 	publisher = {American Association for the Advancement of Science (AAAS)}, 
- 	author    = {Frank, H. S.}, 
- 	year      = {1970}, 
- 	month     = {Aug}, 
- 	pages     = {635–641}
+    title     = {The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance}, 
+    volume    = {169}, 
+    ISSN      = {1095-9203}, 
+    url       = {http://dx.doi.org/10.1126/science.169.3946.635}, 
+    DOI       = {10.1126/science.169.3946.635}, 
+    number    = {3946}, 
+    journal   = {Science}, 
+    publisher = {American Association for the Advancement of Science (AAAS)}, 
+    author    = {Frank, H. S.}, 
+    year      = {1970}, 
+    month     = {Aug}, 
+    pages     = {635–641}
 }
 ```
 
@@ -990,7 +1010,61 @@ Example: `treatments/19854332.html` would be an html document which is the marke
 
 
 
+# Identifiers
+Identifiers are important and often come embedded with some resolution URL to make them globally unique.
+For sharing the true identifiers, which often have a local scope, ColDP requires them to be prefixed with a known scheme abbreviation.
+For example COL identifiers should be shared not by their API or portal URL (http://www.catalogueoflife.org/data/taxon/NN), but instead as `col:NN`.
+
+## Identifier schemes
+To avoid conflicts of scheme names we strongly recommend to use the following scheme names which are case insensitive:
+ 
+ - avibase: Avibase taxon concept - [avibase:D754DB8552A7AA42](https://avibase.ca/D754DB85)
+ - bhl: Biodiversity Heritage Library page number - [bhl:45607882](https://www.biodiversitylibrary.org/page/45607882)
+ - bold: BOLD BIN numbers - [BOLD:AAJ2287](http://v3.boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAJ2287)
+ - col: Catalogue of Life Checklist- [col:6W3C4](http://www.catalogueoflife.org/data/taxon/6W3C4)
+ - doi: any kind of Digital Object Identifier - [doi:10.5281/zenodo.6407053](https://doi.org/10.5281/zenodo.6407053)
+ - eunis: European Nature Information System - [eunis:193060](https://eunis.eea.europa.eu/species/193060)
+ - gbif: GBIF Backbone Taxonomy - [gbif:2704179](https://www.gbif.org/species/2704179)
+ - genbank: GenBank accession number - [genbank:U49845](https://www.ncbi.nlm.nih.gov/nucleotide/U49845)
+ - if: Index Fungorum - [if:550000](http://www.indexfungorum.org/Names/NamesRecord.asp?RecordID=550000)
+ - inat: iNaturalist taxon identifier - [inat:52808](https://www.inaturalist.org/observations?taxon_id=52808)
+ - ipni: International Plant Name Index - [ipni:320035-2](https://www.ipni.org/n/320035-2)
+ - isbn: International Standard Book Number, with 10 or 13 numbers - [isbn:9780393978674](https://isbndb.com/book/9780393978674)
+ - iucn: IUCN Redlist species - [iucn:10335](https://apiv3.iucnredlist.org/api/v3/taxonredirect/10335)
+ - ncbi: NCBI taxonomy - [ncbi:93036](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=93036)
+ - otl: Open Tree of Life - [otl:510850](https://tree.opentreeoflife.org/taxonomy/browse?id=510850)
+ - pesi: Pan-European Species directories Infrastructure - [pesi:93A25572-521E-4130-B8C5-9C7D332E5605](http://www.eu-nomen.eu/portal/taxon.php?GUID=93A25572-521E-4130-B8C5-9C7D332E5605)
+ - taxonid: taxon concepts as Linked Data - [taxonid:D92326](http://taxonid.org/D92326)
+ - tpl: The Plant List - [tpl:kew-435194](http://www.theplantlist.org/tpl1.1/record/kew-435194)
+ - tropicos: Missource Botanical Gardens TROPICOS - [tropicos:25509881](https://www.tropicos.org/name/25509881)
+ - tsn: ITIS Taxonomic Serial Number - [tsn:41107](https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=41107#null)
+ - ubio: uBio - [ubio:5408026](http://www.ubio.org/browser/details.php?namebankID=5408026)
+ - unite: UNITE Species Hypotheses - [unite:SH1659817.08FU](https://unite.ut.ee/sh/SH1659817.08FU)
+ - usda: USDA Plants - [unite:POAN](https://plants.sc.egov.usda.gov/home/plantProfile?symbol=POAN)
+ - wfo: World Flora Online - [wfo:0000891536](http://www.worldfloraonline.org/taxon/wfo-0000891536)
+ - wikidata: Wikidata items - [wikidata:Q157571](https://www.wikidata.org/wiki/Q157571)
+ - worms: World Register of Marine Species - [worms:212808](https://www.marinespecies.org/aphia.php?p=taxdetails&id=212808)
+ - zoobank: ZooBank record - [zoobank:EEDEA832-A8A9-44DF-8F2F-684FFEC9C19B](https://zoobank.org/NomenclaturalActs/eedea832-a8a9-44df-8f2f-684ffec9c19b)
+
+Sharing globally unique URN, URI or URLs should be done without any further scheme.
+We do recommend to share the bare identifier with its scheme though if possible instead:
+
+ - https://species.wikimedia.org/wiki/Poa_annua
+ - https://www.biodiversitylibrary.org/page/45607882
+ - urn:lsid:zoobank.org:act:EEDEA832-A8A9-44DF-8F2F-684FFEC9C19B
+ - urn:lsid:ipni.org:names:320035-2
+ - urn:lsid:Blattodea.speciesfile.org:TaxonName:1287
+
+If you plan to share identifiers with other schemes we encourage users to tell us about them so we can "register" them to guarantee thier uniqueness
+and inform others about their semantics.
+
+
 # Best Practices
+
+## multiple value concatenation
+Some fields are allowed to contain multiple values. These must be concatenated by a simple comma. Any surrounding whitespace should be ignored.
+If the value itself contains a comma, it should be escaped by a backslash, i.e. `foo,bar` should become `foo\,bar`.
+Any other combinations of a backslash with some other characters will be take literally, i.e. `\n` will remain `\n`.
 
 ## parentID vs flat ranks
 A taxonomic hierarchy can be established either as a parent child relationship using `Taxon.parentID` or by using the flat, higher rank terms on each record.

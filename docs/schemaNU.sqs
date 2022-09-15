@@ -367,7 +367,7 @@
         </location>
         <size>
             <width>160.00</width>
-            <height>520.00</height>
+            <height>540.00</height>
         </size>
         <zorder>10</zorder>
         <SQLField>
@@ -380,6 +380,11 @@
             <hidden><![CDATA[0]]></hidden>
             <notNull><![CDATA[1]]></notNull>
             <uid><![CDATA[A263E697-E7B6-415F-9829-0F6982DCD9E8]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[alternativeID]]></name>
+            <type><![CDATA[TEXT[]]]></type>
+            <uid><![CDATA[E913C0EE-E751-48EE-A09F-6F778035271D]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[sourceID]]></name>
@@ -780,7 +785,7 @@
         </location>
         <size>
             <width>215.00</width>
-            <height>1040.00</height>
+            <height>1080.00</height>
         </size>
         <zorder>6</zorder>
         <SQLField>
@@ -791,6 +796,16 @@
             <hidden><![CDATA[0]]></hidden>
             <notNull><![CDATA[1]]></notNull>
             <uid><![CDATA[91F17EB2-D0AB-4699-A77C-606F986D00D5]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[alternativeID]]></name>
+            <type><![CDATA[TEXT[]]]></type>
+            <uid><![CDATA[E21778E6-AEEE-443D-8195-5312A008B9E8]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[nameAlternativeID]]></name>
+            <type><![CDATA[TEXT[]]]></type>
+            <uid><![CDATA[022DDB71-A101-4C3C-8E32-5248AD3AC56C]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[sourceID]]></name>
@@ -1254,8 +1269,8 @@
         <name><![CDATA[TypeMaterial]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>405.00</x>
-            <y>204.00</y>
+            <x>406.00</x>
+            <y>210.00</y>
         </location>
         <size>
             <width>170.00</width>
@@ -1486,8 +1501,8 @@
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
         <windowHeight><![CDATA[1010.000000]]></windowHeight>
-        <windowLocationX><![CDATA[137.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[49.000000]]></windowLocationY>
+        <windowLocationX><![CDATA[234.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[20.000000]]></windowLocationY>
         <windowScrollOrigin><![CDATA[{0, 0}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1612.000000]]></windowWidth>
     </SQLDocumentInfo>
