@@ -8,6 +8,7 @@ is a tabular text format with a fixed set of files and columns.
 * [Format Comparison](#format-comparison)
 * [Data Files](#data-files)
 * [Metadata](#metadata)
+* [Identifiers](#identifiers)
 * [Best Practises](#best-practices)
 
 ## Status & Versioning
