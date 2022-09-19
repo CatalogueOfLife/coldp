@@ -1026,7 +1026,7 @@ To avoid conflicts of naming scopes we strongly recommend to use the following s
  - bhl: Biodiversity Heritage Library page number - [bhl:45607882](https://www.biodiversitylibrary.org/page/45607882)
  - bold: BOLD BIN numbers - [BOLD:AAJ2287](http://v3.boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAJ2287)
  - col: Catalogue of Life Checklist- [col:6W3C4](http://www.catalogueoflife.org/data/taxon/6W3C4)
- - doi: any kind of Digital Object Identifier - [doi:10.5281/zenodo.6407053](https://doi.org/10.5281/zenodo.6407053)
+ - doi: any Digital Object Identifier - [doi:10.5281/zenodo.6407053](https://doi.org/10.5281/zenodo.6407053)
  - eunis: European Nature Information System - [eunis:193060](https://eunis.eea.europa.eu/species/193060)
  - gbif: GBIF Backbone Taxonomy - [gbif:2704179](https://www.gbif.org/species/2704179)
  - genbank: GenBank accession number - [genbank:U49845](https://www.ncbi.nlm.nih.gov/nucleotide/U49845)
@@ -1044,14 +1044,15 @@ To avoid conflicts of naming scopes we strongly recommend to use the following s
  - tsn: ITIS Taxonomic Serial Number - [tsn:41107](https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=41107#null)
  - ubio: uBio - [ubio:5408026](http://www.ubio.org/browser/details.php?namebankID=5408026)
  - unite: UNITE Species Hypotheses - [unite:SH1659817.08FU](https://unite.ut.ee/sh/SH1659817.08FU)
- - usda: USDA Plants - [unite:POAN](https://plants.sc.egov.usda.gov/home/plantProfile?symbol=POAN)
+ - usda: USDA Plants - [usda:POAN](https://plants.sc.egov.usda.gov/home/plantProfile?symbol=POAN)
  - wfo: World Flora Online - [wfo:0000891536](http://www.worldfloraonline.org/taxon/wfo-0000891536)
  - wikidata: Wikidata items - [wikidata:Q157571](https://www.wikidata.org/wiki/Q157571)
  - worms: World Register of Marine Species - [worms:212808](https://www.marinespecies.org/aphia.php?p=taxdetails&id=212808)
  - zoobank: ZooBank record - [zoobank:EEDEA832-A8A9-44DF-8F2F-684FFEC9C19B](https://zoobank.org/NomenclaturalActs/eedea832-a8a9-44df-8f2f-684ffec9c19b)
 
-Sharing globally unique URN, URI or URLs should be done without any further scope.
-We do recommend to share the bare identifier with its scope though if possible instead:
+We do recommend to share bare identifiers with their scope if possible.
+But sharing globally unique URN, URI or URLs can be done without any further scope:
+
 
  - https://species.wikimedia.org/wiki/Poa_annua
  - https://www.biodiversitylibrary.org/page/45607882
