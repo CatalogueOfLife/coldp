@@ -128,8 +128,8 @@ Unique name identifier that is referred to elsewhere via `nameID`.
 
 #### alternativeID
 A comma concatenated list of alternative identifiers for the name.
-Every alternative identifier must be a URI/URN/URL or given in the form of `scheme:id`. 
-See [identifiers](#Identifiers) for all details and common schemes.
+Every alternative identifier must be a URI/URN/URL or given in the form of `scope:id`. 
+See [identifiers](#Identifiers) for all details and common scopes.
 
 *added in v1.1*
 
@@ -312,8 +312,8 @@ Unique taxon identifier that is referred to elsewhere via `taxonID`.
 
 #### alternativeID
 A comma concatenated list of alternative identifiers for the taxonomic concept.
-Every alternative identifier must be a URI/URN/URL or given in the form of `scheme:id`. 
-See [identifiers](#Identifiers) for all details and common schemes.
+Every alternative identifier must be a URI/URN/URL or given in the form of `scope:id`. 
+See [identifiers](#Identifiers) for all details and common scopes.
 
 *added in v1.1*
 
@@ -639,8 +639,8 @@ The local identifier for the reference as used in referenceID in other entities.
 
 #### alternativeID
 A comma concatenated list of alternative identifiers for the reference.
-Every alternative identifier must be a URI/URN/URL or given in the form of `scheme:id`. 
-See [identifiers](#Identifiers) for all details and common schemes.
+Every alternative identifier must be a URI/URN/URL or given in the form of `scope:id`. 
+See [identifiers](#Identifiers) for all details and common scopes.
 
 #### sourceID
 Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
@@ -1016,11 +1016,11 @@ Example: `treatments/19854332.html` would be an html document which is the marke
 
 # Identifiers
 Identifiers are important and often come embedded with some resolution URL to make them globally unique.
-For sharing the true identifiers, which often have a local scope, ColDP requires them to be prefixed with a known scheme abbreviation.
+For sharing the true identifiers, which often have a local scope, ColDP requires them to be prefixed with a known scope abbreviation.
 For example COL identifiers should be shared not by their API or portal URL (http://www.catalogueoflife.org/data/taxon/NN), but instead as `col:NN`.
 
-## Identifier schemes
-To avoid conflicts of scheme names we strongly recommend to use the following scheme names which are case insensitive:
+## Identifier Scopes
+To avoid conflicts of naming scopes we strongly recommend to use the following scope names which are case insensitive:
  
  - avibase: Avibase taxon concept - [avibase:D754DB8552A7AA42](https://avibase.ca/D754DB85)
  - bhl: Biodiversity Heritage Library page number - [bhl:45607882](https://www.biodiversitylibrary.org/page/45607882)
@@ -1050,8 +1050,8 @@ To avoid conflicts of scheme names we strongly recommend to use the following sc
  - worms: World Register of Marine Species - [worms:212808](https://www.marinespecies.org/aphia.php?p=taxdetails&id=212808)
  - zoobank: ZooBank record - [zoobank:EEDEA832-A8A9-44DF-8F2F-684FFEC9C19B](https://zoobank.org/NomenclaturalActs/eedea832-a8a9-44df-8f2f-684ffec9c19b)
 
-Sharing globally unique URN, URI or URLs should be done without any further scheme.
-We do recommend to share the bare identifier with its scheme though if possible instead:
+Sharing globally unique URN, URI or URLs should be done without any further scope.
+We do recommend to share the bare identifier with its scope though if possible instead:
 
  - https://species.wikimedia.org/wiki/Poa_annua
  - https://www.biodiversitylibrary.org/page/45607882
@@ -1059,7 +1059,7 @@ We do recommend to share the bare identifier with its scheme though if possible 
  - urn:lsid:ipni.org:names:320035-2
  - urn:lsid:Blattodea.speciesfile.org:TaxonName:1287
 
-If you plan to share identifiers with other schemes we encourage users to tell us about them so we can "register" them to guarantee thier uniqueness
+If you plan to share identifiers with other scopes we encourage users to tell us about them so we can "register" them to guarantee thier uniqueness
 and inform others about their semantics.
 
 
