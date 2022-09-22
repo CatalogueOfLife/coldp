@@ -373,13 +373,15 @@ Nullable flag indicating that the taxon is extinct (true) or extant (false). Thi
 type: [enum](http://api.checklistbank.org/vocab/geotime)
 
 Earliest appearance of the taxon in the geological time scale.
-Recommended values are geochronological names from the official International Commission on Stratigraphy (ICS).
+Recommended values are geochronological names from the official [International Commission on Stratigraphy (ICS)](https://stratigraphy.org/chart)
+or million years before present, given with the unit `Ma` after the number, e.g. `17.4 Ma`.
 
 #### temporalRangeEnd
 type: [enum](http://api.checklistbank.org/vocab/geotime)
 
 Latest appearance of the taxon in the geological time scale.
-Recommended values are geochronological names from the official International Commission on Stratigraphy (ICS).
+Recommended values are geochronological names from the official [International Commission on Stratigraphy (ICS)](https://stratigraphy.org/chart)
+or million years before present, given with the unit `Ma` after the number, e.g. `17.4 Ma`.
 
 #### environment
 type: [enum[]](http://api.checklistbank.org/vocab/environment)
