@@ -1,5 +1,5 @@
 
-# COL Data Package (ColDP) Specification 1.0
+# COL Data Package (ColDP) Specification
 The recommended exchange format for data to and from COL ChecklistBank
 is a tabular text format with a fixed set of files and columns.
 
@@ -12,11 +12,11 @@ is a tabular text format with a fixed set of files and columns.
 * [Best Practises](#best-practices)
 
 ## Status & Versioning
-**Version 1.0 of ColDP has been released on [October 25th 2021](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.0)**.
+ - **Version 1.1 of ColDP is under development and new fields are marked as such in the documentation below**.
+ - **Version 1.0 of ColDP has been released on [October 25th 2021](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.0)**.
+   Since then only [small changes](CHANGES.md) to the documentation and enumeration of values have been applied with the latest release of ColDP being [version 1.0.1](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.1).
 
-*No more fields or entities will be renamed, removed or added*.
-
-Since then only [small changes](CHANGES.md) to the documentation and enumeration of values have been applied with the latest release of ColDP being [version 1.0.1](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.1).
+### Versioning
 ColDP adheres to [semantic versioning](http://semver.org/):
  - **patch** changes (1.0.x) do not alter the exchange schema at all. No more fields or entities will be renamed, removed or added. The documentation and enumeration of values are allowed to change.
  - **minor** changes (1.x.0) preserve backwards compatability. Fields or entities can be added, but not renamed or removed.
@@ -294,6 +294,20 @@ Date the type material was gathered. Recommended to be given as ISO 8601 dates.
 
 #### collector
 The collectors name
+
+#### institutionCode
+The name or acronym in use by the institution having custody of the material.
+*added in v1.1*
+
+#### catalogNumber
+The identifier for the specimen in a collection.
+*added in v1.1*
+
+#### associatedSequences
+*added in v1.1*
+
+#### sex
+*added in v1.1*
 
 #### link
 A link to further information about the specimen, e.g. as provided by the institute holding the collection.
