@@ -126,7 +126,7 @@ Otherwise `tsv` offers escaping  `\t`, `\n`, `\r` and `\` itself using the backs
 
 
 ### Character Encoding
-All files should be encoded in UTF-8.
+All files **must be encoded in UTF-8**.
 
 ### Entity listing:
  - [metadata.yaml](#metadatayaml)
