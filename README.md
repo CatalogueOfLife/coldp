@@ -70,13 +70,57 @@ Multimedia metadata|-|x|x
  - `-` = not supported
  
 ## Data Files
-The filename for an entity in the above diagram is a case insensitive version of the class name, any number of ignored hyphens or underscores and a known tabular text suffix. 
-The suffix specifies one of the two supported tabular flavours, comma separated or tab separated files:
+The filename for an entity in the above diagram is a case insensitive version of the class name, any number of ignored hyphens or underscores and a known tabular text suffix. The suffix specifies one of the two supported tabular flavours, comma separated or tab separated files:
 
  - `csv`: a comma separated, optionally quoted CSV file as per [RFC 4180](https://tools.ietf.org/html/rfc4180)
  - `tsv`, `tab` or `txt`: indicates a tab seperated file without quoting
  
- Valid examples are `Taxon.tsv` or `vernacular-name.csv`
+Valid examples are `Taxon.tsv` or `vernacular-name.csv`
+`tsv` files are simpler to produce and handle, so if you have the option we recommend `tsv` over `csv`.
+
+### Quoting and Escaping
+`tsv` files do not have any quoting of values, i.e. values are represented as they are. There are just 2 characters that are special and one needs to escape to not break the format: `\t` tabs and `\n` new lines. As they are never important in ColDP data the simplest solution is to just replace them with an ordinary space if they appear in any value.
+
+`csv` files use a comma as the delimiter which often also appears in values. The optional quoting of values using double quotes `"` at the beginning and end of the value allows to safely use a comma without escaping it. E.g. `1234,"Miller, 1887"` are 2 columns. That pushes the problem to the double quote symbol which then has to be escaped inside quoted values by doubling it, e.g. `1234,"Frederic ""The Great"", 1887"`. Here are the important rules from the [RFC 4180 specification](https://tools.ietf.org/html/rfc4180)
+
+
+>   4.  Within the header and each record, there may be one or more
+       fields, separated by commas.  Each line should contain the same
+       number of fields throughout the file.  Spaces are considered part
+       of a field and should not be ignored.  The last field in the
+       record must not be followed by a comma.  For example:
+
+       ```
+       aaa,bbb,ccc
+       ```
+
+>   5.  Each field may or may not be enclosed in double quotes (however
+       some programs, such as Microsoft Excel, do not use double quotes
+       at all).  If fields are not enclosed with double quotes, then
+       double quotes may not appear inside the fields.  For example:
+
+       ```
+       "aaa","bbb","ccc" CRLF
+       zzz,yyy,xxx
+       ```
+
+>   6.  Fields containing line breaks (CRLF), double quotes, and commas
+       should be enclosed in double-quotes.  For example:
+
+       ```
+       "aaa","b CRLF
+       bb","ccc" CRLF
+       zzz,yyy,xxx
+       ```
+
+>   7.  If double-quotes are used to enclose fields, then a double-quote
+       appearing inside a field must be escaped by preceding it with
+       another double quote.  For example:
+
+       ```
+       "aaa","b""bb","ccc"
+       ```
+
 
 ### Character Encoding
 All files should be encoded in UTF-8.
