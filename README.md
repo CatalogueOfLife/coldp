@@ -79,7 +79,10 @@ Valid examples are `Taxon.tsv` or `vernacular-name.csv`
 `tsv` files are simpler to produce and handle, so if you have the option we recommend `tsv` over `csv`.
 
 ### Quoting and Escaping
-`tsv` files do not have any quoting of values, i.e. values are represented as they are. There are just 2 characters that are special and one needs to escape to not break the format: `\t` tabs and `\n` new lines. As they are never important in ColDP data the simplest solution is to just replace them with an ordinary space if they appear in any value.
+`tsv` files do not have any quoting of values, i.e. values are represented as they are. There are just 2 characters that are special and one needs to escape to not break the format: `\t` tabs and `\n` new lines. As they are hardly ever important in ColDP data (they most often are dirty data) the simplest solution is to just replace them with an ordinary space if they appear in any value.
+
+Otherwise `tsv` offers escaping  `\t`, `\n`, `\r` and `\` itself using the backslash `\` if you really want to keep these characters in your values.
+
 
 `csv` files use a comma as the delimiter which often also appears in values. The optional quoting of values using double quotes `"` at the beginning and end of the value allows to safely use a comma without escaping it. E.g. `1234,"Miller, 1887"` are 2 columns. That pushes the problem to the double quote symbol which then has to be escaped inside quoted values by doubling it, e.g. `1234,"Frederic ""The Great"", 1887"`. Here are the important rules from the [RFC 4180 specification](https://tools.ietf.org/html/rfc4180)
 
