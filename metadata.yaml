@@ -19,6 +19,13 @@ description: |
     An abstract about the content of this dataset.
     This can be as many paragraphs as you like in literal style YAML.    
 
+# Keywords list. Added in v1.1
+keyword: 
+  - example
+  - coldp
+  - invasives
+  - legal
+  - fish
 # Official release date of this version in ISO YYYY-MM-DD. Will be part of the default citation!
 issued: 2018-06-01      
 

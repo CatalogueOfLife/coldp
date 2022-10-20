@@ -52,6 +52,12 @@
           "type": "string"
         },
 
+        "keyword": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "taxonomicScope": {
           "type": "string"
         },

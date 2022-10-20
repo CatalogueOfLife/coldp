@@ -68,8 +68,35 @@ Multimedia metadata|-|x|x
 
  - `x` = supported
  - `-` = not supported
+
+## Archive Files
+A ColDP archive consists of several files in a folder.
+These are either data files corresponding to the schema diagram above:
  
-## Data Files
+ - [Name](#name)
+ - [NameRelation](#namerelation)
+ - [Taxon](#taxon)
+ - [Synonym](#synonym)
+ - [NameUsage](#nameusage)
+ - [TaxonConceptRelation](#taxonconceptrelation)
+ - [SpeciesInteraction](#speciesinteraction)
+ - [SpeciesEstimate](#speciesestimate)
+ - [Reference](#reference)
+ - [Reference JSON-CSL](#reference-json-csl)
+ - [Reference BIBTEX](#reference-bibtex)
+ - [TypeMaterial](#typematerial)
+ - [Distribution](#distribution)
+ - [Media](#media)
+ - [VernacularName](#vernacularname)
+ - [Treatment documents](#treatment)
+
+or one of the following:
+ - [metadata.yaml](#metadatayaml)
+ - logo.png, a logo image for the dataset
+ - [CHANGES.md](#changes)
+
+
+### Data Files
 The filename for an entity in the above diagram is a case insensitive version of the class name, any number of ignored hyphens or underscores and a known tabular text suffix. The suffix specifies one of the two supported tabular flavours, comma separated or tab separated files:
 
  - `csv`: a comma separated, optionally quoted CSV file as per [RFC 4180](https://tools.ietf.org/html/rfc4180)
@@ -124,29 +151,10 @@ Otherwise `tsv` offers escaping  `\t`, `\n`, `\r` and `\` itself using the backs
        "aaa","b""bb","ccc"
        ```
 
-
 ### Character Encoding
 All files **must be encoded in UTF-8**.
 
-### Entity listing:
- - [metadata.yaml](#metadatayaml)
- - [Name](#name)
- - [NameRelation](#namerelation)
- - [Taxon](#taxon)
- - [Synonym](#synonym)
- - [NameUsage](#nameusage)
- - [TaxonConceptRelation](#taxonconceptrelation)
- - [SpeciesInteraction](#speciesinteraction)
- - [SpeciesEstimate](#speciesestimate)
- - [Reference](#reference)
- - [Reference JSON-CSL](#reference-json-csl)
- - [Reference BIBTEX](#reference-bibtex)
- - [TypeMaterial](#typematerial)
- - [Distribution](#distribution)
- - [Media](#media)
- - [VernacularName](#vernacularname)
- - [Treatment documents](#treatment)
-  
+
 ## Metadata
 A [YAML file](https://en.wikipedia.org/wiki/YAML) called `metadata.yaml` with metadata about the entire data package should be included. 
 The file consists mostly of key value pairs like title, see the [comments in metadata.yaml](metadata.yaml) for all available keys.
@@ -158,12 +166,17 @@ See [yaml example](metadata.yaml) for all available fields.
 Additional entries to the YAML file are allowed to express non standard properties.
 
 
+## Changes
+To document past versions and changes in data it is recommended
+to include a dedicated changelog markdown file named `CHANGES.md`.
+See https://keepachangelog.com/en/1.0.0/ for best practices.
+
+
 
 # Data File Columns
 All data files should contain a header row that specifies the name of the columns as given below. 
 In the absence of a header row it is expected that all columns exist in the exact order given below.
 With headers given it is allowed to share additional columns which are not part of the standard as listed below.
-
 
 
 
