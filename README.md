@@ -6,7 +6,7 @@ is a tabular text format with a fixed set of files and columns.
 * [Status & Versioning](status--versioning)
 * [Schema](#schema)
 * [Format Comparison](#format-comparison)
-* [Data Files](#data-files)
+* [Archive Files](#archive-files)
 * [Metadata](#metadata)
 * [Identifiers](#identifiers)
 * [Best Practises](#best-practices)
@@ -92,8 +92,8 @@ These are either data files corresponding to the schema diagram above:
 
 or one of the following:
  - [metadata.yaml](#metadatayaml)
- - logo.png, a logo image for the dataset
  - [CHANGES.md](#changes)
+ - `logo.png` a logo image for the dataset
 
 
 ### Data Files
