@@ -5,10 +5,10 @@ is a tabular text format with a fixed set of files and columns.
 
 * [Status & Versioning](status--versioning)
 * [Schema](#schema)
-* [Format Comparison](#format-comparison)
-* [Archive Files](#archive-files)
+* [Files](#archive-files)
 * [Metadata](#metadata)
 * [Identifiers](#identifiers)
+* [Format Comparison](#format-comparison)
 * [Best Practises](#best-practices)
 
 ## Status & Versioning
@@ -30,44 +30,6 @@ It aligns closely to the Frictionless Tabular Data Package for which we provide 
 
 ![schema](docs/schema.png)
 
-
-## Format Comparison
-
-The ColDP format was developed to overcome limitations existing in currently used formats for sharing taxonomic information, namely [Darwin Core Archives](https://dwc.tdwg.org/text/) and the Catalogue of Life submission format also known as [ACEF](http://www.catalogueoflife.org/content/contributing-your-data#ACEF) (Annual Checklist Exchange Format). Darwin Core Archives and ACEF could still be used for exchanging data to and from Catalogue of Life ChecklistBank, but the ColDP format will support the most features. The following table provides an overview of different features supported in each of the 3 formats:
-
-Feature|ACEF|DwC-A|ColDP
- --- |:---:| :---:| :---:
-Linnean classification (KPCOFG)|x|x|x
-Extended Linnean classification (subranks)|-|-|x
-Flexible Parent-child classification|-|x|x
-Custom taxon ordering|-|-|x
-Phylo trees|-|-|x
-Unrestricted ranks|-|x|x
-Higher taxon details|-|x|x
-Infraspecific taxa|x|x|x
-Nested infraspecific taxa|-|x|x
-Basionyms|-|x|x
-Synonyms|x|x|x
-Synonyms for higher taxa|-|x|x
-Name identifier|-|x|x
-Nomenclatural status|x|x|x
-Fossils/extinction flags|x|x|x
-Name & taxon separation|-|-|x
-Species interactions|-|-|x
-Species estimates|-|-|x
-Structured references|x|-|x
-Nomenclatural relations|-|-|x
-Type species|-|x|x
-Type specimen|-|x|x
-Taxon concepts|-|x|x
-Taxon concept relations|-|x|x
-Vernacular names|x|x|x
-Structured distributions|x|x|x
-Treatments|-|x|x
-Multimedia metadata|-|x|x
-
- - `x` = supported
- - `-` = not supported
 
 ## Archive Files
 A ColDP archive consists of several files in a folder.
@@ -1139,6 +1101,46 @@ But sharing globally unique URN, URI or URLs can be done without any further sco
 If you plan to share identifiers with other scopes we encourage users to tell us about them so we can "register" them to guarantee thier uniqueness
 and inform others about their semantics.
 
+
+
+# Format Comparison
+
+The ColDP format was developed to overcome limitations existing in currently used formats for sharing taxonomic information, namely [Darwin Core Archives](https://dwc.tdwg.org/text/) and the Catalogue of Life submission format also known as [ACEF](http://www.catalogueoflife.org/content/contributing-your-data#ACEF) (Annual Checklist Exchange Format). Darwin Core Archives and ACEF could still be used for exchanging data to and from Catalogue of Life ChecklistBank, but the ColDP format will support the most features. The following table provides an overview of different features supported in each of the 3 formats:
+
+Feature|ACEF|DwC-A|ColDP
+ --- |:---:| :---:| :---:
+Linnean classification (KPCOFG)|x|x|x
+Extended Linnean classification (subranks)|-|-|x
+Flexible Parent-child classification|-|x|x
+Custom taxon ordering|-|-|x
+Phylo trees|-|-|x
+Unrestricted ranks|-|x|x
+Higher taxon details|-|x|x
+Infraspecific taxa|x|x|x
+Nested infraspecific taxa|-|x|x
+Basionyms|-|x|x
+Synonyms|x|x|x
+Synonyms for higher taxa|-|x|x
+Name identifier|-|x|x
+Nomenclatural status|x|x|x
+Fossils/extinction flags|x|x|x
+Name & taxon separation|-|-|x
+Species interactions|-|-|x
+Species estimates|-|-|x
+Structured references|x|-|x
+Nomenclatural relations|-|-|x
+Type species|-|x|x
+Type specimen|-|x|x
+Taxon concepts|-|x|x
+Taxon concept relations|-|x|x
+Vernacular names|x|x|x
+Structured distributions|x|x|x
+Treatments|-|x|x
+Multimedia metadata|-|x|x
+
+ - `x` = supported
+ - `-` = not supported
+ 
 
 # Best Practices
 
