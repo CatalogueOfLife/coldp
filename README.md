@@ -942,20 +942,19 @@ Optional identifier for the source this record came from as listed in the [metad
 #### areaID
 The identifier/code for the geographic area this distribution record is about.
 The value must be taken from the gazetteer this record declares.
-E.g. ISO country codes, TDWG codes or TEOW identifiers.
-If the TEXT gazetteer is used only the free text area should be given with no areaID.
+E.g.  country codes, `TDWG` codes or `TEOW` identifiers.
+If the `TEXT` gazetteer is used only the free text area should be given with no areaID.
 
 #### area
 The geographic area this distribution record is about.
-The area value should be taken from the gazetteer that defines the values used here.
-For all agazetteers but TEXT the area value should be the identifier from the given standard.
-E.g. ISO country codes, TDWG codes or TEOW identifiers.
+The value provides a human label for the area specified by areaID.
+Free text values can be provided here when the gazetteer is set to `TEXT`.
 
 #### gazetteer
 type: [enum](http://api.checklistbank.org/vocab/gazetteer)
 
 The geographic gazetteer the area is defined in.
-Alternatively the gazetteer can be defined globally for all records in the metadata.yml file.
+If none is given defaults to free `TEXT`.
 
 #### status
 type: [enum](http://api.checklistbank.org/vocab/distributionstatus)
@@ -964,9 +963,6 @@ Distribution status.
 #### referenceID
 Pointer to the reference that supports this distribution. Refers to an existing Reference.ID within this data package.
 
-#### pageReferenceID
-An optional microcitation to a specific page within the reference given by referenceID.
-Multiple page references can be given by as a comma concatenated list.
 
 #### remarks
 Remarks about the distribution.
@@ -1039,9 +1035,6 @@ Optional sex of the organism this vernacular name is restricted to.
 #### referenceID
 Pointer to the reference that supports this vernacular name. Refers to an existing Reference.ID within this data package.
 
-#### pageReferenceID
-An optional microcitation to a specific page within the reference given by referenceID.
-Multiple page references can be given by as a comma concatenated list.
 
 
 
