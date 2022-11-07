@@ -1058,7 +1058,7 @@ To avoid conflicts of naming scopes we strongly recommend to use the following s
  
  - avibase: Avibase taxon concept - [avibase:D754DB8552A7AA42](https://avibase.ca/D754DB85)
  - bhl: Biodiversity Heritage Library page number - [bhl:45607882](https://www.biodiversitylibrary.org/page/45607882)
- - [bold](https://registry.identifiers.org/registry/bold): BOLD BIN numbers - [BOLD:AAJ2287](http://v3.boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAJ2287)
+ - [bold](https://registry.identifiers.org/registry/bold.taxonomy): BOLD BIN numbers - [BOLD:AAJ2287](http://v3.boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAJ2287)
  - [col](https://registry.identifiers.org/registry/col): Catalogue of Life Checklist- [col:6W3C4](http://www.catalogueoflife.org/data/taxon/6W3C4)
  - [doi](https://registry.identifiers.org/registry/doi): any Digital Object Identifier - [doi:10.5281/zenodo.6407053](https://doi.org/10.5281/zenodo.6407053)
  - eunis: European Nature Information System - [eunis:193060](https://eunis.eea.europa.eu/species/193060)
@@ -1076,7 +1076,7 @@ To avoid conflicts of naming scopes we strongly recommend to use the following s
  - tpl: The Plant List - [tpl:kew-435194](http://www.theplantlist.org/tpl1.1/record/kew-435194)
  - tropicos: Missource Botanical Gardens TROPICOS - [tropicos:25509881](https://www.tropicos.org/name/25509881)
  - tsn: ITIS Taxonomic Serial Number - [tsn:41107](https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=41107#null)
- - [ubio](https://registry.identifiers.org/registry/ubio): uBio - [ubio:5408026](http://www.ubio.org/browser/details.php?namebankID=5408026)
+ - [ubio](https://registry.identifiers.org/registry/ubio.namebank): uBio - [ubio:5408026](http://www.ubio.org/browser/details.php?namebankID=5408026)
  - unite: UNITE Species Hypotheses - [unite:SH1659817.08FU](https://unite.ut.ee/sh/SH1659817.08FU)
  - usda: USDA Plants - [usda:POAN](https://plants.sc.egov.usda.gov/home/plantProfile?symbol=POAN)
  - wfo: World Flora Online - [wfo:0000891536](http://www.worldfloraonline.org/taxon/wfo-0000891536)
