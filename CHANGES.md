@@ -17,6 +17,7 @@ ColDP adheres to [semantic versioning](http://semver.org/):
  - Recommend to include changelog file
  - Include logo.png in readme
  - remove Distribution.pageReferenceID and VernacularName.pageReferenceID from readme, which were never present in the schema
+ - link to identifiers.org
 
 ## v1.0.1
 [Released](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.1) on 2022-04-07

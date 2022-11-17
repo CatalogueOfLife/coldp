@@ -127,6 +127,9 @@ and the organisations list which takes a structured organisation object.
 See [yaml example](metadata.yaml) for all available fields.
 Additional entries to the YAML file are allowed to express non standard properties.
 
+Note that there is no single preformatted citation string, but instead the structured metadata itself is the citation
+which can be formatted according to [various styles](https://www.zotero.org/styles) like [APA](https://apastyle.apa.org/products/publication-manual-7th-edition) which is the default style in checklistbank.org.
+For citations please pay special attention to the core fields `title`, `creator`, `editor`, `publisher` & `issued`.
 
 ## Changes
 To document past versions and changes in data it is recommended
