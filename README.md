@@ -1071,10 +1071,12 @@ To avoid conflicts of naming scopes we strongly recommend to use the following s
  - inat: iNaturalist taxon identifier - [inat:52808](https://www.inaturalist.org/observations?taxon_id=52808)
  - ipni: International Plant Name Index - [ipni:320035-2](https://www.ipni.org/n/320035-2)
  - [isbn](https://registry.identifiers.org/registry/isbn): International Standard Book Number, with 10 or 13 numbers - [isbn:9780393978674](https://isbndb.com/book/9780393978674)
+ - irmng: Interim Register of Marine and Nonmarine Genera - [irmng:1038927]([https://apiv3.iucnredlist.org/api/v3/taxonredirect/10335](https://www.irmng.org/aphia.php?p=taxdetails&id=1038927))
  - iucn: IUCN Redlist species - [iucn:10335](https://apiv3.iucnredlist.org/api/v3/taxonredirect/10335)
  - ncbi: NCBI taxonomy - [ncbi:93036](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=93036)
  - otl: Open Tree of Life - [otl:510850](https://tree.opentreeoflife.org/taxonomy/browse?id=510850)
  - pesi: Pan-European Species directories Infrastructure - [pesi:93A25572-521E-4130-B8C5-9C7D332E5605](http://www.eu-nomen.eu/portal/taxon.php?GUID=93A25572-521E-4130-B8C5-9C7D332E5605)
+ - silva: SILVA taxonomy - https://www.arb-silva.de/documentation/silva-taxonomy/
  - taxonid: taxon concepts as Linked Data - [taxonid:D92326](http://taxonid.org/D92326)
  - tpl: The Plant List - [tpl:kew-435194](http://www.theplantlist.org/tpl1.1/record/kew-435194)
  - tropicos: Missource Botanical Gardens TROPICOS - [tropicos:25509881](https://www.tropicos.org/name/25509881)
