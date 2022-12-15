@@ -5,8 +5,10 @@ is a tabular text format with a fixed set of files and columns.
 
 * [Status & Versioning](status-versioning)
 * [Schema](#schema)
-* [Files](#archive-files)
-* [Metadata](#metadata)
+* [Archive Files](#archive-files)
+* [Dataset Metadata](#metadata)
+* [Document Changes](#changes)
+* [Raw Source Data](#raw-source-data)
 * [Identifiers](#identifiers)
 * [Format Comparison](#format-comparison)
 * [Best Practises](#best-practices)
@@ -52,7 +54,7 @@ These are either data files corresponding to the schema diagram above:
  - [VernacularName](#vernacularname)
  - [Treatment documents](#treatment)
 
-or one of the following:
+or the following:
  - [metadata.yaml](#metadatayaml)
  - [CHANGES.md](#changes)
  - `logo.png` a logo image for the dataset
@@ -135,6 +137,17 @@ For citations please pay special attention to the core fields `title`, `creator`
 To document past versions and changes in data it is recommended
 to include a dedicated changelog markdown file named `CHANGES.md`.
 See https://keepachangelog.com/en/1.0.0/ for best practices.
+
+
+## Raw Source Data
+In many cases it is desirable to also include the raw source data files like PDFs, Excel spreadsheets, database dumps, XML files 
+or any other custom or binary files inside the archive.
+This allows users interested in details not captured by ColDP to access them, but also
+improves transparency and increases trust. 
+
+ColDP recommends to use a special `raw` folder to hold all the original source files.
+Please always consider the resulting total archive size and consider the inclusion of very large raw files if the total archive size exceeds 1GB.
+
 
 
 
