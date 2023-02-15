@@ -1072,6 +1072,7 @@ Scopes that are also registered prefixes in [identifiers.org](https://registry.i
 ## Identifier Scopes
 To avoid conflicts of naming scopes we strongly recommend to use the following scope names which are case insensitive:
  
+ - algaebase: AlgaeBase algae species - [algaebase:90](https://www.algaebase.org/search/species/detail/?species_id=90)
  - avibase: Avibase taxon concept - [avibase:D754DB8552A7AA42](https://avibase.ca/D754DB85)
  - bhl: Biodiversity Heritage Library page number - [bhl:45607882](https://www.biodiversitylibrary.org/page/45607882)
  - [bold](https://registry.identifiers.org/registry/bold.taxonomy): BOLD BIN numbers - [BOLD:AAJ2287](http://v3.boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAJ2287)
@@ -1086,6 +1087,7 @@ To avoid conflicts of naming scopes we strongly recommend to use the following s
  - [isbn](https://registry.identifiers.org/registry/isbn): International Standard Book Number, with 10 or 13 numbers - [isbn:9780393978674](https://isbndb.com/book/9780393978674)
  - irmng: Interim Register of Marine and Nonmarine Genera - [irmng:1038927]([https://apiv3.iucnredlist.org/api/v3/taxonredirect/10335](https://www.irmng.org/aphia.php?p=taxdetails&id=1038927))
  - iucn: IUCN Redlist species - [iucn:10335](https://apiv3.iucnredlist.org/api/v3/taxonredirect/10335)
+ - mycobank: Mycobank Fungal Database - [mycobank:309626](https://www.mycobank.org/page/Name%20details%20page/field/Mycobank%20%23/309626)
  - ncbi: NCBI taxonomy - [ncbi:93036](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=93036)
  - otl: Open Tree of Life - [otl:510850](https://tree.opentreeoflife.org/taxonomy/browse?id=510850)
  - pesi: Pan-European Species directories Infrastructure - [pesi:93A25572-521E-4130-B8C5-9C7D332E5605](http://www.eu-nomen.eu/portal/taxon.php?GUID=93A25572-521E-4130-B8C5-9C7D332E5605)
