@@ -27,11 +27,17 @@ ColDP adheres to [semantic versioning](http://semver.org/):
 
 ## Schema
 
-The format is a single ZIP archive that bundles various delimited text files described below together with a metadata.yaml file providing basic metadata about the entire dataset. Each file holds records for the same class of things shown in this diagram with columns explained in more detail in the [Data File section](#data-file-columns).
+The ColDP format is a single ZIP archive that bundles various delimited text files described below together with a metadata.yaml file 
+providing basic metadata about the entire dataset. 
+Each file holds records for the same class of things shown in this diagram with columns explained in more detail in the [Data File section](#data-file-columns).
 It aligns closely to the Frictionless Tabular Data Package for which we provide a [descriptor](http://api.catalogueoflife.org/datapackage).
 
 ![schema](docs/schema.png)
 
+For simpler sharing ColDP also offers a merged [NameUsage](#nameusage) entity, 
+which combines fields from the [Taxon](#taxon), [Synonym](#synonym) and [Name](#name) entity:
+
+![NameUsage schema](docs/schemaNU.png)
 
 ## Archive Files
 A ColDP archive consists of several files in a folder.
