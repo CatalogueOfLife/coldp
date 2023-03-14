@@ -16,8 +16,9 @@ This works in 99.99% of names, but can lead to unexpected results in rare, speci
 The following example therefore focus on how to provide names as proper parsed names already, so there is no need to further interpret them.
 
 ### Binomials
-A regular species name like ```Abies alba Mill.``` should be given as
+A regular species name like should be given as:
 
+```Abies alba Mill.``` 
 ```
 rank=species
 genus=Abies
@@ -128,8 +129,50 @@ authorship=Bercht. & J.Presl
 ```
 
 ### Cultivars
+Similar to infraspecific names cultivars according to the [International Code of Nomenclature for Cultivated Plants](https://www.ishs.org/sites/default/files/static/ScriptaHorticulturae_18.pdf)
+ have their own field to capture the cultivar name:
+```Chamaecyparis lawsoniana 'Golden Wonder'```
+
+```
+rank=cultivar
+genus=Chamaecyparis
+specificEpithet=lawsoniana
+cultivarEpithet=Golden Wonder
+code=cultivars
+```
+
+Cultivar Groups are treated the same way just with a different rank. 
+The rank marker "Group" is not mentioned again in the epithet field:
+```Brassica oleracea Capitata Group```
+
+```
+rank=cultivar group
+genus=Brassica
+specificEpithet=oleracea
+cultivarEpithet=Capitata
+code=cultivars
+```
+
 
 ### Hybrids
+There are two kind of hybrids that are syntactically very different.
+**Hybrid formulas** are combinations of several names and currently cannot be represented in a parsed way in ColDP.
+Names such as ```Festuca pratensis × Lolium perenne``` should be given as simple names only:
+```
+scientificName=Festuca pratensis × Lolium perenne
+```
+
+**Named hybrids** or notho taxa on the other hand are very much structured like regular Linnean names and can be represented as parsed ColDP names.
+For example the hybrid ```Lolium multiflorum × Schedonorus arundina``` 
+has been described as the nothospecies ```×Schedolium krasanii H. Scholz```. 
+The hybrid marker should be preserved as a prefix in the respective epithet field using the true multiplication sign:
+```
+rank=species
+genus=×Schedolium
+specificEpithet=krasanii
+code=botanical
+```
+
 
 ### OTUs
 
