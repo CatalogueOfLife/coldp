@@ -11,6 +11,7 @@ is a tabular text format with a fixed set of files and columns.
 * [Raw Source Data](#raw-source-data)
 * [Identifiers](#identifiers)
 * [Format Comparison](#format-comparison)
+* [Publishing Guidelines](/docs/publishing-guide.md)
 * [Best Practises](#best-practices)
 
 ## Status & Versioning
@@ -1165,6 +1166,7 @@ Multimedia metadata|-|x|x
  
 
 # Best Practices
+Please see also the [ColDP Publishing Guidelines](/docs/publishing-guide.md) for concrete examples.
 
 ## multiple value concatenation
 Some fields are allowed to contain multiple values. These must be concatenated by a simple comma. Any surrounding whitespace should be ignored.
