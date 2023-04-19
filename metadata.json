@@ -1,6 +1,6 @@
 {
   "description": "JSON schema for COL Data Package (ColDP) metadata",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/CatalogueOfLife/coldp/master/metadata.json",
   "type": "object",
   "properties": {
@@ -8,7 +8,15 @@
           "$ref": "#/definitions/doi"
         },
         "identifier": {
-          "type": "object"
+          "type": "object",
+          "properties": {
+              "col": {"type": "integer"},
+              "gbif": {"type": "string"},
+              "plazi": {"type": "string"}
+          },          
+          "additionalProperties": {
+            "type": "string"
+          }
         },
         "title": {
           "type": "string"

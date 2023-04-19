@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=metadata.json
+
 # single, primary DOI for the dataset
 doi: 10.15468/2zjeva
 
@@ -102,7 +104,7 @@ publisher:
   department: Global Fisheries Cluster
   city: Vancouver
   state: B.C.
-  country: Canada
+  country: CA
 
 # Agent contributing to the dataset in any other way, but who is not considered an author of the dataset
 # Use the optional note field to specify the kind of contribution
@@ -130,29 +132,29 @@ contributor:
 
   - organisation: The WorldFish Center
     city: Penang
-    country: Malaysia
+    country: MY
 
   - rorid: 02h2x0161
     organisation: Helmholtz Centre for Ocean Research Kiel    
     department: GEOMAR
     city: Kiel
-    country: Germany
+    country: DE
     note: Hosting services
 
   - organisation: Food and Agriculture Organization of the United Nations
     rorid: 00pe0tf51
     city: Rome
-    country: Italy
+    country: IT
 
   - organisation: Muséum National d'Histoire Naturelle 
     rorid: 03wkt5x30
     city: Paris
-    country: France
+    country: FR
 
   - organisation: Aristotle University of Thessaloniki
     rorid: 02j61yw88
     city: Thessaloniki
-    country: Greece
+    country: GR
 
 # Description of the geographical scope of the dataset
 geographicScope: global
