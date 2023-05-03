@@ -174,9 +174,10 @@ confidence: 5
 # 0-100 to express the completeness of the dataset in regards to the defined scope
 completeness: 95
 
-# Any commons license (CC0, CC-BY, CC-BY-NC, CC-BY-SA, CC-BY-ND, CC-BY-NC-SA, CC-BY-NC-ND)
-# Must be CC0 or CC-BY to be used by COL !!!
-license: CC0
+# Any Open Definition license ID: https://licenses.opendefinition.org/licenses/groups/all.json
+# For ChecklistBank please use only CC0-1.0, CC-BY-4.0 or CC-BY-NC-4.0
+# Must be CC0-1.0 or CC-BY-4.0 to be used by COL !!!
+license: CC0-1.0
 
 # Link to a website for the dataset
 url: https://www.fishbase.org
