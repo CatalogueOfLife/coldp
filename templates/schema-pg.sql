@@ -1,336 +1,164 @@
 -- Postgres ColDP schema
 
--- enumeration types
-CREATE TYPE AREASTANDARD AS ENUM (
-  'TDWG',
-  'ISO',
-  'FAO',
-  'FAO_FISHING',
-  'LONGHURST',
-  'TEOW',
-  'IHO',
-  'TEXT'
-);
-
-CREATE TYPE DISTRIBUTIONSTATUS AS ENUM (
-  'NATIVE',
-  'DOMESTICATED',
-  'ALIEN',
-  'UNCERTAIN'
-);
-
-CREATE TYPE GAZETTEER AS ENUM (
-  'TDWG',
-  'ISO',
-  'FAO',
-  'LONGHURST',
-  'TEOW',
-  'IHO',
-  'TEXT'
-);
-
-CREATE TYPE LIFEZONE AS ENUM (
-  'BRACKISH',
-  'FRESHWATER',
-  'MARINE',
-  'TERRESTRIAL'
-);
-
-CREATE TYPE MEDIATYPE AS ENUM (
-  'IMAGE',
-  'VIDEO',
-  'AUDIO'
-);
-
-CREATE TYPE NOMCODE AS ENUM (
-  'BACTERIAL',
-  'BOTANICAL',
-  'CULTIVARS',
-  'PHYTOSOCIOLOGICAL',
-  'VIRUS',
-  'ZOOLOGICAL'
-);
-
-CREATE TYPE NOMRELTYPE AS ENUM (
-  'SPELLING_CORRECTION',
-  'BASIONYM',
-  'BASED_ON',
-  'REPLACEMENT_NAME',
-  'CONSERVED',
-  'LATER_HOMONYM',
-  'SUPERFLUOUS',
-  'HOMOTYPIC',
-  'TYPE'
-);
-
-CREATE TYPE NOMSTATUS AS ENUM (
-  'ESTABLISHED',
-  'NOT_ESTABLISHED',
-  'ACCEPTABLE',
-  'UNACCEPTABLE',
-  'CONSERVED',
-  'REJECTED',
-  'DOUBTFUL',
-  'MANUSCRIPT',
-  'CHRESONYM'
-);
-
-CREATE TYPE SEX AS ENUM (
-  'FEMALE',
-  'MALE',
-  'HERMAPHRODITE'
-);
-
-CREATE TYPE STATUS AS ENUM (
-  'ACCEPTED',
-  'PROVISIONALLY_ACCEPTED',
-  'SYNONYM',
-  'AMBIGUOUS_SYNONYM',
-  'MISAPPLIED'
-);
-
-CREATE TYPE TAXRELTYPE AS ENUM (
-  'EQUALS',
-  'INCLUDES',
-  'INCLUDED_IN',
-  'OVERLAPS',
-  'EXCLUDES',
-
-  'INTERACTS_WITH',
-  'VISITS',
-  'INHABITS',
-  'SYMBIONT_OF',
-  'ASSOCIATED_WITH',
-  'EATS',
-  'POLLINATES',
-  'PARASITE_OF',
-  'PATHOGEN_OF',
-  'HOST_OF'
-);
-
-CREATE TYPE RANK AS ENUM (
-  'DOMAIN',
-  'REALM',
-  'SUBREALM',
-  'SUPERKINGDOM',
-  'KINGDOM',
-  'SUBKINGDOM',
-  'INFRAKINGDOM',
-  'SUPERPHYLUM',
-  'PHYLUM',
-  'SUBPHYLUM',
-  'INFRAPHYLUM',
-  'SUPERCLASS',
-  'CLASS',
-  'SUBCLASS',
-  'INFRACLASS',
-  'PARVCLASS',
-  'SUPERLEGION',
-  'LEGION',
-  'SUBLEGION',
-  'INFRALEGION',
-  'SUPERCOHORT',
-  'COHORT',
-  'SUBCOHORT',
-  'INFRACOHORT',
-  'GIGAORDER',
-  'MAGNORDER',
-  'GRANDORDER',
-  'MIRORDER',
-  'SUPERORDER',
-  'ORDER',
-  'NANORDER',
-  'HYPOORDER',
-  'MINORDER',
-  'SUBORDER',
-  'INFRAORDER',
-  'PARVORDER',
-  'MEGAFAMILY',
-  'GRANDFAMILY',
-  'SUPERFAMILY',
-  'EPIFAMILY',
-  'FAMILY',
-  'SUBFAMILY',
-  'INFRAFAMILY',
-  'SUPERTRIBE',
-  'TRIBE',
-  'SUBTRIBE',
-  'INFRATRIBE',
-  'SUPRAGENERIC_NAME',
-  'GENUS',
-  'SUBGENUS',
-  'INFRAGENUS',
-  'SUPERSECTION',
-  'SECTION',
-  'SUBSECTION',
-  'SUPERSERIES',
-  'SERIES',
-  'SUBSERIES',
-  'INFRAGENERIC_NAME',
-  'SPECIES_AGGREGATE',
-  'SPECIES',
-  'INFRASPECIFIC_NAME',
-  'GREX',
-  'SUBSPECIES',
-  'CULTIVAR_GROUP',
-  'CONVARIETY',
-  'INFRASUBSPECIFIC_NAME',
-  'PROLES',
-  'NATIO',
-  'ABERRATION',
-  'MORPH',
-  'VARIETY',
-  'SUBVARIETY',
-  'FORM',
-  'SUBFORM',
-  'PATHOVAR',
-  'BIOVAR',
-  'CHEMOVAR',
-  'MORPHOVAR',
-  'PHAGOVAR',
-  'SEROVAR',
-  'CHEMOFORM',
-  'FORMA_SPECIALIS',
-  'CULTIVAR',
-  'STRAIN',
-  'OTHER',
-  'UNRANKED'
-);
-
-
-
-
-
-CREATE TABLE "Reference" (
-	"ID" TEXT PRIMARY KEY,
+CREATE TABLE reference (
+	id TEXT PRIMARY KEY,
+  alternative_id TEXT[],
+  source_id TEXT,
 	citation TEXT,
+  type TEXT,
 	author TEXT,
-	title TEXT,
-	year INTEGER,
-	source TEXT,
-	details TEXT,
+  editor TEXT,
+  title TEXT,
+  container_author TEXT,
+  container_title TEXT,
+  issued TEXT,
+  accessed TEXT,
+	collection_title TEXT,
+  collection_editor TEXT,
+	volume TEXT,
+  issue TEXT,
+  edition TEXT,
+  page TEXT,
+  publisher TEXT,
+  publisher_place TEXT,
+	version TEXT,
+	isbn TEXT,
+  issn TEXT,
 	doi TEXT,
 	link TEXT,
 	remarks TEXT
 );
 
-CREATE TABLE "Name" (
-	"ID" TEXT PRIMARY KEY,
-	"originalNameID" TEXT REFERENCES "Name",
-	"scientificName" TEXT NOT NULL,
+CREATE TABLE name_usage (
+	id TEXT PRIMARY KEY,
+  alternative_id TEXT[],
+  name_alternative_id TEXT[],
+  source_id TEXT,
+  parent_id TEXT REFERENCES name_usage,
+  sequence_index INTEGER,
+  branch_length NUMERIC,
+	basionym_id TEXT REFERENCES name_usage,
+  status TEXT,
+	scientific_name TEXT NOT NULL,
 	authorship TEXT,
-	rank RANK NOT NULL,
+	rank TEXT,
 	uninomial TEXT,
-	genus TEXT,
-	"infragenericEpithet" TEXT,
-	"specificEpithet" TEXT,
-	"infraspecificEpithet" TEXT,
-	"cultivarEpithet" TEXT,
-	"publishedInID" TEXT REFERENCES "Reference",
-	"publishedInPage" TEXT,
-	"publishedInYear" INTEGER,
-	code NOMCODE,
-	status STATUS,
-	link TEXT,
+	generic_name TEXT,
+	infrageneric_epithet TEXT,
+	specific_epithet TEXT,
+	infraspecific_epithet TEXT,
+  cultivar_epithet TEXT,
+  name_phrase TEXT,
+	name_reference_id TEXT REFERENCES reference,
+	name_published_id_page TEXT,
+	name_published_id_year INTEGER,
+  name_published_id_page_link TEXT,
+  code TEXT,
+  name_status TEXT,
+  according_to_id TEXT REFERENCES reference,
+  scrutinizer TEXT,
+  scrutinizer_id TEXT,
+  scrutinizer_date TEXT,
+  reference_id TEXT[],
+  extinct BOOLEAN,
+  temporal_range_start TEXT,
+  temporal_range_end TEXT,
+  environment TEXT[],
+  link TEXT,
+  name_remarks TEXT,
 	remarks TEXT
 );
 
-CREATE TABLE "NameRelation" (
-	"nameID" TEXT NOT NULL REFERENCES "Name",
-	"relatedNameID" TEXT REFERENCES "Name",
-	type NOMRELTYPE NOT NULL,
-	"publishedInID" TEXT REFERENCES "Reference",
+CREATE TABLE name_relation (
+  source_id TEXT,
+	name_id TEXT NOT NULL REFERENCES name_usage,
+	related_name_id TEXT REFERENCES name_usage,
+  type TEXT NOT NULL,
+	reference_id TEXT REFERENCES reference,
 	remarks TEXT
 );
 
-CREATE TABLE "Taxon" (
-	"ID" TEXT PRIMARY KEY,
-	"parentID" TEXT REFERENCES "Taxon",
-	"nameID" TEXT NOT NULL REFERENCES "Name",
-	"namePhrase" TEXT,
-	"accordingToID" TEXT REFERENCES "Reference",
-	provisional BOOLEAN NOT NULL,
-	"referenceID" TEXT[],
-	scrutinizer TEXT,
-	"scrutinizerDate" DATE,
-	extinct BOOLEAN,
-	"temporalRangeStart" TEXT,
-	"temporalRangeEnd" TEXT,
-	lifezone LIFEZONE[],
-	link TEXT,
-	remarks TEXT
-);
-
-CREATE TABLE "TaxonRelation" (
-  "taxonID" TEXT NOT NULL REFERENCES "Taxon",
-  "relatedTaxonID" TEXT NOT NULL REFERENCES "Taxon",
-  type TAXRELTYPE NOT NULL,
-  "referenceID" TEXT REFERENCES "Reference",
+CREATE TABLE type_material (
+  id TEXT PRIMARY KEY,
+  source_id TEXT,
+  name_id TEXT NOT NULL REFERENCES name_usage,
+  citation TEXT,
+  status TEXT,
+  reference_id TEXT REFERENCES reference,
+  locality TEXT,
+  country CHARACTER(2),
+  latitude DECIMAL,
+  longitude DECIMAL,
+  altitude INTEGER,
+  host TEXT,
+  date TEXT,
+  collector TEXT,
+  institution_code TEXT,
+  catalog_number TEXT,
+  associated_sequences TEXT,
+  sex TEXT,
+  link TEXT,
   remarks TEXT
 );
 
-CREATE TABLE "Distribution" (
-	"taxonID" TEXT NOT NULL REFERENCES "Taxon",
+CREATE TABLE distribution (
+	taxon_id TEXT NOT NULL REFERENCES name_usage,
+  source_id TEXT,
 	area TEXT NOT NULL,
-	gazetteer GAZETTEER NOT NULL,
-	status DISTRIBUTIONSTATUS,
-	"referenceID" TEXT
+  area_id TEXT,
+	gazetteer TEXT,
+	status TEXT,
+  reference_id TEXT REFERENCES reference,
+  remarks TEXT
 );
 
-CREATE TABLE "Synonym" (
-	"ID" TEXT PRIMARY KEY,
-	"taxonID" TEXT REFERENCES "Taxon",
-	"nameID" TEXT NOT NULL REFERENCES "Name",
-	"namePhrase" TEXT,
-	"accordingToID" TEXT REFERENCES "Reference",
-	status STATUS NOT NULL,
-	"referenceID" TEXT[],
-	link TEXT,
-	remarks TEXT
-);
-
-CREATE TABLE "Media" (
-	"taxonID" TEXT NOT NULL REFERENCES "Taxon",
+CREATE TABLE media (
+  taxon_id TEXT NOT NULL REFERENCES name_usage,
+  source_id TEXT,
 	url TEXT NOT NULL,
-	type MEDIATYPE,
+	type TEXT,
 	format TEXT,
 	title TEXT,
-	created DATE,
+	created TEXT,
 	creator TEXT,
 	license TEXT,
 	link TEXT
 );
 
-CREATE TABLE "Treatment" (
-	"taxonID" TEXT PRIMARY KEY REFERENCES "Taxon",
+CREATE TABLE treatment (
+  taxon_id TEXT NOT NULL REFERENCES name_usage,
+  source_id TEXT,
 	document TEXT NOT NULL
 );
 
-CREATE TABLE "TypeMaterial" (
-	"ID" TEXT PRIMARY KEY,
-	"nameID" TEXT NOT NULL REFERENCES "Name",
-	citation TEXT,
-	status TEXT,
-	"referenceID" TEXT REFERENCES "Reference",
-	locality TEXT,
-	country CHARACTER(2),
-	latitude DECIMAL,
-	longitude DECIMAL,
-	altitude INTEGER,
-	host TEXT,
-	date TEXT,
-	collector TEXT,
-	link TEXT,
-	remarks TEXT
-);
 
-CREATE TABLE "VernacularName" (
-	"taxonID" TEXT NOT NULL REFERENCES "Taxon",
+CREATE TABLE vernacular_name (
+  taxon_id TEXT NOT NULL REFERENCES name_usage,
+  source_id TEXT,
 	name TEXT NOT NULL,
 	transliteration TEXT,
 	language CHARACTER(3),
 	country CHARACTER(2),
 	area TEXT,
-	sex SEX,
-	"referenceID" TEXT
+	sex TEXT,
+  reference_id TEXT REFERENCES reference
+);
+
+CREATE TABLE species_interaction (
+  taxon_id TEXT NOT NULL REFERENCES name_usage,
+  related_taxon_id TEXT REFERENCES name_usage,
+  source_id TEXT,
+  related_taxon_scientific_name TEXT,
+  type TEXT NOT NULL,
+  reference_id TEXT REFERENCES reference,
+  remarks TEXT
+);
+
+CREATE TABLE taxon_concept_relation (
+  taxon_id TEXT NOT NULL REFERENCES name_usage,
+  related_taxon_id TEXT REFERENCES name_usage,
+  source_id TEXT,
+  type TEXT NOT NULL,
+  reference_id TEXT REFERENCES reference,
+  remarks TEXT
 );

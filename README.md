@@ -237,7 +237,8 @@ For the exact status note, e.g. *nomen nudum*, the remarks field should addition
 Alternatively a URI or simple name from a class of the [NOMEN ontology](https://github.com/SpeciesFileGroup/nomen/blob/master/src/ontology/nomen.owl) can be used.
 
 #### referenceID
-A pointer to a Reference indicating the original publication of the name in its given combination, not the basionym.
+A pointer to a Reference that is the publication in which the scientificName was originally established 
+under the rules of the associated nomenclatural code. 
 
 #### publishedInYear
 The effective year the name was published, given as a 4 digit integer. 
