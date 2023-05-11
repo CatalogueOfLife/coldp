@@ -182,8 +182,11 @@ See [identifiers](#Identifiers) for all details and common scopes.
 Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### basionymID
-Identifier of the name which is the original combination of this name. Also known as the basionym or protonym. 
-Contrary to the strict basionym definition it is recommended to populate this field also for original names which should point to itself.
+Identifier of the name which is the original combination of this name. Also known as the basionym. 
+Contrary to the strict basionym definition it is acceptable to populate this field also for original names which should point to itself.
+A basionym is a terminal relationship. The original name should not have a basionym relation to another name itself.
+When the basionym was established as a nomen novum to replace another name, e.g. a homonym, 
+it should not use basionymID to refer to the replaced name but use the [NameRelation](#namerelation) with `type=replacement name` instead.
 
 Note there is an alternative way to share the information about an original name by using a [NameRelation](#namerelation) with `type=basionym`.
 The field basionymID exists for simplicity and because it is an important information to be shared.
