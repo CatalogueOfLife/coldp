@@ -1,57 +1,57 @@
 -- Postgres ColDP schema
 
 CREATE TABLE reference (
-	id TEXT PRIMARY KEY,
+  id TEXT PRIMARY KEY,
   alternative_id TEXT[],
   source_id TEXT,
-	citation TEXT,
+  citation TEXT,
   type TEXT,
-	author TEXT,
+  author TEXT,
   editor TEXT,
   title TEXT,
   container_author TEXT,
   container_title TEXT,
   issued TEXT,
   accessed TEXT,
-	collection_title TEXT,
+  collection_title TEXT,
   collection_editor TEXT,
-	volume TEXT,
+  volume TEXT,
   issue TEXT,
   edition TEXT,
   page TEXT,
   publisher TEXT,
   publisher_place TEXT,
-	version TEXT,
-	isbn TEXT,
+  version TEXT,
+  isbn TEXT,
   issn TEXT,
-	doi TEXT,
-	link TEXT,
-	remarks TEXT
+  doi TEXT,
+  link TEXT,
+  remarks TEXT
 );
 
 CREATE TABLE name_usage (
-	id TEXT PRIMARY KEY,
+  id TEXT PRIMARY KEY,
   alternative_id TEXT[],
   name_alternative_id TEXT[],
   source_id TEXT,
   parent_id TEXT REFERENCES name_usage,
   sequence_index INTEGER,
   branch_length NUMERIC,
-	basionym_id TEXT REFERENCES name_usage,
+  basionym_id TEXT REFERENCES name_usage,
   status TEXT,
-	scientific_name TEXT NOT NULL,
-	authorship TEXT,
-	rank TEXT,
-	uninomial TEXT,
-	generic_name TEXT,
-	infrageneric_epithet TEXT,
-	specific_epithet TEXT,
-	infraspecific_epithet TEXT,
+  scientific_name TEXT NOT NULL,
+  authorship TEXT,
+  rank TEXT,
+  uninomial TEXT,
+  generic_name TEXT,
+  infrageneric_epithet TEXT,
+  specific_epithet TEXT,
+  infraspecific_epithet TEXT,
   cultivar_epithet TEXT,
   name_phrase TEXT,
-	name_reference_id TEXT REFERENCES reference,
-	name_published_id_page TEXT,
-	name_published_id_year INTEGER,
+  name_reference_id TEXT REFERENCES reference,
+  name_published_id_page TEXT,
+  name_published_id_year INTEGER,
   name_published_id_page_link TEXT,
   code TEXT,
   name_status TEXT,
@@ -66,16 +66,16 @@ CREATE TABLE name_usage (
   environment TEXT[],
   link TEXT,
   name_remarks TEXT,
-	remarks TEXT
+  remarks TEXT
 );
 
 CREATE TABLE name_relation (
   source_id TEXT,
-	name_id TEXT NOT NULL REFERENCES name_usage,
-	related_name_id TEXT REFERENCES name_usage,
+  name_id TEXT NOT NULL REFERENCES name_usage,
+  related_name_id TEXT REFERENCES name_usage,
   type TEXT NOT NULL,
-	reference_id TEXT REFERENCES reference,
-	remarks TEXT
+  reference_id TEXT REFERENCES reference,
+  remarks TEXT
 );
 
 CREATE TABLE type_material (
@@ -102,12 +102,12 @@ CREATE TABLE type_material (
 );
 
 CREATE TABLE distribution (
-	taxon_id TEXT NOT NULL REFERENCES name_usage,
+  taxon_id TEXT NOT NULL REFERENCES name_usage,
   source_id TEXT,
-	area TEXT NOT NULL,
+  area TEXT NOT NULL,
   area_id TEXT,
-	gazetteer TEXT,
-	status TEXT,
+  gazetteer TEXT,
+  status TEXT,
   reference_id TEXT REFERENCES reference,
   remarks TEXT
 );
@@ -115,32 +115,32 @@ CREATE TABLE distribution (
 CREATE TABLE media (
   taxon_id TEXT NOT NULL REFERENCES name_usage,
   source_id TEXT,
-	url TEXT NOT NULL,
-	type TEXT,
-	format TEXT,
-	title TEXT,
-	created TEXT,
-	creator TEXT,
-	license TEXT,
-	link TEXT
+  url TEXT NOT NULL,
+  type TEXT,
+  format TEXT,
+  title TEXT,
+  created TEXT,
+  creator TEXT,
+  license TEXT,
+  link TEXT
 );
 
 CREATE TABLE treatment (
   taxon_id TEXT NOT NULL REFERENCES name_usage,
   source_id TEXT,
-	document TEXT NOT NULL
+  document TEXT NOT NULL
 );
 
 
 CREATE TABLE vernacular_name (
   taxon_id TEXT NOT NULL REFERENCES name_usage,
   source_id TEXT,
-	name TEXT NOT NULL,
-	transliteration TEXT,
-	language CHARACTER(3),
-	country CHARACTER(2),
-	area TEXT,
-	sex TEXT,
+  name TEXT NOT NULL,
+  transliteration TEXT,
+  language CHARACTER(3),
+  country CHARACTER(2),
+  area TEXT,
+  sex TEXT,
   reference_id TEXT REFERENCES reference
 );
 
