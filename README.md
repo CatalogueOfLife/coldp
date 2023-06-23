@@ -924,6 +924,10 @@ The `id` field in each record of the array is used as the primary key and referr
 Alternatively to CSL-JSON a [BibTex](http://www.bibtex.org/Format/) file `reference.bib` can be given to provide highly structured citations.
 
 The `id` field following the curly opening bracket is used as the primary key and referred to from `referenceID` fields elsewhere.
+You can also download BibTex records from CrossRef using curl:
+```
+curl --location --silent --header "Accept: application/x-bibtex" https://doi.org/10.1080/11035890601282097 
+```
 
 
 #### Bibtex example
