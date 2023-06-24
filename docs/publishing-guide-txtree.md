@@ -11,3 +11,5 @@ For interoperability with [ChecklistBank](https://www.checklistbank.org) and oth
  - **REF**: A list of reference keys to support the taxonomic opinion. 
  - **ENV**: A list of [environments](/docs/README.md#environment) the species occurrs in. 
  - **VERN**: A list of vernacular names, each given as languageCode:name. Example: ```VERN=de:Traubeneiche,fr:Chêne rouvre,dk:Vintereg```
+ - **EXTINCT**: A boolean flag to indicate extinct taxa. Example: ```EXTINCT=true```
+
