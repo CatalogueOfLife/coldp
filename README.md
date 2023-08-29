@@ -432,7 +432,7 @@ See [best practices](#best-practices) for details on how to concatenate multi va
 #### extinct
 type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
 
-Nullable flag indicating that the taxon is extinct (true) or extant (false). This includes species that died out very recently.
+Nullable flag indicating that the taxon is extinct (true) or extant (false). This includes species that died out recently.
 
 #### temporalRangeStart
 type: [enum](http://api.checklistbank.org/vocab/geotime)
