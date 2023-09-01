@@ -929,6 +929,9 @@ You can also download BibTex records from CrossRef using curl:
 curl --location --silent --header "Accept: application/x-bibtex" https://doi.org/10.1080/11035890601282097 
 ```
 
+For converting existing bibliographies into BibTex the [AnyStyle parser](https://anystyle.io) is highly recommended.
+It is free and quick to use online for a few hundred to thousand references. For much larger amounts it needs to be run locally.
+
 
 #### Bibtex example
 ```
