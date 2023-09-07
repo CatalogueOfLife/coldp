@@ -1216,6 +1216,8 @@ Language of the vernacular name given as an ISO 639-3 letter code.
 type: boolean
 A flag to indicate if this vernacular name is the preferred name for the given language.
 
+*added in v1.1*
+
 #### country
 Country this vernacular name is used in given as an ISO 3166-2 letter code.
 
