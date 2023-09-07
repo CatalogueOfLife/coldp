@@ -195,6 +195,27 @@ With headers given it is allowed to share additional columns which are not part 
 
 ## Name
 See [NAMES.md](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md) for examples and rationales.
+Names can be shared in a structured way using various fields, 
+but rank, scientificName and authorship alone are sufficient.
+
+A structured `scientificName` can be given using the following fields:
+ - [uninomial](#uninomial)
+ - [genus](#genus)
+ - [infragenericEpithet](#infragenericEpithet)
+ - [specificEpithet](#specificEpithet)
+ - [infraspecificEpithet](#infraspecificEpithet)
+ - [cultivarEpithet](#cultivarEpithet)
+ - [notho](#notho)
+
+An `authorship` of a name can be structured with:
+
+ - [combinationAuthorship](#combinationAuthorship)
+ - [combinationExAuthorship](#combinationExAuthorship)
+ - [combinationAuthorshipYear](#combinationAuthorshipYear)
+ - [basionymAuthorship](#basionymAuthorship)
+ - [basionymExAuthorship](#basionymExAuthorship)
+ - [basionymAuthorshipYear](#basionymAuthorshipYear)
+
 
 #### ID
 Unique name identifier that is referred to elsewhere via `nameID`.
@@ -251,6 +272,56 @@ The infraspecific epithet in case of bi/trinomials.
 
 #### cultivarEpithet
 The name of the cultivar for name governed by the cultivar code.
+
+#### notho
+For named hybrids the part of the name which is considered a hybrid
+and which usually is prefixed with the hybrid marker `×`. One of:
+
+ - generic
+ - infrageneric
+ - specific
+ - infraspecific
+
+type: [namePart enum](https://api.checklistbank.org/vocab/namePart)
+
+*added in v1.1*
+
+#### combinationAuthorship
+The authorteam of the main authorship for the very combination (not the original combination).
+Multiple authors should be concatenated with a pipe `|` symbol.
+
+*added in v1.1*
+
+#### combinationExAuthorship
+The ex-authors part of the main authorship for the very combination (not the original combination).
+The `ex` prefix as normally found in the authorship should not be included here.
+Multiple authors should be concatenated with a pipe `|` symbol.
+
+*added in v1.1*
+
+#### combinationAuthorshipYear
+The year given in the authorship for the very combination (not the original combination).
+
+*added in v1.1*
+, given without brackets
+#### basionymAuthorship
+The authorteam of the original name normally found in brackets, but given here without brackets.
+Multiple authors should be concatenated with a pipe `|` symbol.
+
+*added in v1.1*
+
+#### basionymExAuthorship
+The ex-authors of the original name normally found in brackets, but given here without brackets.
+The `ex` prefix as normally found in the authorship should not be included here.
+Multiple authors should be concatenated with a pipe `|` symbol.
+
+*added in v1.1*
+
+#### basionymAuthorshipYear
+The year given in the authorship for the original combination normally found in brackets, but given here without brackets.
+
+*added in v1.1*
+
 
 #### code
 type: [code enum](http://api.checklistbank.org/vocab/nomCode)
@@ -1079,7 +1150,6 @@ Distribution status.
 #### referenceID
 Pointer to the reference that supports this distribution. Refers to an existing Reference.ID within this data package.
 
-
 #### remarks
 Remarks about the distribution.
 
@@ -1117,6 +1187,11 @@ type: [license](http://api.checklistbank.org/vocab/license)
 #### link
 Optional webpage from the source this media item is shown on.
 
+#### remarks
+Remarks about the media item.
+
+*added in v1.1*
+
 
 
 ## VernacularName
@@ -1151,6 +1226,10 @@ Optional sex of the organism this vernacular name is restricted to.
 #### referenceID
 Pointer to the reference that supports this vernacular name. Refers to an existing Reference.ID within this data package.
 
+#### remarks
+Remarks about the vernacular name.
+
+*added in v1.1*
 
 
 
