@@ -1712,7 +1712,7 @@
         <windowHeight><![CDATA[1010.000000]]></windowHeight>
         <windowLocationX><![CDATA[585.000000]]></windowLocationX>
         <windowLocationY><![CDATA[15.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{0, 95.5}]]></windowScrollOrigin>
+        <windowScrollOrigin><![CDATA[{0, 0}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1612.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>
