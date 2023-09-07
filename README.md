@@ -646,7 +646,6 @@ A flexible, generic way to assign arbitrary property values to a taxon.
 It can be used to share species profiles, traits, descriptions and any other dynamic information about a taxon.
 Every property value can optionally be referenced and ordered.
 
-
 #### taxonID
 The subject taxon the property is about.
 
@@ -814,6 +813,11 @@ See author for recommendations how to supply person names.
 The title of the work. 
 In case of journal articles the article title, not the journal itself.
 
+#### titleShort
+The abbreviated title of the work.
+
+*added in v1.1*
+
 #### containerAuthor
 Author(s) of the container holding the item, e.g. the book author for a book chapter.
 See author for recommendations how to supply person names.
@@ -821,6 +825,11 @@ See author for recommendations how to supply person names.
 #### containerTitle
 Title of the container holding the item, e.g. the book title for a book chapter, the journal title for a journal article.
 The containerTitle should exclude volume, edition, pages and other specifics.
+
+#### containerTitleShort
+The abbreviated container title.
+
+*added in v1.1*
 
 #### issued
 type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date) 
