@@ -6,6 +6,7 @@ is a tabular text format with a fixed set of files and columns.
 * [Status & Versioning](status-versioning)
 * [Schema](#schema)
 * [Archive Files](#archive-files)
+* [Default Values](#defaultvalues)
 * [Dataset Metadata](#metadata)
 * [Document Changes](#changes)
 * [Raw Source Data](#raw-source-data)
@@ -49,6 +50,7 @@ These are either data files corresponding to the schema diagram above:
  - [Taxon](#taxon)
  - [Synonym](#synonym)
  - [NameUsage](#nameusage)
+ - [TaxonProperty](#taxonproperty)
  - [TaxonConceptRelation](#taxonconceptrelation)
  - [SpeciesInteraction](#speciesinteraction)
  - [SpeciesEstimate](#speciesestimate)
@@ -124,6 +126,32 @@ Otherwise `tsv` offers escaping  `\t`, `\n`, `\r` and `\` itself using the backs
 
 ### Character Encoding
 All files **must be encoded in UTF-8**.
+
+
+
+## Default Values
+*added in v1.1*
+
+In some cases it is useful to declare a fixed, global value that applies to every record in the dataset,
+for example if all taxa are animals it makes sense to declare `Name.code=zoological` only once.
+This can be done in a single file default.yaml that provides default values for all terms. 
+Term names are organised under their entity/class name in the file.
+
+Example of a `default.yaml` file:
+
+```yaml
+Name:
+  code: zoological
+Taxon:
+  extinct: false
+  environment: marine
+  kingdom: Animalia
+```
+
+If the term is defined in the actual data, default values will only apply in case the value is null. 
+E.g. it can be used to have a default *code* value, but override it for exceptional records.
+This is similar to the default feature in the meta.xml file of DwC archives.
+
 
 
 ## Metadata
@@ -388,7 +416,7 @@ Optional identifier for the source this record came from as listed in the [metad
 #### parentID
 The direct parent taxon's ID in the classification. This is the preferred way of exchanging a hierarchy and takes precedence over any classification given in the denormalized fields.
 
-#### sequenceIndex
+#### ordinal
 A integer to specify an optional custom sort order for sibling taxa sharing the same parentID in the datasets.
 This can be used to define a traditional ordering of orders and families for example and can be existing for parts of the dataset, e.g. higher ranks, only. The natural ordering of integers from small to large should be applied.
 Not that this does not have to be a unique, global index.
@@ -604,6 +632,43 @@ Therefore the following properties deviate slightly from their usage in their cl
  - **nameAlternativeID**: corresponds to Name.alternativeID. *added in v1.1*
 
 If a single NameUsage entity is given no further Name, Taxon or Synonym entity must exist.
+
+
+
+
+
+## TaxonProperty
+*added in v1.1*
+
+A flexible, generic key value store that allows to assign arbitrary property values to a taxon.
+Every property value can optionally be referenced and ordered.
+
+
+#### taxonID
+The subject taxon the property is about.
+
+#### property
+The required name of the property the value is assigned to.
+For example a text label like "Biology" or "Illustration", 
+a [Plinian core term](https://www.tdwg.org/community/species/plinian-core/) or some Wikidata P value like [P2974](https://www.wikidata.org/wiki/Property:P2974).
+
+#### value
+A required free text value for the given property.
+If markup is needed [Markdown](https://de.wikipedia.org/wiki/Markdown)        is preferred.
+
+#### referenceID
+An optional reference where this property value was documented or who asserted it.
+
+#### page
+The exact single page number where the property value was published in the linked reference.
+If the value spans multiple pages, the first page should be given.
+
+#### ordinal
+An integer to specify an optional custom sort order for property values sharing the same taxonID in the dataset.
+
+#### remarks
+Remarks about the property value.
+
 
 
 

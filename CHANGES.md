@@ -6,6 +6,8 @@ ColDP adheres to [semantic versioning](http://semver.org/):
  - **major** changes (x.0.0) break backwards compatability. Fields or entities can be renamed, removed, added or changed in semantics. 
 
 ## unreleased v1.1
+ - Add default.yaml: https://github.com/CatalogueOfLife/coldp/issues/44
+ - Add TaxonProperty entity: https://github.com/CatalogueOfLife/coldp/issues/76
  - Add metadata keywords: https://github.com/CatalogueOfLife/coldp/issues/67
  - Best practises for misapplied names
  - Change enum links to point to checklistbank.org not catalogue.life
