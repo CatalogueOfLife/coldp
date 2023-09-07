@@ -376,10 +376,12 @@ The collectors name
 
 #### institutionCode
 The name or acronym in use by the institution having custody of the material.
+
 *added in v1.1*
 
 #### catalogNumber
 The identifier for the specimen in a collection.
+
 *added in v1.1*
 
 #### associatedSequences
@@ -640,12 +642,16 @@ If a single NameUsage entity is given no further Name, Taxon or Synonym entity m
 ## TaxonProperty
 *added in v1.1*
 
-A flexible, generic key value store that allows to assign arbitrary property values to a taxon.
+A flexible, generic way to assign arbitrary property values to a taxon.
+It can be used to share species profiles, traits, descriptions and any other dynamic information about a taxon.
 Every property value can optionally be referenced and ordered.
 
 
 #### taxonID
 The subject taxon the property is about.
+
+#### sourceID
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### property
 The required name of the property the value is assigned to.
