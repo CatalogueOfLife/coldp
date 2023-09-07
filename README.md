@@ -353,6 +353,21 @@ If the description spans multiple pages, the first page should be given.
 A URL to the exact page where the name was published.
 If the description spans multiple pages, the link to the first page should be given.
 
+#### gender
+type: [gender enum](http://api.checklistbank.org/vocab/gender)
+
+Gender of the name, i.e. the genus in case of bi/trinomials.
+Values for the gender field should be one of `masculine`, `feminine` or `neuter`.
+
+*added in v1.1*
+
+#### genderAgreement
+type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
+
+Flag that indicates for bi/trinomials whether the (infra)species epithet must follow and agree with the gender of the genus.
+
+*added in v1.1*
+
 #### link
 A link to a webpage provided by the source depicting the name.
 

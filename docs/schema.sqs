@@ -1383,8 +1383,8 @@
         <name><![CDATA[Synonym]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>608.00</x>
-            <y>1106.00</y>
+            <x>605.00</x>
+            <y>1138.00</y>
         </location>
         <size>
             <width>205.00</width>
@@ -1562,7 +1562,7 @@
         </location>
         <size>
             <width>211.00</width>
-            <height>580.00</height>
+            <height>620.00</height>
         </size>
         <zorder>4</zorder>
         <SQLField>
@@ -1748,6 +1748,18 @@
             <uid><![CDATA[3C3B8837-15F3-4A0E-96E8-0978D1B3E090]]></uid>
         </SQLField>
         <SQLField>
+            <name><![CDATA[gender]]></name>
+            <type><![CDATA[ENUM]]></type>
+            <hidden><![CDATA[0]]></hidden>
+            <uid><![CDATA[CFF220D6-EB43-43BC-BC41-AB9426D7599D]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[genderAgreement]]></name>
+            <type><![CDATA[BOOL]]></type>
+            <hidden><![CDATA[0]]></hidden>
+            <uid><![CDATA[501124EE-C8DD-4D1E-A6A6-D203328DAAF7]]></uid>
+        </SQLField>
+        <SQLField>
             <name><![CDATA[link]]></name>
             <type><![CDATA[URI]]></type>
             <hidden><![CDATA[0]]></hidden>
@@ -1788,7 +1800,7 @@
         <windowHeight><![CDATA[1010.000000]]></windowHeight>
         <windowLocationX><![CDATA[156.000000]]></windowLocationX>
         <windowLocationY><![CDATA[-243.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{0, 174}]]></windowScrollOrigin>
+        <windowScrollOrigin><![CDATA[{0, 359.5}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1612.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>

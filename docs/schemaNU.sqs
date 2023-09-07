@@ -920,7 +920,7 @@
         </location>
         <size>
             <width>215.00</width>
-            <height>1220.00</height>
+            <height>1260.00</height>
         </size>
         <zorder>6</zorder>
         <SQLField>
@@ -1142,6 +1142,18 @@
             <hidden><![CDATA[0]]></hidden>
             <labelColor><![CDATA[{0.921431,0.921453,0.921441,0.754655,sRGBColorSpace}]]></labelColor>
             <uid><![CDATA[AF3C1C9E-55B5-4A86-A2B0-1951DBA2735C]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[gender]]></name>
+            <type><![CDATA[ENUM]]></type>
+            <hidden><![CDATA[0]]></hidden>
+            <uid><![CDATA[B097B141-686F-4BCF-A629-16468AE0ACE0]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[genderAgreement]]></name>
+            <type><![CDATA[BOOL]]></type>
+            <hidden><![CDATA[0]]></hidden>
+            <uid><![CDATA[8C31B666-8561-45FE-89D9-74174205BE79]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[code]]></name>
