@@ -177,12 +177,12 @@
         <name><![CDATA[VernacularName]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1188.00</x>
-            <y>666.00</y>
+            <x>1182.00</x>
+            <y>670.00</y>
         </location>
         <size>
             <width>155.00</width>
-            <height>220.00</height>
+            <height>240.00</height>
         </size>
         <zorder>0</zorder>
         <SQLField>
@@ -225,6 +225,12 @@
             <type><![CDATA[CHAR(3)]]></type>
             <hidden><![CDATA[0]]></hidden>
             <uid><![CDATA[3012CC71-D4E3-4FEC-9F1A-1401E121E8FF]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[preferred]]></name>
+            <type><![CDATA[BOOL]]></type>
+            <hidden><![CDATA[0]]></hidden>
+            <uid><![CDATA[37F4F89A-04A8-485D-8E4B-C7A94FDC5605]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[country]]></name>
@@ -279,8 +285,8 @@
         <name><![CDATA[TaxonProperty]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1179.00</x>
-            <y>920.00</y>
+            <x>1173.00</x>
+            <y>934.00</y>
         </location>
         <size>
             <width>161.00</width>
@@ -1620,8 +1626,8 @@
         <name><![CDATA[Treatment]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1170.00</x>
-            <y>1125.00</y>
+            <x>1165.00</x>
+            <y>1129.00</y>
         </location>
         <size>
             <width>173.00</width>

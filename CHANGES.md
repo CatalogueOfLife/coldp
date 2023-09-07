@@ -6,6 +6,7 @@ ColDP adheres to [semantic versioning](http://semver.org/):
  - **major** changes (x.0.0) break backwards compatability. Fields or entities can be renamed, removed, added or changed in semantics. 
 
 ## unreleased v1.1
+ - VernavularName.preferred: https://github.com/CatalogueOfLife/coldp/issues/70
  - structured authorships: https://github.com/CatalogueOfLife/coldp/issues/75
  - titleShort and containerTitleShort added to Reference: https://github.com/CatalogueOfLife/coldp/issues/74
  - Add default.yaml: https://github.com/CatalogueOfLife/coldp/issues/44

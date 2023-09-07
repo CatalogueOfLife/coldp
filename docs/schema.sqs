@@ -4,8 +4,8 @@
         <name><![CDATA[Distribution]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1208.00</x>
-            <y>758.00</y>
+            <x>1207.00</x>
+            <y>739.00</y>
         </location>
         <size>
             <width>154.00</width>
@@ -169,12 +169,12 @@
         <name><![CDATA[VernacularName]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1189.00</x>
-            <y>962.00</y>
+            <x>1177.00</x>
+            <y>941.00</y>
         </location>
         <size>
-            <width>180.00</width>
-            <height>220.00</height>
+            <width>182.00</width>
+            <height>240.00</height>
         </size>
         <zorder>0</zorder>
         <SQLField>
@@ -217,6 +217,12 @@
             <type><![CDATA[CHARACTER(3)]]></type>
             <hidden><![CDATA[0]]></hidden>
             <uid><![CDATA[3012CC71-D4E3-4FEC-9F1A-1401E121E8FF]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[preferred]]></name>
+            <type><![CDATA[BOOL]]></type>
+            <hidden><![CDATA[0]]></hidden>
+            <uid><![CDATA[11E48171-3AEB-4D4F-A955-E3CD23C2A661]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[country]]></name>
@@ -775,7 +781,7 @@
         </SQLField>
         <SQLField>
             <name><![CDATA[extinct]]></name>
-            <type><![CDATA[BOOLEAN]]></type>
+            <type><![CDATA[BOOL]]></type>
             <hidden><![CDATA[0]]></hidden>
             <uid><![CDATA[C01889D0-606E-4536-BD1C-F07806271A75]]></uid>
         </SQLField>
@@ -921,8 +927,8 @@
         <name><![CDATA[SpeciesInteraction]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1170.00</x>
-            <y>1204.00</y>
+            <x>1163.00</x>
+            <y>1203.00</y>
         </location>
         <size>
             <width>207.00</width>
@@ -1016,8 +1022,8 @@
         <name><![CDATA[Media]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1221.00</x>
-            <y>331.00</y>
+            <x>1223.00</x>
+            <y>310.00</y>
         </location>
         <size>
             <width>137.00</width>
@@ -1120,8 +1126,8 @@
         <name><![CDATA[SpeciesEstimate]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1205.00</x>
-            <y>591.00</y>
+            <x>1203.00</x>
+            <y>573.00</y>
         </location>
         <size>
             <width>154.00</width>
@@ -1780,8 +1786,8 @@
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
         <windowHeight><![CDATA[1010.000000]]></windowHeight>
-        <windowLocationX><![CDATA[0.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[45.000000]]></windowLocationY>
+        <windowLocationX><![CDATA[156.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[-243.000000]]></windowLocationY>
         <windowScrollOrigin><![CDATA[{0, 174}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1612.000000]]></windowWidth>
     </SQLDocumentInfo>

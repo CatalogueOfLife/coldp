@@ -1212,6 +1212,10 @@ An optional transliteration of the vernacular name into the latin script.
 #### language
 Language of the vernacular name given as an ISO 639-3 letter code.
 
+#### preferred
+type: boolean
+A flag to indicate if this vernacular name is the preferred name for the given language.
+
 #### country
 Country this vernacular name is used in given as an ISO 3166-2 letter code.
 
