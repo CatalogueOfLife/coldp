@@ -370,8 +370,8 @@
         <name><![CDATA[Reference]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>338.00</x>
-            <y>759.00</y>
+            <x>344.00</x>
+            <y>768.00</y>
         </location>
         <size>
             <width>186.00</width>
@@ -556,8 +556,8 @@
         <name><![CDATA[TaxonConceptRelation]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>917.00</x>
-            <y>1229.00</y>
+            <x>912.00</x>
+            <y>1232.00</y>
         </location>
         <size>
             <width>191.00</width>
@@ -927,8 +927,8 @@
         <name><![CDATA[SpeciesInteraction]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>1163.00</x>
-            <y>1203.00</y>
+            <x>1155.00</x>
+            <y>1207.00</y>
         </location>
         <size>
             <width>207.00</width>
@@ -1383,8 +1383,8 @@
         <name><![CDATA[Synonym]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>605.00</x>
-            <y>1138.00</y>
+            <x>602.00</x>
+            <y>1152.00</y>
         </location>
         <size>
             <width>205.00</width>
@@ -1557,12 +1557,12 @@
         <name><![CDATA[Name]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>600.00</x>
-            <y>498.00</y>
+            <x>601.00</x>
+            <y>487.00</y>
         </location>
         <size>
-            <width>211.00</width>
-            <height>620.00</height>
+            <width>227.00</width>
+            <height>640.00</height>
         </size>
         <zorder>4</zorder>
         <SQLField>
@@ -1663,6 +1663,11 @@
             <type><![CDATA[ENUM]]></type>
             <hidden><![CDATA[0]]></hidden>
             <uid><![CDATA[3555A076-5A20-4C71-AFB5-E7277F45F094]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[originalSpelling]]></name>
+            <type><![CDATA[BOOL]]></type>
+            <uid><![CDATA[7DE25F50-AEE0-42A4-A921-6989DD5DFA12]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[combinationAuthorship]]></name>
@@ -1798,9 +1803,9 @@
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
         <windowHeight><![CDATA[1010.000000]]></windowHeight>
-        <windowLocationX><![CDATA[156.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[-243.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{0, 359.5}]]></windowScrollOrigin>
+        <windowLocationX><![CDATA[46.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[45.000000]]></windowLocationY>
+        <windowScrollOrigin><![CDATA[{0, 282}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1612.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>

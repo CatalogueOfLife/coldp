@@ -368,6 +368,20 @@ Flag that indicates for bi/trinomials whether the (infra)species epithet must fo
 
 *added in v1.1*
 
+#### originalSpelling
+type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
+
+Flag indicating that the name is given in it's original spelling when an emendation exists.
+Only use the flag if there is a known correction existing.
+The originalSpelling is usually indicated by placing [sic] after the name.
+
+A `originalSpelling=false` flag instead is indicating that the name is a corrected spelling, 
+usually indicated by placing `corrig.` after the name.
+
+In most cases when it is unknown or the original spelling was never revised leave this flag empty.
+
+*added in v1.1*
+
 #### link
 A link to a webpage provided by the source depicting the name.
 

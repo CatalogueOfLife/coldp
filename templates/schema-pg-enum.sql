@@ -374,6 +374,7 @@ CREATE TABLE name_usage (
   infraspecific_epithet TEXT,
   cultivar_epithet TEXT,
   notho NAMEPART,
+  original_spelling BOOLEAN,
   combination_authorship TEXT,
   combination_ex_authorship TEXT,
   combination_authorship_year TEXT,
