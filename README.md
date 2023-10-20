@@ -16,9 +16,18 @@ is a tabular text format with a fixed set of files and columns.
 * [Best Practises](#best-practices)
 
 ## Status & Versioning
- - **Version 1.1 of ColDP is under development and new fields are marked as such in the documentation below**.
- - **Version 1.0 of ColDP has been released on [October 25th 2021](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.0)**.
-   Since then only [small changes](CHANGES.md) to the documentation and enumeration of values have been applied with the latest release of ColDP being [version 1.0.1](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.1).
+
+### Stable Release
+**Version 1.0 of ColDP has been released on [October 25th 2021](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.0)**.
+
+Since then only [small changes](CHANGES.md) to the documentation and enumeration of values have been applied with the latest release of ColDP being [version 1.0.1](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.1).
+
+### Development Branch
+**Version 1.1 of ColDP is still under development** 
+and new fields are marked as such in the documentation below.
+
+There is no guarantee that these fields might still change until the version is released.
+ChecklistBank tries it's best to support already all new 1.1 features, so it can be used already.
 
 ### Versioning
 ColDP adheres to [semantic versioning](http://semver.org/):
