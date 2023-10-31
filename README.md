@@ -219,10 +219,14 @@ A structured `scientificName` can be given using the following fields:
 An `authorship` of a name can be structured with:
 
  - [combinationAuthorship](#combinationAuthorship)
+ - [combinationAuthorshipID](#combinationAuthorshipID)
  - [combinationExAuthorship](#combinationExAuthorship)
+ - [combinationExAuthorshipID](#combinationExAuthorshipID)
  - [combinationAuthorshipYear](#combinationAuthorshipYear)
  - [basionymAuthorship](#basionymAuthorship)
+ - [basionymAuthorshipID](#basionymAuthorshipID)
  - [basionymExAuthorship](#basionymExAuthorship)
+ - [basionymExAuthorshipID](#basionymExAuthorshipID)
  - [basionymAuthorshipYear](#basionymAuthorshipYear)
 
 
@@ -296,8 +300,15 @@ type: [namePart enum](https://api.checklistbank.org/vocab/namePart)
 *added in v1.1*
 
 #### combinationAuthorship
-The authorteam of the main authorship for the very combination (not the original combination).
+The authorteam of the main authorship for the exact combination (not the original combination).
 Multiple authors should be concatenated with a pipe `|` symbol.
+
+*added in v1.1*
+
+#### combinationAuthorshipID
+A list of identifiers for authors of the exact combination (not the original combination).
+Multiple author identifiers should be concatenated with a pipe `|` symbol.
+The order and number of identifiers must always match up the names given in `combinationAuthorship`.
 
 *added in v1.1*
 
@@ -308,14 +319,28 @@ Multiple authors should be concatenated with a pipe `|` symbol.
 
 *added in v1.1*
 
-#### combinationAuthorshipYear
-The year given in the authorship for the very combination (not the original combination).
+#### combinationExAuthorshipID
+A list of identifiers for ex-authors of the exact combination (not the original combination).
+Multiple author identifiers should be concatenated with a pipe `|` symbol.
+The order and number of identifiers must always match up the names given in `combinationExAuthorship`.
 
 *added in v1.1*
-, given without brackets
+
+#### combinationAuthorshipYear
+The year given in the authorship for the very combination (not the original combination), given without brackets.
+
+*added in v1.1*
+
 #### basionymAuthorship
 The authorteam of the original name normally found in brackets, but given here without brackets.
 Multiple authors should be concatenated with a pipe `|` symbol.
+
+*added in v1.1*
+
+#### basionymAuthorshipID
+A list of identifiers for authors of the original combination (basionym) normally found in brackets.
+Multiple author identifiers should be concatenated with a pipe `|` symbol.
+The order and number of identifiers must always match up the names given in `basionymAuthorship`.
 
 *added in v1.1*
 
@@ -323,6 +348,13 @@ Multiple authors should be concatenated with a pipe `|` symbol.
 The ex-authors of the original name normally found in brackets, but given here without brackets.
 The `ex` prefix as normally found in the authorship should not be included here.
 Multiple authors should be concatenated with a pipe `|` symbol.
+
+*added in v1.1*
+
+#### basionymExAuthorshipID
+A list of identifiers for ex-authors of the original combination (basionym) normally found in brackets.
+Multiple author identifiers should be concatenated with a pipe `|` symbol.
+The order and number of identifiers must always match up the names given in `basionymExAuthorship`.
 
 *added in v1.1*
 
