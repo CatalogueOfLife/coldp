@@ -15,6 +15,9 @@ The simple version is always an option, but requires a consumer like ChecklistBa
 This works in 99.99% of names, but can lead to unexpected results in rare, special cases.
 The following example therefore focus on how to provide names as proper parsed names already, so there is no need to further interpret them.
 
+In addition to parsed names, the authorship can also be broken down into individual parts, i.e. authors 
+including even identifiers for individual authors. See the [parsed authorship examples](#parsedAuthorships) below for more details.
+
 ### Binomials
 A regular species name like should be given as:
 
@@ -181,6 +184,59 @@ code: botanical
 ### Placeholders
 
 
+## Parsed authorships
+Instead of a single authorship string there are several individual properties that can be used to break down the string:
+
+ - combinationAuthorship
+ - combinationAuthorshipID
+ - combinationExAuthorship
+ - combinationExAuthorshipID
+ - combinationAuthorshipYear
+ - basionymAuthorship
+ - basionymAuthorshipID
+ - basionymExAuthorship
+ - basionymExAuthorshipID
+ - basionymAuthorshipYear
+
+Apart from the year all other fields can be a `|` concatenated list of values.
+For example ```Abies alba subsp. apennina Brullo, Scelsi & Spamp.``` could be given as
+
+```
+rank: subspecies
+genus: Abies
+specificEpithet: alba
+infraspecificEpithet: apennina
+combinationAuthorship: Brullo|Scelsi|Spamp.
+combinationAuthorshipID: 13165-1|36267-1|27048-1
+```
+
+with these entries in the Author table:
+```
+ID: 13165-1
+given: Brullo
+family: Brullo
+abbreviationBotany: Brullo
+sex: male
+birth: 1947
+country: Italy
+link: https://www.ipni.org/a/13165-1
+
+ID: 36267-1
+given: Fabrizio
+family: Scelsi
+abbreviationBotany: Scelsi
+sex: male
+country: Italy
+link: https://www.ipni.org/a/36267-1
+
+ID: 27048-1
+given: Giovanni
+family: Spampinato
+abbreviationBotany: Spamp.
+sex: male
+birth: 1958
+link: https://www.ipni.org/a/27048-1
+```
 
 
 ## Name relations

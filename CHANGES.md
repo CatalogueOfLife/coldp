@@ -9,16 +9,21 @@ ColDP adheres to [semantic versioning](http://semver.org/):
  - Name.originalSpelling
  - Name.gender & genderAgreement: https://github.com/CatalogueOfLife/coldp/issues/69
  - VernacularName.preferred: https://github.com/CatalogueOfLife/coldp/issues/70
- - structured authorships: https://github.com/CatalogueOfLife/coldp/issues/75
+ - Add Author entity: https://github.com/CatalogueOfLife/coldp/issues/77
+     + [Name.combinationAuthorshipID](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#combinationAuthorshipID)
+     + [Name.combinationExAuthorshipID](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#combinationExAuthorshipID)
+     + [Name.basionymAuthorshipID](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#basionymAuthorshipID)
+     + [Name.basionymExAuthorshipID](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#basionymExAuthorshipID)
+     + Reference.authorID
+     + Reference.editorID
+     + Reference.containerAuthorID
+     + Reference.collectionEditorID
+ - Structured authorships: https://github.com/CatalogueOfLife/coldp/issues/75
      + [combinationAuthorship](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#combinationAuthorship)
-     + [combinationAuthorshipID](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#combinationAuthorshipID)
      + [combinationExAuthorship](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#combinationExAuthorship)
-     + [combinationExAuthorshipID](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#combinationExAuthorshipID)
      + [combinationAuthorshipYear](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#combinationAuthorshipYear)
      + [basionymAuthorship](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#basionymAuthorship)
-     + [basionymAuthorshipID](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#basionymAuthorshipID)
      + [basionymExAuthorship](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#basionymExAuthorship)
-     + [basionymExAuthorshipID](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#basionymExAuthorshipID)
      + [basionymAuthorshipYear](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#basionymAuthorshipYear)
  - titleShort and containerTitleShort added to Reference: https://github.com/CatalogueOfLife/coldp/issues/74
  - Add default.yaml: https://github.com/CatalogueOfLife/coldp/issues/44

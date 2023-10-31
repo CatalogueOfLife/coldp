@@ -55,6 +55,7 @@ A ColDP archive consists of several files in a folder.
 These are either data files corresponding to the schema diagram above:
  
  - [Name](#name)
+ - [Author](#author)
  - [NameRelation](#namerelation)
  - [Taxon](#taxon)
  - [Synonym](#synonym)
@@ -217,18 +218,20 @@ A structured `scientificName` can be given using the following fields:
  - [notho](#notho)
 
 An `authorship` of a name can be structured with:
-
  - [combinationAuthorship](#combinationAuthorship)
- - [combinationAuthorshipID](#combinationAuthorshipID)
  - [combinationExAuthorship](#combinationExAuthorship)
- - [combinationExAuthorshipID](#combinationExAuthorshipID)
  - [combinationAuthorshipYear](#combinationAuthorshipYear)
  - [basionymAuthorship](#basionymAuthorship)
- - [basionymAuthorshipID](#basionymAuthorshipID)
  - [basionymExAuthorship](#basionymExAuthorship)
- - [basionymExAuthorshipID](#basionymExAuthorshipID)
  - [basionymAuthorshipYear](#basionymAuthorshipYear)
 
+ or can make use of the [Author](#author) entity and define authorships purely by using identifiers:
+ - [combinationAuthorshipID](#combinationAuthorshipID)
+ - [combinationExAuthorshipID](#combinationExAuthorshipID)
+ - [combinationAuthorshipYear](#combinationAuthorshipYear)
+ - [basionymAuthorshipID](#basionymAuthorshipID)
+ - [basionymExAuthorshipID](#basionymExAuthorshipID)
+ - [basionymAuthorshipYear](#basionymAuthorshipYear)
 
 #### ID
 Unique name identifier that is referred to elsewhere via `nameID`.
@@ -308,7 +311,8 @@ Multiple authors should be concatenated with a pipe `|` symbol.
 #### combinationAuthorshipID
 A list of identifiers for authors of the exact combination (not the original combination).
 Multiple author identifiers should be concatenated with a pipe `|` symbol.
-The order and number of identifiers must always match up the names given in `combinationAuthorship`.
+If `combinationAuthorship` is given, the order and number of author names and identifiers must always match up.
+Author identifiers must refer to an existing Author.ID within this data package.
 
 *added in v1.1*
 
@@ -322,7 +326,8 @@ Multiple authors should be concatenated with a pipe `|` symbol.
 #### combinationExAuthorshipID
 A list of identifiers for ex-authors of the exact combination (not the original combination).
 Multiple author identifiers should be concatenated with a pipe `|` symbol.
-The order and number of identifiers must always match up the names given in `combinationExAuthorship`.
+If `combinationExAuthorship` is given, the order and number of author names and identifiers must always match up.
+Author identifiers must refer to an existing Author.ID within this data package.
 
 *added in v1.1*
 
@@ -340,7 +345,8 @@ Multiple authors should be concatenated with a pipe `|` symbol.
 #### basionymAuthorshipID
 A list of identifiers for authors of the original combination (basionym) normally found in brackets.
 Multiple author identifiers should be concatenated with a pipe `|` symbol.
-The order and number of identifiers must always match up the names given in `basionymAuthorship`.
+If `basionymAuthorship` is given, the order and number of author names and identifiers must always match up.
+Author identifiers must refer to an existing Author.ID within this data package.
 
 *added in v1.1*
 
@@ -354,7 +360,8 @@ Multiple authors should be concatenated with a pipe `|` symbol.
 #### basionymExAuthorshipID
 A list of identifiers for ex-authors of the original combination (basionym) normally found in brackets.
 Multiple author identifiers should be concatenated with a pipe `|` symbol.
-The order and number of identifiers must always match up the names given in `basionymExAuthorship`.
+If `basionymExAuthorship` is given, the order and number of author names and identifiers must always match up.
+Author identifiers must refer to an existing Author.ID within this data package.
 
 *added in v1.1*
 
@@ -432,6 +439,72 @@ Additional nomenclatural remarks about the name. Often indicating its status or 
 
 
 
+## Author
+Normalised and structured authors that can be referred to by names, references and taxon scrutinizers.
+
+*added in v1.1*
+
+
+#### ID
+Unique identifier for the author / person. 
+
+#### sourceID
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
+
+#### alternativeID
+A comma concatenated list of alternative identifiers for the author.
+Every alternative identifier must be in the form of `scope:id`. 
+See [identifiers](#Identifiers) for all details and common scopes.
+Recommended identifier scopes for authors are ipni, wikidata & viaf.
+
+#### given
+List of given names, concatenated by a comma.
+
+#### family
+The family name including any leading particles if existing.
+
+#### suffix
+Optional suffix to distinguish persons with identical surnames.
+In well known cases of father and son, the son should be distinguished by ‘f.’ or ‘filius’ in the suffix. 
+
+#### abbreviationBotany
+Standard form (official abbreviation) of the persons name for use in a botanical author citation.
+
+#### alternativeNames
+A `|` separated list of alternative names this person is known under.
+
+#### sex
+Sex or gender of the person.
+
+#### country
+Country of citizenship. Preferably as ISO code.
+If multiple concatenated by a comma.
+
+#### birth
+Date of birth, given as an ISO date string.
+
+#### birthPlace
+Location the person was born at.
+
+#### death
+Date of death, given as an ISO date string.
+
+#### interest
+List of taxonomic groups the person has worked on.
+
+#### referenceID
+List of sources where the information was taken from or further information can be found about the author.
+
+#### link
+A link to a webpage provided by the source depicting the author.
+
+#### remarks
+Remarks about the person.
+
+
+
+
+ 
 ## NameRelation
 A directed nomenclatural name relation.
 See [NAMES.md#name-relations](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md#name-relations) for examples and definitions.
@@ -946,9 +1019,21 @@ In accordance with BibTeX it is also permissable to use the english word `and` a
 The second form requires the family name to be a single word, as all words before the last whitespace are considered given names.
 If a comma is used to separate surname, firstname please use a semicolon to delimit individual authors.
 
+#### authorID
+List of Author.ID identifiers separated by a comma that act as authors for this reference.
+Authors must exist in the local data package.
+
+*added in v1.1*
+
 #### editor
 The editor(s) of the work. 
 See author for recommendations how to supply person names.
+
+#### editorID
+List of Author.ID identifiers separated by a comma that act as editors for this reference.
+Authors must exist in the local data package.
+
+*added in v1.1*
 
 #### title
 The title of the work. 
@@ -962,6 +1047,12 @@ The abbreviated title of the work.
 #### containerAuthor
 Author(s) of the container holding the item, e.g. the book author for a book chapter.
 See author for recommendations how to supply person names.
+
+#### containerAuthorID
+List of Author.ID identifiers separated by a comma that act as the container authors for this reference.
+Authors must exist in the local data package.
+
+*added in v1.1*
 
 #### containerTitle
 Title of the container holding the item, e.g. the book title for a book chapter, the journal title for a journal article.
@@ -987,6 +1078,12 @@ Title of the collection holding the item, e.g. the series title for a book.
 
 #### collectionEditor
 Editor(s) of the collection holding the item, e.g. the series editor for a book.
+
+#### collectionEditorID
+List of Author.ID identifiers separated by a comma that act as collection editors for this reference.
+Authors must exist in the local data package.
+
+*added in v1.1*
 
 #### volume
 type: [number](https://specs.frictionlessdata.io/table-schema/#number)
@@ -1344,6 +1441,7 @@ To avoid conflicts of naming scopes we strongly recommend to use the following s
  - iucn: IUCN Redlist species - [iucn:10335](https://apiv3.iucnredlist.org/api/v3/taxonredirect/10335)
  - mycobank: Mycobank Fungal Database - [mycobank:309626](https://www.mycobank.org/page/Name%20details%20page/field/Mycobank%20%23/309626)
  - ncbi: NCBI taxonomy - [ncbi:93036](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=93036)
+ - orcid: Open Researcher and Contributor ID - [orcid:0000-0001-6492-4016](https://orcid.org/0000-0001-6492-4016)
  - otl: Open Tree of Life - [otl:510850](https://tree.opentreeoflife.org/taxonomy/browse?id=510850)
  - pesi: Pan-European Species directories Infrastructure - [pesi:93A25572-521E-4130-B8C5-9C7D332E5605](http://www.eu-nomen.eu/portal/taxon.php?GUID=93A25572-521E-4130-B8C5-9C7D332E5605)
  - silva: SILVA taxonomy - https://www.arb-silva.de/documentation/silva-taxonomy/
@@ -1354,10 +1452,12 @@ To avoid conflicts of naming scopes we strongly recommend to use the following s
  - [ubio](https://registry.identifiers.org/registry/ubio.namebank): uBio - [ubio:5408026](http://www.ubio.org/browser/details.php?namebankID=5408026)
  - unite: UNITE Species Hypotheses - [unite:SH1659817.08FU](https://unite.ut.ee/sh/SH1659817.08FU)
  - usda: USDA Plants - [usda:POAN](https://plants.sc.egov.usda.gov/home/plantProfile?symbol=POAN)
+ - viaf: [Virtual International Authority File database](https://viaf.org/) - [viaf:76389959](https://viaf.org/viaf/76389959)
  - wfo: World Flora Online - [wfo:0000891536](http://www.worldfloraonline.org/taxon/wfo-0000891536)
  - [wikidata](https://registry.identifiers.org/registry/wikidata): Wikidata items - [wikidata:Q157571](https://www.wikidata.org/wiki/Q157571)
  - [worms](https://registry.identifiers.org/registry/worms): World Register of Marine Species - [worms:212808](https://www.marinespecies.org/aphia.php?p=taxdetails&id=212808)
  - zoobank: ZooBank record - [zoobank:EEDEA832-A8A9-44DF-8F2F-684FFEC9C19B](https://zoobank.org/NomenclaturalActs/eedea832-a8a9-44df-8f2f-684ffec9c19b)
+
 
 We do recommend to share bare identifiers with their scope if possible.
 But sharing globally unique URN, URI or URLs can be done without any further scope:
