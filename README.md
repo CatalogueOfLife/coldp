@@ -430,6 +430,12 @@ In most cases when it is unknown or the original spelling was never revised leav
 
 *added in v1.1*
 
+#### etymology
+Etymology of the name, i.e. the origin or meaning of the words forming the scientific name.
+Should be a short human readable paragraph.
+
+*added in v1.1*
+
 #### link
 A link to a webpage provided by the source depicting the name.
 

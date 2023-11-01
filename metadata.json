@@ -89,6 +89,17 @@
           "format": "uri",
           "type": "string"
         },
+        "urlFormatter": {
+          "type": "object",
+          "properties": {
+              "name": {"type": "string"},
+              "taxon": {"type": "string"},
+              "synonym": {"type": "string"},
+              "reference": {"type": "string"},
+              "author": {"type": "string"},
+              "typeMaterial": {"type": "string"}
+          }
+        },
         "issn": {
           "type": "string"
         },

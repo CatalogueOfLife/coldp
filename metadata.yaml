@@ -185,6 +185,16 @@ url: https://www.fishbase.org
 # URL to large logo image
 logo: https://www.fishbase.de/images/gifs/fblogo_new.gif 
 
+# templates to build links to webpages for individual records of some kind using these variables:
+#  {ID} individual record identifier
+#  {TAXONID} individual record identifier for the taxon, i.e accepted name
+urlFormatter:
+  name: https://fishbase.mnhn.fr/summary/{ID}
+  taxon: https://fishbase.mnhn.fr/summary/{ID}
+  synonym: https://fishbase.mnhn.fr/Nomenclature/SynonymSummary.php?GSID={TAXONID}&ID={ID}
+  reference: https://fishbase.mnhn.fr/references/FBRefSummary.php?ID={ID}
+  author: https://fishbase.mnhn.fr/collaborators/CollaboratorSummary.php?ID={ID}
+  typeMaterial: 
 
 # List of Citations this dataset is derived from.
 # We use CSL-JSON fields to represent a structured citation, see below for the main fields used for bibliographies.

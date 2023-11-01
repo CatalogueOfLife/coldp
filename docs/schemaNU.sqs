@@ -978,7 +978,7 @@
         </location>
         <size>
             <width>239.00</width>
-            <height>1360.00</height>
+            <height>1380.00</height>
         </size>
         <zorder>6</zorder>
         <SQLField>
@@ -1279,6 +1279,11 @@
             <type><![CDATA[ENUM]]></type>
             <hidden><![CDATA[0]]></hidden>
             <uid><![CDATA[0AA111DF-8F6D-4C95-BCAC-CDEEC247F4C2]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[etymology]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[855889EB-1DFC-44E3-BAF9-93EF5189C9B3]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[nameStatus]]></name>
@@ -1982,7 +1987,7 @@
         <windowHeight><![CDATA[1010.000000]]></windowHeight>
         <windowLocationX><![CDATA[308.000000]]></windowLocationX>
         <windowLocationY><![CDATA[45.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{0, 0}]]></windowScrollOrigin>
+        <windowScrollOrigin><![CDATA[{0, 165}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1612.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>

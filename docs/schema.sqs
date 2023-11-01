@@ -1200,8 +1200,8 @@
         <name><![CDATA[Author]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>634.00</x>
-            <y>1055.00</y>
+            <x>636.00</x>
+            <y>1061.00</y>
         </location>
         <size>
             <width>193.00</width>
@@ -1761,12 +1761,12 @@
         <name><![CDATA[Name]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>605.00</x>
-            <y>310.00</y>
+            <x>611.00</x>
+            <y>303.00</y>
         </location>
         <size>
             <width>239.00</width>
-            <height>720.00</height>
+            <height>740.00</height>
         </size>
         <zorder>4</zorder>
         <SQLField>
@@ -2023,6 +2023,11 @@
             <type><![CDATA[BOOL]]></type>
             <hidden><![CDATA[0]]></hidden>
             <uid><![CDATA[501124EE-C8DD-4D1E-A6A6-D203328DAAF7]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[etymology]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[5E963709-2A9B-4BD5-AA2B-444A10C6FA4F]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[link]]></name>
