@@ -6,6 +6,7 @@ ColDP adheres to [semantic versioning](http://semver.org/):
  - **major** changes (x.0.0) break backwards compatability. Fields or entities can be renamed, removed, added or changed in semantics. 
 
 ## unreleased v1.1
+ - nomenclatural relation & TypeMaterial.page
  - Add urlFormatter to metadata
  - Name.etymology
  - Name.originalSpelling

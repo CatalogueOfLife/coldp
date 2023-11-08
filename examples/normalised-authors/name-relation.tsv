@@ -1,2 +1,4 @@
-nameID	relatedNameID	type	referenceID	remarks
-goch	sectoch	basionym		
+nameID	relatedNameID	type	referenceID	page	remarks
+goch	sectoch	BASIONYM			
+sp11	gpoa	type	Hitchcock_1929		Type discussion: Reference article Hitchcock, A. S. 1920. The genera of grasses of the United States. U.S.D.A. Bull. (1915-23) 772: 41.
+spy2	spy1	REPLACEMENT_NAME	Ye_2021	494	

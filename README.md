@@ -534,6 +534,12 @@ The kind of directed nomenclatural relation.
 #### referenceID
 The reference or nomenclatural act where this nomenclatural relation was established.
 
+#### page
+The exact single page number where the nomenclatural relation was published in the linked reference.
+If the value spans multiple pages, the first page should be given.
+
+*added in v1.1*
+
 #### remarks
 Remarks about the relation.
 
@@ -568,6 +574,12 @@ The status of the type material, e.g. holotype
 #### referenceID
 A referenceID pointing to the Reference table indicating the publication of the type designation.
 Most often this is equivalent to the original names referenceID, but for subsequent designations a later reference should be cited.
+
+#### page
+The exact single page number where the type designation was published in the linked reference.
+If the value spans multiple pages, the first page should be given.
+
+*added in v1.1*
 
 #### locality
 The type locality. Ideally from largest area to smallest.

@@ -1,1 +1,4 @@
-taxonID	name	language	preferred	lifeStage	sex	referenceID	remarks
+taxonID	name	language	country	preferred	lifeStage	sex	referenceID	remarks
+sp11	June grass	English	United States	false				x
+sp11	Kentucky blue grass	English	Canada	true				x
+sp11	smooth meadow grass	English	Pakistan	false				x
