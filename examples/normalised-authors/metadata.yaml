@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/CatalogueOfLife/coldp/master/metadata.json
+
+identifier:
+  col: 272998
+
+title: ColDP Full Example
+alias: ColDP Full Example
+
+description: Strongly normalised ColDP test dataset that tries to cover most fields for testing API & UI.
+keyword: 
+  - example
+  - coldp
+issued: 2023-11-11      
+version: "0.1"
+
+contact: 
+  given: Markus
+  family: Döring
+  email: mdoering@gbif.org
+
+creator:
+  - given: Markus
+    family: Döring
+    email: mdoering@gbif.org
+    orcid: 0000-0001-7757-1889
+
+# Any Open Definition license ID: https://licenses.opendefinition.org/licenses/groups/all.json
+# For ChecklistBank please use only CC0-1.0, CC-BY-4.0 or CC-BY-NC-4.0
+# Must be CC0-1.0 or CC-BY-4.0 to be used by COL !!!
+license: CC0-1.0
+url: https://github.com/CatalogueOfLife/coldp

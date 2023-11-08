@@ -1,0 +1,15 @@
+ID	parentID	nameID	alternativeID	accordingToID	scrutinizer	scrutinizerID	scrutinizerDate	lifezone	link	remarks
+p		p	x	x	x	x	x	x	x	x
+c1	p	c1	x	x	x	x	x	x	x	x
+c2	c1	c2	x	x	x	x	x	x	x	x
+c3	c2	c3	x	x	x	x	x	x	x	x
+c4	c3	c4	x	x	x	x	x	x	x	x
+op	c4	op	x	x	x	x	x	x	x	x
+fp	op	fp	x	x	x	x	x	x	x	x
+sfp	fp	sfp	x	x	x	x	x	x	x	x
+tp	sfp	tp	x	x	x	x	x	x	x	x
+stp	tp	stp	x	x	x	x	x	x	x	x
+gp	stp	gp	wfo:wfo-4000030438	x	x					x
+gpp	gp	gpp	x	x	x	x	x	x	x	x
+gc	gpp	gc	x	x	x	x	x	x	x	x
+sp1	gc	sp1	wfo:wfo-0000860245	x	x	x	x	x	x	x

@@ -1,0 +1,19 @@
+ID	alternativeID	scientificName	authorship	rank	uninomial	genus	infragenericEpithet	specificEpithet	infraspecificEpithet	combinationAuthorshipID	combinationExAuthorshipID	combinationAuthorshipYear	basionymAuthorshipID	basionymExAuthorshipID	basionymAuthorshipYear	referenceID	publishedInYear	publishedInPage	publishedInPageLink	gender	genderAgreement	originalSpelling	status	link	etymology	remarks
+p		Plantae		kingdom	Plantae																					
+c1		Tracheophytes			Tracheophytes																					
+c2		Angiosperms			Angiosperms																					
+c3		Monocot			Monocot																					
+c4		Commelinids			Commelinids																					
+op		Poales		order	Poales																					
+fp		Poaceae	Barnhart	family	Poaceae					492																
+sfp		Pooideae		subfamily	Pooideae																					
+tp		Poeae		tribe	Poeae																					
+stp		Poinae	Dumort.	subtribe	Poinae					18271																
+gp	ipni:18760-1	Poa	L.	genus	Poa					12653																Benth. & Hook. f. Gen. Pl. iii. 1196. ALLAGOSTACHYUM, Nees, ex Steud. Nom. ed.II. i. 50 (1840). ARCTOPHILA, Rupr. in Beitr. Pfl. Russ. Reich. ii. 62 (1845).POIDIUM, Nees, in Lindl. Introd. Nat. Syst. ed. II. 450 (1836). PLOTIA, Schreb.ex Steud. Nom. ed. II. ii. 356 (1841).
+goch	ipni:77075709-1	Ochlopoa	(Asch. & Graebn.) H.Scholz	genus	Ochlopoa					9229			307,3308													x
+sectoch	ipni:77075450-1	Poa sect. Ochlopoa	Asch. & Graebn.	section		Poa	Ochlopoa			307,3308						Ascherson_1896	1900	387	https://www.biodiversitylibrary.org/page/11278031							Syn. Mitteleur. Fl. [Ascherson & Graebner] 387 (1900).
+gpp		Panicularia	Keng	genus	Panicularia																					
+gc		Cleistogenes	Heist. ex Fabr.	genus	Cleistogenes												1759						nom. superfl.			
+sp1	ipni:	Cleistogenes gatacrei	(Stapf) Bor	species		Cleistogenes		gatacrei		974			27136													x
+sp2	ipni:	Diplachne gatacrei	Stapf	species		Diplachne		gatacrei		27136																x
+sp3	ipni:	Kengia gatacrei	(Stapf) Cope	species		Kengia		gatacrei		1792			27136													x
