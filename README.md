@@ -6,7 +6,7 @@ is a tabular text format with a fixed set of files and columns.
 * [Status & Versioning](status-versioning)
 * [Schema](#schema)
 * [Archive Files](#archive-files)
-* [Default Values](#defaultvalues)
+* [Default Values](#default-values)
 * [Dataset Metadata](#metadata)
 * [Document Changes](#changes)
 * [Raw Source Data](#raw-source-data)
