@@ -32,8 +32,8 @@ ChecklistBank tries it's best to support already all new 1.1 features, so it can
 ### Versioning
 ColDP adheres to [semantic versioning](http://semver.org/):
  - **patch** changes (1.0.x) do not alter the exchange schema at all. No more fields or entities will be renamed, removed or added. The documentation and enumeration of values are allowed to change.
- - **minor** changes (1.x.0) preserve backwards compatability. Fields or entities can be added, but not renamed or removed.
- - **major** changes (x.0.0) break backwards compatability. Fields or entities can be renamed, removed, added or changed in semantics. 
+ - **minor** changes (1.x.0) preserve backwards compatibility. Fields or entities can be added, but not renamed or removed.
+ - **major** changes (x.0.0) break backwards compatibility. Fields or entities can be renamed, removed, added or changed in semantics. 
  
 
 ## Schema
@@ -83,7 +83,7 @@ or the following:
 The filename for an entity in the above diagram is a case insensitive version of the class name, any number of ignored hyphens or underscores and a known tabular text suffix. The suffix specifies one of the two supported tabular flavours, comma separated or tab separated files:
 
  - `csv`: a comma separated, optionally quoted CSV file as per [RFC 4180](https://tools.ietf.org/html/rfc4180)
- - `tsv`, `tab` or `txt`: indicates a tab seperated file without quoting
+ - `tsv`, `tab` or `txt`: indicates a tab separated file without quoting
  
 Valid examples are `Taxon.tsv` or `vernacular-name.csv`
 `tsv` files are simpler to produce and handle, so if you have the option we recommend `tsv` over `csv`.
@@ -267,7 +267,7 @@ Authorship of the scientificName
 #### rank
 type: [rank enum](http://api.checklistbank.org/vocab/rank)
 
-The rank of the name preferrably given in case insensitive english. The recommended vocabulary is included in [rank_enum](http://api.checklistbank.org/vocab/rank).
+The rank of the name preferably given in case insensitive english. The recommended vocabulary is included in [rank_enum](http://api.checklistbank.org/vocab/rank).
 
 #### uninomial
 The single-word name of generic or higher rank names.
@@ -789,7 +789,7 @@ Any further taxonomic remarks.
 
 ## Synonym
 A synonymous name for a taxon.
-Note that the same name can be linked to mulitple taxa by having several Synonym records to model pro parte synonyms.
+Note that the same name can be linked to multiple taxa by having several Synonym records to model pro parte synonyms.
 
 #### ID
 Optional unique identifier for the synonym.
@@ -1354,7 +1354,7 @@ The URL that resolves to the media item itself, not a webpage that depicts it.
 
 #### type
 The MIME-type of the media item the url identifies.
-Preferrably the full type/subtype combination, e.g `image/jpeg`, but the primary type alone is sufficient (`image`, `video`, `audio`).
+Preferably the full type/subtype combination, e.g `image/jpeg`, but the primary type alone is sufficient (`image`, `video`, `audio`).
 
 #### title
 Optional title for the item.
@@ -1425,7 +1425,7 @@ Remarks about the vernacular name.
 
 
 ## Treatment
-[Treatments](http://plazi.org/api-tools/api/#What_is_a_treatment) are parts of publications that "treat" a single taxon. They can be an original description for a new species, but also subsequent taxonomic works and usually include several sections such as a diagnosis, description, material examied, distribution, etc.
+[Treatments](http://plazi.org/api-tools/api/#What_is_a_treatment) are parts of publications that "treat" a single taxon. They can be an original description for a new species, but also subsequent taxonomic works and usually include several sections such as a diagnosis, description, material examined, distribution, etc.
 ColDP captures an entire treatment either as an TXT, HTML or XML document that lives as an individual file in a subfolder `treatments` and is named by the corresponding taxonID of the name usage it describes. The taxons `accordingToID` should always point to the reference the treatment is published in.
 Example: `treatments/19854332.html` would be an html document which is the marked up treatment for the taxon with ID `19854332`.
 
@@ -1487,7 +1487,7 @@ But sharing globally unique URN, URI or URLs can be done without any further sco
  - urn:lsid:ipni.org:names:320035-2
  - urn:lsid:Blattodea.speciesfile.org:TaxonName:1287
 
-If you plan to share identifiers with other scopes we encourage users to tell us about them so we can "register" them to guarantee thier uniqueness
+If you plan to share identifiers with other scopes we encourage users to tell us about them so we can "register" them to guarantee their uniqueness
 and inform others about their semantics.
 
 
@@ -1541,7 +1541,7 @@ Any other combinations of a backslash with some other characters will be take li
 
 ## parentID vs flat ranks
 A taxonomic hierarchy can be established either as a parent child relationship using `Taxon.parentID` or by using the flat, higher rank terms on each record.
-If possible the parent child approach using `parentID` is preferrable and the flat higher ranks are not needed in that case.
+If possible the parent child approach using `parentID` is preferable and the flat higher ranks are not needed in that case.
   
 ## Species with an uncertain genus
 Sometimes there a cases of a described species with a taxonomically unresolved placement. 
