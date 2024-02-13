@@ -1471,7 +1471,7 @@ To avoid conflicts of naming scopes we strongly recommend to use the following s
  - unite: UNITE Species Hypotheses - [unite:SH1659817.08FU](https://unite.ut.ee/sh/SH1659817.08FU)
  - usda: USDA Plants - [usda:POAN](https://plants.sc.egov.usda.gov/home/plantProfile?symbol=POAN)
  - viaf: [Virtual International Authority File database](https://viaf.org/) - [viaf:76389959](https://viaf.org/viaf/76389959)
- - wfo: World Flora Online - [wfo:0000891536](http://www.worldfloraonline.org/taxon/wfo-0000891536)
+ - wfo: World Flora Online - [wfo:wfo-0000891536](http://www.worldfloraonline.org/taxon/wfo-0000891536)
  - [wikidata](https://registry.identifiers.org/registry/wikidata): Wikidata items - [wikidata:Q157571](https://www.wikidata.org/wiki/Q157571)
  - [worms](https://registry.identifiers.org/registry/worms): World Register of Marine Species - [worms:212808](https://www.marinespecies.org/aphia.php?p=taxdetails&id=212808)
  - zoobank: ZooBank record - [zoobank:EEDEA832-A8A9-44DF-8F2F-684FFEC9C19B](https://zoobank.org/NomenclaturalActs/eedea832-a8a9-44df-8f2f-684ffec9c19b)
