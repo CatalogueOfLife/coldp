@@ -2,10 +2,68 @@
 This guide tries to provide help in publishing ColDP data by giving concrete examples for various cases.
 It should be seen as the intended way of using ColDP when there seemingly are several ways of expressing the same thing.
 
-* [Names](names)
+
+* [Core data items](#core-data-items)
+* [Names](#names)
 * [Name relations](#name-relations)
 * [Taxon concepts](#taxon-concepts)
 * [References](#references)
+
+
+## Core data items
+ColDP covers a range of entities and for names, references and usages also provides alternative representations, mostly parsed and unparsed, one can chose from. The information to be shared with ChecklistBank can be prioritized like the following, using only the simpler [NameUsage](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#nameusage) entity instead of Name, Taxon & Synonym.
+
+### Minimal
+ - [NameUsage](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#nameusage)
+  - ID
+  - scientificName
+  - authorship
+  - rank
+  - status
+  - parentID OR kingdom|phylum|class|order|family|genus
+
+### Highly recommended
+ - [NameUsage](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#nameusage)
+   - basionymID
+   - publishedInID
+   - extinct
+   - environment
+   - link
+ - [Reference](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#reference)
+   - ID
+   - citation
+   - DOI
+   - link
+
+
+### Desired
+ - [NameUsage](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#nameusage)
+   - code
+   - publishedInPageLink
+   - gender
+   - genderAgreement
+ - [NameRelation](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#namerelation)
+   - nameID
+   - relatedNameID
+   - type
+ - [TypeMaterial](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#typematerial)
+   - nameID
+   - citation
+   - status
+   - link
+ - [VernacularName](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#vernacularname)
+   - taxonID
+   - name
+   - language
+ - [Media](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#media)
+   - taxonID
+   - url
+   - type
+   - license
+       
+### Optional
+Anything else not mentioned above including [Distributions](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#media), [Treatments](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#treatment), [Author](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#author), [SpeciesInteraction](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#speciesinteraction) and [TaxonProperty](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#taxonproperty) which can be used to share any other information about a taxon.
+
 
 
 ## Names
