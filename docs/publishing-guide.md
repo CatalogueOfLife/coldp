@@ -13,16 +13,17 @@ It should be seen as the intended way of using ColDP when there seemingly are se
 ## Minimal information
 ColDP covers a range of entities and for names, references and usages also provides alternative representations, mostly parsed and unparsed, one can chose from. The information to be shared with ChecklistBank can be prioritized like the following, using only the simpler [NameUsage](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#nameusage) entity instead of Name, Taxon & Synonym.
 
-### Minimal
+#### Minimal information
  - [NameUsage](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#nameusage)
-  - ID
-  - scientificName
-  - authorship
-  - rank
-  - status
-  - parentID OR kingdom|phylum|class|order|family|genus
+   - ID
+   - scientificName
+   - authorship
+   - rank
+   - status
+   - parentID OR kingdom|phylum|class|order|family|genus
 
-### Highly recommended
+
+#### Highly recommended information
  - [NameUsage](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#nameusage)
    - basionymID
    - publishedInID
@@ -36,7 +37,7 @@ ColDP covers a range of entities and for names, references and usages also provi
    - link
 
 
-### Desired
+#### Desired information
  - [NameUsage](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#nameusage)
    - code
    - publishedInPageLink
@@ -61,7 +62,7 @@ ColDP covers a range of entities and for names, references and usages also provi
    - type
    - license
        
-### Optional
+#### Optional information
 Anything else not mentioned above including [Distributions](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#media), [Treatments](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#treatment), [Author](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#author), [SpeciesInteraction](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#speciesinteraction) and [TaxonProperty](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#taxonproperty) which can be used to share any other information about a taxon.
 
 
