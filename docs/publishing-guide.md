@@ -3,14 +3,14 @@ This guide tries to provide help in publishing ColDP data by giving concrete exa
 It should be seen as the intended way of using ColDP when there seemingly are several ways of expressing the same thing.
 
 
-* [Core data items](#core-data-items)
+* [Minimal information](#minimal-information)
 * [Names](#names)
 * [Name relations](#name-relations)
 * [Taxon concepts](#taxon-concepts)
 * [References](#references)
 
 
-## Core data items
+## Minimal information
 ColDP covers a range of entities and for names, references and usages also provides alternative representations, mostly parsed and unparsed, one can chose from. The information to be shared with ChecklistBank can be prioritized like the following, using only the simpler [NameUsage](https://github.com/CatalogueOfLife/coldp/blob/master/README.md#nameusage) entity instead of Name, Taxon & Synonym.
 
 ### Minimal
