@@ -2,7 +2,8 @@
 This guide tries to provide help in publishing ColDP compliant data with the help of simple [text trees](https://github.com/gbif/text-tree).
 TextTree is a very simple format, but can be extended in a flexible way:
 
-> Abies alba Mill. [genus] {PUB=Miller2019 ENV=terrestrial,marine REF=Döring2021,Banki2022 VERN=de:Traubeneiche,fr:Chêne rouvre,dk:Vintereg,nl:Wintereik}
+> Abies alba Mill. [species] {PUB=Miller2019 ENV=terrestrial,marine REF=Döring2021,Banki2022 VERN=de:Traubeneiche,fr:Chêne rouvre,dk:Vintereg,nl:Wintereik}
+> †Kalloprion kilmisteri [species] {PUB=Eriksson_2006 ENV=marine CHRONO=Llandovery-Wenlock}
 
 This guide provides conventions how to share additional information using TextTree.
 For interoperability with [ChecklistBank](https://www.checklistbank.org) and other taxonomic systems we encourage to use some common information keys and value formats:
@@ -15,3 +16,23 @@ For interoperability with [ChecklistBank](https://www.checklistbank.org) and oth
 
 Any other keys for accepted names will be treated as generic taxon properties.
 
+## References
+A `reference.csv` CSV or `reference.bib` BibText file should accompany the text tree file 
+to define the reference keys used in `PUB` or `REF` variables.
+
+BibTex content can be retrieved from CrossRef for most DOIs when known.
+For example by using curl on the terminal like this:
+> curl --location --silent --header "Accept: application/x-bibtex" https://doi.org/10.1080/11035890601282097 
+> @article{Eriksson_2006,
+    doi = {10.1080/11035890601282097},
+    url = {https://doi.org/10.1080%2F11035890601282097},
+    year = 2006,
+    month = {jun},
+    publisher = {Informa {UK} Limited},
+    volume = {128},
+    number = {2},
+    pages = {97--101},
+    author = {Mats E. Eriksson},
+    title = {Polychaete jaw apparatuses and scolecodonts from the Silurian Ireviken Event interval of Gotland, Sweden},
+    journal = {{GFF}}
+}
