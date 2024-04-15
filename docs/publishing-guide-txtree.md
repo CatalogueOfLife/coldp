@@ -23,7 +23,9 @@ to define the reference keys used in `PUB` or `REF` variables.
 BibTex content can be retrieved from CrossRef for most DOIs when known.
 For example by using curl on the terminal like this:
 > curl --location --silent --header "Accept: application/x-bibtex" https://doi.org/10.1080/11035890601282097 
-> @article{Eriksson_2006,
+
+```
+@article{Eriksson_2006,
     doi = {10.1080/11035890601282097},
     url = {https://doi.org/10.1080%2F11035890601282097},
     year = 2006,
@@ -36,3 +38,4 @@ For example by using curl on the terminal like this:
     title = {Polychaete jaw apparatuses and scolecodonts from the Silurian Ireviken Event interval of Gotland, Sweden},
     journal = {{GFF}}
 }
+```
