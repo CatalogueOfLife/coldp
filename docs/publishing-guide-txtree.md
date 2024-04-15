@@ -11,6 +11,7 @@ For interoperability with [ChecklistBank](https://www.checklistbank.org) and oth
  - **REF**: A list of reference keys to support the taxonomic opinion, concatenated by a comma. 
  - **ENV**: A list of [environments](/docs/README.md#environment) the species occurrs in, concatenated by a comma. 
  - **VERN**: A list of vernacular names, concatenated by a comma, each given as languageCode:name. Example: ```VERN=de:Traubeneiche,fr:Chêne rouvre,dk:Vintereg```
+ - **CHRONO**: A geochronological time range for the earliest-latest appearance of the taxon. The range is delimited by a hyphen, e.g. `Jurassic-Cretaceous`
 
 Any other keys for accepted names will be treated as generic taxon properties.
 
