@@ -4,7 +4,7 @@ identifier:
   col: 272998
 
 title: ColDP Full Example
-alias: ColDP Full Example
+alias: ColDP
 
 description: Strongly normalised ColDP test dataset that tries to cover most fields for testing API & UI.
 keyword: 
