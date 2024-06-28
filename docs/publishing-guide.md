@@ -152,7 +152,13 @@ authorship: (Geoffroy St.-Hilaire, 1806)
 code: zoological
 ```
 Again infrageneric names are rendered differently between codes, so having an explicit code value given is recommended.
+If no genus is know, an unplaced subgenus should also be given using ```infragenericEpithet```:
 
+```
+rank: subgenus
+infragenericEpithet: Aeorestes
+authorship: (Geoffroy St.-Hilaire, 1806)
+```
 
 The species name for the bat ```Lasiurus (Aeorestes) villosissimus (Geoffroy St.-Hilaire, 1806)``` can also given given with an infrageneric name:
 ```
