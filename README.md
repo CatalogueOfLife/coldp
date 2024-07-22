@@ -442,17 +442,28 @@ A link to a webpage provided by the source depicting the name.
 #### remarks
 Additional nomenclatural remarks about the name. Often indicating its status or relevant rules in the code.
 
+#### modified
+UTC timestamp in ISO format to represent the time the record was last modified.
+
+*added in v1.1*
+
+#### modifiedBy
+Author identifier indicating the person who has last modified the record.
+
+*added in v1.1*
 
 
 
 ## Author
 Normalised and structured authors that can be referred to by names, references and taxon scrutinizers.
+All entities also allow to specify a modifedBy field which must reference an Author identifier here.
 
 *added in v1.1*
 
 
 #### ID
 Unique identifier for the author / person. 
+Can be referenced from any modifiedBy field.
 
 #### sourceID
 Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
@@ -461,7 +472,7 @@ Optional identifier for the source this record came from as listed in the [metad
 A comma concatenated list of alternative identifiers for the author.
 Every alternative identifier must be in the form of `scope:id`. 
 See [identifiers](#Identifiers) for all details and common scopes.
-Recommended identifier scopes for authors are ipni, wikidata & viaf.
+Recommended identifier scopes for authors are orcid, ipni, wikidata & viaf.
 
 #### given
 List of given names, concatenated by a comma.
@@ -480,7 +491,7 @@ Standard form (official abbreviation) of the persons name for use in a botanical
 A `|` separated list of alternative names this person is known under.
 
 #### sex
-Sex or gender of the person.
+Biological sex of the person.
 
 #### country
 Country of citizenship. Preferably as ISO code.
@@ -495,6 +506,9 @@ Location the person was born at.
 #### death
 Date of death, given as an ISO date string.
 
+#### affiliation
+Institution(s) the author is affiliated with.
+
 #### interest
 List of taxonomic groups the person has worked on.
 
@@ -506,6 +520,16 @@ A link to a webpage provided by the source depicting the author.
 
 #### remarks
 Remarks about the person.
+
+#### modified
+UTC timestamp in ISO format to represent the time the record was last modified.
+
+*added in v1.1*
+
+#### modifiedBy
+Author identifier indicating the person who has last modified the record.
+
+*added in v1.1*
 
 
 
@@ -542,6 +566,16 @@ If the value spans multiple pages, the first page should be given.
 
 #### remarks
 Remarks about the relation.
+
+#### modified
+UTC timestamp in ISO format to represent the time the record was last modified.
+
+*added in v1.1*
+
+#### modifiedBy
+Author identifier indicating the person who has last modified the record.
+
+*added in v1.1*
 
 
 
@@ -627,6 +661,16 @@ A link to further information about the specimen, e.g. as provided by the instit
 
 #### remarks
 Any further remarks on the type material.
+
+#### modified
+UTC timestamp in ISO format to represent the time the record was last modified.
+
+*added in v1.1*
+
+#### modifiedBy
+Author identifier indicating the person who has last modified the record.
+
+*added in v1.1*
 
 
 
@@ -784,6 +828,16 @@ A link to a webpage provided by the source depicting the taxon.
 #### remarks
 Any further taxonomic remarks.
 
+#### modified
+UTC timestamp in ISO format to represent the time the record was last modified.
+
+*added in v1.1*
+
+#### modifiedBy
+Author identifier indicating the person who has last modified the record.
+
+*added in v1.1*
+
 
 
 
@@ -833,6 +887,16 @@ A link to a webpage provided by the source depicting the synonym.
 
 #### remarks
 Any further taxonomic remarks.
+
+#### modified
+UTC timestamp in ISO format to represent the time the record was last modified.
+
+*added in v1.1*
+
+#### modifiedBy
+Author identifier indicating the person who has last modified the record.
+
+*added in v1.1*
 
 
 
@@ -906,6 +970,16 @@ An integer to specify an optional custom sort order for property values sharing 
 #### remarks
 Remarks about the property value.
 
+#### modified
+UTC timestamp in ISO format to represent the time the record was last modified.
+
+*added in v1.1*
+
+#### modifiedBy
+Author identifier indicating the person who has last modified the record.
+
+*added in v1.1*
+
 
 
 
@@ -928,6 +1002,16 @@ A reference where this relation was documented or who asserted it.
 
 #### remarks
 Remarks about the concept relation.
+
+#### modified
+UTC timestamp in ISO format to represent the time the record was last modified.
+
+*added in v1.1*
+
+#### modifiedBy
+Author identifier indicating the person who has last modified the record.
+
+*added in v1.1*
 
 
 
@@ -964,6 +1048,16 @@ A reference where the interaction was documented.
 #### remarks
 Remarks about the species interaction.
 
+#### modified
+UTC timestamp in ISO format to represent the time the record was last modified.
+
+*added in v1.1*
+
+#### modifiedBy
+Author identifier indicating the person who has last modified the record.
+
+*added in v1.1*
+
 
 
 
@@ -991,6 +1085,17 @@ A mandatory reference ID that supports the estimate and also provides a temporal
 
 #### remarks
 Remarks about the species estimate. Often used to explain the method used when the estimate is not directly taken from a publication.
+
+#### modified
+UTC timestamp in ISO format to represent the time the record was last modified.
+
+*added in v1.1*
+
+#### modifiedBy
+Author identifier indicating the person who has last modified the record.
+
+*added in v1.1*
+
 
 
 
@@ -1143,6 +1248,17 @@ A URL link to the reference. A link to a webpage for electronic resources.
 #### remarks
 Additional comments about the reference.
 `note` in CSL-JSON terminology, but we prefer remarks to be consistent with other ColDP entities.
+
+#### modified
+UTC timestamp in ISO format to represent the time the record was last modified.
+
+*added in v1.1*
+
+#### modifiedBy
+Author identifier indicating the person who has last modified the record.
+
+*added in v1.1*
+
 
 
 
@@ -1338,6 +1454,17 @@ Pointer to the reference that supports this distribution. Refers to an existing 
 #### remarks
 Remarks about the distribution.
 
+#### modified
+UTC timestamp in ISO format to represent the time the record was last modified.
+
+*added in v1.1*
+
+#### modifiedBy
+Author identifier indicating the person who has last modified the record.
+
+*added in v1.1*
+
+
 
 
 ## Media
@@ -1376,6 +1503,17 @@ Optional webpage from the source this media item is shown on.
 Remarks about the media item.
 
 *added in v1.1*
+
+#### modified
+UTC timestamp in ISO format to represent the time the record was last modified.
+
+*added in v1.1*
+
+#### modifiedBy
+Author identifier indicating the person who has last modified the record.
+
+*added in v1.1*
+
 
 
 
@@ -1421,6 +1559,17 @@ Pointer to the reference that supports this vernacular name. Refers to an existi
 Remarks about the vernacular name.
 
 *added in v1.1*
+
+#### modified
+UTC timestamp in ISO format to represent the time the record was last modified.
+
+*added in v1.1*
+
+#### modifiedBy
+Author identifier indicating the person who has last modified the record.
+
+*added in v1.1*
+
 
 
 
