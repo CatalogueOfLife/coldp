@@ -1600,6 +1600,7 @@ To avoid conflicts of naming scopes we strongly recommend to use the following s
  - eunis: European Nature Information System - [eunis:193060](https://eunis.eea.europa.eu/species/193060)
  - gbif: GBIF Backbone Taxonomy - [gbif:2704179](https://www.gbif.org/species/2704179)
  - genbank: GenBank accession number - [genbank:U49845](https://www.ncbi.nlm.nih.gov/nucleotide/U49845)
+ - hol: Hymenoptera Online ID - [hol:31685](https://hol.osu.edu/index.html?id=31685)
  - if: Index Fungorum - [if:550000](http://www.indexfungorum.org/Names/NamesRecord.asp?RecordID=550000)
  - inat: iNaturalist taxon identifier - [inat:52808](https://www.inaturalist.org/observations?taxon_id=52808)
  - ipni: International Plant Name Index - [ipni:320035-2](https://www.ipni.org/n/320035-2)
