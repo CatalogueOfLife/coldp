@@ -145,7 +145,7 @@ All files **must be encoded in UTF-8**.
 In some cases it is useful to declare a fixed, global value that applies to every record in the dataset,
 for example if all taxa are animals it makes sense to declare `Name.code=zoological` only once.
 This can be done in a single file default.yaml that provides default values for all terms. 
-Term names are organised under their entity/class name in the file.
+Term  are organised under their entity/class name in the file.
 
 Example of a `default.yaml` file:
 
@@ -204,9 +204,9 @@ With headers given it is allowed to share additional columns which are not part 
 
 
 ## Name
-See [NAMES.md](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md) for examples and rationales.
 Names can be shared in a structured way using various fields, 
 but rank, scientificName and authorship alone are sufficient.
+See [](https://github.com/Sp2000/colplus/blob/master/docs/) for examples and rationales.
 
 A structured `scientificName` can be given using the following fields:
  - [uninomial](#uninomial)
@@ -537,7 +537,7 @@ Author identifier indicating the person who has last modified the record.
  
 ## NameRelation
 A directed nomenclatural name relation.
-See [NAMES.md#name-relations](https://github.com/Sp2000/colplus/blob/master/docs/NAMES.md#name-relations) for examples and definitions.
+See [#name-relations](https://github.com/Sp2000/colplus/blob/master/docs/#name-relations) for examples and definitions.
 
 #### nameID
 The subject name this relation originates from.
