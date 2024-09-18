@@ -1602,6 +1602,7 @@ To avoid conflicts of naming scopes we strongly recommend to use the following s
  - genbank: GenBank accession number - [genbank:U49845](https://www.ncbi.nlm.nih.gov/nucleotide/U49845)
  - hol: Hymenoptera Online ID - [hol:31685](https://hol.osu.edu/index.html?id=31685)
  - if: Index Fungorum - [if:550000](http://www.indexfungorum.org/Names/NamesRecord.asp?RecordID=550000)
+ - ina: Index Nominum Algarum - [ina:101744](http://ucjeps.berkeley.edu/cgi-bin/porp_cgi.pl?101744)
  - inat: iNaturalist taxon identifier - [inat:52808](https://www.inaturalist.org/observations?taxon_id=52808)
  - ipni: International Plant Name Index - [ipni:320035-2](https://www.ipni.org/n/320035-2)
  - [isbn](https://registry.identifiers.org/registry/isbn): International Standard Book Number, with 10 or 13 numbers - [isbn:9780393978674](https://isbndb.com/book/9780393978674)
