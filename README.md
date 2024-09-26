@@ -17,17 +17,16 @@ is a tabular text format with a fixed set of files and columns.
 
 ## Status & Versioning
 
-### Stable Release
-**Version 1.0 of ColDP has been released on [October 25th 2021](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.0)**.
+### Latest Stable Release
+**Version 1.1 of ColDP has been released on [September 26th 2024](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.1.0)**.
 
-Since then only [small changes](CHANGES.md) to the documentation and enumeration of values have been applied with the latest release of ColDP being [version 1.0.1](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.1).
 
 ### Development Branch
 **Version 1.2 of ColDP is still under development** 
 and new fields are marked as such in the documentation below.
 
 There is no guarantee that these fields might still change until the version is released.
-ChecklistBank tries it's best to support already all new 1.2 features, so it can be used already.
+[ChecklistBank](https://www.checklistbank.org) tries it's best to support already all new features, so it can be used already.
 
 
 ### Versioning
@@ -37,10 +36,11 @@ ColDP adheres to [semantic versioning](http://semver.org/):
  - **major** changes (x.0.0) break backwards compatibility. Fields or entities can be renamed, removed, added or changed in semantics. 
  
 ### History
-All [changes](CHANGES.md) are documented since the initial 1.0 release.
+All [changes](CHANGES.md) are documented since the initial 1.0.0 release.
 
- - **ColDP 1.1, [September 26th 2024](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.1.0)**.
- - **ColDP 1.0, [October 25th 2021](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.1)**.
+ - ColDP 1.1.0, [September 26, 2024](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.1.0).
+ - ColDP 1.0.1, [April 7, 2022](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.1).
+ - ColDP 1.0.0, [October 25, 2021](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.0).
 
 
 ## Schema
