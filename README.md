@@ -23,11 +23,12 @@ is a tabular text format with a fixed set of files and columns.
 Since then only [small changes](CHANGES.md) to the documentation and enumeration of values have been applied with the latest release of ColDP being [version 1.0.1](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.1).
 
 ### Development Branch
-**Version 1.1 of ColDP is still under development** 
+**Version 1.2 of ColDP is still under development** 
 and new fields are marked as such in the documentation below.
 
 There is no guarantee that these fields might still change until the version is released.
-ChecklistBank tries it's best to support already all new 1.1 features, so it can be used already.
+ChecklistBank tries it's best to support already all new 1.2 features, so it can be used already.
+
 
 ### Versioning
 ColDP adheres to [semantic versioning](http://semver.org/):
@@ -35,6 +36,12 @@ ColDP adheres to [semantic versioning](http://semver.org/):
  - **minor** changes (1.x.0) preserve backwards compatibility. Fields or entities can be added, but not renamed or removed.
  - **major** changes (x.0.0) break backwards compatibility. Fields or entities can be renamed, removed, added or changed in semantics. 
  
+### History
+All [changes](CHANGES.md) are documented since the initial 1.0 release.
+
+ - **ColDP 1.1, [September 26th 2024](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.1.0)**.
+ - **ColDP 1.0, [October 25th 2021](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.1)**.
+
 
 ## Schema
 

@@ -5,7 +5,15 @@ ColDP adheres to [semantic versioning](http://semver.org/):
  - **minor** changes (1.x.0) preserve backwards compatability. Fields or entities can be added, but not renamed or removed.
  - **major** changes (x.0.0) break backwards compatability. Fields or entities can be renamed, removed, added or changed in semantics. 
 
-## unreleased v1.1
+
+## unreleased v1.2
+Milestone 1.2](https://github.com/CatalogueOfLife/coldp/issues?q=is%3Aissue+milestone%3A%22Version+1.2%22+)
+
+
+## v1.1.0
+[Released](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.1.0) on 2024-09-26, [Milestone 1.1](https://github.com/CatalogueOfLife/coldp/issues?q=is%3Aissue+milestone%3A%22Version+1.1%22+)
+ - Add conversion.description & url to metadata: https://github.com/CatalogueOfLife/coldp/issues/82
+ - Taxon.accordingToPage & Taxon.accordingToPage: https://github.com/CatalogueOfLife/coldp/issues/60
  - add modified, modifiedBy to all entities: https://github.com/CatalogueOfLife/coldp/issues/73
  - nomenclatural relation & TypeMaterial.page
  - Add urlFormatter to metadata
