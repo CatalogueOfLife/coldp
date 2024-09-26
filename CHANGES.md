@@ -7,7 +7,7 @@ ColDP adheres to [semantic versioning](http://semver.org/):
 
 
 ## unreleased v1.2
-Milestone 1.2](https://github.com/CatalogueOfLife/coldp/issues?q=is%3Aissue+milestone%3A%22Version+1.2%22+)
+[Milestone 1.2](https://github.com/CatalogueOfLife/coldp/issues?q=is%3Aissue+milestone%3A%22Version+1.2%22+)
 
 
 ## v1.1.0
