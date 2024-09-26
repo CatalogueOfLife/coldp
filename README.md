@@ -715,6 +715,18 @@ A reference ID to the publication that established the taxonomic concept used by
 The author & year of the reference will be used to qualify the name with `sensu AUTHOR, YEAR`.
 The ID must refer to an existing Reference.ID within this data package.
 
+#### accordingToPage
+The exact single page number where the taxonomic concept was treated.
+If the treatment spans multiple pages, the first page should be given. 
+
+*added in v1.1*
+
+#### accordingToPageLink
+A URL to the exact page where the taxonomic concept was published.
+If the treatment spans multiple pages, the link to the first page should be given.
+
+*added in v1.1*
+
 #### scrutinizer
 Name of the person who is the latest scrutinizer who revised or reviewed the taxonomic concept.
 
