@@ -196,6 +196,14 @@ urlFormatter:
   author: https://fishbase.mnhn.fr/collaborators/CollaboratorSummary.php?ID={ID}
   typeMaterial: 
 
+# Documentation of the conversion process from the original source data 
+# to the ColDP representation in this dataset
+conversion:
+  # human description of what's being done
+  description: The MySQL database is being exported on a monthly basis to ColDP CSV files with the help of a python script.
+  # location of the conversion script code or more documentation of the process
+  url: https://github.com/CatalogueOfLife/coldp-generator
+
 # List of Citations this dataset is derived from.
 # We use CSL-JSON fields to represent a structured citation, see below for the main fields used for bibliographies.
 #

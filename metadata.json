@@ -100,6 +100,13 @@
               "typeMaterial": {"type": "string"}
           }
         },
+        "conversion": {
+          "type": "object",
+          "properties": {
+              "description": {"type": "string"},
+              "url": {"type": "string", "format": "uri"}
+          }
+        },
         "issn": {
           "type": "string"
         },
