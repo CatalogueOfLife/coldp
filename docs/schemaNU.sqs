@@ -1975,7 +1975,7 @@
             <referencesTable>NameUsage</referencesTable>
             <referencesField><![CDATA[ID]]></referencesField>
             <referencesTable><![CDATA[NameUsage]]></referencesTable>
-            <sourceCardinality>0</sourceCardinality>
+            <sourceCardinality>5</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[91F17EB2-D0AB-4699-A77C-606F986D00D5]]></referencesFieldUID>
             <referencesTableUID><![CDATA[C1197407-207A-4AAA-8774-DC628EDDA84F]]></referencesTableUID>
@@ -2232,7 +2232,7 @@
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
         <windowHeight><![CDATA[996.000000]]></windowHeight>
-        <windowLocationX><![CDATA[360.000000]]></windowLocationX>
+        <windowLocationX><![CDATA[230.000000]]></windowLocationX>
         <windowLocationY><![CDATA[57.000000]]></windowLocationY>
         <windowScrollOrigin><![CDATA[{0, 0}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1690.000000]]></windowWidth>

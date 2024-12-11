@@ -1649,7 +1649,7 @@
             <referencesTable>Name</referencesTable>
             <referencesField><![CDATA[ID]]></referencesField>
             <referencesTable><![CDATA[Name]]></referencesTable>
-            <sourceCardinality>0</sourceCardinality>
+            <sourceCardinality>5</sourceCardinality>
             <destinationCardinality>0</destinationCardinality>
             <referencesFieldUID><![CDATA[ABDC0681-8CAF-491F-B5F1-710E512B8254]]></referencesFieldUID>
             <referencesTableUID><![CDATA[FA38CFBE-F59D-430F-9FA6-170A50C525DE]]></referencesTableUID>
@@ -2351,9 +2351,9 @@
         <SQLEditorFileFormatVersion><![CDATA[3.1]]></SQLEditorFileFormatVersion>
         <uid><![CDATA[F21D303A-981D-49AD-919E-C97DB3C34ECE]]></uid>
         <windowHeight><![CDATA[996.000000]]></windowHeight>
-        <windowLocationX><![CDATA[-0.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[59.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{0, 371}]]></windowScrollOrigin>
+        <windowLocationX><![CDATA[230.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[57.000000]]></windowLocationY>
+        <windowScrollOrigin><![CDATA[{0, 164}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1690.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>

@@ -600,8 +600,9 @@ If coming from a Darwin Core world dwc:occurrenceID is a great fit.
 Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### nameID
-Pointer to the typified name referring to an existing Name.ID within this data package.
-Type material should only be associated with an original name, not with recombinations.
+A comma concatenated list of name IDs pointing to the typified name of this specimen.
+Each ID must refer to an existing Name.ID within this data package.
+See [best practices](#best-practices) for details on how to concatenate multi values.
 
 #### citation
 Material citation of the type material, i.e. type specimen. 
