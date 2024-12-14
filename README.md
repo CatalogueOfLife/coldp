@@ -613,6 +613,10 @@ If atomized fields below are given a citation is not needed. Otherwise it is req
 type: [type status enum](http://api.checklistbank.org/vocab/typeStatus)
 The status of the type material, e.g. holotype
 
+In case multiple names have been linked to the specimen through concatenated values in nameID,
+a list of comma concatenated status values can be given in the same order as the name IDs.
+If a single value is given it will be used for all names.
+
 #### referenceID
 A referenceID pointing to the Reference table indicating the publication of the type designation.
 Most often this is equivalent to the original names referenceID, but for subsequent designations a later reference should be cited.
