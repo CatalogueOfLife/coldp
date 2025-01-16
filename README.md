@@ -1295,6 +1295,10 @@ curl --location --silent --header "Accept: application/vnd.citationstyles.csl+js
 
 The `id` field in each record of the array is used as the primary key and referred to from `referenceID` fields elsewhere.
 
+For efficient handling of larger lists the CSL data can also be formatted as [JSON Lines](https://jsonlines.org/) with each reference on a single row
+and no outer JSON array in a file called `reference.jsonl`.
+
+
 #### CSL-JSON example
 
 ```

@@ -9,6 +9,7 @@ ColDP adheres to [semantic versioning](http://semver.org/):
 ## unreleased v1.2
 [Milestone 1.2](https://github.com/CatalogueOfLife/coldp/issues?q=is%3Aissue+milestone%3A%22Version+1.2%22+)
  - Allow TypeMaterial.nameID and TypeMaterial.status to be multi valued
+ - Accept JSON Lines in `reference.jsonl`, see https://github.com/CatalogueOfLife/coldp/issues/87
 
 
 ## v1.1.0
