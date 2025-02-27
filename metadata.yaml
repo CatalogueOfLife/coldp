@@ -159,11 +159,9 @@ contributor:
 # Description of the geographical scope of the dataset
 geographicScope: global
 
-# Taxonomic scope of the dataset
-taxonomicScope: Cephalaspidomorphi, Sarcopterygii, Elasmobranchii, Holocephali, Actinopterygii, Myxini
-
-# Taxonomic scope of the dataset given as English vernacular name(s)
-taxonomicScopeInEnglish: Fishes
+# Taxonomic scope of the dataset, given in English vernacular names or as latin scientific names
+# concatenate lists with commas
+taxonomicScope: Fishes
 
 # Temporal scope of the dataset
 temporalScope: Extant taxa described until 1987

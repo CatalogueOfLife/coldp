@@ -69,9 +69,6 @@
         "taxonomicScope": {
           "type": "string"
         },
-        "taxonomicScopeInEnglish": {
-          "type": "string"
-        },
         "temporalScope": {
           "type": "string"
         },
