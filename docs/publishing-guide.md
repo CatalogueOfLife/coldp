@@ -20,7 +20,7 @@ ColDP covers a range of entities and for names, references and usages also provi
    - authorship
    - rank
    - status
-   - parentID OR kingdom|phylum|class|order|family|genus
+   - parentID (normalised) OR kingdom;phylum;class;order;family (denormalised)
 
 
 #### Highly recommended information
