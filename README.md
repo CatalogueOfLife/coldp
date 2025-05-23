@@ -172,8 +172,8 @@ This is similar to the default feature in the meta.xml file of DwC archives.
 
 
 ## Metadata
-A [YAML file](https://en.wikipedia.org/wiki/YAML) called `metadata.yaml` with metadata about the entire data package should be included. 
-The file consists mostly of key value pairs like title, see the [comments in metadata.yaml](metadata.yaml) for all available keys.
+A [YAML file](metadata.yaml) called `metadata.yaml` with metadata about the entire data package should be included. 
+The file consists mostly of key value pairs like title, see the comments in [metadata.yaml](metadata.yaml) for all available keys.
 There is also a [JSON schema](metadata.json) available for validation.
 
 An exception are the contact and authors and editors properties which takes a compound person object 
