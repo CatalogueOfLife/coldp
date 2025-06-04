@@ -1625,7 +1625,7 @@ To avoid conflicts of naming scopes we strongly recommend to use the following s
  - [bold](https://registry.identifiers.org/registry/bold.taxonomy): BOLD BIN numbers - [BOLD:AAJ2287](http://v3.boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAJ2287)
  - clb: ChecklistBank identifier
     - A dataset with an integer key: [clb:2019](https://www.checklistbank.org/dataset/2019/about): Mammal Species of the World in ChecklistBank
-    - A name usage with a compound key: [clb:2019-14000204](https://www.checklistbank.org/dataset/2019/taxon/14000204): Puma concolor (id 14000204) in Mammal Species of the World
+    - A name usage with a compound key: [clb:2019/14000204](https://www.checklistbank.org/dataset/2019/taxon/14000204): Puma concolor (id 14000204) in Mammal Species of the World
  - [col](https://registry.identifiers.org/registry/col): Catalogue of Life Checklist- [col:6W3C4](http://www.catalogueoflife.org/data/taxon/6W3C4)
  - [doi](https://registry.identifiers.org/registry/doi): any Digital Object Identifier - [doi:10.5281/zenodo.6407053](https://doi.org/10.5281/zenodo.6407053)
  - eunis: European Nature Information System - [eunis:193060](https://eunis.eea.europa.eu/species/193060)
