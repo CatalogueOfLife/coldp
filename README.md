@@ -1623,6 +1623,9 @@ To avoid conflicts of naming scopes we strongly recommend to use the following s
  - avibase: Avibase taxon concept - [avibase:D754DB8552A7AA42](https://avibase.ca/D754DB85)
  - bhl: Biodiversity Heritage Library page number - [bhl:45607882](https://www.biodiversitylibrary.org/page/45607882)
  - [bold](https://registry.identifiers.org/registry/bold.taxonomy): BOLD BIN numbers - [BOLD:AAJ2287](http://v3.boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAJ2287)
+ - clb: ChecklistBank identifier
+    - A dataset with an integer key: [clb:2007](https://www.checklistbank.org/dataset/2007/about): IRMNG in ChecklistBank
+    - A name usage with a compound key (datasetKey-nameUsageID): [clb:2019-14000204](https://www.checklistbank.org/dataset/2019/taxon/14000204): Puma concolor (id 14000204) in Mammal Species of the World (dataset key 2019)
  - [col](https://registry.identifiers.org/registry/col): Catalogue of Life Checklist- [col:6W3C4](http://www.catalogueoflife.org/data/taxon/6W3C4)
  - [doi](https://registry.identifiers.org/registry/doi): any Digital Object Identifier - [doi:10.5281/zenodo.6407053](https://doi.org/10.5281/zenodo.6407053)
  - eunis: European Nature Information System - [eunis:193060](https://eunis.eea.europa.eu/species/193060)
