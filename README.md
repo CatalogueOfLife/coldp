@@ -1602,8 +1602,10 @@ Author identifier indicating the person who has last modified the record.
 
 
 ## Treatment
-[Treatments](https://plazi.org/treatmentbank/what-treatment/) are parts of publications that "treat" a single taxon. They can be an original description for a new species, but also subsequent taxonomic works and usually include several sections such as a diagnosis, description, material examined, distribution, etc.
-ColDP captures an entire treatment either as an TXT, HTML or XML document that lives as an individual file in a subfolder `treatments` and is named by the corresponding taxonID of the name usage it describes. The taxons `accordingToID` should always point to the reference the treatment is published in.
+[Treatments](https://plazi.org/treatmentbank/what-treatment/) are parts of publications that "treat" a single taxon. 
+They can be an original description for a new species, but also subsequent taxonomic works and usually include several sections such as a diagnosis, description, material examined, distribution, etc.
+ColDP captures an entire treatment either as a PDF, TXT, HTML or XML document that lives as an individual file in a subfolder `treatments` and is named by the corresponding taxonID of the name usage it describes. 
+The taxons `accordingToID` should always point to the reference the treatment is published in.
 Example: `treatments/19854332.html` would be an html document which is the marked up treatment for the taxon with ID `19854332`.
 
 
