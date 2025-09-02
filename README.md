@@ -1472,9 +1472,49 @@ type: [enum](http://api.checklistbank.org/vocab/gazetteer)
 The geographic gazetteer the area is defined in.
 If none is given defaults to free `TEXT`.
 
-#### status
-type: [enum](http://api.checklistbank.org/vocab/distributionstatus)
-Distribution status.
+#### establishmentMeans
+type: [enum](http://api.checklistbank.org/vocab/establishmentmeans)
+Statement about whether the taxon has been introduced to the given area and time through the direct or indirect activity of modern humans.
+
+*added in v1.2*
+
+#### degreeOfEstablishment
+type: [enum](http://api.checklistbank.org/vocab/degreeofestablishment)
+The degree to which the taxon survives, reproduces, and expands its range at the given area and time.
+
+*added in v1.2*
+
+#### pathway
+The process by which the taxon came to be in the given area at the given time.
+
+*added in v1.2*
+
+#### threatStatus
+type: [enum](http://api.checklistbank.org/vocab/threatstatus)
+Threat status of a species as defined by IUCN.
+
+*added in v1.2*
+
+#### year
+type: integer
+Year in which the distribution was assessed. 
+Relevant temporal context for the distribution record including all properties. 
+Given as a single year on which the distribution record is valid. 
+For the same area and taxon there could therefore be several records with different temporal scopes, e.g. in 5 year intervals for invasive species. 
+
+*added in v1.2*
+
+#### season
+type: [enum](http://api.checklistbank.org/vocab/season)
+Optional restriction of the distribution record to some season.
+
+*added in v1.2*
+
+#### lifeStage
+Optional restriction of the distribution record to just a particular life stage of the species.
+
+*added in v1.2*
+
 
 #### referenceID
 Pointer to the reference that supports this distribution. Refers to an existing Reference.ID within this data package.

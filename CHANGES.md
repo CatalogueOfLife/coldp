@@ -11,6 +11,15 @@ ColDP adheres to [semantic versioning](http://semver.org/):
  - Allow TypeMaterial.nameID and TypeMaterial.status to be multi valued
  - Accept JSON Lines in `reference.jsonl`, see https://github.com/CatalogueOfLife/coldp/issues/87
  - remove taxonomicScopeInEnglish from metadata
+ - remove Distribution.status in favor of new fields
+ - extend Distribution class with
+    - establishmentMeans
+    - degreeOfEstablishment
+    - pathway
+    - threatStatus
+    - year
+    - season
+    - lifeStage
 
 
 ## v1.1.0
