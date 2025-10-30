@@ -18,11 +18,11 @@ is a tabular text format with a fixed set of files and columns.
 ## Status & Versioning
 
 ### Latest Stable Release
-**Version 1.1 of ColDP has been released on [September 26th 2024](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.1.0)**.
+**Version 1.2 of ColDP has been released on [October 30th 2025](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.2.0)**.
 
 
 ### Development Branch
-**Version 1.2 of ColDP is still under development** 
+**Version 2.0 of ColDP is still under development** 
 and new fields are marked as such in the documentation below.
 
 There is no guarantee that these fields might still change until the version is released.
@@ -38,6 +38,7 @@ ColDP adheres to [semantic versioning](http://semver.org/):
 ### History
 All [changes](CHANGES.md) are documented since the initial 1.0.0 release.
 
+ - ColDP 1.2.0, [October 30, 2025](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.2.0).
  - ColDP 1.1.0, [September 26, 2024](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.1.0).
  - ColDP 1.0.1, [April 7, 2022](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.1).
  - ColDP 1.0.0, [October 25, 2021](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.0.0).

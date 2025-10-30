@@ -86,6 +86,10 @@
           "format": "uri",
           "type": "string"
         },
+        "feedbackUrl": {
+          "format": "uri",
+          "type": "string"
+        },
         "urlFormatter": {
           "type": "object",
           "properties": {

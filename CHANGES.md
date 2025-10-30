@@ -6,8 +6,11 @@ ColDP adheres to [semantic versioning](http://semver.org/):
  - **major** changes (x.0.0) break backwards compatability. Fields or entities can be renamed, removed, added or changed in semantics. 
 
 
-## unreleased v1.2
-[Milestone 1.2](https://github.com/CatalogueOfLife/coldp/issues?q=is%3Aissue+milestone%3A%22Version+1.2%22+)
+## unreleased v2
+
+## v1.2.0
+[Released](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.2.0) on 2025-10-30, [Milestone 1.2](https://github.com/CatalogueOfLife/coldp/issues?q=is%3Aissue+milestone%3A%22Version+1.2%22+)
+ - adding feedbackUrl to metadata, see https://github.com/CatalogueOfLife/coldp/issues/80
  - Allow TypeMaterial.nameID and TypeMaterial.status to be multi valued
  - Accept JSON Lines in `reference.jsonl`, see https://github.com/CatalogueOfLife/coldp/issues/87
  - remove taxonomicScopeInEnglish from metadata

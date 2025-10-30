@@ -180,6 +180,9 @@ license: CC0-1.0
 # Link to a website for the dataset
 url: https://www.fishbase.org
 
+# Link to an website or issue tracker to provide feedback on data issues
+feedbackUrl: https://github.com/CatalogueOfLife/data/issues
+
 # URL to large logo image
 logo: https://www.fishbase.de/images/gifs/fblogo_new.gif 
 
