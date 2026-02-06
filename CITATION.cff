@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "Catalogue of Life Data Package (ColDP) Specification"
+version: 1.2.0
+license: "CC0-1.0"
+type: software
+abstract: "Specification for the recommended exchange format for taxonomic and nomenclatural data to and from COL ChecklistBank. A tabular text format with a fixed set of files and columns."
+message: "If you use this software, please cite it as below."
+authors:
+  - given-names: Markus
+    family-names: Döring
+    affiliation: GBIF Secretariat
+    orcid: "https://orcid.org/0000-0001-7757-1889"
+keywords:
+  - taxonomy
+  - biology
+  - data format
+  - tabular
+  - csv
+  - metadata
+  - GBIF
+  - Catalogue of Life
