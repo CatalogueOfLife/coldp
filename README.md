@@ -3,7 +3,7 @@
 The recommended exchange format for data to and from COL ChecklistBank
 is a tabular text format with a fixed set of files and columns.
 
-* [Status & Versioning](#status-versioning)
+* [Status & Versioning](#status--versioning)
 * [Schema](#schema)
 * [Archive Files](#archive-files)
 * [Default Values](#default-values)
