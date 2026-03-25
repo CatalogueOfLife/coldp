@@ -1459,7 +1459,7 @@ Optional identifier for the source this record came from as listed in the [metad
 #### areaID
 The identifier/code for the geographic area this distribution record is about.
 The value must be taken from the gazetteer this record declares.
-E.g.  country codes, `TDWG` codes or `TEOW` identifiers.
+E.g. `ISO` 2 letter country codes, `TDWG` codes or `TEOW` identifiers.
 If the `TEXT` gazetteer is used only the free text area should be given with no areaID.
 
 #### area
