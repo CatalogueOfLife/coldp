@@ -6,9 +6,9 @@ doi: 10.15468/2zjeva
 # List of alternative identifiers for the dataset with an ID and an optional type value
 # Supported ID types: DOI, GBIF, COL, PLAZI
 identifier:
-  col: 1010
-  gbif: b96ed603-b710-4b3a-b99b-9bf0de6ef85b
-  plazi: 3378FFAB6B55FFE0B065C77BFF226429
+  - col:1010
+  - gbif:b96ed603-b710-4b3a-b99b-9bf0de6ef85b
+  - plazi:3378FFAB6B55FFE0B065C77BFF226429
 
 # Full dataset title
 title: ColDP Example. The full dataset title

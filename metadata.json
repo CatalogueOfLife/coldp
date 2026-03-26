@@ -8,15 +8,10 @@
           "$ref": "#/definitions/doi"
         },
         "identifier": {
-          "type": "object",
-          "properties": {
-              "col": {"type": "integer"},
-              "gbif": {"type": "string"},
-              "plazi": {"type": "string"}
-          },          
-          "additionalProperties": {
+          "items": {
             "type": "string"
-          }
+          },
+          "type": "array"
         },
         "title": {
           "type": "string"
