@@ -1,0 +1,4072 @@
+{
+    "profile": "tabular-data-package",
+    "resources":
+    [
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "typematerial",
+            "path": "typematerial.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "ID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "ID",
+                        "constraints":
+                        {
+                            "unique": true,
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "nameID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "nameID"
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "citation",
+                        "type": "string",
+                        "format": "default",
+                        "title": "citation"
+                    },
+                    {
+                        "name": "status",
+                        "type": "string",
+                        "format": "default",
+                        "title": "status",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "epitype",
+                                "ergatotype",
+                                "ex type",
+                                "hapantotype",
+                                "holotype",
+                                "iconotype",
+                                "lectotype",
+                                "neotype",
+                                "original material",
+                                "paratype",
+                                "pathotype",
+                                "syntype",
+                                "topotype",
+                                "isotype",
+                                "isoepitype",
+                                "isolectotype",
+                                "isoneotype",
+                                "isoparatype",
+                                "isosyntype",
+                                "paralectotype",
+                                "paraneotype",
+                                "allolectotype",
+                                "alloneotype",
+                                "allotype",
+                                "plastoholotype",
+                                "plastoisotype",
+                                "plastolectotype",
+                                "plastoneotype",
+                                "plastoparatype",
+                                "plastosyntype",
+                                "plastotype",
+                                "plesiotype",
+                                "homoeotype",
+                                "other"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "referenceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "referenceID"
+                    },
+                    {
+                        "name": "page",
+                        "type": "string",
+                        "format": "default",
+                        "title": "page"
+                    },
+                    {
+                        "name": "country",
+                        "type": "string",
+                        "format": "default",
+                        "title": "country",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "AF",
+                                "AX",
+                                "AL",
+                                "DZ",
+                                "AS",
+                                "AD",
+                                "AO",
+                                "AI",
+                                "AQ",
+                                "AG",
+                                "AR",
+                                "AM",
+                                "AW",
+                                "AU",
+                                "AT",
+                                "AZ",
+                                "BS",
+                                "BH",
+                                "BD",
+                                "BB",
+                                "BY",
+                                "BE",
+                                "BZ",
+                                "BJ",
+                                "BM",
+                                "BT",
+                                "BO",
+                                "BQ",
+                                "BA",
+                                "BW",
+                                "BV",
+                                "BR",
+                                "IO",
+                                "BN",
+                                "BG",
+                                "BF",
+                                "BI",
+                                "KH",
+                                "CM",
+                                "CA",
+                                "CV",
+                                "KY",
+                                "CF",
+                                "TD",
+                                "CL",
+                                "CN",
+                                "CX",
+                                "CC",
+                                "CO",
+                                "KM",
+                                "CD",
+                                "CG",
+                                "CK",
+                                "CR",
+                                "CI",
+                                "HR",
+                                "CU",
+                                "CW",
+                                "CY",
+                                "CZ",
+                                "DK",
+                                "DJ",
+                                "DM",
+                                "DO",
+                                "EC",
+                                "EG",
+                                "SV",
+                                "GQ",
+                                "ER",
+                                "EE",
+                                "ET",
+                                "FK",
+                                "FO",
+                                "FJ",
+                                "FI",
+                                "FR",
+                                "GF",
+                                "PF",
+                                "TF",
+                                "GA",
+                                "GM",
+                                "GE",
+                                "DE",
+                                "GH",
+                                "GI",
+                                "GR",
+                                "GL",
+                                "GD",
+                                "GP",
+                                "GU",
+                                "GT",
+                                "GG",
+                                "GN",
+                                "GW",
+                                "GY",
+                                "HT",
+                                "HM",
+                                "VA",
+                                "HN",
+                                "HK",
+                                "HU",
+                                "IS",
+                                "IN",
+                                "ID",
+                                "IR",
+                                "IQ",
+                                "IE",
+                                "IM",
+                                "IL",
+                                "IT",
+                                "JM",
+                                "JP",
+                                "JE",
+                                "JO",
+                                "KZ",
+                                "KE",
+                                "KI",
+                                "KP",
+                                "KR",
+                                "XK",
+                                "KW",
+                                "KG",
+                                "LA",
+                                "LV",
+                                "LB",
+                                "LS",
+                                "LR",
+                                "LY",
+                                "LI",
+                                "LT",
+                                "LU",
+                                "MO",
+                                "MK",
+                                "MG",
+                                "MW",
+                                "MY",
+                                "MV",
+                                "ML",
+                                "MT",
+                                "MH",
+                                "MQ",
+                                "MR",
+                                "MU",
+                                "YT",
+                                "MX",
+                                "FM",
+                                "MD",
+                                "MC",
+                                "MN",
+                                "ME",
+                                "MS",
+                                "MA",
+                                "MZ",
+                                "MM",
+                                "NA",
+                                "NR",
+                                "NP",
+                                "NL",
+                                "NC",
+                                "NZ",
+                                "NI",
+                                "NE",
+                                "NG",
+                                "NU",
+                                "NF",
+                                "MP",
+                                "NO",
+                                "OM",
+                                "PK",
+                                "PW",
+                                "PS",
+                                "PA",
+                                "PG",
+                                "PY",
+                                "PE",
+                                "PH",
+                                "PN",
+                                "PL",
+                                "PT",
+                                "PR",
+                                "QA",
+                                "RE",
+                                "RO",
+                                "RU",
+                                "RW",
+                                "BL",
+                                "SH",
+                                "KN",
+                                "LC",
+                                "MF",
+                                "PM",
+                                "VC",
+                                "WS",
+                                "SM",
+                                "ST",
+                                "SA",
+                                "SN",
+                                "RS",
+                                "SC",
+                                "SL",
+                                "SG",
+                                "SX",
+                                "SK",
+                                "SI",
+                                "SB",
+                                "SO",
+                                "ZA",
+                                "GS",
+                                "SS",
+                                "ES",
+                                "LK",
+                                "SD",
+                                "SR",
+                                "SJ",
+                                "SZ",
+                                "SE",
+                                "CH",
+                                "SY",
+                                "TW",
+                                "TJ",
+                                "TZ",
+                                "TH",
+                                "TL",
+                                "TG",
+                                "TK",
+                                "TO",
+                                "TT",
+                                "TN",
+                                "TR",
+                                "TM",
+                                "TC",
+                                "TV",
+                                "UG",
+                                "UA",
+                                "AE",
+                                "GB",
+                                "US",
+                                "UM",
+                                "UY",
+                                "UZ",
+                                "VU",
+                                "VE",
+                                "VN",
+                                "VG",
+                                "VI",
+                                "WF",
+                                "EH",
+                                "YE",
+                                "ZM",
+                                "ZW",
+                                "XZ"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "locality",
+                        "type": "string",
+                        "format": "default",
+                        "title": "locality"
+                    },
+                    {
+                        "name": "latitude",
+                        "type": "string",
+                        "format": "default",
+                        "title": "latitude"
+                    },
+                    {
+                        "name": "longitude",
+                        "type": "string",
+                        "format": "default",
+                        "title": "longitude"
+                    },
+                    {
+                        "name": "altitude",
+                        "type": "string",
+                        "format": "default",
+                        "title": "altitude"
+                    },
+                    {
+                        "name": "sex",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sex",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "female",
+                                "male",
+                                "hermaphrodite"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "host",
+                        "type": "string",
+                        "format": "default",
+                        "title": "host"
+                    },
+                    {
+                        "name": "associatedSequences",
+                        "type": "string",
+                        "format": "default",
+                        "title": "associatedSequences"
+                    },
+                    {
+                        "name": "date",
+                        "type": "string",
+                        "format": "default",
+                        "title": "date"
+                    },
+                    {
+                        "name": "collector",
+                        "type": "string",
+                        "format": "default",
+                        "title": "collector"
+                    },
+                    {
+                        "name": "institutionCode",
+                        "type": "string",
+                        "format": "default",
+                        "title": "institutionCode"
+                    },
+                    {
+                        "name": "catalogNumber",
+                        "type": "string",
+                        "format": "default",
+                        "title": "catalogNumber"
+                    },
+                    {
+                        "name": "link",
+                        "type": "string",
+                        "format": "uri",
+                        "title": "link"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "primaryKey": "ID",
+                "foreignKeys":
+                [
+                    {
+                        "fields": "nameID",
+                        "reference":
+                        {
+                            "resource": "name",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "referenceID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "typematerial",
+                "title": "TypeMaterial",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/typematerial.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "treatment",
+            "path": "treatment.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "taxonID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "taxonID"
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "document",
+                        "type": "string",
+                        "format": "default",
+                        "title": "document"
+                    },
+                    {
+                        "name": "format",
+                        "type": "string",
+                        "format": "default",
+                        "title": "format",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "plain text",
+                                "markdown",
+                                "xml",
+                                "html",
+                                "tax pub",
+                                "taxon x",
+                                "rdf",
+                                "pdf"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "foreignKeys":
+                [
+                    {
+                        "fields": "taxonID",
+                        "reference":
+                        {
+                            "resource": "taxon",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "treatment",
+                "title": "Treatment",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/treatment.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "nameusage",
+            "path": "nameusage.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "ID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "ID",
+                        "constraints":
+                        {
+                            "unique": true,
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "alternativeID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "alternativeID"
+                    },
+                    {
+                        "name": "nameAlternativeID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "nameAlternativeID"
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "parentID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "parentID"
+                    },
+                    {
+                        "name": "basionymID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "basionymID"
+                    },
+                    {
+                        "name": "status",
+                        "type": "string",
+                        "format": "default",
+                        "title": "status",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "accepted",
+                                "provisionally accepted",
+                                "synonym",
+                                "ambiguous synonym",
+                                "misapplied",
+                                "bare name"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "scientificName",
+                        "type": "string",
+                        "format": "default",
+                        "title": "scientificName",
+                        "constraints":
+                        {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "authorship",
+                        "type": "string",
+                        "format": "default",
+                        "title": "authorship"
+                    },
+                    {
+                        "name": "rank",
+                        "type": "string",
+                        "format": "default",
+                        "title": "rank",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "superdomain",
+                                "domain",
+                                "subdomain",
+                                "infradomain",
+                                "empire",
+                                "realm",
+                                "subrealm",
+                                "superkingdom",
+                                "kingdom",
+                                "subkingdom",
+                                "infrakingdom",
+                                "superphylum",
+                                "phylum",
+                                "subphylum",
+                                "infraphylum",
+                                "parvphylum",
+                                "microphylum",
+                                "nanophylum",
+                                "claudius",
+                                "gigaclass",
+                                "megaclass",
+                                "superclass",
+                                "class",
+                                "subclass",
+                                "infraclass",
+                                "subterclass",
+                                "parvclass",
+                                "superdivision",
+                                "division",
+                                "subdivision",
+                                "infradivision",
+                                "superlegion",
+                                "legion",
+                                "sublegion",
+                                "infralegion",
+                                "megacohort",
+                                "supercohort",
+                                "cohort",
+                                "subcohort",
+                                "infracohort",
+                                "gigaorder",
+                                "magnorder",
+                                "grandorder",
+                                "mirorder",
+                                "superorder",
+                                "order",
+                                "nanorder",
+                                "hypoorder",
+                                "minorder",
+                                "suborder",
+                                "infraorder",
+                                "parvorder",
+                                "supersection zoology",
+                                "section zoology",
+                                "subsection zoology",
+                                "falanx",
+                                "gigafamily",
+                                "megafamily",
+                                "grandfamily",
+                                "superfamily",
+                                "epifamily",
+                                "family",
+                                "subfamily",
+                                "infrafamily",
+                                "supertribe",
+                                "tribe",
+                                "subtribe",
+                                "infratribe",
+                                "suprageneric name",
+                                "supergenus",
+                                "genus",
+                                "subgenus",
+                                "infragenus",
+                                "supersection botany",
+                                "section botany",
+                                "subsection botany",
+                                "superseries",
+                                "series",
+                                "subseries",
+                                "infrageneric name",
+                                "species aggregate",
+                                "species",
+                                "infraspecific name",
+                                "grex",
+                                "klepton",
+                                "subspecies",
+                                "cultivar group",
+                                "convariety",
+                                "infrasubspecific name",
+                                "proles",
+                                "natio",
+                                "aberration",
+                                "morph",
+                                "supervariety",
+                                "variety",
+                                "subvariety",
+                                "superform",
+                                "form",
+                                "subform",
+                                "pathovar",
+                                "biovar",
+                                "chemovar",
+                                "morphovar",
+                                "phagovar",
+                                "serovar",
+                                "chemoform",
+                                "forma specialis",
+                                "lusus",
+                                "cultivar",
+                                "mutatio",
+                                "strain",
+                                "other",
+                                "unranked"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "notho",
+                        "type": "string",
+                        "format": "default",
+                        "title": "notho"
+                    },
+                    {
+                        "name": "originalSpelling",
+                        "type": "string",
+                        "format": "default",
+                        "title": "originalSpelling"
+                    },
+                    {
+                        "name": "uninomial",
+                        "type": "string",
+                        "format": "default",
+                        "title": "uninomial"
+                    },
+                    {
+                        "name": "genericName",
+                        "type": "string",
+                        "format": "default",
+                        "title": "genericName"
+                    },
+                    {
+                        "name": "infragenericEpithet",
+                        "type": "string",
+                        "format": "default",
+                        "title": "infragenericEpithet"
+                    },
+                    {
+                        "name": "specificEpithet",
+                        "type": "string",
+                        "format": "default",
+                        "title": "specificEpithet"
+                    },
+                    {
+                        "name": "infraspecificEpithet",
+                        "type": "string",
+                        "format": "default",
+                        "title": "infraspecificEpithet"
+                    },
+                    {
+                        "name": "cultivarEpithet",
+                        "type": "string",
+                        "format": "default",
+                        "title": "cultivarEpithet"
+                    },
+                    {
+                        "name": "combinationAuthorship",
+                        "type": "string",
+                        "format": "default",
+                        "title": "combinationAuthorship"
+                    },
+                    {
+                        "name": "combinationAuthorshipID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "combinationAuthorshipID"
+                    },
+                    {
+                        "name": "combinationExAuthorship",
+                        "type": "string",
+                        "format": "default",
+                        "title": "combinationExAuthorship"
+                    },
+                    {
+                        "name": "combinationExAuthorshipID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "combinationExAuthorshipID"
+                    },
+                    {
+                        "name": "combinationAuthorshipYear",
+                        "type": "string",
+                        "format": "default",
+                        "title": "combinationAuthorshipYear"
+                    },
+                    {
+                        "name": "basionymAuthorship",
+                        "type": "string",
+                        "format": "default",
+                        "title": "basionymAuthorship"
+                    },
+                    {
+                        "name": "basionymAuthorshipID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "basionymAuthorshipID"
+                    },
+                    {
+                        "name": "basionymExAuthorship",
+                        "type": "string",
+                        "format": "default",
+                        "title": "basionymExAuthorship"
+                    },
+                    {
+                        "name": "basionymExAuthorshipID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "basionymExAuthorshipID"
+                    },
+                    {
+                        "name": "basionymAuthorshipYear",
+                        "type": "string",
+                        "format": "default",
+                        "title": "basionymAuthorshipYear"
+                    },
+                    {
+                        "name": "namePhrase",
+                        "type": "string",
+                        "format": "default",
+                        "title": "namePhrase"
+                    },
+                    {
+                        "name": "nameReferenceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "nameReferenceID"
+                    },
+                    {
+                        "name": "publishedInYear",
+                        "type": "year",
+                        "format": "default",
+                        "title": "publishedInYear"
+                    },
+                    {
+                        "name": "publishedInPage",
+                        "type": "string",
+                        "format": "default",
+                        "title": "publishedInPage"
+                    },
+                    {
+                        "name": "publishedInPageLink",
+                        "type": "string",
+                        "format": "default",
+                        "title": "publishedInPageLink"
+                    },
+                    {
+                        "name": "gender",
+                        "type": "string",
+                        "format": "default",
+                        "title": "gender"
+                    },
+                    {
+                        "name": "genderAgreement",
+                        "type": "boolean",
+                        "format": "default",
+                        "title": "genderAgreement"
+                    },
+                    {
+                        "name": "etymology",
+                        "type": "string",
+                        "format": "default",
+                        "title": "etymology"
+                    },
+                    {
+                        "name": "code",
+                        "type": "string",
+                        "format": "default",
+                        "title": "code",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "bacterial",
+                                "botanical",
+                                "cultivars",
+                                "phyto",
+                                "virus",
+                                "zoological",
+                                "phylo"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "nameStatus",
+                        "type": "string",
+                        "format": "default",
+                        "title": "nameStatus",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "established",
+                                "not established",
+                                "acceptable",
+                                "unacceptable",
+                                "conserved",
+                                "rejected",
+                                "doubtful",
+                                "manuscript",
+                                "chresonym"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "accordingToID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "accordingToID"
+                    },
+                    {
+                        "name": "accordingToPage",
+                        "type": "string",
+                        "format": "default",
+                        "title": "accordingToPage"
+                    },
+                    {
+                        "name": "accordingToPageLink",
+                        "type": "string",
+                        "format": "default",
+                        "title": "accordingToPageLink"
+                    },
+                    {
+                        "name": "referenceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "referenceID"
+                    },
+                    {
+                        "name": "scrutinizer",
+                        "type": "string",
+                        "format": "default",
+                        "title": "scrutinizer"
+                    },
+                    {
+                        "name": "scrutinizerID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "scrutinizerID"
+                    },
+                    {
+                        "name": "scrutinizerDate",
+                        "type": "date",
+                        "format": "default",
+                        "title": "scrutinizerDate"
+                    },
+                    {
+                        "name": "extinct",
+                        "type": "boolean",
+                        "format": "default",
+                        "title": "extinct"
+                    },
+                    {
+                        "name": "temporalRangeStart",
+                        "type": "string",
+                        "format": "default",
+                        "title": "temporalRangeStart"
+                    },
+                    {
+                        "name": "temporalRangeEnd",
+                        "type": "string",
+                        "format": "default",
+                        "title": "temporalRangeEnd"
+                    },
+                    {
+                        "name": "environment",
+                        "type": "string",
+                        "format": "default",
+                        "title": "environment",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "brackish",
+                                "freshwater",
+                                "marine",
+                                "terrestrial"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "species",
+                        "type": "string",
+                        "format": "default",
+                        "title": "species"
+                    },
+                    {
+                        "name": "section",
+                        "type": "string",
+                        "format": "default",
+                        "title": "section"
+                    },
+                    {
+                        "name": "subgenus",
+                        "type": "string",
+                        "format": "default",
+                        "title": "subgenus"
+                    },
+                    {
+                        "name": "genus",
+                        "type": "string",
+                        "format": "default",
+                        "title": "genus"
+                    },
+                    {
+                        "name": "subtribe",
+                        "type": "string",
+                        "format": "default",
+                        "title": "subtribe"
+                    },
+                    {
+                        "name": "tribe",
+                        "type": "string",
+                        "format": "default",
+                        "title": "tribe"
+                    },
+                    {
+                        "name": "subfamily",
+                        "type": "string",
+                        "format": "default",
+                        "title": "subfamily"
+                    },
+                    {
+                        "name": "family",
+                        "type": "string",
+                        "format": "default",
+                        "title": "family"
+                    },
+                    {
+                        "name": "superfamily",
+                        "type": "string",
+                        "format": "default",
+                        "title": "superfamily"
+                    },
+                    {
+                        "name": "suborder",
+                        "type": "string",
+                        "format": "default",
+                        "title": "suborder"
+                    },
+                    {
+                        "name": "order",
+                        "type": "string",
+                        "format": "default",
+                        "title": "order"
+                    },
+                    {
+                        "name": "subclass",
+                        "type": "string",
+                        "format": "default",
+                        "title": "subclass"
+                    },
+                    {
+                        "name": "class",
+                        "type": "string",
+                        "format": "default",
+                        "title": "class"
+                    },
+                    {
+                        "name": "subphylum",
+                        "type": "string",
+                        "format": "default",
+                        "title": "subphylum"
+                    },
+                    {
+                        "name": "phylum",
+                        "type": "string",
+                        "format": "default",
+                        "title": "phylum"
+                    },
+                    {
+                        "name": "kingdom",
+                        "type": "string",
+                        "format": "default",
+                        "title": "kingdom"
+                    },
+                    {
+                        "name": "ordinal",
+                        "type": "integer",
+                        "format": "default",
+                        "title": "ordinal"
+                    },
+                    {
+                        "name": "branchLength",
+                        "type": "number",
+                        "format": "default",
+                        "title": "branchLength"
+                    },
+                    {
+                        "name": "link",
+                        "type": "string",
+                        "format": "uri",
+                        "title": "link"
+                    },
+                    {
+                        "name": "nameRemarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "nameRemarks"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "primaryKey": "ID",
+                "foreignKeys":
+                [
+                    {
+                        "fields": "parentID",
+                        "reference":
+                        {
+                            "resource": "taxon",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "basionymID",
+                        "reference":
+                        {
+                            "resource": "name",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "accordingToID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "referenceID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "nameusage",
+                "title": "NameUsage",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/nameusage.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "taxonproperty",
+            "path": "taxonproperty.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "taxonID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "taxonID"
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "property",
+                        "type": "string",
+                        "format": "default",
+                        "title": "property"
+                    },
+                    {
+                        "name": "value",
+                        "type": "string",
+                        "format": "default",
+                        "title": "value"
+                    },
+                    {
+                        "name": "ordinal",
+                        "type": "integer",
+                        "format": "default",
+                        "title": "ordinal"
+                    },
+                    {
+                        "name": "referenceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "referenceID"
+                    },
+                    {
+                        "name": "page",
+                        "type": "string",
+                        "format": "default",
+                        "title": "page"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "foreignKeys":
+                [
+                    {
+                        "fields": "taxonID",
+                        "reference":
+                        {
+                            "resource": "taxon",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "referenceID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "taxonproperty",
+                "title": "TaxonProperty",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/taxonproperty.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "synonym",
+            "path": "synonym.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "ID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "ID",
+                        "constraints":
+                        {
+                            "unique": true,
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "taxonID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "taxonID"
+                    },
+                    {
+                        "name": "nameID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "nameID"
+                    },
+                    {
+                        "name": "namePhrase",
+                        "type": "string",
+                        "format": "default",
+                        "title": "namePhrase"
+                    },
+                    {
+                        "name": "accordingToID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "accordingToID"
+                    },
+                    {
+                        "name": "accordingToPage",
+                        "type": "string",
+                        "format": "default",
+                        "title": "accordingToPage"
+                    },
+                    {
+                        "name": "accordingToPageLink",
+                        "type": "string",
+                        "format": "default",
+                        "title": "accordingToPageLink"
+                    },
+                    {
+                        "name": "status",
+                        "type": "string",
+                        "format": "default",
+                        "title": "status",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "accepted",
+                                "provisionally accepted",
+                                "synonym",
+                                "ambiguous synonym",
+                                "misapplied",
+                                "bare name"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "referenceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "referenceID"
+                    },
+                    {
+                        "name": "link",
+                        "type": "string",
+                        "format": "uri",
+                        "title": "link"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "primaryKey": "ID",
+                "foreignKeys":
+                [
+                    {
+                        "fields": "taxonID",
+                        "reference":
+                        {
+                            "resource": "taxon",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "nameID",
+                        "reference":
+                        {
+                            "resource": "name",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "accordingToID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "referenceID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "synonym",
+                "title": "Synonym",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/synonym.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "taxonconceptrelation",
+            "path": "taxonconceptrelation.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "taxonID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "taxonID"
+                    },
+                    {
+                        "name": "relatedTaxonID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "relatedTaxonID"
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "format": "default",
+                        "title": "type",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "equals",
+                                "includes",
+                                "included in",
+                                "overlaps",
+                                "excludes"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "referenceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "referenceID"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "foreignKeys":
+                [
+                    {
+                        "fields": "taxonID",
+                        "reference":
+                        {
+                            "resource": "taxon",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "referenceID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "taxonconceptrelation",
+                "title": "TaxonConceptRelation",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/taxonconceptrelation.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "media",
+            "path": "media.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "taxonID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "taxonID"
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "url",
+                        "type": "string",
+                        "format": "uri",
+                        "title": "url"
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "format": "default",
+                        "title": "type",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "image",
+                                "video",
+                                "audio"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "format",
+                        "type": "string",
+                        "format": "default",
+                        "title": "format",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "plain text",
+                                "markdown",
+                                "xml",
+                                "html",
+                                "tax pub",
+                                "taxon x",
+                                "rdf",
+                                "pdf"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "title",
+                        "type": "string",
+                        "format": "default",
+                        "title": "title"
+                    },
+                    {
+                        "name": "created",
+                        "type": "date",
+                        "format": "default",
+                        "title": "created"
+                    },
+                    {
+                        "name": "creator",
+                        "type": "string",
+                        "format": "default",
+                        "title": "creator"
+                    },
+                    {
+                        "name": "license",
+                        "type": "string",
+                        "format": "default",
+                        "title": "license"
+                    },
+                    {
+                        "name": "link",
+                        "type": "string",
+                        "format": "uri",
+                        "title": "link"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "foreignKeys":
+                [
+                    {
+                        "fields": "taxonID",
+                        "reference":
+                        {
+                            "resource": "taxon",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "media",
+                "title": "Media",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/media.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "vernacularname",
+            "path": "vernacularname.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "taxonID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "taxonID"
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "format": "default",
+                        "title": "name"
+                    },
+                    {
+                        "name": "transliteration",
+                        "type": "string",
+                        "format": "default",
+                        "title": "transliteration"
+                    },
+                    {
+                        "name": "language",
+                        "type": "string",
+                        "format": "default",
+                        "title": "language"
+                    },
+                    {
+                        "name": "preferred",
+                        "type": "boolean",
+                        "format": "default",
+                        "title": "preferred"
+                    },
+                    {
+                        "name": "country",
+                        "type": "string",
+                        "format": "default",
+                        "title": "country",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "AF",
+                                "AX",
+                                "AL",
+                                "DZ",
+                                "AS",
+                                "AD",
+                                "AO",
+                                "AI",
+                                "AQ",
+                                "AG",
+                                "AR",
+                                "AM",
+                                "AW",
+                                "AU",
+                                "AT",
+                                "AZ",
+                                "BS",
+                                "BH",
+                                "BD",
+                                "BB",
+                                "BY",
+                                "BE",
+                                "BZ",
+                                "BJ",
+                                "BM",
+                                "BT",
+                                "BO",
+                                "BQ",
+                                "BA",
+                                "BW",
+                                "BV",
+                                "BR",
+                                "IO",
+                                "BN",
+                                "BG",
+                                "BF",
+                                "BI",
+                                "KH",
+                                "CM",
+                                "CA",
+                                "CV",
+                                "KY",
+                                "CF",
+                                "TD",
+                                "CL",
+                                "CN",
+                                "CX",
+                                "CC",
+                                "CO",
+                                "KM",
+                                "CD",
+                                "CG",
+                                "CK",
+                                "CR",
+                                "CI",
+                                "HR",
+                                "CU",
+                                "CW",
+                                "CY",
+                                "CZ",
+                                "DK",
+                                "DJ",
+                                "DM",
+                                "DO",
+                                "EC",
+                                "EG",
+                                "SV",
+                                "GQ",
+                                "ER",
+                                "EE",
+                                "ET",
+                                "FK",
+                                "FO",
+                                "FJ",
+                                "FI",
+                                "FR",
+                                "GF",
+                                "PF",
+                                "TF",
+                                "GA",
+                                "GM",
+                                "GE",
+                                "DE",
+                                "GH",
+                                "GI",
+                                "GR",
+                                "GL",
+                                "GD",
+                                "GP",
+                                "GU",
+                                "GT",
+                                "GG",
+                                "GN",
+                                "GW",
+                                "GY",
+                                "HT",
+                                "HM",
+                                "VA",
+                                "HN",
+                                "HK",
+                                "HU",
+                                "IS",
+                                "IN",
+                                "ID",
+                                "IR",
+                                "IQ",
+                                "IE",
+                                "IM",
+                                "IL",
+                                "IT",
+                                "JM",
+                                "JP",
+                                "JE",
+                                "JO",
+                                "KZ",
+                                "KE",
+                                "KI",
+                                "KP",
+                                "KR",
+                                "XK",
+                                "KW",
+                                "KG",
+                                "LA",
+                                "LV",
+                                "LB",
+                                "LS",
+                                "LR",
+                                "LY",
+                                "LI",
+                                "LT",
+                                "LU",
+                                "MO",
+                                "MK",
+                                "MG",
+                                "MW",
+                                "MY",
+                                "MV",
+                                "ML",
+                                "MT",
+                                "MH",
+                                "MQ",
+                                "MR",
+                                "MU",
+                                "YT",
+                                "MX",
+                                "FM",
+                                "MD",
+                                "MC",
+                                "MN",
+                                "ME",
+                                "MS",
+                                "MA",
+                                "MZ",
+                                "MM",
+                                "NA",
+                                "NR",
+                                "NP",
+                                "NL",
+                                "NC",
+                                "NZ",
+                                "NI",
+                                "NE",
+                                "NG",
+                                "NU",
+                                "NF",
+                                "MP",
+                                "NO",
+                                "OM",
+                                "PK",
+                                "PW",
+                                "PS",
+                                "PA",
+                                "PG",
+                                "PY",
+                                "PE",
+                                "PH",
+                                "PN",
+                                "PL",
+                                "PT",
+                                "PR",
+                                "QA",
+                                "RE",
+                                "RO",
+                                "RU",
+                                "RW",
+                                "BL",
+                                "SH",
+                                "KN",
+                                "LC",
+                                "MF",
+                                "PM",
+                                "VC",
+                                "WS",
+                                "SM",
+                                "ST",
+                                "SA",
+                                "SN",
+                                "RS",
+                                "SC",
+                                "SL",
+                                "SG",
+                                "SX",
+                                "SK",
+                                "SI",
+                                "SB",
+                                "SO",
+                                "ZA",
+                                "GS",
+                                "SS",
+                                "ES",
+                                "LK",
+                                "SD",
+                                "SR",
+                                "SJ",
+                                "SZ",
+                                "SE",
+                                "CH",
+                                "SY",
+                                "TW",
+                                "TJ",
+                                "TZ",
+                                "TH",
+                                "TL",
+                                "TG",
+                                "TK",
+                                "TO",
+                                "TT",
+                                "TN",
+                                "TR",
+                                "TM",
+                                "TC",
+                                "TV",
+                                "UG",
+                                "UA",
+                                "AE",
+                                "GB",
+                                "US",
+                                "UM",
+                                "UY",
+                                "UZ",
+                                "VU",
+                                "VE",
+                                "VN",
+                                "VG",
+                                "VI",
+                                "WF",
+                                "EH",
+                                "YE",
+                                "ZM",
+                                "ZW",
+                                "XZ"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "area",
+                        "type": "string",
+                        "format": "default",
+                        "title": "area"
+                    },
+                    {
+                        "name": "sex",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sex",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "female",
+                                "male",
+                                "hermaphrodite"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "referenceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "referenceID"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "foreignKeys":
+                [
+                    {
+                        "fields": "taxonID",
+                        "reference":
+                        {
+                            "resource": "taxon",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "referenceID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "vernacularname",
+                "title": "VernacularName",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/vernacularname.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "name",
+            "path": "name.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "ID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "ID",
+                        "constraints":
+                        {
+                            "unique": true,
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "alternativeID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "alternativeID"
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "basionymID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "basionymID"
+                    },
+                    {
+                        "name": "scientificName",
+                        "type": "string",
+                        "format": "default",
+                        "title": "scientificName",
+                        "constraints":
+                        {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "authorship",
+                        "type": "string",
+                        "format": "default",
+                        "title": "authorship"
+                    },
+                    {
+                        "name": "rank",
+                        "type": "string",
+                        "format": "default",
+                        "title": "rank",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "superdomain",
+                                "domain",
+                                "subdomain",
+                                "infradomain",
+                                "empire",
+                                "realm",
+                                "subrealm",
+                                "superkingdom",
+                                "kingdom",
+                                "subkingdom",
+                                "infrakingdom",
+                                "superphylum",
+                                "phylum",
+                                "subphylum",
+                                "infraphylum",
+                                "parvphylum",
+                                "microphylum",
+                                "nanophylum",
+                                "claudius",
+                                "gigaclass",
+                                "megaclass",
+                                "superclass",
+                                "class",
+                                "subclass",
+                                "infraclass",
+                                "subterclass",
+                                "parvclass",
+                                "superdivision",
+                                "division",
+                                "subdivision",
+                                "infradivision",
+                                "superlegion",
+                                "legion",
+                                "sublegion",
+                                "infralegion",
+                                "megacohort",
+                                "supercohort",
+                                "cohort",
+                                "subcohort",
+                                "infracohort",
+                                "gigaorder",
+                                "magnorder",
+                                "grandorder",
+                                "mirorder",
+                                "superorder",
+                                "order",
+                                "nanorder",
+                                "hypoorder",
+                                "minorder",
+                                "suborder",
+                                "infraorder",
+                                "parvorder",
+                                "supersection zoology",
+                                "section zoology",
+                                "subsection zoology",
+                                "falanx",
+                                "gigafamily",
+                                "megafamily",
+                                "grandfamily",
+                                "superfamily",
+                                "epifamily",
+                                "family",
+                                "subfamily",
+                                "infrafamily",
+                                "supertribe",
+                                "tribe",
+                                "subtribe",
+                                "infratribe",
+                                "suprageneric name",
+                                "supergenus",
+                                "genus",
+                                "subgenus",
+                                "infragenus",
+                                "supersection botany",
+                                "section botany",
+                                "subsection botany",
+                                "superseries",
+                                "series",
+                                "subseries",
+                                "infrageneric name",
+                                "species aggregate",
+                                "species",
+                                "infraspecific name",
+                                "grex",
+                                "klepton",
+                                "subspecies",
+                                "cultivar group",
+                                "convariety",
+                                "infrasubspecific name",
+                                "proles",
+                                "natio",
+                                "aberration",
+                                "morph",
+                                "supervariety",
+                                "variety",
+                                "subvariety",
+                                "superform",
+                                "form",
+                                "subform",
+                                "pathovar",
+                                "biovar",
+                                "chemovar",
+                                "morphovar",
+                                "phagovar",
+                                "serovar",
+                                "chemoform",
+                                "forma specialis",
+                                "lusus",
+                                "cultivar",
+                                "mutatio",
+                                "strain",
+                                "other",
+                                "unranked"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "uninomial",
+                        "type": "string",
+                        "format": "default",
+                        "title": "uninomial"
+                    },
+                    {
+                        "name": "genus",
+                        "type": "string",
+                        "format": "default",
+                        "title": "genus"
+                    },
+                    {
+                        "name": "infragenericEpithet",
+                        "type": "string",
+                        "format": "default",
+                        "title": "infragenericEpithet"
+                    },
+                    {
+                        "name": "specificEpithet",
+                        "type": "string",
+                        "format": "default",
+                        "title": "specificEpithet"
+                    },
+                    {
+                        "name": "infraspecificEpithet",
+                        "type": "string",
+                        "format": "default",
+                        "title": "infraspecificEpithet"
+                    },
+                    {
+                        "name": "cultivarEpithet",
+                        "type": "string",
+                        "format": "default",
+                        "title": "cultivarEpithet"
+                    },
+                    {
+                        "name": "notho",
+                        "type": "string",
+                        "format": "default",
+                        "title": "notho"
+                    },
+                    {
+                        "name": "originalSpelling",
+                        "type": "string",
+                        "format": "default",
+                        "title": "originalSpelling"
+                    },
+                    {
+                        "name": "combinationAuthorship",
+                        "type": "string",
+                        "format": "default",
+                        "title": "combinationAuthorship"
+                    },
+                    {
+                        "name": "combinationAuthorshipID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "combinationAuthorshipID"
+                    },
+                    {
+                        "name": "combinationExAuthorship",
+                        "type": "string",
+                        "format": "default",
+                        "title": "combinationExAuthorship"
+                    },
+                    {
+                        "name": "combinationExAuthorshipID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "combinationExAuthorshipID"
+                    },
+                    {
+                        "name": "combinationAuthorshipYear",
+                        "type": "string",
+                        "format": "default",
+                        "title": "combinationAuthorshipYear"
+                    },
+                    {
+                        "name": "basionymAuthorship",
+                        "type": "string",
+                        "format": "default",
+                        "title": "basionymAuthorship"
+                    },
+                    {
+                        "name": "basionymAuthorshipID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "basionymAuthorshipID"
+                    },
+                    {
+                        "name": "basionymExAuthorship",
+                        "type": "string",
+                        "format": "default",
+                        "title": "basionymExAuthorship"
+                    },
+                    {
+                        "name": "basionymExAuthorshipID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "basionymExAuthorshipID"
+                    },
+                    {
+                        "name": "basionymAuthorshipYear",
+                        "type": "string",
+                        "format": "default",
+                        "title": "basionymAuthorshipYear"
+                    },
+                    {
+                        "name": "code",
+                        "type": "string",
+                        "format": "default",
+                        "title": "code",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "bacterial",
+                                "botanical",
+                                "cultivars",
+                                "phyto",
+                                "virus",
+                                "zoological",
+                                "phylo"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "status",
+                        "type": "string",
+                        "format": "default",
+                        "title": "status",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "established",
+                                "not established",
+                                "acceptable",
+                                "unacceptable",
+                                "conserved",
+                                "rejected",
+                                "doubtful",
+                                "manuscript",
+                                "chresonym"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "referenceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "referenceID"
+                    },
+                    {
+                        "name": "publishedInYear",
+                        "type": "year",
+                        "format": "default",
+                        "title": "publishedInYear"
+                    },
+                    {
+                        "name": "publishedInPage",
+                        "type": "string",
+                        "format": "default",
+                        "title": "publishedInPage"
+                    },
+                    {
+                        "name": "publishedInPageLink",
+                        "type": "string",
+                        "format": "default",
+                        "title": "publishedInPageLink"
+                    },
+                    {
+                        "name": "gender",
+                        "type": "string",
+                        "format": "default",
+                        "title": "gender"
+                    },
+                    {
+                        "name": "genderAgreement",
+                        "type": "boolean",
+                        "format": "default",
+                        "title": "genderAgreement"
+                    },
+                    {
+                        "name": "etymology",
+                        "type": "string",
+                        "format": "default",
+                        "title": "etymology"
+                    },
+                    {
+                        "name": "link",
+                        "type": "string",
+                        "format": "uri",
+                        "title": "link"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "primaryKey": "ID",
+                "foreignKeys":
+                [
+                    {
+                        "fields": "basionymID",
+                        "reference":
+                        {
+                            "resource": "name",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "referenceID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "name",
+                "title": "Name",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/name.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "speciesestimate",
+            "path": "speciesestimate.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "taxonID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "taxonID"
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "estimate",
+                        "type": "integer",
+                        "format": "default",
+                        "title": "estimate"
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "format": "default",
+                        "title": "type",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "species living",
+                                "species extinct",
+                                "estimated species"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "referenceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "referenceID"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "foreignKeys":
+                [
+                    {
+                        "fields": "taxonID",
+                        "reference":
+                        {
+                            "resource": "taxon",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "referenceID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "speciesestimate",
+                "title": "SpeciesEstimate",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/speciesestimate.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "distribution",
+            "path": "distribution.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "taxonID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "taxonID"
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "areaID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "areaID"
+                    },
+                    {
+                        "name": "area",
+                        "type": "string",
+                        "format": "default",
+                        "title": "area"
+                    },
+                    {
+                        "name": "gazetteer",
+                        "type": "string",
+                        "format": "default",
+                        "title": "gazetteer",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "tdwg",
+                                "iso",
+                                "fao",
+                                "longhurst",
+                                "realm",
+                                "iho",
+                                "mrgid",
+                                "text"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "establishmentMeans",
+                        "type": "string",
+                        "format": "default",
+                        "title": "establishmentMeans"
+                    },
+                    {
+                        "name": "degreeOfEstablishment",
+                        "type": "string",
+                        "format": "default",
+                        "title": "degreeOfEstablishment"
+                    },
+                    {
+                        "name": "pathway",
+                        "type": "string",
+                        "format": "default",
+                        "title": "pathway"
+                    },
+                    {
+                        "name": "threatStatus",
+                        "type": "string",
+                        "format": "default",
+                        "title": "threatStatus"
+                    },
+                    {
+                        "name": "year",
+                        "type": "string",
+                        "format": "default",
+                        "title": "year"
+                    },
+                    {
+                        "name": "season",
+                        "type": "string",
+                        "format": "default",
+                        "title": "season"
+                    },
+                    {
+                        "name": "lifeStage",
+                        "type": "string",
+                        "format": "default",
+                        "title": "lifeStage"
+                    },
+                    {
+                        "name": "referenceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "referenceID"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "foreignKeys":
+                [
+                    {
+                        "fields": "taxonID",
+                        "reference":
+                        {
+                            "resource": "taxon",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "referenceID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "distribution",
+                "title": "Distribution",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/distribution.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "taxon",
+            "path": "taxon.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "ID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "ID",
+                        "constraints":
+                        {
+                            "unique": true,
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "alternativeID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "alternativeID"
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "parentID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "parentID"
+                    },
+                    {
+                        "name": "nameID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "nameID"
+                    },
+                    {
+                        "name": "namePhrase",
+                        "type": "string",
+                        "format": "default",
+                        "title": "namePhrase"
+                    },
+                    {
+                        "name": "accordingToID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "accordingToID"
+                    },
+                    {
+                        "name": "accordingToPage",
+                        "type": "string",
+                        "format": "default",
+                        "title": "accordingToPage"
+                    },
+                    {
+                        "name": "accordingToPageLink",
+                        "type": "string",
+                        "format": "default",
+                        "title": "accordingToPageLink"
+                    },
+                    {
+                        "name": "provisional",
+                        "type": "boolean",
+                        "format": "default",
+                        "title": "provisional"
+                    },
+                    {
+                        "name": "scrutinizer",
+                        "type": "string",
+                        "format": "default",
+                        "title": "scrutinizer"
+                    },
+                    {
+                        "name": "scrutinizerID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "scrutinizerID"
+                    },
+                    {
+                        "name": "scrutinizerDate",
+                        "type": "date",
+                        "format": "default",
+                        "title": "scrutinizerDate"
+                    },
+                    {
+                        "name": "extinct",
+                        "type": "boolean",
+                        "format": "default",
+                        "title": "extinct"
+                    },
+                    {
+                        "name": "temporalRangeStart",
+                        "type": "string",
+                        "format": "default",
+                        "title": "temporalRangeStart"
+                    },
+                    {
+                        "name": "temporalRangeEnd",
+                        "type": "string",
+                        "format": "default",
+                        "title": "temporalRangeEnd"
+                    },
+                    {
+                        "name": "environment",
+                        "type": "string",
+                        "format": "default",
+                        "title": "environment",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "brackish",
+                                "freshwater",
+                                "marine",
+                                "terrestrial"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "referenceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "referenceID"
+                    },
+                    {
+                        "name": "species",
+                        "type": "string",
+                        "format": "default",
+                        "title": "species"
+                    },
+                    {
+                        "name": "section",
+                        "type": "string",
+                        "format": "default",
+                        "title": "section"
+                    },
+                    {
+                        "name": "subgenus",
+                        "type": "string",
+                        "format": "default",
+                        "title": "subgenus"
+                    },
+                    {
+                        "name": "genus",
+                        "type": "string",
+                        "format": "default",
+                        "title": "genus"
+                    },
+                    {
+                        "name": "subtribe",
+                        "type": "string",
+                        "format": "default",
+                        "title": "subtribe"
+                    },
+                    {
+                        "name": "tribe",
+                        "type": "string",
+                        "format": "default",
+                        "title": "tribe"
+                    },
+                    {
+                        "name": "subfamily",
+                        "type": "string",
+                        "format": "default",
+                        "title": "subfamily"
+                    },
+                    {
+                        "name": "family",
+                        "type": "string",
+                        "format": "default",
+                        "title": "family"
+                    },
+                    {
+                        "name": "superfamily",
+                        "type": "string",
+                        "format": "default",
+                        "title": "superfamily"
+                    },
+                    {
+                        "name": "suborder",
+                        "type": "string",
+                        "format": "default",
+                        "title": "suborder"
+                    },
+                    {
+                        "name": "order",
+                        "type": "string",
+                        "format": "default",
+                        "title": "order"
+                    },
+                    {
+                        "name": "subclass",
+                        "type": "string",
+                        "format": "default",
+                        "title": "subclass"
+                    },
+                    {
+                        "name": "class",
+                        "type": "string",
+                        "format": "default",
+                        "title": "class"
+                    },
+                    {
+                        "name": "subphylum",
+                        "type": "string",
+                        "format": "default",
+                        "title": "subphylum"
+                    },
+                    {
+                        "name": "phylum",
+                        "type": "string",
+                        "format": "default",
+                        "title": "phylum"
+                    },
+                    {
+                        "name": "kingdom",
+                        "type": "string",
+                        "format": "default",
+                        "title": "kingdom"
+                    },
+                    {
+                        "name": "ordinal",
+                        "type": "integer",
+                        "format": "default",
+                        "title": "ordinal"
+                    },
+                    {
+                        "name": "branchLength",
+                        "type": "number",
+                        "format": "default",
+                        "title": "branchLength"
+                    },
+                    {
+                        "name": "link",
+                        "type": "string",
+                        "format": "uri",
+                        "title": "link"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "primaryKey": "ID",
+                "foreignKeys":
+                [
+                    {
+                        "fields": "parentID",
+                        "reference":
+                        {
+                            "resource": "taxon",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "nameID",
+                        "reference":
+                        {
+                            "resource": "name",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "accordingToID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "referenceID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "taxon",
+                "title": "Taxon",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/taxon.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "speciesinteraction",
+            "path": "speciesinteraction.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "taxonID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "taxonID"
+                    },
+                    {
+                        "name": "relatedTaxonID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "relatedTaxonID"
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "relatedTaxonScientificName",
+                        "type": "string",
+                        "format": "default",
+                        "title": "relatedTaxonScientificName"
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "format": "default",
+                        "title": "type",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "related to",
+                                "co occurs with",
+                                "interacts with",
+                                "adjacent to",
+                                "symbiont of",
+                                "eats",
+                                "eaten by",
+                                "kills",
+                                "killed by",
+                                "preys upon",
+                                "preyed upon by",
+                                "host of",
+                                "has host",
+                                "parasite of",
+                                "has parasite",
+                                "pathogen of",
+                                "has pathogen",
+                                "vector of",
+                                "has vector",
+                                "endoparasite of",
+                                "has endoparasite",
+                                "ectoparasite of",
+                                "has ectoparasite",
+                                "hyperparasite of",
+                                "has hyperparasite",
+                                "kleptoparasite of",
+                                "has kleptoparasite",
+                                "parasitoid of",
+                                "has parasitoid",
+                                "hyperparasitoid of",
+                                "has hyperparasitoid",
+                                "visits",
+                                "visited by",
+                                "visits flowers of",
+                                "flowers visited by",
+                                "pollinates",
+                                "pollinated by",
+                                "lays eggs on",
+                                "has eggs layed on by",
+                                "epiphyte of",
+                                "has epiphyte",
+                                "commensalist of",
+                                "mutualist of"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "referenceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "referenceID"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "foreignKeys":
+                [
+                    {
+                        "fields": "taxonID",
+                        "reference":
+                        {
+                            "resource": "taxon",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "referenceID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "speciesinteraction",
+                "title": "SpeciesInteraction",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/speciesinteraction.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "namerelation",
+            "path": "namerelation.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "nameID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "nameID"
+                    },
+                    {
+                        "name": "relatedNameID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "relatedNameID"
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "format": "default",
+                        "title": "type",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "spelling correction",
+                                "basionym",
+                                "based on",
+                                "replacement name",
+                                "conserved",
+                                "later homonym",
+                                "superfluous",
+                                "homotypic",
+                                "type"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "referenceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "referenceID"
+                    },
+                    {
+                        "name": "page",
+                        "type": "string",
+                        "format": "default",
+                        "title": "page"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "foreignKeys":
+                [
+                    {
+                        "fields": "nameID",
+                        "reference":
+                        {
+                            "resource": "name",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "relatedNameID",
+                        "reference":
+                        {
+                            "resource": "name",
+                            "fields": "ID"
+                        }
+                    },
+                    {
+                        "fields": "referenceID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "namerelation",
+                "title": "NameRelation",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/namerelation.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "author",
+            "path": "author.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "ID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "ID",
+                        "constraints":
+                        {
+                            "unique": true,
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "alternativeID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "alternativeID"
+                    },
+                    {
+                        "name": "given",
+                        "type": "string",
+                        "format": "default",
+                        "title": "given"
+                    },
+                    {
+                        "name": "family",
+                        "type": "string",
+                        "format": "default",
+                        "title": "family"
+                    },
+                    {
+                        "name": "suffix",
+                        "type": "string",
+                        "format": "default",
+                        "title": "suffix"
+                    },
+                    {
+                        "name": "abbreviationBotany",
+                        "type": "string",
+                        "format": "default",
+                        "title": "abbreviationBotany"
+                    },
+                    {
+                        "name": "alternativeNames",
+                        "type": "string",
+                        "format": "default",
+                        "title": "alternativeNames"
+                    },
+                    {
+                        "name": "sex",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sex",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "female",
+                                "male",
+                                "hermaphrodite"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "country",
+                        "type": "string",
+                        "format": "default",
+                        "title": "country",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "AF",
+                                "AX",
+                                "AL",
+                                "DZ",
+                                "AS",
+                                "AD",
+                                "AO",
+                                "AI",
+                                "AQ",
+                                "AG",
+                                "AR",
+                                "AM",
+                                "AW",
+                                "AU",
+                                "AT",
+                                "AZ",
+                                "BS",
+                                "BH",
+                                "BD",
+                                "BB",
+                                "BY",
+                                "BE",
+                                "BZ",
+                                "BJ",
+                                "BM",
+                                "BT",
+                                "BO",
+                                "BQ",
+                                "BA",
+                                "BW",
+                                "BV",
+                                "BR",
+                                "IO",
+                                "BN",
+                                "BG",
+                                "BF",
+                                "BI",
+                                "KH",
+                                "CM",
+                                "CA",
+                                "CV",
+                                "KY",
+                                "CF",
+                                "TD",
+                                "CL",
+                                "CN",
+                                "CX",
+                                "CC",
+                                "CO",
+                                "KM",
+                                "CD",
+                                "CG",
+                                "CK",
+                                "CR",
+                                "CI",
+                                "HR",
+                                "CU",
+                                "CW",
+                                "CY",
+                                "CZ",
+                                "DK",
+                                "DJ",
+                                "DM",
+                                "DO",
+                                "EC",
+                                "EG",
+                                "SV",
+                                "GQ",
+                                "ER",
+                                "EE",
+                                "ET",
+                                "FK",
+                                "FO",
+                                "FJ",
+                                "FI",
+                                "FR",
+                                "GF",
+                                "PF",
+                                "TF",
+                                "GA",
+                                "GM",
+                                "GE",
+                                "DE",
+                                "GH",
+                                "GI",
+                                "GR",
+                                "GL",
+                                "GD",
+                                "GP",
+                                "GU",
+                                "GT",
+                                "GG",
+                                "GN",
+                                "GW",
+                                "GY",
+                                "HT",
+                                "HM",
+                                "VA",
+                                "HN",
+                                "HK",
+                                "HU",
+                                "IS",
+                                "IN",
+                                "ID",
+                                "IR",
+                                "IQ",
+                                "IE",
+                                "IM",
+                                "IL",
+                                "IT",
+                                "JM",
+                                "JP",
+                                "JE",
+                                "JO",
+                                "KZ",
+                                "KE",
+                                "KI",
+                                "KP",
+                                "KR",
+                                "XK",
+                                "KW",
+                                "KG",
+                                "LA",
+                                "LV",
+                                "LB",
+                                "LS",
+                                "LR",
+                                "LY",
+                                "LI",
+                                "LT",
+                                "LU",
+                                "MO",
+                                "MK",
+                                "MG",
+                                "MW",
+                                "MY",
+                                "MV",
+                                "ML",
+                                "MT",
+                                "MH",
+                                "MQ",
+                                "MR",
+                                "MU",
+                                "YT",
+                                "MX",
+                                "FM",
+                                "MD",
+                                "MC",
+                                "MN",
+                                "ME",
+                                "MS",
+                                "MA",
+                                "MZ",
+                                "MM",
+                                "NA",
+                                "NR",
+                                "NP",
+                                "NL",
+                                "NC",
+                                "NZ",
+                                "NI",
+                                "NE",
+                                "NG",
+                                "NU",
+                                "NF",
+                                "MP",
+                                "NO",
+                                "OM",
+                                "PK",
+                                "PW",
+                                "PS",
+                                "PA",
+                                "PG",
+                                "PY",
+                                "PE",
+                                "PH",
+                                "PN",
+                                "PL",
+                                "PT",
+                                "PR",
+                                "QA",
+                                "RE",
+                                "RO",
+                                "RU",
+                                "RW",
+                                "BL",
+                                "SH",
+                                "KN",
+                                "LC",
+                                "MF",
+                                "PM",
+                                "VC",
+                                "WS",
+                                "SM",
+                                "ST",
+                                "SA",
+                                "SN",
+                                "RS",
+                                "SC",
+                                "SL",
+                                "SG",
+                                "SX",
+                                "SK",
+                                "SI",
+                                "SB",
+                                "SO",
+                                "ZA",
+                                "GS",
+                                "SS",
+                                "ES",
+                                "LK",
+                                "SD",
+                                "SR",
+                                "SJ",
+                                "SZ",
+                                "SE",
+                                "CH",
+                                "SY",
+                                "TW",
+                                "TJ",
+                                "TZ",
+                                "TH",
+                                "TL",
+                                "TG",
+                                "TK",
+                                "TO",
+                                "TT",
+                                "TN",
+                                "TR",
+                                "TM",
+                                "TC",
+                                "TV",
+                                "UG",
+                                "UA",
+                                "AE",
+                                "GB",
+                                "US",
+                                "UM",
+                                "UY",
+                                "UZ",
+                                "VU",
+                                "VE",
+                                "VN",
+                                "VG",
+                                "VI",
+                                "WF",
+                                "EH",
+                                "YE",
+                                "ZM",
+                                "ZW",
+                                "XZ"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "birth",
+                        "type": "string",
+                        "format": "default",
+                        "title": "birth"
+                    },
+                    {
+                        "name": "birthPlace",
+                        "type": "string",
+                        "format": "default",
+                        "title": "birthPlace"
+                    },
+                    {
+                        "name": "death",
+                        "type": "string",
+                        "format": "default",
+                        "title": "death"
+                    },
+                    {
+                        "name": "affiliation",
+                        "type": "string",
+                        "format": "default",
+                        "title": "affiliation"
+                    },
+                    {
+                        "name": "interest",
+                        "type": "string",
+                        "format": "default",
+                        "title": "interest"
+                    },
+                    {
+                        "name": "referenceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "referenceID"
+                    },
+                    {
+                        "name": "link",
+                        "type": "string",
+                        "format": "uri",
+                        "title": "link"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "primaryKey": "ID",
+                "foreignKeys":
+                [
+                    {
+                        "fields": "referenceID",
+                        "reference":
+                        {
+                            "resource": "reference",
+                            "fields": "ID"
+                        }
+                    }
+                ],
+                "name": "author",
+                "title": "Author",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/author.json"
+            },
+            "profile": "tabular-data-resource"
+        },
+        {
+            "encoding": "UTF-8",
+            "format": "csv",
+            "name": "reference",
+            "path": "reference.tsv",
+            "dialect":
+            {
+                "delimiter": "\t",
+                "doubleQuote": false,
+                "header": true
+            },
+            "schema":
+            {
+                "fields":
+                [
+                    {
+                        "name": "ID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "ID",
+                        "constraints":
+                        {
+                            "unique": true,
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "alternativeID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "alternativeID"
+                    },
+                    {
+                        "name": "sourceID",
+                        "type": "string",
+                        "format": "default",
+                        "title": "sourceID"
+                    },
+                    {
+                        "name": "citation",
+                        "type": "string",
+                        "format": "default",
+                        "title": "citation"
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "format": "default",
+                        "title": "type",
+                        "constraints":
+                        {
+                            "enum":
+                            [
+                                "article",
+                                "article journal",
+                                "article magazine",
+                                "article newspaper",
+                                "bill",
+                                "book",
+                                "broadcast",
+                                "chapter",
+                                "dataset",
+                                "document",
+                                "entry",
+                                "entry dictionary",
+                                "entry encyclopedia",
+                                "figure",
+                                "graphic",
+                                "interview",
+                                "legal case",
+                                "legislation",
+                                "manuscript",
+                                "map",
+                                "motion picture",
+                                "musical score",
+                                "pamphlet",
+                                "paper conference",
+                                "patent",
+                                "performance",
+                                "periodical",
+                                "personal communication",
+                                "post",
+                                "post weblog",
+                                "report",
+                                "review",
+                                "review book",
+                                "software",
+                                "song",
+                                "speech",
+                                "standard",
+                                "thesis",
+                                "treaty",
+                                "webpage"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "author",
+                        "type": "string",
+                        "format": "default",
+                        "title": "author"
+                    },
+                    {
+                        "name": "editor",
+                        "type": "string",
+                        "format": "default",
+                        "title": "editor"
+                    },
+                    {
+                        "name": "title",
+                        "type": "string",
+                        "format": "default",
+                        "title": "title"
+                    },
+                    {
+                        "name": "titleShort",
+                        "type": "string",
+                        "format": "default",
+                        "title": "titleShort"
+                    },
+                    {
+                        "name": "containerAuthor",
+                        "type": "string",
+                        "format": "default",
+                        "title": "containerAuthor"
+                    },
+                    {
+                        "name": "containerTitle",
+                        "type": "string",
+                        "format": "default",
+                        "title": "containerTitle"
+                    },
+                    {
+                        "name": "containerTitleShort",
+                        "type": "string",
+                        "format": "default",
+                        "title": "containerTitleShort"
+                    },
+                    {
+                        "name": "issued",
+                        "type": "date",
+                        "format": "default",
+                        "title": "issued"
+                    },
+                    {
+                        "name": "accessed",
+                        "type": "date",
+                        "format": "default",
+                        "title": "accessed"
+                    },
+                    {
+                        "name": "collectionTitle",
+                        "type": "string",
+                        "format": "default",
+                        "title": "collectionTitle"
+                    },
+                    {
+                        "name": "collectionEditor",
+                        "type": "string",
+                        "format": "default",
+                        "title": "collectionEditor"
+                    },
+                    {
+                        "name": "volume",
+                        "type": "string",
+                        "format": "default",
+                        "title": "volume"
+                    },
+                    {
+                        "name": "issue",
+                        "type": "string",
+                        "format": "default",
+                        "title": "issue"
+                    },
+                    {
+                        "name": "edition",
+                        "type": "string",
+                        "format": "default",
+                        "title": "edition"
+                    },
+                    {
+                        "name": "page",
+                        "type": "string",
+                        "format": "default",
+                        "title": "page"
+                    },
+                    {
+                        "name": "publisher",
+                        "type": "string",
+                        "format": "default",
+                        "title": "publisher"
+                    },
+                    {
+                        "name": "publisherPlace",
+                        "type": "string",
+                        "format": "default",
+                        "title": "publisherPlace"
+                    },
+                    {
+                        "name": "version",
+                        "type": "string",
+                        "format": "default",
+                        "title": "version"
+                    },
+                    {
+                        "name": "isbn",
+                        "type": "string",
+                        "format": "default",
+                        "title": "isbn"
+                    },
+                    {
+                        "name": "issn",
+                        "type": "string",
+                        "format": "default",
+                        "title": "issn"
+                    },
+                    {
+                        "name": "doi",
+                        "type": "string",
+                        "format": "default",
+                        "title": "doi"
+                    },
+                    {
+                        "name": "link",
+                        "type": "string",
+                        "format": "uri",
+                        "title": "link"
+                    },
+                    {
+                        "name": "remarks",
+                        "type": "string",
+                        "format": "default",
+                        "title": "remarks"
+                    },
+                    {
+                        "name": "modified",
+                        "type": "date",
+                        "format": "default",
+                        "title": "modified"
+                    },
+                    {
+                        "name": "modifiedBy",
+                        "type": "string",
+                        "format": "default",
+                        "title": "modifiedBy"
+                    }
+                ],
+                "primaryKey": "ID",
+                "name": "reference",
+                "title": "Reference",
+                "identifier": "http://rs.gbif.org/data-packages/coldp/",
+                "url": "http://rs.gbif.org/data-packages/coldp/1.2/table-schemas/reference.json"
+            },
+            "profile": "tabular-data-resource"
+        }
+    ]
+}

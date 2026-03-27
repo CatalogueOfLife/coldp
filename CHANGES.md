@@ -8,6 +8,11 @@ ColDP adheres to [semantic versioning](http://semver.org/):
 
 ## unreleased v2
  - use identifier arrays in metadata instead of the prefix map
+ - bug fix from 1.2.0, add missing fields that were present in the schema already but not documented in the readme text:
+   - TaxonConceptRelation.sourceID
+   - Synonym.accordingToPage
+   - Synonym.accordingToPageLink
+
 
 ## v1.2.0
 [Released](https://github.com/CatalogueOfLife/coldp/releases/tag/v1.2.0) on 2025-10-30, [Milestone 1.2](https://github.com/CatalogueOfLife/coldp/issues?q=is%3Aissue+milestone%3A%22Version+1.2%22+)

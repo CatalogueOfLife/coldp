@@ -49,7 +49,7 @@ All [changes](CHANGES.md) are documented since the initial 1.0.0 release.
 The ColDP format is a single ZIP archive that bundles various delimited text files described below together with a metadata.yaml file 
 providing basic metadata about the entire dataset. 
 Each file holds records for the same class of things shown in this diagram with columns explained in more detail in the [Data File section](#data-file-columns).
-It aligns closely to the Frictionless Tabular Data Package for which we provide a [descriptor](http://api.catalogueoflife.org/datapackage).
+It aligns closely to the Frictionless Tabular Data Package for which we provide a [datapackage.json](docs/datapackage.json) descriptor since release 1.2.0.
 
 ![schema](docs/schema.png)
 
@@ -897,6 +897,18 @@ The author & year of the reference will be used to qualify the name with `sensu 
 Strongly recommended in case of misapplied names.
 The ID must refer to an existing Reference.ID within this data package.
 
+#### accordingToPage
+The exact single page number where the synonym was treated.
+If the treatment spans multiple pages, the first page should be given. 
+
+*added in v1.1*
+
+#### accordingToPageLink
+A URL to the exact page where the synonym was published.
+If the treatment spans multiple pages, the link to the first page should be given.
+
+*added in v1.1*
+
 #### status
 type: [enum](http://api.checklistbank.org/vocab/taxonomicstatus)
 
@@ -943,7 +955,7 @@ Therefore the following properties deviate slightly from their usage in their cl
  - **status**: is the taxonomic name usage status which includes Synonym.status and the Taxon.provisional flag. 
             A provisional taxon should be listed as `provisionally accepted`. 
             Unresolved names which are neither accepted nor synonyms can be listed with status=`bare name` in which case only the Name properties are relevant. This corresponds to a lone Name record without a Taxon or Synonym record.
- - **nameStatus**: corresponds to the nomenclatural name status.
+ - **nameStatus**: corresponds to the nomenclatural name status otherwise given in Name.status.
  - **nameRemarks**: corresponds to the nomenclatural name remarks otherwise given in Name.remarks.
  - **genus**: is the taxonomic classification of a name usage and corresponds to Taxon.genus. For synonyms it often is not the same as the genus part of the name
  - **genericName**: corresponds to the genus field of a name and represents the atomized genus of a scientificName.
@@ -1017,6 +1029,9 @@ The subject taxon this relation originates from.
 
 #### relatedTaxonID
 The object this taxon relates to.
+
+#### sourceID
+Optional identifier for the source this record came from as listed in the [metadata.yaml](metadata.yaml)
 
 #### type
 type: [enum](http://api.checklistbank.org/vocab/TaxonConceptRelType)
@@ -1234,15 +1249,12 @@ Authors must exist in the local data package.
 *added in v1.1*
 
 #### volume
-type: [number](https://specs.frictionlessdata.io/table-schema/#number)
 (container) volume number holding the item, e.g. `2` when citing a chapter from book volume 2.
 
 #### issue
-type: [number](https://specs.frictionlessdata.io/table-schema/#number)
 (container) issue holding the item, e.g. `5` when citing a journal article from journal volume 2, issue 5.
 
 #### edition
-type: [number](https://specs.frictionlessdata.io/table-schema/#number)
 (container) edition holding the item, e.g. `3` when citing a chapter in the third edition of a book.
 
 #### page
