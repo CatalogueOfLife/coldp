@@ -1118,7 +1118,7 @@ The estimated number of species.
 #### type
 type: [enum](http://api.checklistbank.org/vocab/estimatetype)
 The exact kind of estimation, e.g. number of described living species or total estimated species including yet to be described organisms.
-If none is given the type defaults to 'described species living'.
+If none is given the type defaults to described 'species living'.
 
 #### referenceID
 A mandatory reference ID that supports the estimate and also provides a temporal context.
