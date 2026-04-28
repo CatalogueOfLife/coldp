@@ -1698,8 +1698,8 @@ To avoid conflicts of naming scopes we strongly recommend to use the following s
  - orcid: Open Researcher and Contributor ID - [orcid:0000-0001-6492-4016](https://orcid.org/0000-0001-6492-4016)
  - otl: Open Tree of Life - [otl:510850](https://tree.opentreeoflife.org/taxonomy/browse?id=510850)
  - pesi: Pan-European Species directories Infrastructure - [pesi:93A25572-521E-4130-B8C5-9C7D332E5605](http://www.eu-nomen.eu/portal/taxon.php?GUID=93A25572-521E-4130-B8C5-9C7D332E5605)
- - silva: SILVA taxonomy - https://www.arb-silva.de/documentation/silva-taxonomy/
- - taxonid: taxon concepts as Linked Data - [taxonid:D92326](http://taxonid.org/D92326)
+ - silva-lsu: SILVA Taxonomy for Large Subunit rRNA - https://www.arb-silva.de/documentation/silva-taxonomy/
+ - silva-ssu: SILVA Taxonomy for Small Subunit rRNA - https://www.arb-silva.de/documentation/silva-taxonomy/
  - tpl: The Plant List - [tpl:kew-435194](http://www.theplantlist.org/tpl1.1/record/kew-435194)
  - tropicos: Missource Botanical Gardens TROPICOS - [tropicos:25509881](https://www.tropicos.org/name/25509881)
  - tsn: ITIS Taxonomic Serial Number - [tsn:41107](https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=41107#null)
