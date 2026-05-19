@@ -1471,7 +1471,10 @@ Optional identifier for the source this record came from as listed in the [metad
 #### areaID
 The identifier/code for the geographic area this distribution record is about.
 The value must be taken from the gazetteer this record declares.
-E.g. `ISO` 2 letter country codes, `TDWG` codes or `TEOW` identifiers.
+E.g. `FR` for an ISO 3166 2 letter country code, `FRA-CI` for a TDWG code (all 4 levels are supported) or `TEOW` identifiers.
+See [https://catalogueoflife.github.io/col-gazetteers/](https://catalogueoflife.github.io/col-gazetteers/) for all supported gazetteers and their values.
+Our [gazetteer vocabulary](https://api.checklistbank.org/vocab/gazetteer) also ships with a regular expression for recognized values of each gazetteer.
+
 If the `TEXT` gazetteer is used only the free text area should be given with no areaID.
 
 #### area
