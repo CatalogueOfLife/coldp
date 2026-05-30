@@ -12,6 +12,7 @@ ColDP adheres to [semantic versioning](http://semver.org/):
    - TaxonConceptRelation.sourceID
    - Synonym.accordingToPage
    - Synonym.accordingToPageLink
+ - metadata add source.shortTitle to support aliases of sources in aggregated datasets
 
 
 ## v1.2.0

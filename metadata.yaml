@@ -223,6 +223,7 @@ source:
   - id: ecf
     type: book
     title: Eschmeyer's Catalog of Fishes
+    shortTitle: ECoF
     editor: 
       - Ronald Fricke     # simple format: GivenName FamilyName
       - Van der Laan, R.  # simple format: FamilyName, GivenName
@@ -239,6 +240,7 @@ source:
     author: # author list. type=NAME[]
     editor: # editor list. type=NAME[]
     title: # primary title of the item
+    shortTitle: # abbreviated title, short source alias
     containerAuthor: # author(s) of the container holding the item (e.g. the book author for a book chapter). type=NAME[]
     containerTitle: # title of the container holding the item (e.g. the book title for a book chapter, the journal title for a journal article)
     issued: # date the item was issued/published in possibly truncated ISO format, e.g. 1998, 1998-05 or 1998-05-21. type=DATE
