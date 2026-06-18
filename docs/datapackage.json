@@ -2812,9 +2812,11 @@
               "enum": [
                 "tdwg",
                 "iso",
-                "fao",
-                "longhurst",
                 "realm",
+                "longhurst",
+                "teow",
+                "wdpa",
+                "fao",
                 "iho",
                 "mrgid",
                 "text"
