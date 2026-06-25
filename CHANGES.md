@@ -13,6 +13,7 @@ ColDP adheres to [semantic versioning](http://semver.org/):
    - Synonym.accordingToPage
    - Synonym.accordingToPageLink
  - metadata add source.alias to support short titles of sources in aggregated datasets
+ - link to https://www.checklistbank.org/about/identifiers as the single source of truth for identifier scopes instead of maintaining the list in the readme
 
 
 ## v1.2.0

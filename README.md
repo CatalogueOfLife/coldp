@@ -1672,49 +1672,20 @@ For sharing the true identifiers only, which often have a local scope, ColDP req
 For example COL identifiers should be shared not by their API or portal URL (http://www.catalogueoflife.org/data/taxon/NN), but instead as `col:NN`.
 
 These type of compact identifiers are also known [CURIE](https://en.wikipedia.org/wiki/CURIE)s.
-Scopes that are also registered prefixes in [identifiers.org](https://registry.identifiers.org) are linked.
 
 ## Identifier Scopes
-To avoid conflicts of naming scopes we strongly recommend to use the following scope names which are case insensitive:
- 
- - algaebase: AlgaeBase algae species - [algaebase:90](https://www.algaebase.org/search/species/detail/?species_id=90)
- - avibase: Avibase taxon concept - [avibase:D754DB8552A7AA42](https://avibase.ca/D754DB85)
- - bhl: Biodiversity Heritage Library page number - [bhl:45607882](https://www.biodiversitylibrary.org/page/45607882)
- - [bold](https://registry.identifiers.org/registry/bold.taxonomy): BOLD BIN numbers - [BOLD:AAJ2287](http://v3.boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAJ2287)
- - clb: ChecklistBank dataset identifier using their integer key: [clb:2019](https://www.checklistbank.org/dataset/2019/about): Mammal Species of the World in ChecklistBank
- - clb[0-9]+: ChecklistBank name usage identifier, using the prefix `clb` with the datasets integer key as the scope: [clb2019:14000204](https://www.checklistbank.org/dataset/2019/taxon/14000204): Puma concolor (id 14000204) in dataset 2019, Mammal Species of the World
- - [col](https://registry.identifiers.org/registry/col): Catalogue of Life Checklist- [col:6W3C4](http://www.catalogueoflife.org/data/taxon/6W3C4)
- - [doi](https://registry.identifiers.org/registry/doi): any Digital Object Identifier - [doi:10.5281/zenodo.6407053](https://doi.org/10.5281/zenodo.6407053)
- - eunis: European Nature Information System - [eunis:193060](https://eunis.eea.europa.eu/species/193060)
- - gbif: GBIF Backbone Taxonomy - [gbif:2704179](https://www.gbif.org/species/2704179)
- - genbank: GenBank accession number - [genbank:U49845](https://www.ncbi.nlm.nih.gov/nucleotide/U49845)
- - hol: Hymenoptera Online ID - [hol:31685](https://hol.osu.edu/index.html?id=31685)
- - if: Index Fungorum - [if:550000](http://www.indexfungorum.org/Names/NamesRecord.asp?RecordID=550000)
- - ina: Index Nominum Algarum - [ina:101744](http://ucjeps.berkeley.edu/cgi-bin/porp_cgi.pl?101744)
- - inat: iNaturalist taxon identifier - [inat:52808](https://www.inaturalist.org/observations?taxon_id=52808)
- - ipni: International Plant Name Index - [ipni:320035-2](https://www.ipni.org/n/320035-2)
- - [isbn](https://registry.identifiers.org/registry/isbn): International Standard Book Number, with 10 or 13 numbers - [isbn:9780393978674](https://isbndb.com/book/9780393978674)
- - irmng: Interim Register of Marine and Nonmarine Genera - [irmng:1038927]([https://apiv3.iucnredlist.org/api/v3/taxonredirect/10335](https://www.irmng.org/aphia.php?p=taxdetails&id=1038927))
- - iucn: IUCN Redlist species - [iucn:10335](https://apiv3.iucnredlist.org/api/v3/taxonredirect/10335)
- - mb: Mycobank Fungal Database - [mb:309626](https://www.mycobank.org/page/Name%20details%20page/field/Mycobank%20%23/309626)
- - ncbi: NCBI taxonomy - [ncbi:93036](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=93036)
- - orcid: Open Researcher and Contributor ID - [orcid:0000-0001-6492-4016](https://orcid.org/0000-0001-6492-4016)
- - otl: Open Tree of Life - [otl:510850](https://tree.opentreeoflife.org/taxonomy/browse?id=510850)
- - pesi: Pan-European Species directories Infrastructure - [pesi:93A25572-521E-4130-B8C5-9C7D332E5605](http://www.eu-nomen.eu/portal/taxon.php?GUID=93A25572-521E-4130-B8C5-9C7D332E5605)
- - silva-lsu: SILVA Taxonomy for Large Subunit rRNA - https://www.arb-silva.de/documentation/silva-taxonomy/
- - silva-ssu: SILVA Taxonomy for Small Subunit rRNA - https://www.arb-silva.de/documentation/silva-taxonomy/
- - tpl: The Plant List - [tpl:kew-435194](http://www.theplantlist.org/tpl1.1/record/kew-435194)
- - tropicos: Missource Botanical Gardens TROPICOS - [tropicos:25509881](https://www.tropicos.org/name/25509881)
- - tsn: ITIS Taxonomic Serial Number - [tsn:41107](https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=41107#null)
- - [ubio](https://registry.identifiers.org/registry/ubio.namebank): uBio - [ubio:5408026](http://www.ubio.org/browser/details.php?namebankID=5408026)
- - unite: UNITE Species Hypotheses - [unite:SH1659817.08FU](https://unite.ut.ee/sh/SH1659817.08FU)
- - usda: USDA Plants - [usda:POAN](https://plants.sc.egov.usda.gov/home/plantProfile?symbol=POAN)
- - viaf: [Virtual International Authority File database](https://viaf.org/) - [viaf:76389959](https://viaf.org/viaf/76389959)
- - wfo: World Flora Online - [wfo:wfo-0000891536](http://www.worldfloraonline.org/taxon/wfo-0000891536)
- - [wikidata](https://registry.identifiers.org/registry/wikidata): Wikidata items - [wikidata:Q157571](https://www.wikidata.org/wiki/Q157571)
- - [worms](https://registry.identifiers.org/registry/worms): World Register of Marine Species - [worms:212808](https://www.marinespecies.org/aphia.php?p=taxdetails&id=212808)
- - zoobank: ZooBank record - [zoobank:EEDEA832-A8A9-44DF-8F2F-684FFEC9C19B](https://zoobank.org/NomenclaturalActs/eedea832-a8a9-44df-8f2f-684ffec9c19b)
+To avoid conflicts of naming scopes we strongly recommend to use one of the registered scope names, which are case insensitive.
+The list of recognised scopes is maintained as the single source of truth at
+[checklistbank.org/about/identifiers](https://www.checklistbank.org/about/identifiers).
+Scopes that are also registered prefixes in [identifiers.org](https://registry.identifiers.org) are noted there too.
 
+A few examples of scoped identifiers:
+
+ - col: Catalogue of Life Checklist - [col:6W3C4](https://www.catalogueoflife.org/data/taxon/6W3C4)
+ - gbif: GBIF Backbone Taxonomy - [gbif:2704179](https://www.gbif.org/species/2704179)
+ - tsn: ITIS Taxonomic Serial Number - [tsn:41107](https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=41107)
+ - worms: World Register of Marine Species - [worms:212808](https://www.marinespecies.org/aphia.php?p=taxdetails&id=212808)
+ - wfo: World Flora Online - [wfo:wfo-0000891536](https://www.worldfloraonline.org/taxon/wfo-0000891536)
 
 We do recommend to share bare identifiers with their scope if possible.
 But sharing globally unique URN, URI or URLs can be done without any further scope:
