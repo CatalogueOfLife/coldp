@@ -23,7 +23,7 @@ ColDP adheres to [semantic versioning](http://semver.org/):
  - Accept JSON Lines in `reference.jsonl`, see https://github.com/CatalogueOfLife/coldp/issues/87
  - remove taxonomicScopeInEnglish from metadata
  - remove Distribution.status in favor of new fields
- - extend Distribution class with
+ - extend Distribution class, see https://github.com/CatalogueOfLife/coldp/issues/81 with
     - establishmentMeans
     - degreeOfEstablishment
     - pathway
