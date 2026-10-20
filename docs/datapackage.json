@@ -2106,7 +2106,8 @@
                 "rejected",
                 "doubtful",
                 "manuscript",
-                "chresonym"
+                "chresonym",
+                "orthographic variant"
               ]
             }
           },
@@ -3868,7 +3869,8 @@
                 "rejected",
                 "doubtful",
                 "manuscript",
-                "chresonym"
+                "chresonym",
+                "orthographic variant"
               ]
             }
           },
