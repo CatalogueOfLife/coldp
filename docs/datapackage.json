@@ -1621,7 +1621,15 @@
             "type": "string",
             "format": "default",
             "title": "notho",
-            "description": "For named hybrids the part of the name which is considered a hybrid and which usually is prefixed with the hybrid marker ×. One of:"
+            "description": "For named hybrids the part of the name which is considered a hybrid and which usually is prefixed with the hybrid marker ×. One of: generic infrageneric specific infraspecific",
+            "constraints": {
+              "enum": [
+                "generic",
+                "infrageneric",
+                "specific",
+                "infraspecific"
+              ]
+            }
           },
           {
             "name": "originalSpelling",
@@ -2193,6 +2201,7 @@
                 "fao",
                 "iho",
                 "mrgid",
+                "gi",
                 "text"
               ]
             }
@@ -2914,7 +2923,15 @@
             "type": "string",
             "format": "default",
             "title": "notho",
-            "description": "For named hybrids the part of the name which is considered a hybrid and which usually is prefixed with the hybrid marker ×. One of:"
+            "description": "For named hybrids the part of the name which is considered a hybrid and which usually is prefixed with the hybrid marker ×. One of: generic infrageneric specific infraspecific",
+            "constraints": {
+              "enum": [
+                "generic",
+                "infrageneric",
+                "specific",
+                "infraspecific"
+              ]
+            }
           },
           {
             "name": "originalSpelling",

@@ -38,6 +38,9 @@ CREATE TYPE GAZETTEER AS ENUM (
   'FAO',
   'LONGHURST',
   'TEOW',
+  'WDPA',
+  'REALM',
+  'GI',
   'IHO',
   'MRGID',
   'TEXT'
