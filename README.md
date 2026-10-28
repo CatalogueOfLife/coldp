@@ -1490,14 +1490,16 @@ The geographic gazetteer the area is defined in.
 If none is given defaults to free `TEXT`.
 
 #### establishmentMeans
-type: [enum](http://api.checklistbank.org/vocab/establishmentmeans)
+type: string
 Statement about whether the taxon has been introduced to the given area and time through the direct or indirect activity of modern humans.
+Use of the [establishmentMeans vocabulary](http://api.checklistbank.org/vocab/establishmentmeans) is strongly recommended.
 
 *added in v1.2*
 
 #### degreeOfEstablishment
-type: [enum](http://api.checklistbank.org/vocab/degreeofestablishment)
+type: string
 The degree to which the taxon survives, reproduces, and expands its range at the given area and time.
+Use of the [degreeOfEstablishment vocabulary](http://api.checklistbank.org/vocab/degreeofestablishment) is strongly recommended.
 
 *added in v1.2*
 
@@ -1507,8 +1509,9 @@ The process by which the taxon came to be in the given area at the given time.
 *added in v1.2*
 
 #### threatStatus
-type: [enum](http://api.checklistbank.org/vocab/threatstatus)
+type: string
 Threat status of a species as defined by IUCN.
+Use of the [threatStatus vocabulary](http://api.checklistbank.org/vocab/threatstatus) is strongly recommended.
 
 *added in v1.2*
 
