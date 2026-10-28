@@ -7,16 +7,20 @@ CREATE TABLE reference (
   citation TEXT,
   type TEXT,
   author TEXT,
+  author_id TEXT[],
   editor TEXT,
+  editor_id TEXT[],
   title TEXT,
   title_short TEXT,
   container_author TEXT,
+  container_author_id TEXT[],
   container_title TEXT,
   container_title_short TEXT,
   issued TEXT,
   accessed TEXT,
   collection_title TEXT,
   collection_editor TEXT,
+  collection_editor_id TEXT[],
   volume TEXT,
   issue TEXT,
   edition TEXT,
@@ -28,7 +32,32 @@ CREATE TABLE reference (
   issn TEXT,
   doi TEXT,
   link TEXT,
-  remarks TEXT
+  remarks TEXT,
+  modified TIMESTAMPTZ,
+  modified_by TEXT
+);
+
+CREATE TABLE author (
+  id TEXT PRIMARY KEY,
+  source_id TEXT,
+  alternative_id TEXT[],
+  given TEXT,
+  family TEXT,
+  suffix TEXT,
+  abbreviation_botany TEXT,
+  alternative_names TEXT,
+  sex TEXT,
+  country TEXT,
+  birth TEXT,
+  birth_place TEXT,
+  death TEXT,
+  affiliation TEXT,
+  interest TEXT,
+  reference_id TEXT[],
+  link TEXT,
+  remarks TEXT,
+  modified TIMESTAMPTZ,
+  modified_by TEXT
 );
 
 CREATE TABLE name_usage (
@@ -37,48 +66,73 @@ CREATE TABLE name_usage (
   name_alternative_id TEXT[],
   source_id TEXT,
   parent_id TEXT REFERENCES name_usage,
-  ordinal INTEGER,
-  branch_length NUMERIC,
   basionym_id TEXT REFERENCES name_usage,
   status TEXT,
   scientific_name TEXT NOT NULL,
   authorship TEXT,
   rank TEXT,
+  notho TEXT,
+  original_spelling BOOLEAN,
   uninomial TEXT,
   generic_name TEXT,
   infrageneric_epithet TEXT,
   specific_epithet TEXT,
   infraspecific_epithet TEXT,
   cultivar_epithet TEXT,
-  notho TEXT,
-  original_spelling BOOLEAN,
   combination_authorship TEXT,
+  combination_authorship_id TEXT,
   combination_ex_authorship TEXT,
+  combination_ex_authorship_id TEXT,
   combination_authorship_year TEXT,
   basionym_authorship TEXT,
+  basionym_authorship_id TEXT,
   basionym_ex_authorship TEXT,
+  basionym_ex_authorship_id TEXT,
   basionym_authorship_year TEXT,
   name_phrase TEXT,
   name_reference_id TEXT REFERENCES reference,
-  name_published_id_year INTEGER,
-  name_published_id_page TEXT,
-  name_published_id_page_link TEXT,
+  name_published_in_year INTEGER,
+  name_published_in_page TEXT,
+  name_published_in_page_link TEXT,
   gender TEXT,
   gender_agreement BOOLEAN,
+  etymology TEXT,
   code TEXT,
   name_status TEXT,
   according_to_id TEXT REFERENCES reference,
+  according_to_page TEXT,
+  according_to_page_link TEXT,
+  reference_id TEXT[],
   scrutinizer TEXT,
   scrutinizer_id TEXT,
   scrutinizer_date TEXT,
-  reference_id TEXT[],
   extinct BOOLEAN,
   temporal_range_start TEXT,
   temporal_range_end TEXT,
   environment TEXT[],
+  species TEXT,
+  section TEXT,
+  subgenus TEXT,
+  genus TEXT,
+  subtribe TEXT,
+  tribe TEXT,
+  subfamily TEXT,
+  family TEXT,
+  superfamily TEXT,
+  suborder TEXT,
+  "order" TEXT,
+  subclass TEXT,
+  class TEXT,
+  subphylum TEXT,
+  phylum TEXT,
+  kingdom TEXT,
+  ordinal INTEGER,
+  branch_length NUMERIC,
   link TEXT,
   name_remarks TEXT,
-  remarks TEXT
+  remarks TEXT,
+  modified TIMESTAMPTZ,
+  modified_by TEXT
 );
 
 CREATE TABLE name_relation (
@@ -87,41 +141,55 @@ CREATE TABLE name_relation (
   source_id TEXT,
   type TEXT NOT NULL,
   reference_id TEXT REFERENCES reference,
-  remarks TEXT
+  page TEXT,
+  remarks TEXT,
+  modified TIMESTAMPTZ,
+  modified_by TEXT
 );
 
 CREATE TABLE type_material (
   id TEXT PRIMARY KEY,
+  name_id TEXT[] NOT NULL,
   source_id TEXT,
-  name_id TEXT NOT NULL REFERENCES name_usage,
   citation TEXT,
-  status TEXT,
-  institution_code TEXT,
-  catalog_number TEXT,
+  status TEXT[],
   reference_id TEXT REFERENCES reference,
+  page TEXT,
+  country TEXT,
   locality TEXT,
-  country CHARACTER(2),
   latitude DECIMAL,
   longitude DECIMAL,
   altitude INTEGER,
-  host TEXT,
   sex TEXT,
+  host TEXT,
+  associated_sequences TEXT,
   "date" TEXT,
   collector TEXT,
-  associated_sequences TEXT,
+  institution_code TEXT,
+  catalog_number TEXT,
   link TEXT,
-  remarks TEXT
+  remarks TEXT,
+  modified TIMESTAMPTZ,
+  modified_by TEXT
 );
 
 CREATE TABLE distribution (
   taxon_id TEXT NOT NULL REFERENCES name_usage,
   source_id TEXT,
-  area TEXT NOT NULL,
   area_id TEXT,
+  area TEXT NOT NULL,
   gazetteer TEXT,
-  status TEXT,
+  establishment_means TEXT,
+  degree_of_establishment TEXT,
+  pathway TEXT,
+  threat_status TEXT,
+  year INTEGER,
+  season TEXT,
+  life_stage TEXT,
   reference_id TEXT REFERENCES reference,
-  remarks TEXT
+  remarks TEXT,
+  modified TIMESTAMPTZ,
+  modified_by TEXT
 );
 
 CREATE TABLE media (
@@ -129,13 +197,14 @@ CREATE TABLE media (
   source_id TEXT,
   url TEXT NOT NULL,
   type TEXT,
-  format TEXT,
   title TEXT,
   created TEXT,
   creator TEXT,
   license TEXT,
   link TEXT,
-  remarks TEXT  
+  remarks TEXT,
+  modified TIMESTAMPTZ,
+  modified_by TEXT
 );
 
 CREATE TABLE treatment (
@@ -144,7 +213,6 @@ CREATE TABLE treatment (
   document TEXT NOT NULL,
   format TEXT
 );
-
 
 CREATE TABLE vernacular_name (
   taxon_id TEXT NOT NULL REFERENCES name_usage,
@@ -157,7 +225,9 @@ CREATE TABLE vernacular_name (
   area TEXT,
   sex TEXT,
   reference_id TEXT REFERENCES reference,
-  remarks TEXT  
+  remarks TEXT,
+  modified TIMESTAMPTZ,
+  modified_by TEXT
 );
 
 CREATE TABLE species_estimate (
@@ -166,7 +236,9 @@ CREATE TABLE species_estimate (
   estimate INTEGER NOT NULL,
   type TEXT NOT NULL,
   reference_id TEXT REFERENCES reference,
-  remarks TEXT
+  remarks TEXT,
+  modified TIMESTAMPTZ,
+  modified_by TEXT
 );
 
 CREATE TABLE taxon_property (
@@ -174,10 +246,12 @@ CREATE TABLE taxon_property (
   source_id TEXT,
   property TEXT NOT NULL,
   value TEXT NOT NULL,
+  ordinal INTEGER,
   reference_id TEXT REFERENCES reference,
   page TEXT,
-  ordinal INTEGER,
-  remarks TEXT
+  remarks TEXT,
+  modified TIMESTAMPTZ,
+  modified_by TEXT
 );
 
 CREATE TABLE species_interaction (
@@ -187,7 +261,9 @@ CREATE TABLE species_interaction (
   related_taxon_scientific_name TEXT,
   type TEXT NOT NULL,
   reference_id TEXT REFERENCES reference,
-  remarks TEXT
+  remarks TEXT,
+  modified TIMESTAMPTZ,
+  modified_by TEXT
 );
 
 CREATE TABLE taxon_concept_relation (
@@ -196,5 +272,7 @@ CREATE TABLE taxon_concept_relation (
   source_id TEXT,
   type TEXT NOT NULL,
   reference_id TEXT REFERENCES reference,
-  remarks TEXT
+  remarks TEXT,
+  modified TIMESTAMPTZ,
+  modified_by TEXT
 );
