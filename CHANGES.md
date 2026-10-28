@@ -15,6 +15,7 @@ ColDP adheres to [semantic versioning](http://semver.org/):
  - metadata add source.alias to support short titles of sources in aggregated datasets
  - link to https://www.checklistbank.org/about/identifiers as the single source of truth for identifier scopes instead of maintaining the list in the readme
  - replace `docs/publishing-guide.md` with a pointer to the maintained [ColDP publishing guidelines](https://www.checklistbank.org/about/contribute#coldp-publishing-guidelines) on ChecklistBank, see https://github.com/CatalogueOfLife/coldp/issues/97
+ - datapackage.json: type Reference.issued and Reference.accessed as string to allow truncated ISO dates, and all modified fields as datetime, see https://github.com/gbif/rs.gbif.org/issues/233
 
 
 ## v1.2.0

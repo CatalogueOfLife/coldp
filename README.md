@@ -1227,12 +1227,12 @@ The abbreviated container title.
 *added in v1.1*
 
 #### issued
-type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date) 
+type: string, an [ISO8601 date](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates) that can be truncated
 Date the work was issued/published. 
 Use ISO dates that can be truncated to represent a year, year & month or exact date, e.g. 1998, 1998-05 or 1998-05-21
 
 #### accessed
-type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date) 
+type: string, an [ISO8601 date](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates) that can be truncated
 Date the item has been accessed.
 See issued for how to use ISO dates.
 

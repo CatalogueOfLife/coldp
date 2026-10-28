@@ -465,7 +465,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
@@ -669,13 +669,13 @@
           },
           {
             "name": "issued",
-            "type": "date",
+            "type": "string",
             "format": "default",
             "title": "issued"
           },
           {
             "name": "accessed",
-            "type": "date",
+            "type": "string",
             "format": "default",
             "title": "accessed"
           },
@@ -786,7 +786,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
@@ -1097,7 +1097,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
@@ -1501,7 +1501,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
@@ -1619,7 +1619,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
@@ -1724,7 +1724,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
@@ -2176,7 +2176,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
@@ -2620,7 +2620,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
@@ -2733,7 +2733,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
@@ -2884,7 +2884,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
@@ -2991,7 +2991,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
@@ -3137,7 +3137,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
@@ -3253,7 +3253,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
@@ -3400,7 +3400,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
@@ -4105,7 +4105,7 @@
           },
           {
             "name": "modified",
-            "type": "date",
+            "type": "datetime",
             "format": "default",
             "title": "modified",
             "description": "UTC timestamp in ISO format to represent the time the record was last modified."
