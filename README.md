@@ -747,8 +747,9 @@ Name of the person who is the latest scrutinizer who revised or reviewed the tax
 Identifier for the scrutinizer. Highly recommended are [ORCID](https://orcid.org) ids.
 
 #### scrutinizerDate
-type: [ISO8601 date](https://frictionlessdata.io/specs/table-schema/#date) 
+type: string, an [ISO8601 date](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates) that can be truncated
 The date when the taxonomic concept was last revised or reviewed by the scrutinizer.
+See Reference.issued for how to use ISO dates.
 
 #### provisional
 type: [boolean](https://frictionlessdata.io/specs/table-schema/#boolean)
@@ -1166,7 +1167,7 @@ If individual fields are given the full citation can be ignored.
 #### type
 type: [enum](http://api.catalogueoflife.org/vocab/csltype)
 CSL type that defines what kind of structured reference this is and which fields are applicable.
-E.g. ARTICLE-JOURNAL, BOOK, CHAPTER, DATASET or WEBPAGE. 
+E.g. article journal, book, chapter, dataset or webpage.
 See also https://aurimasv.github.io/z2csl/typeMap.xml for mapping of CSL types from Zotero and to field sets.
 
 #### author

@@ -1,6 +1,6 @@
 ID	citation	type	author	title	version	issued	publisher	containerTitle	volume	issue	page	doi	isbn	link
 wp1		webpage		Crepis bakeri	2018		Wikipedia							https://en.wikipedia.org/wiki/Crepis_bakeri
-greene1895	Greene, Edward Lee 1895. Erythea 3(5)	article-journal	Greene, Edward Lee			1895		Erythea	3	5				
+greene1895	Greene, Edward Lee 1895. Erythea 3(5)	article journal	Greene, Edward Lee			1895		Erythea	3	5				
 fna	Greene (2018) Crepis bakeri, Flora of North America	chapter	Greene	Crepis bakeri		2018		Flora of North America						http://www.efloras.org/florataxon.aspx?flora_id=1&taxon_id=250066440
 ulloa		article	Ulloa Ulloa, C.; P. Acevedo-Rodríguez; S. G. Beck; M. J. Belgrano; R. Bernal; P. E. Berry; L. Brako; M. Celis; G. Davidse; S. R. Gradstein; O. Hokche; B. León; S. León-Yánez; R. E. Magill; D. A. Neill; M. H. Nee; P. H. Raven; Stimmel, Heather; M. T. Strong; Villaseñor Ríos, José L.; J. L. Zarucchi; F. O. Zuloaga & P. M. Jørgensen	An integrated assessment of vascular plants species of the Americas		2017-12-22		Science	358	6370	1614–1617	10.1126/science.aao0398		
 frank	 	motion picture	James Whale	The Bride of Frankenstein		1935	Universal Pictures							https://www.imdb.com/title/tt0026138/
@@ -9,4 +9,4 @@ rel	Personal communications J.P.Sartre (1967)
 Hind2013	Hind, N. (2013). 763. GUNDELIA TOURNEFORTII: Compositae. Curtis's Botanical Magazine, 30(2), 114-138.	article	Hind, Nicholas	763. GUNDELIA TOURNEFORTII: Compositae		2013		Curtis's Botanical Magazine	30	2	114-138	doi:10.2307/45066252		
 Jarvis2007		book	Jarvis, Charlie	Order out of Chaos. Linnaean Plant Types and their Types		2007-12-31	Linnaean Society of London in association with the Natural History Museum					10.5281/zenodo.291971	978-0-9506207-7-0	
 TPL-Asteraceae		dataset		Species of Compositae contained within The Plant List	1.1	2013								http://www.theplantlist.org/1.1/browse/A/Compositae/
-Fu2016		article-journal	Fu, Zhi-Xi and Jiao, Bo-Han and Nie, Bao and Zhang, Guo-Jin and Gao, Tian-Gang and China Phylogeny Consortium	A comprehensive generic-level phylogeny of the sunflower family: Implications for the systematics of Chinese Asteraceae		2016		Journal of Systematics and Evolution	54	4		doi: 10.1111/jse.12216		https://onlinelibrary.wiley.com/doi/pdf/10.1111/jse.12216
+Fu2016		article journal	Fu, Zhi-Xi and Jiao, Bo-Han and Nie, Bao and Zhang, Guo-Jin and Gao, Tian-Gang and China Phylogeny Consortium	A comprehensive generic-level phylogeny of the sunflower family: Implications for the systematics of Chinese Asteraceae		2016		Journal of Systematics and Evolution	54	4		doi: 10.1111/jse.12216		https://onlinelibrary.wiley.com/doi/pdf/10.1111/jse.12216

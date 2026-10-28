@@ -1,7 +1,7 @@
 nameID	relatedNameID	type	referenceID	remarks
 1006	1006-s3	basionym		
-fake	hybrid	SPELLING_CORRECTION	rel	a relation remark
-fake	hybrid	BASED_ON	rel	another relation remark
-fake	hybrid	REPLACEMENT_NAME	rel	yet another relation remark
-hybrid	fake	LATER_HOMONYM	rel	yet another relation remark
-hybrid	fake	SUPERFLUOUS	rel	yet another relation remark
+fake	hybrid	spelling correction	rel	a relation remark
+fake	hybrid	based on	rel	another relation remark
+fake	hybrid	replacement name	rel	yet another relation remark
+hybrid	fake	later homonym	rel	yet another relation remark
+hybrid	fake	superfluous	rel	yet another relation remark
